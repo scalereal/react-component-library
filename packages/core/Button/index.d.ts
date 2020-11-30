@@ -1,5 +1,5 @@
 import React, { ElementType, MouseEventHandler, ReactNode } from 'react';
-import { ComponentSize } from '../../config/sizes';
+import { ComponentSize } from '../../theme/sizes';
 export declare type ButtonType = 'default' | 'danger' | 'ghost' | 'secondary';
 interface BaseButtonProps {
     type?: ButtonType;

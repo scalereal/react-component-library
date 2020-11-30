@@ -19,7 +19,7 @@
         "test": "react-scripts test",
         "eject": "react-scripts eject",
         "clear": "rm -rf packages",
-        "copy": "cp -r src/config/fonts packages/config/",
+        "copy": "cp -r src/theme/fonts packages/theme/",
         "build": "tsc",
         "storybook": "start-storybook -p 6006 -s public",
         "build-storybook": "build-storybook -s public",
@@ -28,13 +28,6 @@
         "lint": "tsc --noEmit && eslint src/**/*.ts{,x}",
         "lint:fix": "eslint --ext js,js,ts,tsx src --fix",
         "format": "prettier --write src/**/*.ts{,x}"
-    },
-    "jest": {
-        "collectCoverageFrom": [
-            "src/**/*.{js,jsx,ts,tsx}",
-            "!src/**/*.stories.{js,jsx,ts,tsx}",
-            "!src/serviceWorker.ts"
-        ]
     },
     "husky": {
         "hooks": {

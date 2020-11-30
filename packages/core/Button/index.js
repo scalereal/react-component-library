@@ -19,16 +19,16 @@ var Button = function (props, ref) {
         disabled: disabled,
         withText: children != null
     };
-    var childrenWithIcon = !icon ? children : (React.createElement(React.Fragment, null,
+    var childrenWithIcon = !icon ? (children) : (React.createElement(React.Fragment, null,
         children,
         React.createElement(StyledIcon, { as: icon })));
     if (as && !disabled) {
-        return (React.createElement(StyledButton, __assign({ as: as, to: to, ref: ref, className: className }, styles), loading ? ('Loading...') : childrenWithIcon));
+        return (React.createElement(StyledButton, __assign({ as: as, to: to, ref: ref, className: className }, styles), loading ? 'Loading...' : childrenWithIcon));
     }
     if (href && !disabled) {
-        return (React.createElement(StyledButton, __assign({ as: 'a', href: href, ref: ref, className: className }, styles), loading ? ('Loading...') : childrenWithIcon));
+        return (React.createElement(StyledButton, __assign({ as: "a", href: href, ref: ref, className: className }, styles), loading ? 'Loading...' : childrenWithIcon));
     }
-    return (React.createElement(StyledButton, __assign({ as: 'button', type: 'button', onClick: onClick, ref: ref, className: className }, styles), loading ? ('Loading...') : childrenWithIcon));
+    return (React.createElement(StyledButton, __assign({ as: "button", type: "button", onClick: onClick, ref: ref, className: className }, styles), loading ? 'Loading...' : childrenWithIcon));
 };
 export default React.forwardRef(Button);
 //# sourceMappingURL=index.js.map

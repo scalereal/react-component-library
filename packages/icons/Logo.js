@@ -9,7 +9,7 @@ var __assign = (this && this.__assign) || function () {
     };
     return __assign.apply(this, arguments);
 };
-import * as React from "react";
+import * as React from 'react';
 function SvgLogo(props) {
     return (React.createElement("svg", __assign({ xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 841.9 595.3" }, props),
         React.createElement("g", { fill: "#61DAFB" },
