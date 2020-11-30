@@ -20,5 +20,5 @@
         "declarationMap": false
     },
     "include": ["src", "src/stories"],
-    "exclude": ["**/*.stories.tsx", "**/*.test.ts", "**/*.test.tsx", "./src/setupTests.ts"]
+    "exclude": ["**/*.stories.tsx", "**/*.test.ts", "**/*.test.tsx", "**/*.spec.tsx", "./src/setupTests.ts"]
 }
