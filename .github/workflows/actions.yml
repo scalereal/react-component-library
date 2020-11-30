@@ -48,11 +48,7 @@ jobs:
       # Run Test Script 
       - name: Test Script
         run: npm run test
-      
-      # Run Build Script 
-      - name: Build Script
-        run: npm run build
-      
+
       # Create Release
       - name: Create Release
         uses: actions/create-release@v1
