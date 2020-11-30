@@ -1,0 +1,55 @@
+name: Install, Format, Lint, Test, Build 
+
+# Controls when the action will run. 
+on:
+  # Triggers the workflow on push or pull request events but only for the main branch
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  install-format-lint-test-build:
+    # The type of runner that the job will run on
+    runs-on: ${{ matrix.operating-system }}
+    strategy:
+      matrix:
+        operating-system: [ubuntu-latest, windows-latest, macos-latest]
+        node-version: [10, 12, 14]
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - name: Checkout 
+        uses: actions/checkout@v2
+        
+      - name: Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with: 
+          node-version: ${{ matrix.node-version }}
+          
+      # Install All the Packages
+      - name: Install Packages
+        run: npm install
+
+      # Run Format Script 
+      - name: Format Script
+        run: npm run format
+        
+      # Run ESLint Script 
+      - name: ESLint Script
+        run: npm run lint
+
+      # Run Test Script 
+      - name: Test Script
+        run: npm run test
+      
+      # Run Build Script 
+      - name: Build Script
+        run: npm run build
+      
