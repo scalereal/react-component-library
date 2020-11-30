@@ -41,3 +41,24 @@ jobs:
       - name: Format Script
         run: npm run format
         
+      # Run ESLint Script 
+      - name: ESLint Script
+        run: npm run lint
+
+      # Run Test Script 
+      - name: Test Script
+        run: npm run test
+      
+      # Run Build Script 
+      - name: Build Script
+        run: npm run build
+      
+      # Create Release
+      - name: Create Release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
+        with:
+          tag_name: ${{ github.ref }}
+          release_name: Release ${{ github.ref }}
+
