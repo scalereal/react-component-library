@@ -1,4 +1,4 @@
-name: Install, Format, Lint, Test, Build 
+name: Install, Format, Lint, Test, Build, Release
 
 # Controls when the action will run. 
 on:
@@ -14,7 +14,7 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
-  install-format-lint-test-build:
+  install-format-lint-test-build-release:
     # The type of runner that the job will run on
     runs-on: ${{ matrix.operating-system }}
     strategy:
@@ -53,3 +53,11 @@ jobs:
       - name: Build Script
         run: npm run build
       
+      # Create Release
+      - name: Create Release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
+        with:
+          tag_name: ${{ github.ref }}
+          release_name: Release ${{ github.ref }}
