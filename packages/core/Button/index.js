@@ -31,4 +31,3 @@ var Button = function (props, ref) {
     return (React.createElement(StyledButton, __assign({ as: "button", type: "button", onClick: onClick, ref: ref, className: className }, styles), loading ? 'Loading...' : childrenWithIcon));
 };
 export default React.forwardRef(Button);
-//# sourceMappingURL=index.js.map

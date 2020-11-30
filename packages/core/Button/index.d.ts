@@ -36,4 +36,3 @@ declare const _default: React.ForwardRefExoticComponent<{
     to?: string | undefined;
 } & React.RefAttributes<unknown>>;
 export default _default;
-//# sourceMappingURL=index.d.ts.map

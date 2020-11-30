@@ -17,4 +17,3 @@ function SvgLogo(props) {
             React.createElement("circle", { cx: 420.9, cy: 296.5, r: 45.7 }))));
 }
 export default SvgLogo;
-//# sourceMappingURL=Logo.js.map

@@ -16,8 +16,8 @@
         "jsx": "react",
         "outDir": "packages",
         "declaration": true,
-        "sourceMap": true,
-        "declarationMap": true
+        "sourceMap": false,
+        "declarationMap": false
     },
     "include": ["src", "src/stories"],
     "exclude": ["**/*.stories.tsx", "**/*.test.ts", "**/*.test.tsx", "./src/setupTests.ts"]

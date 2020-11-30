@@ -8,4 +8,3 @@ export var heights = {
     default: 45,
     small: 35
 };
-//# sourceMappingURL=sizes.js.map
