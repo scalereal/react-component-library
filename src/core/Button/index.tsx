@@ -13,6 +13,7 @@ interface BaseButtonProps {
     children?: ReactNode;
     disabled?: boolean;
     loading?: boolean;
+    backgroundColor?:string;
 }
 
 type HTMLButtonProps = {

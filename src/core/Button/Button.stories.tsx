@@ -4,54 +4,86 @@ import styled from 'styled-components';
 import Button, { ButtonProps } from '.';
 
 // import DownloadIcon from '../../icons/Download';
+const ButtonType={defualt:'default', danger:'danger' , ghost:'ghost' , secondary:'secondary'};
+const ButtonSize={defualt:'default', large:'large' , small:'small'};
 
 export default {
     title: 'Components/Core/Button',
-    component: Button
+    component: Button,
+    argTypes : {
+        type:{
+        control: {
+            type: 'select',
+            options: Object.keys(ButtonType),
+          },
+        },
+    backgroundColor: { control: 'color' },
+    size : {
+        control: {
+            type: 'select',
+            options: Object.keys(ButtonSize),
+          },
+    },
+    disabled :{
+        control: {
+            type: 'boolean'
+        }
+    },
+
+        // children: 'Default Button',
+    },
 } as Meta;
 
-const Template: Story<ButtonProps> = args => <Button {...args} />;
+const Template: Story<ButtonProps> = ({ disabled, size, backgroundColor, type, ...args }) => {
+    // retrieves the appropriate icon passes it as a component prop
+    const selectedType = ButtonType[type];
+    const Color=backgroundColor;
+    const Size = ButtonSize[size];
+    const Disable = disabled;
+    return <Button disabled={Disable} size={Size} backgroundColor={Color} type={selectedType} {...args} />;
+  };
+// const Template: Story<ButtonProps> = args => <Button {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
-    children: 'Default Button'
+    children: 'Default Button',
 };
 
-export const DangerButton = Template.bind({});
-DangerButton.args = {
-    children: 'Danger Button',
-    type: 'danger'
-};
+// export const DangerButton = Template.bind({});
+// DangerButton.args = {
+//     children: 'Danger Button',
+//     type: 'danger'
+// };
 
-export const Ghost = Template.bind({});
-Ghost.args = {
-    children: 'Ghost Button',
-    type: 'ghost'
-};
+// export const Ghost = Template.bind({});
+// Ghost.args = {
+//     children: 'Ghost Button',
+//     type: 'ghost'
+// };
 
-export const Secondary = Template.bind({});
-Secondary.args = {
-    children: 'Secondary Button',
-    type: 'secondary'
-};
+// export const Secondary = Template.bind({});
+// Secondary.args = {
+//     children: 'Secondary Button',
+//     type: 'secondary'
+// };
 
-export const Disabled = Template.bind({});
-Disabled.args = {
-    children: 'Disabled Button',
-    disabled: true
-};
+// export const Disabled = Template.bind({});
+// Disabled.args = {
+//     children: 'Disabled Button',
+//     disabled: true
+// };
 
-export const Loading = Template.bind({});
-Loading.args = {
-    children: 'Button',
-    loading: true
-};
+// export const Loading = Template.bind({});
+// Loading.args = {
+//     children: 'Button',
+//     loading: true
+// };
 
-export const WithIcon = Template.bind({});
-WithIcon.args = {
-    //   icon: DownloadIcon,
-    children: 'Download'
-};
+// export const WithIcon = Template.bind({});
+// WithIcon.args = {
+//     //   icon: DownloadIcon,
+//     children: 'Download'
+// };
 
 const ButtonRow = styled.div`
     display: flex;
