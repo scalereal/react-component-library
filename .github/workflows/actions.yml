@@ -1,20 +1,19 @@
-name: Install, Format, Lint, Test
+name: Install, Format, Lint, Test, Build, Release
 
 # Controls when the action will run. 
 on:
-  # Triggers the workflow on push or pull request events but only for the main branch
+  # Triggers the workflow on push request events but only for the release branch and release tag
   push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
-
+    tags: 
+      - 'v*'
+    branches: [ release ]
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
-  install-format-lint-test:
+  # This workflow contains a single job called "install-format-lint-test-build-release"
+  install-format-lint-test-build-release:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
@@ -44,3 +43,16 @@ jobs:
       # Run Test Script 
       - name: Test Script
         run: npm run test
+      
+      # Run Build Script 
+      - name: Build Script
+        run: npm run build
+        
+      # Create Release
+      - name: Create Release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
+        with:
+          tag_name: ${{ github.ref }}
+          release_name: Release ${{ github.ref }}
