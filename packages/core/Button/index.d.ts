@@ -9,6 +9,7 @@ interface BaseButtonProps {
     children?: ReactNode;
     disabled?: boolean;
     loading?: boolean;
+    backgroundColor?: string;
 }
 declare type HTMLButtonProps = {
     onClick?: MouseEventHandler<HTMLButtonElement>;

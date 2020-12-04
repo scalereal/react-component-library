@@ -3,7 +3,7 @@ import * as React from 'react';
 import Button from './index';
 
 describe('Button', () => {
-    it('should render properly', () => {
+    it('should render properl', () => {
         const { container } = render(<Button />);
         expect(container).toMatchSnapshot();
     });

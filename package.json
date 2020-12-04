@@ -16,10 +16,7 @@
     "scripts": {
         "compile-icons": "npx @svgr/cli -d src/icons src/icons --typescript",
         "start": "react-scripts start",
-        "check-types": "tsc",
-        "test:watch": "run-p 'check-types -- -w' 'test:jest -- --watch'",
-        "test:jest": "jest --config config/jest/jest.config.js",
-        "test": "run-p check-types test:jest",
+        "test": "jest -c config/jest/jest.config.js --watch",
         "eject": "react-scripts eject",
         "clear": "rm -rf packages",
         "mkdir": "mkdir -m 700  packages",
@@ -45,6 +42,12 @@
         "*.+(json|css|md)": [
             "prettier --write",
             "git add"
+        ]
+    },
+    "jest": {
+        "setupFilesAfterEnv": [
+          "@testing-library/jest-dom/extend-expect",
+          "<rootDir>/src/setupTests.js"
         ]
     },
     "publishConfig": {
