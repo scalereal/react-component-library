@@ -1,7 +1,7 @@
 import { Meta, Story } from '@storybook/react/types-6-0';
 import React from 'react';
 import styled from 'styled-components';
-import Button, { ButtonProps } from '.';
+import Button, { ButtonProps } from './index';
 
 // import DownloadIcon from '../../icons/Download';
 const ButtonType={defualt:'default', danger:'danger' , ghost:'ghost' , secondary:'secondary'};
