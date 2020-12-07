@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card should render title and message text 1`] = `
+<div>
+  <div
+    class="sc-bdfBwQ efpqlE"
+  >
+    <div
+      class="sc-gsTCUz hzklTu"
+    >
+      <img
+        class="sc-dlfnbm fAbRqY"
+        src="Image"
+      />
+    </div>
+    <div
+      class="sc-eCssSg fYBSNH"
+    >
+      <div
+        class="sc-hKgILt hkQNYV"
+      >
+        Title
+      </div>
+      <div
+        class="sc-jSgupP ktxcFg"
+      >
+        Message
+      </div>
+    </div>
+  </div>
+</div>
+`;
