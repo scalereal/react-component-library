@@ -3,7 +3,7 @@ import React from 'react';
 import { Avatar } from './Avatar';
 import { Props } from './types';
 
-const SizeMap: Props['size'][] = ['S', 'M', 'L'];
+const SizeMap: Props['size'][] = ['ES', 'S', 'M', 'L'];
 
 export default {
     title: 'Components/Core/Avatar',
@@ -27,21 +27,24 @@ export default {
         hoverTextColor: {
             control:'color'
         },
-        hoverTextShadowColor: {
+        hoverShadowColor: {
             control:'color'
         },
-        hoverImageShadowColor: {
+        hoverTextShadowColor: {
             control:'color'
         },
         hoverEffect:{ 
             control: { type: 'boolean'}  
+        },
+        disabled:{
+            control:{type:'boolean'}
         }
     }
 } as Meta;
 
-const Template: Story<Props> = ({size,...args }) => {
+const Template: Story<Props> = ({...args }) => {
     // retrieves the appropriate icon passes it as a component prop
-    return <Avatar size={size} {...args} />;
+    return <Avatar {...args} />;
 };
 
 export const Default = Template.bind({});
@@ -51,5 +54,5 @@ Default.args = {
 
 export const ImageAvatar = Template.bind({});
 ImageAvatar.args = {
-    res: 'Pradip Bhusnar'
+    res:'pradip bhusnar'
 };
