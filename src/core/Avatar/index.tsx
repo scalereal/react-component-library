@@ -4,7 +4,7 @@ import { Props } from './types';
 
 export type Ref = HTMLDivElement;
 
-export const Avatar = React.forwardRef<Ref, Props>( (props, ref) => {
+const Avatar = React.forwardRef<Ref, Props>( (props, ref) => {
     const {size='S',res='Pradip Bhusnar'} = props;
     const isValidURL = (res:string) => {
         const reso = res.match(/(http(s)?:\/\/.)?(www\.)?[-a-zA-Z0-9@:%._\\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\\+.~#?&//=]*)/g);
@@ -27,3 +27,4 @@ Avatar.defaultProps = {
     hoverEffect: false
 };
 
+export default Avatar
