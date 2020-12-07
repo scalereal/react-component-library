@@ -17,7 +17,7 @@ const Avatar = React.forwardRef<Ref, Props>( (props, ref) => {
     }
     
 
-  return <StyledAvatar ref={ref} size='S' {...props}>
+  return <StyledAvatar ref={ref} size={size} {...props}>
         {isValidURL(res)?<img src={res} />:<span>{chars(res)}</span>}
     </StyledAvatar>;
 });
