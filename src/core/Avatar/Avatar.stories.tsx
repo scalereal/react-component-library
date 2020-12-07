@@ -1,6 +1,6 @@
 import { Meta, Story } from '@storybook/react/types-6-0';
 import React from 'react';
-import { Avatar } from './Avatar';
+import Avatar from '.';
 import { Props } from './types';
 
 const SizeMap: Props['size'][] = ['ES', 'S', 'M', 'L'];

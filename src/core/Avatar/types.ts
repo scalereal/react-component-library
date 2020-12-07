@@ -11,4 +11,5 @@ export interface Props{
     hoverShadowColor?:string;
     hoverTextShadowColor?:string;
     res?: string;
+    disabled?:boolean;
 }

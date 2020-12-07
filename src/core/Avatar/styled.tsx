@@ -47,7 +47,7 @@ const mixin = (size:any) => {
  };
 
 export const StyledAvatar = styled.div<Props>`
-    ${pr => pr.disabled===true?`pointer-events: none;opacity: 0.4;`:''}
+    ${pr => pr.disabled === true?'pointer-events: none;opacity: 0.4;':''}
     ${pr=>  mixin(pr.size)}
     border-radius: 50%;
     text-align:center;

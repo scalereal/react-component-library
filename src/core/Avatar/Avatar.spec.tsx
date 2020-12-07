@@ -1,6 +1,6 @@
 import { render } from '@testing-library/react';
 import * as React from 'react';
-import { Avatar } from './Avatar';
+import Avatar from '.';
 
 describe('Avatar component', () => {
     it('should render with default theme', () => {
