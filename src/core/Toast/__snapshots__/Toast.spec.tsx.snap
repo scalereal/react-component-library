@@ -3,22 +3,22 @@
 exports[`Toast should render properly with danger variant 1`] = `
 <div>
   <div
-    class="sc-bdfBwQ kwBqEK"
+    class="sc-bdfBwQ WLqQm"
   >
     <div
-      class="sc-gsTCUz kTaMy"
+      class="sc-gsTCUz kdZmDy"
     >
       <div
-        class="sc-dlfnbm hCIaCT"
+        class="sc-dlfnbm kJHYvJ"
       >
         Title
       </div>
     </div>
     <div
-      class="sc-hKgILt hPNfeQ"
+      class="sc-hKgILt UimoD"
     >
       <div
-        class="sc-eCssSg kmlyBG"
+        class="sc-eCssSg kMlGrf"
       >
         Message
       </div>
@@ -38,22 +38,22 @@ exports[`Toast should render properly with danger variant 1`] = `
 exports[`Toast should render properly with info variant 1`] = `
 <div>
   <div
-    class="sc-bdfBwQ kwBqEK"
+    class="sc-bdfBwQ WLqQm"
   >
     <div
-      class="sc-gsTCUz kTaMy"
+      class="sc-gsTCUz kdZmDy"
     >
       <div
-        class="sc-dlfnbm hCIaCT"
+        class="sc-dlfnbm kJHYvJ"
       >
         Title
       </div>
     </div>
     <div
-      class="sc-hKgILt hPNfeQ"
+      class="sc-hKgILt UimoD"
     >
       <div
-        class="sc-eCssSg kmlyBG"
+        class="sc-eCssSg kMlGrf"
       >
         Message
       </div>
@@ -73,22 +73,22 @@ exports[`Toast should render properly with info variant 1`] = `
 exports[`Toast should render properly with success variant 1`] = `
 <div>
   <div
-    class="sc-bdfBwQ kwBqEK"
+    class="sc-bdfBwQ WLqQm"
   >
     <div
-      class="sc-gsTCUz kTaMy"
+      class="sc-gsTCUz kdZmDy"
     >
       <div
-        class="sc-dlfnbm hCIaCT"
+        class="sc-dlfnbm kJHYvJ"
       >
         Title
       </div>
     </div>
     <div
-      class="sc-hKgILt hPNfeQ"
+      class="sc-hKgILt UimoD"
     >
       <div
-        class="sc-eCssSg kmlyBG"
+        class="sc-eCssSg kMlGrf"
       >
         Message
       </div>
@@ -108,22 +108,22 @@ exports[`Toast should render properly with success variant 1`] = `
 exports[`Toast should render properly with warning variant 1`] = `
 <div>
   <div
-    class="sc-bdfBwQ kwBqEK"
+    class="sc-bdfBwQ WLqQm"
   >
     <div
-      class="sc-gsTCUz kTaMy"
+      class="sc-gsTCUz kdZmDy"
     >
       <div
-        class="sc-dlfnbm hCIaCT"
+        class="sc-dlfnbm kJHYvJ"
       >
         Title
       </div>
     </div>
     <div
-      class="sc-hKgILt hPNfeQ"
+      class="sc-hKgILt UimoD"
     >
       <div
-        class="sc-eCssSg kmlyBG"
+        class="sc-eCssSg kMlGrf"
       >
         Message
       </div>
@@ -143,22 +143,22 @@ exports[`Toast should render properly with warning variant 1`] = `
 exports[`Toast should render title and message text 1`] = `
 <div>
   <div
-    class="sc-bdfBwQ kwBqEK"
+    class="sc-bdfBwQ WLqQm"
   >
     <div
-      class="sc-gsTCUz kTaMy"
+      class="sc-gsTCUz kdZmDy"
     >
       <div
-        class="sc-dlfnbm hCIaCT"
+        class="sc-dlfnbm kJHYvJ"
       >
         Title
       </div>
     </div>
     <div
-      class="sc-hKgILt hPNfeQ"
+      class="sc-hKgILt UimoD"
     >
       <div
-        class="sc-eCssSg kmlyBG"
+        class="sc-eCssSg kMlGrf"
       >
         Message
       </div>

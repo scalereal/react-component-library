@@ -1,10 +1,10 @@
 
 import styled from "styled-components"
-import { ToastProps } from './types';
+import { ModalProps } from './types';
 import { defaultTheme } from "../../theme/theme"
 
-export const Toast = styled('div')<ToastProps>`
-    position:relative;
+export const Modal = styled('div')<ModalProps>`
+    position: relative;
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -16,8 +16,7 @@ export const Toast = styled('div')<ToastProps>`
     outline: 0;
     box-shadow: 0 0.5rem 2rem ${defaultTheme.shadowColor};
 `;
-
-export const ToastHeader = styled('div')`
+export const ModalHeader = styled('div')<ModalProps>`
     display: flex;
     flex-shrink: 0;
     align-items: center;
@@ -27,29 +26,36 @@ export const ToastHeader = styled('div')`
     border-top-left-radius: calc(.3rem - 1px);
     border-top-right-radius: calc(.3rem - 1px);
 `;
-export const ToastTitle = styled('div')`
+
+export const ModalTitle = styled('div')`
     font-size:1.2em;
     color: ${defaultTheme.typographyColor};
     margin-bottom: 0;
     line-height: 1.5;
 `;
-export const ToastBody = styled('div')`
+export const ModalBody = styled('div')<ModalProps>`
     position: relative;
     flex: 1 1 auto;
     padding: 1rem;
-    background-color:#fff;
 `;
-export const ToastMessage = styled('div')`
+export const ModalDescription = styled('div')`
     font-size:1em;
     color: ${defaultTheme.typographyColor};
     margin-top: 0;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
 `;
-export const ToastFooter = styled('div')<ToastProps>`
-    height:8px;
-    background-color:${props => defaultTheme.statusColors[props.variant] };
+export const ModalFooter = styled('div')`
+    display: flex;
+    flex-wrap: wrap;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: flex-end;
+    padding: .75rem;
+    border-top: 1px solid ${defaultTheme.shadowColor};
+    border-bottom-right-radius: calc(.3rem - 1px);
+    border-bottom-left-radius: calc(.3rem - 1px);
 `;
-export const ToastCloseIcon = styled('div')`
+export const ModalCloseIcon = styled('div')`
     position:absolute;
     top:15px;
     right:10px;

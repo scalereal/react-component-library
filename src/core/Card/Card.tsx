@@ -2,19 +2,20 @@ import React,{ FC } from 'react'
 import * as Styled from "./Card.styled"
 import { CardProps } from './types';
 
-const Toast:FC<CardProps> = ({ src, title, message } : CardProps) => {
+const Toast:FC<CardProps> = ({ src, title, description, direction, align} : CardProps) => {
+
     return (
-        <Styled.Card>
-            <Styled.CardHeader>
+        <Styled.Card title={title} description={description} direction={direction} align={align}>
+            <Styled.CardHeader title={title} description={description} direction={direction} align={align}>
                 <Styled.CardImage src={src}/>
             </Styled.CardHeader>
-            <Styled.CardBody>
+            <Styled.CardBody title={title} description={description} direction={direction} align={align}>
               <Styled.CardTitle>
                      {title}
               </Styled.CardTitle>
-              <Styled.CardMessage>
-                  {message}
-              </Styled.CardMessage>
+              <Styled.CardDescription>
+                  {description}
+              </Styled.CardDescription>
             </Styled.CardBody>
         </Styled.Card>
     )
