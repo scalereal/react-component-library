@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Toggle should render correctly with all the props given 1`] = `
+<div>
+  <div
+    class="sc-bdfBwQ gpdIze"
+  >
+    <input
+      class="sc-dlfnbm pdsDj"
+      type="checkbox"
+    />
+    <div
+      class="sc-gsTCUz ahIbM"
+    />
+  </div>
+</div>
+`;

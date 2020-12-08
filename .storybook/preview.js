@@ -1,8 +1,6 @@
-import { withKnobs } from '@storybook/addon-knobs';
 import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport';
 import { addDecorator, addParameters } from '@storybook/react';
 
-addDecorator(withKnobs);
 addParameters({
     viewport: {
         viewports: {

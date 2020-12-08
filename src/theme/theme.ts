@@ -16,6 +16,9 @@ export const defaultTheme : DefaultTheme = {
 
   shadowColor:grey[500],
   iconColor:grey[800],
+  outlineColor:grey[500],
+  whiteColor:'white',
+  blackColor:'black',
 
   typographyColor:grey[800],
 

@@ -1,4 +1,3 @@
-
 import styled from "styled-components"
 import { ToastProps } from './types';
 import { defaultTheme } from "../../theme/theme"

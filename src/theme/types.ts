@@ -13,6 +13,9 @@ export interface DefaultTheme {
 
     shadowColor: string;
     iconColor:string;
+    outlineColor:string;
+    blackColor:string;
+    whiteColor:string;
 
     typographyColor:string;
 
@@ -46,3 +49,12 @@ type statusColors = {
     success: string;
     info:string;
 };
+
+export type ToggleSizes = {
+    [key: string]: string;
+    XS: string;
+    S: string;
+    M: string;
+    L: string;
+    XL: string;
+}
