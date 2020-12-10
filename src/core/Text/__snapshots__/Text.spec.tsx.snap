@@ -3,7 +3,7 @@
 exports[`Text should render span element by default 1`] = `
 <div>
   <span
-    class="sc-bdfBwQ encrWX"
+    class="sc-bdfBwQ dMYsmu"
   />
 </div>
 `;

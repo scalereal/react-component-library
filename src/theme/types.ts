@@ -13,9 +13,19 @@ export interface DefaultTheme {
 
     shadowColor: string;
     iconColor:string;
-    outlineColor:string;
+    borderColor:string;
     blackColor:string;
     whiteColor:string;
+
+    inputColor:string;
+    inputBackgroundColor:string;
+    inputDisabledColor:string;
+    inputPlaceHolderColor:string;
+    inputPreffixAndSuffixBackgroundColor:string;
+
+    linkColor:string;
+    linkActiveColor:string;
+    linkHoverColor:string;
 
     typographyColor:string;
 
@@ -57,4 +67,18 @@ export type ToggleSizes = {
     M: string;
     L: string;
     XL: string;
+}
+
+export interface SpacingTheme {
+    S1: string;
+    S2: string;
+    S3: string;
+    S4: string;
+    M1: string;
+    M2: string;
+    M3: string;
+    L1: string;
+    L2: string;
+    L3: string;
+    L4: string;
 }

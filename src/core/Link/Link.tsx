@@ -1,16 +1,22 @@
-import React, { FC, PropsWithChildren } from 'react';
+import React, { FC } from 'react';
 import Text from '../Text/Text';
 import * as Styled from './Link.styled';
-import { LinkProps } from './types';
+import { LinkProps,WithStyle } from './types';
 
-export const Link: FC<LinkProps> = ({ href, children, ...props }:PropsWithChildren<LinkProps>) =>{
-    const isValidStringOrNumber = (e: any) => typeof e === 'string' || typeof e === 'number';
+const Link: FC<LinkProps> & WithStyle = React.memo(
+    React.forwardRef(({ href, ...props }, ref) => {
+        const isValidStringOrNumber = (e: any) => typeof e === 'string' || typeof e === 'number';
         return (
-            <Styled.LinkStyled href={href} {...props}>
-                {React.Children.map(children, c => {
+            <Styled.LinkStyled href={href} {...props} ref={ref}>
+                {React.Children.map(props.children, c => {
                     return isValidStringOrNumber(c) ? <Text>{c}</Text> : c;
                 })}
             </Styled.LinkStyled>
         );
-}
-export default Link
+    })
+);
+
+Link.displayName = 'Link';
+Link.Style = Styled.LinkStyled;
+
+export default Link;

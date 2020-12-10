@@ -1,12 +1,13 @@
 import styled from "styled-components"
 import { toggleSizes } from "../../theme/sizes"
-import { ToggleProps } from './types';
+import { ToggleProps, ToggleWrapperProps } from './types';
 import { defaultTheme } from "../../theme/theme"
 
 const getHeight = ({ size }: ToggleProps) => (size ? toggleSizes[size] : toggleSizes['M']);
 const getWidth = (props: ToggleProps) => `calc(${getHeight(props)} * 2)`;
 
-export const Wrapper = styled('div')<ToggleProps>`
+
+export const ToggleWrapper = styled('div')<ToggleWrapperProps>`
     position: relative;
     width: ${getWidth};
     height: ${getHeight};
@@ -22,7 +23,7 @@ export const Wrapper = styled('div')<ToggleProps>`
         border-radius: 15px;
     }
 `;
-export const Circle = styled('div')<ToggleProps>`
+export const Circle = styled('div')<ToggleWrapperProps>`
     z-index: 1;
     position: absolute;
     background-color: ${defaultTheme.shadowColor};

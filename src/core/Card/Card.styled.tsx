@@ -37,7 +37,7 @@ export const CardBody = styled('div')<CardProps>`
     background-color:#fff;
     height:100%;
     width:${props => props.direction==="column" ? 'auto':'8rem'};
-    text-align:${props => props.align};
+    text-align:${props => props.alignText};
     flex: 1 1 auto;
     padding: 1rem 1rem;
 `;

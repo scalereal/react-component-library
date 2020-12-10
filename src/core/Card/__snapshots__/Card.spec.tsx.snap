@@ -17,7 +17,7 @@ exports[`Card should render title and description text 1`] = `
       />
     </div>
     <div
-      class="sc-eCssSg gDuHkC"
+      class="sc-eCssSg kPseUx"
       direction="column"
       title="Title"
     >
