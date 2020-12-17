@@ -3,7 +3,7 @@
 exports[`Label should render correctly with all the given props 1`] = `
 <div>
   <label
-    class="sc-bdfBwQ ijJJPe"
+    class="sc-bdfBwQ dyHkAH"
     required=""
   >
     Demo Label
@@ -14,7 +14,7 @@ exports[`Label should render correctly with all the given props 1`] = `
 exports[`Label should render correctly with default props 1`] = `
 <div>
   <label
-    class="sc-bdfBwQ kasNar"
+    class="sc-bdfBwQ cXjEE"
   >
     Label
   </label>

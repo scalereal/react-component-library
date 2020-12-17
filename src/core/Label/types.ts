@@ -1,6 +1,6 @@
 import React, { RefObject  } from 'react';
 import { AnyStyledComponent } from 'styled-components';
-
+import { LabelSizes } from "../../theme/core/label/types"
 export interface WithStyle {
     Style?: AnyStyledComponent;
 }
@@ -15,6 +15,7 @@ export interface WithThemeProp {
     // eslint-disable-next-line no-undef
     as?: keyof JSX.IntrinsicElements | React.ComponentType<any>;
 }
+
 export interface LabelProps extends HTMLProps<HTMLLabelElement>, WithThemeProp   {
     /** Shows pointer while hovering on it*/
     showPointer?: boolean;
@@ -22,4 +23,8 @@ export interface LabelProps extends HTMLProps<HTMLLabelElement>, WithThemeProp  
     required?: boolean;
     /** Label Color */
     labelColor?: string;
+    /** Label Size */
+    labelSize: LabelSizes;
+    /** Label Hover Color*/
+    hoverColor?:string;
 }
