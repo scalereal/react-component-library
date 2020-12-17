@@ -1,6 +1,6 @@
 import React, { RefObject  } from 'react';
 import { AnyStyledComponent } from 'styled-components';
-
+import { ToggleSizes } from "../../theme/core/toggle/types"
 export interface WithStyle {
     Style?: AnyStyledComponent;
 }
@@ -20,11 +20,9 @@ export interface WithThemeProp {
 type DivProps = Omit<HTMLProps<HTMLInputElement>, 'size'>;
 type InputProps = Omit<HTMLProps<HTMLInputElement>, 'size' | 'type'>;
 
-
-export type ToggleSizes = 'XS' | 'S' | 'M' | 'L' | 'XL';
 export interface ToggleWrapperProps extends DivProps, WithThemeProp {
     /** Toggle size */
-    size?: ToggleSizes;
+    size: ToggleSizes;
 }
 export interface ToggleProps extends InputProps, WithThemeProp {
     /** Toggle size */

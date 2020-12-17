@@ -3,7 +3,7 @@
 exports[`Input should render correctly when fullWidth & required props are falsy 1`] = `
 <div>
   <div
-    class="sc-bdfBwQ eDkGLL"
+    class="sc-bdfBwQ dOTqjN"
   >
     <input
       class="sc-gsTCUz guRvgL"
@@ -18,7 +18,7 @@ exports[`Input should render correctly when fullWidth & required props are falsy
 exports[`Input should render correctly when it is disabled 1`] = `
 <div>
   <div
-    class="sc-bdfBwQ eDkGLL"
+    class="sc-bdfBwQ dOTqjN"
   >
     <input
       class="sc-gsTCUz qdJqK"
@@ -34,7 +34,7 @@ exports[`Input should render correctly when it is disabled 1`] = `
 exports[`Input should render correctly with all the props given 1`] = `
 <div>
   <div
-    class="sc-bdfBwQ iaEopH"
+    class="sc-bdfBwQ faCpUx"
   >
     <span
       class="sc-dlfnbm csXxpq"

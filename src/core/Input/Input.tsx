@@ -4,13 +4,35 @@ import { InputProps, WithStyle } from './types';
 
 export const Input: FC<InputProps> & WithStyle = React.memo(
     React.forwardRef((props, ref) => {
-        const { fullWidth, required, prefix, suffix, ...restProps } = props,
+        const {
+                fullWidth,
+                required,
+                prefix,
+                suffix,
+                borderColor,
+                textColor,
+                disabledColor,
+                backgroundColor,
+                placeHolderColor,
+                preffixBackgroundColor,
+                suffixBackgroundColor,
+                ...restProps
+            } = props,
             id = props.id || 'input';
         return (
-            <Styled.Wrapper fullWidth={fullWidth}>
-                {prefix && <Styled.Prefix>{prefix}</Styled.Prefix>}
-                <Styled.Input id={id} ref={ref} required={required} fullWidth={fullWidth} {...restProps} />
-                {suffix && <Styled.Suffix>{suffix}</Styled.Suffix>}
+            <Styled.Wrapper fullWidth={fullWidth} borderColor={borderColor} textColor={textColor}>
+                {prefix && <Styled.Prefix preffixBackgroundColor={preffixBackgroundColor}>{prefix}</Styled.Prefix>}
+                <Styled.Input
+                    id={id}
+                    ref={ref}
+                    required={required}
+                    fullWidth={fullWidth}
+                    disabledColor={disabledColor}
+                    backgroundColor={backgroundColor}
+                    placeHolderColor={placeHolderColor}
+                    {...restProps}
+                />
+                {suffix && <Styled.Suffix suffixBackgroundColor={suffixBackgroundColor}>{suffix}</Styled.Suffix>}
             </Styled.Wrapper>
         );
     })

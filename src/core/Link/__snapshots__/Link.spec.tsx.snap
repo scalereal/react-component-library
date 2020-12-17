@@ -7,7 +7,7 @@ exports[`Link should render with component as child 1`] = `
     href="#"
   >
     <span
-      class="sc-bdfBwQ klWFfv"
+      class="sc-bdfBwQ ewJtXI"
     >
       Hi i am Name
     </span>
