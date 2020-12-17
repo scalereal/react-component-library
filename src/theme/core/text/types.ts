@@ -8,5 +8,7 @@ export interface TextTheme {
     defaults: {
         textColor: string;
         lineHeight:string;
+        hoverColor:string;
+        activeColor:string;
     };
 }

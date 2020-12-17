@@ -5,13 +5,27 @@ import Link  from './Link';
 export default {
     title: 'Components/Core/Link',
     component: Link,
-} as Meta
+    argTypes: {
+        linkColor: {
+            control: 'color'
+        },
+        hoverColor: {
+            control: 'color'
+        },
+        activeColor: {
+            control: 'color'
+        }
+    }
+} as Meta;
 
-const Template:Story = ({...args}) => {
+const Template:Story = ({linkSize,linkColor,hoverColor,activeColor,...args}) => {
     return (
-    <Link href="#" {...args}>View Link</Link>
+    <Link href="#" linkSize={linkSize} linkColor={linkColor} hoverColor={hoverColor} activeColor={activeColor} {...args}>View Link</Link>
     )
 }
 
 export const Default = Template.bind({});
+Default.args = {
+    linkSize:'S'
+}
 

@@ -1,6 +1,6 @@
 import React, { RefObject  } from 'react';
 import { AnyStyledComponent } from 'styled-components';
-
+import { LinkSizes } from "../../theme/core/link/types"
 export interface WithStyle {
     Style?: AnyStyledComponent;
 }
@@ -18,4 +18,12 @@ export interface WithThemeProp {
 export interface LinkProps extends HTMLProps<HTMLAnchorElement> {
     /** Link url */
     href: string;
+    /** Link Size */
+    linkSize: LinkSizes,
+    /** Link Color */
+    linkColor?:string;
+    /** Link Hover Color */
+    hoverColor?:string
+    /** Link Active Color*/
+    activeColor?:string
 }

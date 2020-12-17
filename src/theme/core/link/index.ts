@@ -1,7 +1,7 @@
 import { blue } from '../../Colors';
-import { TextTheme } from './types';
+import { LinkTheme } from './types';
 
-const textTheme: TextTheme = {
+const link: LinkTheme = {
     sizes: {
         XS: {
             fontSize: '1rem',
@@ -20,11 +20,10 @@ const textTheme: TextTheme = {
         }
     },
     defaults: {
-        textColor: blue[500],
-        lineHeight: '1',
-        hoverColor:blue[700],
-        activeColor:blue[600]
+        linkColor: blue[500],
+        hoverColor: blue[700],
+        activeColor: blue[600],
     }
 };
 
-export default textTheme;
+export default link;

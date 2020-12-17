@@ -1,19 +1,24 @@
-import { defaultTheme } from '../../theme/theme';
 import styled from "styled-components"
+import linkTheme from "../../theme/core/link/index"
+import { LinkProps } from './types';
 
-export const LinkStyled = styled('a')`
-    color: ${defaultTheme.linkColor};
+export const LinkStyled = styled('a')<LinkProps>`
+    color: ${({ theme, linkColor }) => (linkColor ? linkColor : theme.defaults.linkColor)};
     background-color: transparent;
     text-decoration: none;
-
+    font-size: ${({ theme, linkSize }) => (theme.sizes[linkSize].fontSize)};
     &:active {
-        color: ${defaultTheme.linkActiveColor};
+        color: ${({ theme, activeColor }) => (activeColor ? activeColor : theme.defaults.activeColor)};
     }
 
     &:hover {
-        color: ${defaultTheme.linkHoverColor};
+        color: ${({ theme, hoverColor }) => (hoverColor ? hoverColor : theme.defaults.hoverColor)};
         text-decoration: underline;
         outline-width: 0;
         cursor: pointer;
     }
 `;
+
+LinkStyled.defaultProps = {
+    theme:linkTheme
+}

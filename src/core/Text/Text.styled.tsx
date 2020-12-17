@@ -22,6 +22,13 @@ export const Text = styled('span')<TextProps>`
     ${getTextStyle}
     ${props => props.uppercase && uppercase()};
     ${props => props.lineThrough && lineThrough()};
+    &:active {
+        color: ${({ theme, activeColor }) => (activeColor ? activeColor : theme.defaults.activeColor)};
+    }
+
+    &:hover {
+        color: ${({ theme, hoverColor }) => (hoverColor ? hoverColor : theme.defaults.hoverColor)};
+    }
 `;
 
 

@@ -9,7 +9,7 @@ describe('Text', () => {
     });
 
     it('should render with all the props', () => {
-        const { container } = render(<Text  textColor="pink" uppercase lineThrough textSize="S" lineHeight="1" />);
+        const { container } = render(<Text activeColor="red" hoverColor="blue" textColor="pink" uppercase lineThrough textSize="S" lineHeight="1" />);
         expect(container).toMatchSnapshot();
     });
 });
