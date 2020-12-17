@@ -5,14 +5,18 @@ import Text from '../Text/Text';
 
 const Toast:FC<ToastProps> & WithStyle = React.memo(
     React.forwardRef((props, ref) => {
-        const { variant, title, message,...restProps } = props;
+        const { variant, title, message, titleColor, messageColor, borderColor, ...restProps } = props;
         return (
             <Styled.Toast ref={ref} variant={variant} {...restProps}>
-                <Styled.ToastHeader>
-                    {title && <Text>{title}</Text>}
+                <Styled.ToastHeader variant={variant} borderColor={borderColor}>
+                    <Text textSize="S" lineHeight="1.5" textColor={titleColor}>
+                        {title}
+                    </Text>
                 </Styled.ToastHeader>
                 <Styled.ToastBody>
-                    {message && <Text>{message}</Text>}
+                    <Text textSize="XS" textColor={messageColor}>
+                        {message}
+                    </Text>
                 </Styled.ToastBody>
                 <Styled.ToastFooter variant={variant} />
                 <Styled.ToastCloseIcon>X</Styled.ToastCloseIcon>

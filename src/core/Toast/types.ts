@@ -24,7 +24,15 @@ export type ToastProps = Omit<HTMLProps<HTMLDivElement>, 'id' | 'action'> & {
     /** Toast Variant */
     variant: string;
     /** Toast Title */
-    title?: string;
+    title: string;
     /** Toast message */
-    message?: string;
+    message: string;
+    /** Toast Title Color */
+    titleColor?: string;
+    /** Toast message Color*/
+    messageColor?: string;
+    /** Toast Shadow Color */
+    shadowColor?:string;
+    /**Toast Border Color */
+    borderColor?:string;
 };

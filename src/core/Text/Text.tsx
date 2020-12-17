@@ -15,7 +15,6 @@ const Text: FC<TextProps> & WithStyle = React.memo(
 Text.defaultProps = {
     lineThrough: false,
     uppercase: false,
-    textColor: 'inherit',
 };
 Text.displayName = 'Text';
 Text.Style = Styled.Text;

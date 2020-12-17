@@ -3,7 +3,7 @@
 exports[`Text should render span element by default 1`] = `
 <div>
   <span
-    class="sc-bdfBwQ dMYsmu"
+    class="sc-bdfBwQ ewJtXI"
   />
 </div>
 `;
@@ -11,7 +11,7 @@ exports[`Text should render span element by default 1`] = `
 exports[`Text should render with all the props 1`] = `
 <div>
   <span
-    class="sc-bdfBwQ jPKUeT"
+    class="sc-bdfBwQ hBfFGm"
   />
 </div>
 `;

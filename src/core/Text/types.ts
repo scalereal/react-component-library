@@ -1,6 +1,6 @@
 import React, { RefObject  } from 'react';
 import { AnyStyledComponent } from 'styled-components';
-
+import { TextSizes } from "../../theme/core/text/types"
 export interface WithStyle {
     Style?: AnyStyledComponent;
 }
@@ -16,10 +16,14 @@ export interface WithThemeProp {
     as?: keyof JSX.IntrinsicElements | React.ComponentType<any>;
 }
 export interface TextProps extends HTMLProps<HTMLElement>, WithThemeProp {
+    /**Text Size */
+    textSize: TextSizes
     /** Text color */
     textColor?: string;
     /** Text Uppercase*/
     uppercase?: boolean;
     /** Line through text */
     lineThrough?: boolean;
+    /**Text Line Height */
+    lineHeight?:string;
 }
