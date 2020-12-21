@@ -1,5 +1,6 @@
 import React, { RefObject } from 'react';
 import { AnyStyledComponent } from 'styled-components';
+import { TextSizes } from "../../theme/core/text/types"
 
 export interface WithStyle {
     Style?: AnyStyledComponent;
@@ -15,12 +16,21 @@ export interface WithThemeProp {
     // eslint-disable-next-line no-undef
     as?: keyof JSX.IntrinsicElements | React.ComponentType<any>;
 }
-
-export type ModalDirection = 'column' | 'row';
-export type ModalTextAlignment = 'left' | 'center' | 'right';
 export interface ModalProps extends HTMLProps<HTMLDivElement>, WithThemeProp {
     /** Modal Title */
     title: string;
     /** Modal Description */
     description: string;
+    /** Modal Border Color */
+    borderColor?:string;
+    /** Modal Shadow Color */
+    shadowColor?:string;
+    /** Modal Title Size */
+    titleSize: TextSizes;
+    /** Modal Description Size */
+    descriptionSize: TextSizes;
+    /** Modal Title Color */
+    titleColor?:string;
+    /** Modal Description Color */
+    descriptionColor?:string;
 };

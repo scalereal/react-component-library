@@ -18,5 +18,8 @@ const Link: FC<LinkProps> & WithStyle = React.memo(
 
 Link.displayName = 'Link';
 Link.Style = Styled.LinkStyled;
+Link.defaultProps = {
+    linkSize: 'S'
+}
 
 export default Link;

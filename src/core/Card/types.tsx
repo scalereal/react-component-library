@@ -1,6 +1,6 @@
 import React, { RefObject } from 'react';
 import { AnyStyledComponent } from 'styled-components';
-
+import { TextSizes } from "../../theme/core/text/types"
 export interface WithStyle {
     Style?: AnyStyledComponent;
 }
@@ -16,17 +16,30 @@ export interface WithThemeProp {
     as?: keyof JSX.IntrinsicElements | React.ComponentType<any>;
 }
 
-export type CardDirection = 'column' | 'row';
+export type CardDirection = 'horizontal' | 'vertical';
 export type CardTextAlignment = 'left' | 'center' | 'right';
+
 export interface CardProps extends HTMLProps<HTMLDivElement>, WithThemeProp {
     /** Card Image */
-    src?: string;
+    imgSrc?: string;
     /** Card Title */
     title: string;
     /** Card Description */
     description: string;
     /** Card Direction */
-    direction: CardDirection;
+    variant: CardDirection;
     /** Card Text Alignment */
-    alignText: CardTextAlignment;
+    textAlignment: CardTextAlignment;
+    /** Card Border Color */
+    borderColor?:string;
+    /** Card Shadow Color */
+    shadowColor?:string;
+    /** Card Title Size */
+    titleSize: TextSizes;
+    /** Card Description Size */
+    descriptionSize:TextSizes;
+    /** Card Title Color */
+    titleColor?:string;
+    /** Card Description Color */
+    descriptionColor?:string;
 };

@@ -1,7 +1,7 @@
 import styled,{ css } from 'styled-components';
 import { ListProps } from './types';
-import { SpacingTheme } from "../../theme/types"
-import { spacing } from "../../theme/theme"
+import { spacingTheme } from "../../theme/core/list/index"
+import { SpacingTheme } from "../../theme/core/list/types"
 
 const horizontal = (spacings: SpacingTheme) => css`
     li {
@@ -27,13 +27,16 @@ const vertical = (spacings: SpacingTheme) => css`
     }
 `;
 
-export const ListStyled = styled('ul')<ListProps>`
+export const ListStyled = styled('ul').attrs(({ theme: spacings  }) => ({ spacings }))<ListProps>`
     padding: 0;
     margin: 0;
     display: flex;
     list-style: none;
     flex-direction: ${({ variant }) => (variant === 'horizontal' ? 'row' : 'column')};
-    ${({ variant }) => variant === 'horizontal' && horizontal(spacing)};
-    ${({ variant }) => variant === 'vertical' && vertical(spacing)};
+    ${({ spacings, variant }) => variant === 'horizontal' && horizontal(spacings)};
+    ${({ spacings, variant }) => variant === 'vertical' && vertical(spacings)};
 `;
 
+ListStyled.defaultProps = {
+    theme:spacingTheme
+}

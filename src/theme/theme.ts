@@ -1,5 +1,5 @@
 import { blue, orange, green, red, grey } from "./Colors";
-import { DefaultTheme,SpacingTheme } from "./types"
+import { DefaultTheme } from "./types"
 
 export const defaultTheme : DefaultTheme = {
     primaryColor: blue[500],
@@ -59,16 +59,4 @@ export const defaultTheme : DefaultTheme = {
     infoFocusColor:blue[600],
     infoDisabledColor:blue[300],
 };
-export const spacing: SpacingTheme = {
-    S1: '0.4rem',
-    S2: '0.8rem',
-    S3: '1.2rem',
-    S4: '1.6rem',
-    M1: '2.4rem',
-    M2: '3.2rem',
-    M3: '4.0rem',
-    L1: '4.8rem',
-    L2: '5.6rem',
-    L3: '6.4rem',
-    L4: '7.2rem'
-};
+
