@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import linkTheme from "../../theme/core/link/index"
+import { linkTheme } from "../../theme/core/link/index"
 import { LinkProps } from './types';
 
 export const LinkStyled = styled('a')<LinkProps>`
@@ -7,6 +7,8 @@ export const LinkStyled = styled('a')<LinkProps>`
     background-color: transparent;
     text-decoration: none;
     font-size: ${({ theme, linkSize }) => (theme.sizes[linkSize].fontSize)};
+    font-family: ${({ theme }) => (theme.fontFamily)};
+
     &:active {
         color: ${({ theme, activeColor }) => (activeColor ? activeColor : theme.defaults.activeColor)};
     }

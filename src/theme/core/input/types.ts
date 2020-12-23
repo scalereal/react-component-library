@@ -6,4 +6,5 @@ export interface InputTheme {
     inputPlaceHolderColor:string;
     inputPreffixBackgroundColor:string;
     inputSuffixBackgroundColor:string;
+    fontFamily:string;
 }

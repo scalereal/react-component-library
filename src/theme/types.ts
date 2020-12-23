@@ -1,3 +1,5 @@
+import * as CoreThemes from './core/types';
+import  { LoaderTheme } from "./loader/types"
 export interface DefaultTheme {
     primaryColor: string;
     primaryHoverColor: string;
@@ -60,11 +62,18 @@ type statusColors = {
     info:string;
 };
 
-export type ToggleSizes = {
-    [key: string]: string;
-    XS: string;
-    S: string;
-    M: string;
-    L: string;
-    XL: string;
+export interface CoreTheme {
+    cardTheme?: CoreThemes.CardTheme;
+    inputTheme?: CoreThemes.InputTheme;
+    labelTheme?: CoreThemes.LabelTheme;
+    linkTheme?: CoreThemes.LinkTheme;
+    modalTheme?: CoreThemes.ModalTheme;
+    toggleTheme?: CoreThemes.ToggleTheme;
+    toastTheme?: CoreThemes.ToastTheme;
+    fontTheme?: CoreThemes.FontTheme;
 }
+export interface Theme extends CoreTheme {
+    loaderTheme?: LoaderTheme;
+}
+
+export * from './core/types';

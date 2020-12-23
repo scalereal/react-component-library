@@ -5,6 +5,7 @@ export interface LinkTheme {
             fontSize:string;
         };
     },
+    fontFamily: string;
     defaults:{
         linkColor: string;
         hoverColor: string;

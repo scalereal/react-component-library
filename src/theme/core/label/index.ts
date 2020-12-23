@@ -1,6 +1,6 @@
 import { LabelTheme } from './types';
-
-const labelTheme: LabelTheme = {
+import { grey } from '../../core/colors'
+export const labelTheme: LabelTheme = {
     sizes: {
         XS: {
             fontSize: '1rem',
@@ -18,10 +18,27 @@ const labelTheme: LabelTheme = {
             fontSize: '1.8rem',
         }
     },
+    weights: {
+        light: {
+            weight: '300'
+        },
+        regular: {
+            weight:'400'
+        },
+        medium: {
+            weight:'600'
+        },
+        strong: {
+            weight:'700'
+        },
+        extraStrong: {
+            weight:'800'
+        }
+    },
+    fontFamily: '"Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif',
     defaults: {
-        hoverColor:'#000000',
-        labelColor: '#435465'
+        labelColor: grey[800],
+        lineHeight: '1',
+        labelWeight:'400',
     }
 };
-
-export default labelTheme;

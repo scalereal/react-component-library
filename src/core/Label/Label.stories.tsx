@@ -10,14 +10,11 @@ export default {
         labelColor: {
             control: 'color'
         },
-        hoverColor: {
-            control: 'color'
-        }
     }
 } as Meta;
 
-const Template:Story = ({ labelColor, required, showPointer, hoverColor, labelSize, ...args}) => {
-    return <Label labelColor={labelColor} required={required} showPointer={showPointer} hoverColor={hoverColor} labelSize={labelSize} {...args}>
+const Template:Story = ({ labelColor, required, showPointer, labelSize,labelWeight,lineHeight,upperCase, ...args}) => {
+    return <Label labelColor={labelColor} required={required} showPointer={showPointer} labelSize={labelSize} labelWeight={labelWeight} lineHeight={lineHeight} uppercase={upperCase} {...args}>
     Lorem Ipsum is simply dummy text
     </Label>
 }

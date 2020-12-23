@@ -1,7 +1,8 @@
 import React, { FC } from 'react';
 import Text from '../Text/Text';
 import * as Styled from './Link.styled';
-import { LinkProps,WithStyle } from './types';
+import { LinkProps } from './types';
+import { WithStyle } from '../../utils'
 
 const Link: FC<LinkProps> & WithStyle = React.memo(
     React.forwardRef(({ href, linkSize, linkColor,hoverColor,activeColor, ...props }, ref) => {
