@@ -1,3 +1,5 @@
+import * as CoreThemes from './core/types';
+import  { LoaderTheme } from "./loader/types"
 export interface DefaultTheme {
     primaryColor: string;
     primaryHoverColor: string;
@@ -13,6 +15,19 @@ export interface DefaultTheme {
 
     shadowColor: string;
     iconColor:string;
+    borderColor:string;
+    blackColor:string;
+    whiteColor:string;
+
+    inputColor:string;
+    inputBackgroundColor:string;
+    inputDisabledColor:string;
+    inputPlaceHolderColor:string;
+    inputPreffixAndSuffixBackgroundColor:string;
+
+    linkColor:string;
+    linkActiveColor:string;
+    linkHoverColor:string;
 
     typographyColor:string;
 
@@ -46,3 +61,19 @@ type statusColors = {
     success: string;
     info:string;
 };
+
+export interface CoreTheme {
+    cardTheme?: CoreThemes.CardTheme;
+    inputTheme?: CoreThemes.InputTheme;
+    labelTheme?: CoreThemes.LabelTheme;
+    linkTheme?: CoreThemes.LinkTheme;
+    modalTheme?: CoreThemes.ModalTheme;
+    toggleTheme?: CoreThemes.ToggleTheme;
+    toastTheme?: CoreThemes.ToastTheme;
+    fontTheme?: CoreThemes.FontTheme;
+}
+export interface Theme extends CoreTheme {
+    loaderTheme?: LoaderTheme;
+}
+
+export * from './core/types';

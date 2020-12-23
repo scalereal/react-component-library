@@ -1,46 +1,53 @@
-
 import styled from "styled-components"
 import { ToastProps } from './types';
-import { defaultTheme } from "../../theme/theme"
+import { toastTheme } from "../../theme/core/toast/index"
 
 export const Toast = styled('div')<ToastProps>`
+    position: relative;
     display: flex;
-    flex-direction:column;
-    border: 1px solid ${defaultTheme.shadowColor};
-    border-radius: 3px;
-    max-width:20rem;
-    box-shadow: 0 0.5rem 2rem ${defaultTheme.shadowColor};
-    width:16rem;
-    height:100%;
-    position:relative;
+    flex-direction: column;
+    width: 100%;
+    pointer-events: auto;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid ${({ theme, borderColor }) => (borderColor ? borderColor : theme.borderColor)};
+    border-radius: 0.3rem;
+    outline: 0;
+    box-shadow: 0 0.5rem 2rem ${({ theme, shadowColor }) => (shadowColor ? shadowColor : theme.borderColor)};
 `;
-
-export const ToastHeader = styled('div')`
-    padding:0.9rem 0.8rem;
-    background-color:#fff;
-    height:100%;
-    border-bottom:1px solid ${defaultTheme.shadowColor};
-`;
-export const ToastTitle = styled('div')`
-    font-size:1.2em;
-    color: ${defaultTheme.typographyColor};
+export const ToastHeader = styled('div')<ToastProps>`
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1rem;
+    border-bottom: 1px solid ${({ theme, borderColor }) => (borderColor ? borderColor : theme.borderColor)};
+    border-top-left-radius: calc(0.3rem - 1px);
+    border-top-right-radius: calc(0.3rem - 1px);
 `;
 export const ToastBody = styled('div')`
-    padding:0.9rem 0.8rem;
+    position: relative;
+    flex: 1 1 auto;
+    padding: 1rem;
     background-color:#fff;
-    height:100%;
-`;
-export const ToastMessage = styled('div')`
-    font-size:1em;
-    color: ${defaultTheme.typographyColor};
 `;
 export const ToastFooter = styled('div')<ToastProps>`
     height:8px;
-    background-color:${props => defaultTheme.statusColors[props.variant] };
+    background-color:${({ theme, variant }) => (theme.statusColor[variant])};
 `;
 export const ToastCloseIcon = styled('div')`
     position:absolute;
     top:15px;
     right:10px;
-    color: ${defaultTheme.iconColor};
 `;
+
+Toast.displayName = "Toast"
+Toast.defaultProps = {
+    theme:toastTheme
+}
+ToastHeader.defaultProps = {
+    theme: toastTheme
+};
+ToastFooter.defaultProps = {
+    theme: toastTheme
+};

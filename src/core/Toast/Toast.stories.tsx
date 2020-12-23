@@ -8,18 +8,31 @@ const variants: ToastProps['variant'][] = ['danger', 'warning', 'success', 'info
 export default {
     title: 'Components/Core/Toast',
     component: Toast,
-    argTypes : {
-        variant:{
-        control: {
-            type: 'select',
-            options: Object.values(variants),
-          },
+    argTypes: {
+        variant: {
+            control: {
+                type: 'select',
+                options: Object.values(variants)
+            }
         },
-    },
-} as Meta
+        titleColor: {
+            control: 'color'
+        },
+        messageColor: {
+            control: 'color'
+        },
+        shadowColor: {
+            control: 'color'
+        },
+        borderColor: {
+            control: 'color'
+        }
+    }
+} as Meta;
 
-const Template:Story = ({ variant, title, message, ...args}) => {
-    return <Toast variant={variant} title={title} message={message} {...args} />
+const Template:Story = ({ variant, title, message, titleColor, messageColor, borderColor, shadowColor, ...args}) => {
+    return <Toast variant={variant} title={title} message={message} titleColor={titleColor} messageColor={messageColor} borderColor=
+    {borderColor} shadowColor={shadowColor} {...args} />
 }
 
 export const Default = Template.bind({});

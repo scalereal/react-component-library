@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`List should render horizontal list 1`] = `
+<div>
+  <ul
+    class="sc-bdfBwQ hjSajA"
+  >
+    <li>
+      <p>
+        item 1
+      </p>
+    </li>
+    <li>
+      <p>
+        item 2
+      </p>
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`List should render vertical list 1`] = `
+<div>
+  <ul
+    class="sc-bdfBwQ cjZcyT"
+  >
+    <li>
+      <p>
+        item 1
+      </p>
+    </li>
+    <li>
+      <p>
+        item 2
+      </p>
+    </li>
+  </ul>
+</div>
+`;

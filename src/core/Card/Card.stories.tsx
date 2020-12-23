@@ -1,20 +1,45 @@
 import { Meta, Story } from '@storybook/react/types-6-0';
 import React from 'react';
 import Card from "./Card"
-
-
 export default {
     title: 'Components/Core/Card',
     component: Card,
+    argTypes:{
+        shadowColor:{
+            control:'color'
+        },
+        borderColor:{
+            control:'color'
+        },
+        titleColor:{
+            control:'color'
+        },
+        descriptionColor:{
+            control:'color'
+        }
+    }
 } as Meta
 
-const Template:Story = ({ img, title, message, ...args}) => {
-    return <Card src={img} title={title} message={message} {...args} />
+const Template:Story = ({ imgSrc, title, description, variant, textAlignment,borderColor, shadowColor, titleSize, descriptionSize, ...args}) => {
+    return <Card imgSrc={imgSrc} 
+                title={title} 
+                description={description} 
+                variant={variant} 
+                textAlignment={textAlignment} 
+                borderColor={borderColor} 
+                shadowColor={shadowColor} 
+                titleSize={titleSize} 
+                descriptionSize={descriptionSize} 
+                {...args} />
 }
 
 export const Default = Template.bind({});
 Default.args = {
     title:'Title',
-    message:'Lorem Ipsum is simply dummy text',
-    src:"https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/close-up-of-tulips-blooming-in-field-royalty-free-image-1584131616.jpg?crop=0.630xw:1.00xh;0.186xw,0&resize=640:*"
+    description:'Lorem Ipsum is simply dummy text',
+    imgSrc:'https://www.w3schools.com/w3css/img_forest.jpg',
+    variant:'vertical',
+    textAlignment:'left',
+    titleSize:'M',
+    descriptionSize:'XS',
 }

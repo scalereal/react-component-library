@@ -4,8 +4,8 @@ import Card from "./Card"
 
 
 describe('Card', () => {
-    it('should render title and message text', () => {
-        const { container } = render(<Card src="Image" title="Title" message="Message" />);
+    it('should render with All the default Props', () => {
+        const { container } = render(<Card src="src"  title="Title" description="Description" variant="vertical" titleSize="S" descriptionSize="S" textAlignment="left"/>);
         expect(container).toMatchSnapshot();
     });
 });

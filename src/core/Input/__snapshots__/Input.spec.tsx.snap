@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Input should render correctly when fullWidth & required props are falsy 1`] = `
+<div>
+  <div
+    class="sc-bdfBwQ dOTqjN"
+  >
+    <input
+      class="sc-gsTCUz guRvgL"
+      id="input"
+      placeholder="Enter Email Address"
+      type="email"
+    />
+  </div>
+</div>
+`;
+
+exports[`Input should render correctly when it is disabled 1`] = `
+<div>
+  <div
+    class="sc-bdfBwQ dOTqjN"
+  >
+    <input
+      class="sc-gsTCUz qdJqK"
+      disabled=""
+      id="email-input"
+      placeholder="Enter Email Address"
+      type="text"
+    />
+  </div>
+</div>
+`;
+
+exports[`Input should render correctly with all the props given 1`] = `
+<div>
+  <div
+    class="sc-bdfBwQ faCpUx"
+  >
+    <span
+      class="sc-dlfnbm csXxpq"
+    >
+      www.
+    </span>
+    <input
+      class="sc-gsTCUz guRvgL"
+      id="email-input"
+      placeholder="Enter Email Address"
+      required=""
+      type="email"
+    />
+    <span
+      class="sc-hKgILt dMhINk"
+    >
+      .com
+    </span>
+  </div>
+</div>
+`;

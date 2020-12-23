@@ -1,8 +1,29 @@
-export type CardProps =  {
-     /** Card Image */
-    src:string;
+import { HTMLProps, WithThemeProp } from '../../utils';
+import { TextSizes } from "../../theme/core/text/types"
+export type CardDirection = 'horizontal' | 'vertical';
+export type CardTextAlignment = 'left' | 'center' | 'right';
+
+export interface CardProps extends HTMLProps<HTMLDivElement>, WithThemeProp {
+    /** Card Image */
+    imgSrc?: string;
     /** Card Title */
     title: string;
-    /** Card message */
-    message: string;
+    /** Card Description */
+    description: string;
+    /** Card Direction */
+    variant: CardDirection;
+    /** Card Text Alignment */
+    textAlignment: CardTextAlignment;
+    /** Card Border Color */
+    borderColor?:string;
+    /** Card Shadow Color */
+    shadowColor?:string;
+    /** Card Title Size */
+    titleSize: TextSizes;
+    /** Card Description Size */
+    descriptionSize:TextSizes;
+    /** Card Title Color */
+    titleColor?:string;
+    /** Card Description Color */
+    descriptionColor?:string;
 };

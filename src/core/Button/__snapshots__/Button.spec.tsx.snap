@@ -1,23 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Button should render pro 1`] = `
-<div>
-  <button
-    class="sc-bdfBwQ dIndFy"
-    type="button"
-  />
-</div>
-`;
-
-exports[`Button should render properl 1`] = `
-<div>
-  <button
-    class="sc-bdfBwQ dIndFy"
-    type="button"
-  />
-</div>
-`;
-
 exports[`Button should render properly 1`] = `
 <div>
   <button

@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Avatar component should render with default theme 1`] = `
+<div>
+  <label
+    class="sc-gsTCUz fIhbEO"
+  >
+    <input
+      class="sc-bdfBwQ ioezKP"
+      type="checkbox"
+    />
+    <span>
+      CheckBox
+    </span>
+  </label>
+</div>
+`;
