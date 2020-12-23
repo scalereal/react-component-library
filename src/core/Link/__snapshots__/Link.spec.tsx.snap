@@ -3,11 +3,11 @@
 exports[`Link should render with component as child 1`] = `
 <div>
   <a
-    class="sc-gsTCUz hbeUVf"
+    class="sc-gsTCUz iyrXEY"
     href="#"
   >
     <span
-      class="sc-bdfBwQ leQbGc"
+      class="sc-bdfBwQ cJAVCI"
     >
       Hi i am Name
     </span>
@@ -18,11 +18,11 @@ exports[`Link should render with component as child 1`] = `
 exports[`Link should render with default props 1`] = `
 <div>
   <a
-    class="sc-gsTCUz hbeUVf"
+    class="sc-gsTCUz iyrXEY"
     href="#"
   >
     <span
-      class="sc-bdfBwQ leQbGc"
+      class="sc-bdfBwQ cJAVCI"
     >
       Test
     </span>

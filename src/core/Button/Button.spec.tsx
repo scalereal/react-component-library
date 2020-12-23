@@ -34,7 +34,7 @@ describe('Button', () => {
 
     it('should render with correct children', () => {
         const{container}=render(<Button>Click Me</Button>);
-        expect(container).toContainHTML("<Button>Click Me</Button>");
+        expect(container).toContainHTML("Click Me");
     });
 
 });

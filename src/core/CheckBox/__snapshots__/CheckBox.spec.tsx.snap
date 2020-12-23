@@ -2,16 +2,23 @@
 
 exports[`CheckBox component should render with default theme 1`] = `
 <div>
-  <label
-    class="sc-gsTCUz dcuIuA"
-  >
-    <input
-      class="sc-bdfBwQ gzbGav"
-      type="checkbox"
+  <div>
+    <label
+      class="sc-bdfBwQ fysQaf"
+      for="error"
+      id="error"
     />
-    <span>
-      CheckBox
-    </span>
-  </label>
+    <label
+      class="sc-gsTCUz kTsPZv"
+    >
+      <input
+        type="checkbox"
+        value="CheckBox"
+      />
+      <span>
+        CheckBox
+      </span>
+    </label>
+  </div>
 </div>
 `;
