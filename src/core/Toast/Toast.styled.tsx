@@ -1,6 +1,6 @@
 import styled from "styled-components"
 import { ToastProps } from './types';
-import toastTheme  from "../../theme/core/toast/index"
+import { toastTheme } from "../../theme/core/toast/index"
 
 export const Toast = styled('div')<ToastProps>`
     position: relative;

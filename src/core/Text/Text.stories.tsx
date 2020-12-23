@@ -19,8 +19,8 @@ export default {
     }
 } as Meta;
 
-const Template:Story = ({ textColor,activeColor,hoverColor, lineThrough, uppercase, textSize, lineHeight, ...args}) => {
-    return <Text textColor={textColor} activeColor={activeColor} hoverColor={hoverColor} lineThrough={lineThrough} uppercase={uppercase} textSize={textSize} lineHeight={lineHeight} {...args}>
+const Template:Story = ({ textColor,activeColor,hoverColor, lineThrough, uppercase, textSize, lineHeight, textWeight,textAlign, ...args}) => {
+    return <Text textColor={textColor} activeColor={activeColor} hoverColor={hoverColor} lineThrough={lineThrough} uppercase={uppercase} textSize={textSize} lineHeight={lineHeight} textWeight={textWeight} textAlign={textAlign} {...args}>
     Lorem Ipsum is simply dummy text
     </Text>
 }

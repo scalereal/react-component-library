@@ -1,6 +1,7 @@
 import React, { FC, useCallback } from 'react';
 import * as Styled from './Toggle.styled';
-import { ToggleProps,WithStyle } from './types';
+import { ToggleProps } from './types';
+import { WithStyle } from '../../utils'
 
 export const Toggle: FC<ToggleProps> & WithStyle = React.memo(
     React.forwardRef((props, ref) => {

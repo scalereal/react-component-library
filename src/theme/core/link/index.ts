@@ -1,7 +1,7 @@
-import { blue } from '../../Colors';
+import { grey } from '../../core/colors';
 import { LinkTheme } from './types';
 
-const link: LinkTheme = {
+export const linkTheme: LinkTheme = {
     sizes: {
         XS: {
             fontSize: '1rem',
@@ -19,11 +19,11 @@ const link: LinkTheme = {
             fontSize: '1.8rem',
         }
     },
+    fontFamily: '"Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif',
     defaults: {
-        linkColor: blue[500],
-        hoverColor: blue[700],
-        activeColor: blue[600],
+        linkColor: grey[800],
+        hoverColor: grey[700],
+        activeColor: grey[600],
     }
 };
 
-export default link;

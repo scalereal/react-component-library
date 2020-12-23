@@ -1,7 +1,7 @@
 import { blue }from '../Colors';
 import { LoaderTheme } from './types';
 
-const loaderTheme: LoaderTheme = {
+export const loaderTheme: LoaderTheme = {
     sizes: {
         XXS: '32px',
         XS: '44px',
@@ -12,5 +12,3 @@ const loaderTheme: LoaderTheme = {
     },
     defaultColor: blue[500]
 };
-
-export default loaderTheme;

@@ -1,6 +1,7 @@
 import React, { FC } from 'react';
 import * as Styled from './Input.styled';
-import { InputProps, WithStyle } from './types';
+import { InputProps } from './types';
+import { WithStyle } from "../../utils"
 
 export const Input: FC<InputProps> & WithStyle = React.memo(
     React.forwardRef((props, ref) => {
@@ -13,6 +14,7 @@ export const Input: FC<InputProps> & WithStyle = React.memo(
                 textColor,
                 disabledColor,
                 backgroundColor,
+                disabled,
                 placeHolderColor,
                 preffixBackgroundColor,
                 suffixBackgroundColor,
@@ -30,6 +32,7 @@ export const Input: FC<InputProps> & WithStyle = React.memo(
                     disabledColor={disabledColor}
                     backgroundColor={backgroundColor}
                     placeHolderColor={placeHolderColor}
+                    disabled={disabled}
                     {...restProps}
                 />
                 {suffix && <Styled.Suffix suffixBackgroundColor={suffixBackgroundColor}>{suffix}</Styled.Suffix>}

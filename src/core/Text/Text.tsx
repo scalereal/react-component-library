@@ -1,11 +1,12 @@
 import React, { FC } from 'react';
 import * as Styled from "./Text.styled"
-import { TextProps,WithStyle } from './types';
+import { TextProps } from './types';
+import { WithStyle } from '../../utils'
 
 const Text: FC<TextProps> & WithStyle = React.memo(
-    React.forwardRef(({ children ,textSize, ...restProps }, ref) => {
+    React.forwardRef(({ children, textSize, textWeight, textAlign, ...restProps }, ref) => {
         return (
-            <Styled.Text {...restProps } textSize={textSize}  ref={ref}>
+            <Styled.Text  textSize={textSize} textWeight={textWeight} textAlign={textAlign} ref={ref} {...restProps }>
                 {children}
             </Styled.Text>
         );

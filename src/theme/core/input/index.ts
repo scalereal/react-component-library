@@ -1,7 +1,7 @@
-import { grey }from '../../Colors';
+import { grey }from '../../core/colors';
 import { InputTheme } from './types';
 
-const inputTheme: InputTheme = {
+export const inputTheme: InputTheme = {
     inputBackgroundColor:'#ffffff',
     inputTextColor:grey[800],
     inputBorderColor:grey[500],
@@ -9,6 +9,6 @@ const inputTheme: InputTheme = {
     inputPlaceHolderColor:grey[800],
     inputPreffixBackgroundColor:grey[500],
     inputSuffixBackgroundColor:grey[500],
+    fontFamily: '"Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif',
 };
-
-export default inputTheme;
+;

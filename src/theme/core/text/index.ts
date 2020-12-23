@@ -1,7 +1,7 @@
-import { blue } from '../../Colors';
+import { grey } from '../../core/colors';
 import { TextTheme } from './types';
 
-const textTheme: TextTheme = {
+export const textTheme: TextTheme = {
     sizes: {
         XS: {
             fontSize: '1rem',
@@ -19,12 +19,30 @@ const textTheme: TextTheme = {
             fontSize: '1.8rem',
         }
     },
+    weights: {
+        light: {
+            weight: '300'
+        },
+        regular: {
+            weight:'400'
+        },
+        medium: {
+            weight:'600'
+        },
+        strong: {
+            weight:'700'
+        },
+        extraStrong: {
+            weight:'800'
+        }
+    },
+    fontFamily: '"Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif',
     defaults: {
-        textColor: blue[500],
+        textColor: grey[800],
         lineHeight: '1',
-        hoverColor:blue[700],
-        activeColor:blue[600]
+        hoverColor:grey[700],
+        activeColor:grey[600],
+        textAlign:'left',
+        textWeight:'400',
     }
 };
-
-export default textTheme;

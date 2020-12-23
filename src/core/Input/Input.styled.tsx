@@ -1,7 +1,6 @@
 import styled from "styled-components"
 import { InputProps } from './types';
-import inputTheme from "../../theme/core/input/index"
-
+import { inputTheme } from "../../theme/core/input/index"
 
 export const Wrapper = styled('div')<InputProps>`
     display: flex;
@@ -11,19 +10,19 @@ export const Wrapper = styled('div')<InputProps>`
     }
     background-clip: padding-box;
     box-sizing: border-box;
-    border: 1px solid ${({ theme }) => theme.inputBorderColor};
+    border: 1px solid ${({ theme, borderColor }) => (borderColor ? borderColor : theme.inputBorderColor)};
     border-radius: 5px;
     overflow: hidden;
     width: ${props => (props.fullWidth ? '100%' : 'max-content')};
     height: max-content;
-
+    font-family: ${({ theme }) =>(theme.fontFamily)};
     &:focus-within {
         border-color: ${({ theme, borderColor }) => (borderColor ? borderColor : theme.inputBorderColor)};
     }
-
     & > * {
         font-size: 1rem;
         padding: 10px;
+        font-family: ${({ theme }) =>(theme.fontFamily)};
         color: ${({ theme, textColor }) => (textColor ? textColor : theme.inputTextColor)};
     }
 `;
@@ -36,6 +35,7 @@ export const Input = styled('input')<InputProps>`
     outline: 0;
     border: 0;
     cursor: ${({ disabled }) => (disabled ? 'not-allowed' : 'inherit')};
+    font-family: ${({ theme }) =>(theme.fontFamily)};
     background-color: ${({ disabled, theme, disabledColor, backgroundColor }) =>
         disabled
             ? disabledColor
@@ -44,11 +44,10 @@ export const Input = styled('input')<InputProps>`
             : backgroundColor
             ? backgroundColor
             : theme.inputBackgroundColor};
-
     &::placeholder {
         color: ${({theme, placeHolderColor }) => placeHolderColor ? placeHolderColor : theme.inputPlaceHolderColor};
+        font-family: ${({ theme }) =>(theme.fontFamily)};
     }
-
     &::-webkit-file-upload-button {
         visibility: hidden;
     }
@@ -60,6 +59,8 @@ Input.defaultProps = {
 export const Prefix = styled('span')<InputProps>`
     background-color: ${({ theme, preffixBackgroundColor }) =>
         preffixBackgroundColor ? preffixBackgroundColor : theme.inputPreffixBackgroundColor};
+
+    font-family: ${({ theme }) =>(theme.fontFamily)};
 `;
 Prefix.defaultProps = {
     theme: inputTheme
@@ -68,6 +69,8 @@ Prefix.defaultProps = {
 export const Suffix = styled('span')<InputProps>`
     background-color: ${({ theme, suffixBackgroundColor }) =>
         suffixBackgroundColor ? suffixBackgroundColor : theme.inputSuffixBackgroundColor};
+    
+    font-family: ${({ theme }) =>(theme.fontFamily)};
 `;
 Suffix.defaultProps = {
     theme: inputTheme
