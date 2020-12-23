@@ -3,7 +3,7 @@ import React from 'react';
 import Avatar from '.';
 import { Props } from './types';
 
-const SizeMap: Props['size'][] = ['ES', 'S', 'M', 'L'];
+const SizeMap: Props['size'][] = ['XS', 'S', 'M', 'L', 'XL'];
 
 export default {
     title: 'Components/Core/Avatar',
@@ -38,6 +38,11 @@ export default {
         },
         disabled:{
             control:{type:'boolean'}
+        },
+        ref:{
+            table:{
+              disable:true
+            }
         }
     }
 } as Meta;

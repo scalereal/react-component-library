@@ -15,6 +15,18 @@ export default {
                 options: Object.values(SizeMap),
             },
         },
+        label:{
+            control:{type:'text'}
+        },
+        disabled:{
+            control:{type:'boolean'}
+        },
+        hasError:{
+            control: { type: 'boolean'}
+        },
+        errorText:{
+            control:{type:'text'}
+        },
         bgColor : {
             control:'color'
         },
@@ -36,9 +48,7 @@ export default {
         hoverEffect:{ 
             control: { type: 'boolean'}  
         },
-        disabled:{
-            control:{type:'boolean'}
-        }
+        
     }
 } as Meta;
 
@@ -48,6 +58,5 @@ const Template: Story<Props> = ({...args }) => {
 };
 
 export const Default = Template.bind({});
-Default.args = {
-};
+
 

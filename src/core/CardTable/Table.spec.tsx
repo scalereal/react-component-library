@@ -1,10 +1,10 @@
 import { render } from '@testing-library/react';
 import * as React from 'react';
-import CheckBox from '.';
+import CardTable from '.';
 
-describe('Avatar component', () => {
+describe('CheckBoxGroup component', () => {
     it('should render with default theme', () => {
-        const { container } = render(<CheckBox/>);
+        const { container } = render(<CardTable />);
         expect(container).toMatchSnapshot();
     });
 

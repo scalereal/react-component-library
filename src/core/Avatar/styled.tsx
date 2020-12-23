@@ -1,9 +1,11 @@
 import styled from 'styled-components';
+import { defaultTheme } from "../../theme/theme";
 import { Props } from './types';
+
 
 const mixin = (size:any) => {
     switch (size) {
-        case "ES":
+        case "XS":
             return `width: 50px;
             height: 50px;
             line-height: 50px;
@@ -40,6 +42,16 @@ const mixin = (size:any) => {
                 height: 200px;
             }
             span{font-size:7em}`;
+        
+        case "XL":
+            return `width: 250px;
+            height: 250px;
+            line-height: 250px;
+            img{
+                width: 250px;
+                height: 250px;
+            }
+            span{font-size:9em}`;
   
       default:
         return `border:1px solid red;`;
@@ -51,13 +63,13 @@ export const StyledAvatar = styled.div<Props>`
     ${pr=>  mixin(pr.size)}
     border-radius: 50%;
     text-align:center;
-    background-color: ${pr => pr.bgColor || `#C4C4C4` };
+    background-color: ${pr => pr.bgColor || defaultTheme.secondaryColor };
 
     ${pr => pr.hoverEffect? `&:hover {
-        background-color: ${pr.hoverBgColor || '#126AFA'};
-        box-shadow: 0px 5px 8px ${pr.hoverShadowColor || '#004AD7' };
+        background-color: ${pr.hoverBgColor || defaultTheme.primaryActiveColor};
+        box-shadow: 0px 5px 8px ${pr.hoverShadowColor || defaultTheme.shadowColor };
         span{
-            color: ${pr.hoverTextColor || '#EFF2F4'};
+            color: ${pr.hoverTextColor || defaultTheme.whiteColor};
             text-shadow: 0px 5px 8px ${pr.hoverTextShadowColor };
         }
         }
@@ -73,6 +85,6 @@ export const StyledAvatar = styled.div<Props>`
         display: inline-block;
         vertical-align: middle;
         line-height: normal;
-        color: ${pr => pr.textColor || '#126AFA'};
+        color: ${pr => pr.textColor || defaultTheme.primaryColor};
     }
 `;

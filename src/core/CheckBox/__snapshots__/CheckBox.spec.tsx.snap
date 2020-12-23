@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CheckBox component should render with default theme 1`] = `
+<div>
+  <label
+    class="sc-gsTCUz dcuIuA"
+  >
+    <input
+      class="sc-bdfBwQ gzbGav"
+      type="checkbox"
+    />
+    <span>
+      CheckBox
+    </span>
+  </label>
+</div>
+`;

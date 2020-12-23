@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card should render title and description text 1`] = `
+<div>
+  <div
+    class="sc-bdfBwQ jLDrxf"
+    direction="column"
+    title="Title"
+  >
+    <div
+      class="sc-gsTCUz eFqjLv"
+      direction="column"
+      title="Title"
+    >
+      <img
+        class="sc-dlfnbm fAbRqY"
+      />
+    </div>
+    <div
+      class="sc-eCssSg kPseUx"
+      direction="column"
+      title="Title"
+    >
+      <div
+        class="sc-hKgILt fPbReX"
+      >
+        Title
+      </div>
+      <div
+        class="sc-jSgupP kkhRXC"
+      >
+        Description
+      </div>
+    </div>
+  </div>
+</div>
+`;

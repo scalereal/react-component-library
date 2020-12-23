@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Modal should render title and description text 1`] = `
+<div>
+  <div
+    class="sc-bdfBwQ kOUwLq"
+    title="Title"
+  >
+    <div
+      class="sc-gsTCUz kdZmDy"
+      title="Title"
+    >
+      <div
+        class="sc-dlfnbm kJHYvJ"
+      >
+        Title
+      </div>
+    </div>
+    <div
+      class="sc-hKgILt iEmfbb"
+      title="Title"
+    >
+      <div
+        class="sc-eCssSg ekFRyt"
+      >
+        Description
+      </div>
+    </div>
+    <div
+      class="sc-jSgupP fOOCZY"
+    />
+    <div
+      class="sc-gKsewC kBjPyY"
+    >
+      X
+    </div>
+  </div>
+</div>
+`;
