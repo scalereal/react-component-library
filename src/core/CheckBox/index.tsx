@@ -1,16 +1,21 @@
 import React from 'react';
-import { StyledCheckBoxInput, StyledLabel } from './styled';
+import { ErrorLabel, StyledLabel } from './styled';
 import { Props } from './types';
 
-export type Ref = HTMLInputElement;
+export type Ref = HTMLLabelElement;
 
-const CheckBox = React.forwardRef<Ref, Props>( (props, ref) => {
-    const {size='S',type="checkbox"} = props;
-    return (
-        <StyledLabel ref={ref}>
-            <StyledCheckBoxInput type={type} size={size} {...props}/>
-            <span>CheckBox</span>
-        </StyledLabel>
+let CheckBox = React.forwardRef<Ref, Props>( (props, ref) => {
+    const {size='S', label='CheckBox',value='',errorText=''} = props;
+  
+    return ( 
+        <div>
+            <ErrorLabel id="error" htmlFor="error">{errorText}</ErrorLabel>
+            <StyledLabel ref={ref} size={size} {...props} >
+                <input type="checkbox" value={value===''?label:value}/>
+                <span>{label}</span>
+                {/* <Label>{label}</Label> */}
+            </StyledLabel>
+        </div>
         )
 });
 
@@ -19,4 +24,4 @@ CheckBox.defaultProps = {
     hoverEffect: false
 };
 
-export default CheckBox
+export default CheckBox = React.memo(CheckBox)

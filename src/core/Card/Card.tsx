@@ -1,20 +1,20 @@
-import React,{ FC } from 'react'
-import * as Styled from "./Card.styled"
-import Text from "../Text/Text"
+import React, { FC } from 'react';
+import { WithStyle } from "../../utils";
+import Text from "../Text/Text";
+import * as Styled from "./Card.styled";
 import { CardProps } from './types';
-import { WithStyle } from "../../utils"
 
 const Card:FC<CardProps> & WithStyle = React.memo(
     React.forwardRef((props, ref) => {
-        const { title, description, variant, textAlignment,imgSrc,shadowColor, borderColor,titleSize, descriptionSize ,titleColor,descriptionColor} = props
+        const { title, description,imgSrc,titleSize, descriptionSize ,titleColor,descriptionColor} = props
         return (
-            <Styled.Card ref={ref} title={title} description={description} variant={variant} textAlignment={textAlignment} shadowColor={shadowColor} borderColor={borderColor} titleSize={titleSize} descriptionSize={descriptionSize}>
+            <Styled.Card ref={ref} {...props}>
                 {
-                    imgSrc && <Styled.CardHeader title={title} description={description} variant={variant} textAlignment={textAlignment} shadowColor={shadowColor} borderColor={borderColor} titleSize={titleSize} descriptionSize={descriptionSize}>
+                    imgSrc && <Styled.CardHeader {...props}>
                                 <Styled.CardImage src={imgSrc} />
                             </Styled.CardHeader>
                 }
-                <Styled.CardBody title={title} description={description} variant={variant}  textAlignment={textAlignment} shadowColor={shadowColor} borderColor={borderColor} titleSize={titleSize} descriptionSize={descriptionSize}>
+                <Styled.CardBody {...props}>
                     <Styled.CardTitle>
                         <Text textColor={titleColor} textSize={titleSize}>{title}</Text>
                     </Styled.CardTitle>

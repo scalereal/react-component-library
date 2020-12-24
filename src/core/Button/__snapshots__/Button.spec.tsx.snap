@@ -1,10 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Button should render properly 1`] = `
+exports[`Button should render with not-allowed cursor when it is disabled 1`] = `
 <div>
   <button
-    class="sc-bdfBwQ dIndFy"
-    type="button"
-  />
+    class="sc-bdfBwQ gzvqaz"
+    disabled=""
+    type="primary"
+  >
+    ClickMe
+  </button>
 </div>
 `;

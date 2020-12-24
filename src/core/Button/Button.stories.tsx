@@ -1,151 +1,72 @@
 import { Meta, Story } from '@storybook/react/types-6-0';
 import React from 'react';
-import styled from 'styled-components';
-import Button, { ButtonProps } from './index';
+import Button from './Button';
+import { Props } from './types';
 
-// import DownloadIcon from '../../icons/Download';
-const ButtonType={defualt:'default', danger:'danger' , ghost:'ghost' , secondary:'secondary'};
-const ButtonSize={defualt:'default', large:'large' , small:'small'};
+const SizeMap: Props['size'][] = ['XS', 'S', 'M', 'L', 'XL'];
+const TypeMap: Props['type'][] = ['primary', 'secondary', 'warning', 'danger', 'success'];
 
 export default {
     title: 'Components/Core/Button',
     component: Button,
     argTypes : {
-        type:{
-        control: {
-            type: 'select',
-            options: Object.keys(ButtonType),
-          },
+        size : {
+            control: {
+                type: 'select',
+                options: Object.values(SizeMap),
+            },
         },
-    backgroundColor: { control: 'color' },
-    size : {
-        control: {
-            type: 'select',
-            options: Object.keys(ButtonSize),
-          },
-    },
-    disabled :{
-        control: {
-            type: 'boolean'
+        type : {
+            control: {
+                type: 'select',
+                options: Object.values(TypeMap),
+            },
+        },
+        bgColor : {
+            control:'color'
+        },
+        textColor: {
+            control:'color'
+        },
+        hoverBgColor: {
+            control:'color'
+        },
+        hoverTextColor: {
+            control:'color'
+        },
+        hoverShadowColor: {
+            control:'color'
+        },
+        hoverEffect:{ 
+            control: { type: 'boolean'}  
+        },
+        disabled:{
+            control:{type:'boolean'}
+        },
+        ref:{
+            table:{
+              disable:true
+            }
+        },
+        icon:{
+            table:{
+              disable:true
+            }
+        },
+        className:{
+            table:{
+              disable:true
+            }
         }
-    },
-
-        // children: 'Default Button',
-    },
+    }
 } as Meta;
 
-const Template: Story<ButtonProps> = ({ disabled, size, backgroundColor, type, ...args }) => {
+const Template: Story<Props> = ({...args }) => {
     // retrieves the appropriate icon passes it as a component prop
-    const selectedType = ButtonType[type];
-    const Color=backgroundColor;
-    const Size = ButtonSize[size];
-    const Disable = disabled;
-    return <Button disabled={Disable} size={Size} backgroundColor={Color} type={selectedType} {...args} />;
-  };
-// const Template: Story<ButtonProps> = args => <Button {...args} />;
+    return <Button {...args} />;
+};
 
 export const Default = Template.bind({});
 Default.args = {
-    children: 'Default Button',
-};
-
-// export const DangerButton = Template.bind({});
-// DangerButton.args = {
-//     children: 'Danger Button',
-//     type: 'danger'
-// };
-
-// export const Ghost = Template.bind({});
-// Ghost.args = {
-//     children: 'Ghost Button',
-//     type: 'ghost'
-// };
-
-// export const Secondary = Template.bind({});
-// Secondary.args = {
-//     children: 'Secondary Button',
-//     type: 'secondary'
-// };
-
-// export const Disabled = Template.bind({});
-// Disabled.args = {
-//     children: 'Disabled Button',
-//     disabled: true
-// };
-
-// export const Loading = Template.bind({});
-// Loading.args = {
-//     children: 'Button',
-//     loading: true
-// };
-
-// export const WithIcon = Template.bind({});
-// WithIcon.args = {
-//     //   icon: DownloadIcon,
-//     children: 'Download'
-// };
-
-const ButtonRow = styled.div`
-    display: flex;
-    align-items: flex-start;
-    margin-bottom: 10px;
-    & > * {
-        margin-right: 10px;
-    }
-`;
-
-export const Sizes = () => {
-    return (
-        <>
-            <ButtonRow>
-                <Button size="large">Large</Button>
-                <Button size="default">Default</Button>
-                <Button size="small">Small</Button>
-            </ButtonRow>
-            <ButtonRow>
-                <Button type="danger" size="large">
-                    Large
-                </Button>
-                <Button type="danger" size="default">
-                    Default
-                </Button>
-                <Button type="danger" size="small">
-                    Small
-                </Button>
-            </ButtonRow>
-            <ButtonRow>
-                <Button type="ghost" size="large">
-                    Large
-                </Button>
-                <Button type="ghost" size="default">
-                    Default
-                </Button>
-                <Button type="ghost" size="small">
-                    Small
-                </Button>
-            </ButtonRow>
-            <ButtonRow>
-                <Button type="secondary" size="large">
-                    Large
-                </Button>
-                <Button type="secondary" size="default">
-                    Default
-                </Button>
-                <Button type="secondary" size="small">
-                    Small
-                </Button>
-            </ButtonRow>
-            <ButtonRow>
-                <Button loading disabled size="large">
-                    Large
-                </Button>
-                <Button loading disabled size="default">
-                    Default
-                </Button>
-                <Button loading disabled size="small">
-                    Small
-                </Button>
-            </ButtonRow>
-        </>
-    );
+    children: "Default"
 };

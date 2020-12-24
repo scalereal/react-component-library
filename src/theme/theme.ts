@@ -1,5 +1,5 @@
-import { blue, orange, green, red, grey } from "./Colors";
-import { DefaultTheme } from "./types"
+import { blue, green, grey, orange, red } from "./Colors";
+import { DefaultTheme } from "./types";
 
 export const defaultTheme : DefaultTheme = {
     primaryColor: blue[500],
@@ -39,16 +39,19 @@ export const defaultTheme : DefaultTheme = {
         info: blue[500],
     },
 
+    warningColor: orange[500],
     warningHoverColor: orange[700],
     warningActiveColor:orange[600],
     warningFocusColor:orange[600],
     warningDisabledColor:orange[300],
 
+    dangerColor: red[500],
     dangerHoverColor: red[700],
     dangerActiveColor:red[600],
     dangerFocusColor:red[600],
     dangerDisabledColor:red[300],
 
+    successColor: green[500],
     successHoverColor: green[700],
     successActiveColor: green[600],
     successFocusColor: green[600],

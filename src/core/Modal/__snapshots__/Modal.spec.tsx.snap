@@ -11,9 +11,13 @@ exports[`Modal should render title and description text 1`] = `
       title="Title"
     >
       <div
-        class="sc-dlfnbm kJHYvJ"
+        class="sc-dlfnbm eVErIe"
       >
-        Title
+        <span
+          class="sc-gKsewC iPiDdN"
+        >
+          Title
+        </span>
       </div>
     </div>
     <div
@@ -21,19 +25,19 @@ exports[`Modal should render title and description text 1`] = `
       title="Title"
     >
       <div
-        class="sc-eCssSg ekFRyt"
+        class="sc-eCssSg dkxmEH"
       >
-        Description
+        <span
+          class="sc-gKsewC ljIHPK"
+        >
+          Description
+        </span>
       </div>
     </div>
     <div
       class="sc-jSgupP fOOCZY"
+      title="Title"
     />
-    <div
-      class="sc-gKsewC kBjPyY"
-    >
-      X
-    </div>
   </div>
 </div>
 `;

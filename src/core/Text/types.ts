@@ -1,9 +1,8 @@
+import { TextAlignments, TextSizes, TextWeights } from "../../theme/core/text/types";
 import { HTMLProps, WithThemeProp } from '../../utils';
-import { TextSizes } from "../../theme/core/text/types"
-import { TextWeights, TextAlignments } from '../../theme/core/text/types';
 export interface TextProps extends HTMLProps<HTMLElement>, WithThemeProp {
     /**Text Size */
-    textSize: TextSizes;
+    textSize?: TextSizes;
     /** Text color */
     textColor?: string;
     /** Text Uppercase*/

@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Radio component should render with default theme 1`] = `
+<div>
+  <div>
+    <label
+      class="sc-bdfBwQ laJvUw"
+      for="error"
+      id="error"
+    />
+    <label
+      class="sc-gsTCUz eskjVr"
+    >
+      CheckBox
+      <input
+        type="radio"
+        value=""
+      />
+      <span />
+    </label>
+  </div>
+</div>
+`;

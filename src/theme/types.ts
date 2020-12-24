@@ -1,5 +1,6 @@
 import * as CoreThemes from './core/types';
-import  { LoaderTheme } from "./loader/types"
+import { LoaderTheme } from "./loader/types";
+
 export interface DefaultTheme {
     primaryColor: string;
     primaryHoverColor: string;
@@ -33,16 +34,19 @@ export interface DefaultTheme {
 
     statusColors: statusColors
 
+    warningColor:string;
     warningHoverColor:string;
     warningActiveColor:string;
     warningFocusColor:string;
     warningDisabledColor:string;
 
+    dangerColor:string;
     dangerHoverColor:string;
     dangerActiveColor:string;
     dangerFocusColor:string;
     dangerDisabledColor:string;
 
+    successColor:string;
     successHoverColor:string;
     successActiveColor:string;
     successFocusColor:string;
@@ -70,7 +74,7 @@ export interface CoreTheme {
     modalTheme?: CoreThemes.ModalTheme;
     toggleTheme?: CoreThemes.ToggleTheme;
     toastTheme?: CoreThemes.ToastTheme;
-    fontTheme?: CoreThemes.FontTheme;
+    // fontTheme?: CoreThemes.FontTheme;
 }
 export interface Theme extends CoreTheme {
     loaderTheme?: LoaderTheme;

@@ -1,72 +1,120 @@
 import styled from 'styled-components';
-import { ComponentSize, heights, sidePaddings } from '../../theme/sizes';
-import { ButtonType } from './index';
+import { defaultTheme } from "../../theme/theme";
+import { Props } from './types';
 
-type StateColors = {
-    regular: string;
-    hover: string;
+
+const SizeMixin = (size:any) => {
+    switch (size) {
+        case "XS":
+            return `padding: 0.6rem 2.4rem 0.8rem;
+            `;
+        case "S":
+          return `padding: 0.8rem 2.4rem 1rem;
+            `;
+        
+        case "M":
+            return `padding: 1rem 2.4rem 1.2rem;
+           `;
+
+        case "L":
+            return `padding: 1.2rem 2.4rem 1.4rem;
+            `;
+        
+        case "XL":
+        return `padding: 1.4rem 2.4rem 1.6rem;
+        `;
+
+      default:
+        return `border:1px solid red;`;
+     }
 };
 
-const typeColors: { [key in ButtonType]: StateColors } = {
-  default: {
-    regular: '#0018cf',
-    hover: '#2e27cc'
-  },
-  danger: {
-    regular: '#d93848',
-    hover: '#eb4d5d'
-  },
-  ghost: {
-    regular: 'transparent',
-    hover: '#dbdbdb'
-  },
-  secondary: {
-    regular: '#000',
-    hover: '#3d3d3d'
-  },
-};
 
-interface StyledButtonProps {
-    innerType: ButtonType;
-    size: ComponentSize;
-    withText: boolean;
-}
+const hoverPick = (pr:Props) => {
+    switch (pr.type) {
+        case "primary":{
+            return `background: ${defaultTheme.primaryColor};
+            border:none;
+            color:${ pr.textColor || defaultTheme.whiteColor};
+            ${pr.hoverEffect?`&:hover {
+                background-color: ${pr.hoverBgColor || defaultTheme.primaryActiveColor};
+                box-shadow: 0px 5px 8px ${pr.hoverShadowColor || defaultTheme.shadowColor };
+                color:${pr.hoverTextColor || defaultTheme.whiteColor };
+                };`:''}
+            `};
 
-/* Real tag is assigned dynamically */
-export const StyledButton = styled.button<StyledButtonProps>`
-    display: flex;
-    align-items: center;
+        case "secondary":
+          return `background:transparent;
+            border:1px solid ${defaultTheme.secondaryColor};
+            color:${pr.textColor || defaultTheme.secondaryActiveColor};
+            ${pr.hoverEffect?`&:hover {
+            border:1px solid ${defaultTheme.secondaryActiveColor};
+            box-shadow: 0px 5px 8px ${pr.hoverShadowColor || defaultTheme.shadowColor };
+            color:${pr.hoverTextColor || defaultTheme.secondaryActiveColor };
+            };`:''}
+            `;
+        
+        case "warning":
+            return `
+            background: ${defaultTheme.warningColor};
+            border:none;
+            color:${pr.textColor || defaultTheme.whiteColor};
+            ${pr.hoverEffect?`&:hover {
+                background-color: ${pr.hoverBgColor || defaultTheme.warningActiveColor};
+                box-shadow: 0px 5px 8px ${pr.hoverShadowColor || defaultTheme.shadowColor };
+                color:${pr.hoverTextColor || defaultTheme.whiteColor };
+                };`:''}
+           `;
+
+        case "danger":
+            return `background: ${defaultTheme.dangerColor};
+            border:none;
+            color:${pr.textColor || defaultTheme.whiteColor};
+            ${pr.hoverEffect?`&:hover {
+                background-color: ${pr.hoverBgColor || defaultTheme.dangerActiveColor};
+                box-shadow: 0px 5px 8px ${pr.hoverShadowColor || defaultTheme.shadowColor };
+                color:${pr.hoverTextColor || defaultTheme.whiteColor };
+                };`:''}
+            `;
+        
+        case "success":
+        return `background: ${defaultTheme.successColor};
+        border:none;
+        color:${pr.textColor || defaultTheme.whiteColor};
+        ${pr.hoverEffect?`&:hover {
+            background-color: ${pr.hoverBgColor || defaultTheme.successActiveColor};
+            box-shadow: 0px 5px 8px ${pr.hoverShadowColor || defaultTheme.shadowColor };
+            color:${pr.hoverTextColor || defaultTheme.whiteColor };
+            };`:''}
+        `;
+
+      default:
+        return `background: ${defaultTheme.primaryColor};
+        border:none;
+        color:${pr.textColor || defaultTheme.whiteColor};
+        ${pr.hoverEffect?`&:hover {
+            background-color: ${pr.hoverBgColor || defaultTheme.primaryActiveColor};
+            box-shadow: 0px 5px 8px ${pr.hoverShadowColor || defaultTheme.shadowColor };
+            color:${pr.hoverTextColor || defaultTheme.whiteColor };
+            };`:''}`;
+    }
+ };
+
+export const StyledButton = styled.button<Props>`
+    ${pr => pr.disabled === true?'pointer-events: none;opacity: 0.4;':''};
+    ${pr=>  SizeMixin(pr.size)};
+    ${pr => hoverPick(pr)};
+    font-size: 20px;
+    border-radius: 0.5rem;
+    text-align:center;
+    position: relative;
+    user-select: none;
+    font-family: inherit;
+    text-decoration: none;
+    transition: all 100ms ease-out 0s;
+    display: inline-flex;
+    -webkit-box-pack: center;
     justify-content: center;
-    /* Add margin in case of loading or icon */
-    & > *:nth-child(1) {
-        margin-left: ${pr => (pr.withText ? 7 : 0)}px;
-    }
-    font-size: 15px;
-    border: none;
-    cursor: pointer;
-    background-color: ${pr => typeColors[pr.innerType].regular};
-    padding: 0 ${pr => sidePaddings[pr.size]}px;
-    height: ${pr => heights[pr.size]}px;
-    color: ${pr => (pr.innerType === 'ghost' ? typeColors.default.regular : '#fff')};
-    ${pr => pr.disabled? `
-        background-color: #a6a6a6;
-        color: #5e5e5e;
-        cursor: not-allowed;
-        &:hover {
-            background-color: #a6a6a6 !important;
-            color: #5e5e5e !important;
-        }
-    `: ''};
-    border-radius: 0;
-    outline: none;
-    &:focus {
-        box-shadow: 0 0 0 1px #fff, 0 0 0 2px ${pr => typeColors[pr.innerType].regular};
-    }
-    &:hover {
-        background-color: ${pr => typeColors[pr.innerType].hover};
-    }
-`;
-
-export const StyledIcon = styled.div`
-    height: 20px;
+    -webkit-box-align: center;
+    align-items: center;
 `;
