@@ -3,6 +3,7 @@
 exports[`Label should render correctly with all the given props 1`] = `
 <div>
   <label
+
     class="sc-bdfBwQ bbGbjQ"
     required=""
   >

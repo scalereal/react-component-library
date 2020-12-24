@@ -1,5 +1,6 @@
 import * as CoreThemes from './core/types';
 import { LoaderTheme } from "./loader/types";
+
 export interface DefaultTheme {
     primaryColor: string;
     primaryHoverColor: string;
