@@ -1,7 +1,6 @@
-
-import styled from "styled-components"
+import styled from 'styled-components';
 import { CardProps } from './types';
-import { cardTheme } from "../../theme/core/card/index"
+import { defaultTheme } from '../../theme';
 
 export const Card = styled('div')<CardProps>`
     position: relative;
@@ -11,9 +10,9 @@ export const Card = styled('div')<CardProps>`
     word-wrap: break-word;
     background-color: #fff;
     background-clip: border-box;
-    border: 1px solid ${({ theme, borderColor }) => borderColor ? borderColor : theme.defaults.borderColor};
+    border: 1px solid ${({ theme, borderColor }) => borderColor ? borderColor : theme.card.defaults.borderColor};
     border-radius: .3rem;
-    box-shadow: 0 0.5rem 2rem ${({ theme, shadowColor }) => shadowColor ? shadowColor : theme.defaults.shadowColor};
+    box-shadow: 0 0.5rem 2rem ${({ theme, shadowColor }) => shadowColor ? shadowColor : theme.card.defaults.shadowColor};
     width:18rem;
     border-top-left-radius: calc(.3rem - 1px);
     border-top-right-radius: calc(.3rem - 1px);
@@ -21,7 +20,7 @@ export const Card = styled('div')<CardProps>`
     border-bottom-right-radius: calc(.3rem - 1px);
 `;
 Card.defaultProps = {
-    theme:cardTheme
+    theme:defaultTheme
 }
 export const CardHeader = styled('div')<CardProps>`
     background-color:#fff;

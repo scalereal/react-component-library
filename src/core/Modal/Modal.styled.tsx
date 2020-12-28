@@ -1,6 +1,6 @@
-import styled from "styled-components"
+import styled from 'styled-components';
 import { ModalProps } from './types';
-import { modalTheme } from "../../theme/core/modal/index"
+import { defaultTheme } from '../../theme';
 
 export const Modal = styled('div')<ModalProps>`
     position: relative;
@@ -10,13 +10,13 @@ export const Modal = styled('div')<ModalProps>`
     pointer-events: auto;
     background-color: #fff;
     background-clip: padding-box;
-    border: 1px solid ${({ theme, borderColor }) => borderColor ? borderColor : theme.defaults.borderColor};
+    border: 1px solid ${({ theme, borderColor }) => borderColor ? borderColor : theme.modal.defaults.borderColor};
     border-radius: .3rem;
     outline: 0;
-    box-shadow: 0 0.5rem 2rem ${({ theme, shadowColor }) => shadowColor ? shadowColor : theme.defaults.shadowColor};
+    box-shadow: 0 0.5rem 2rem ${({ theme, shadowColor }) => shadowColor ? shadowColor : theme.modal.defaults.shadowColor};
 `;
 Modal.defaultProps = {
-    theme:modalTheme
+    theme:defaultTheme
 }
 export const ModalHeader = styled('div')<ModalProps>`
     display: flex;
@@ -24,12 +24,12 @@ export const ModalHeader = styled('div')<ModalProps>`
     align-items: center;
     justify-content: space-between;
     padding: 1rem 1rem;
-    border-bottom: 1px solid ${({ theme, borderColor }) => borderColor ? borderColor : theme.defaults.borderColor};
+    border-bottom: 1px solid ${({ theme, borderColor }) => borderColor ? borderColor : theme.modal.defaults.borderColor};
     border-top-left-radius: calc(.3rem - 1px);
     border-top-right-radius: calc(.3rem - 1px);
 `;
 ModalHeader.defaultProps = {
-    theme:modalTheme
+    theme:defaultTheme
 }
 export const ModalTitle = styled('div')`
     margin-bottom: 0;
@@ -50,10 +50,10 @@ export const ModalFooter = styled('div')<ModalProps>`
     align-items: center;
     justify-content: flex-end;
     padding: .75rem;
-    border-top: 1px solid ${({ theme, borderColor }) => borderColor ? borderColor : theme.defaults.borderColor};
+    border-top: 1px solid ${({ theme, borderColor }) => borderColor ? borderColor : theme.modal.defaults.borderColor};
     border-bottom-right-radius: calc(.3rem - 1px);
     border-bottom-left-radius: calc(.3rem - 1px);
 `;
 ModalFooter.defaultProps = {
-    theme:modalTheme
+    theme:defaultTheme
 }
