@@ -50,6 +50,7 @@ exports[`Input should render correctly with all the props given 1`] = `
     />
     <span
       class="sc-hKgILt kAVLpk"
+
     >
       .com
     </span>
