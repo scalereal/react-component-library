@@ -44,5 +44,6 @@ export const textTheme: TextTheme = {
         activeColor:grey[600],
         textAlign:'left',
         textWeight:'400',
+        size:'S',
     }
 };
