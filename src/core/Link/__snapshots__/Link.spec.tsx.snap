@@ -7,7 +7,7 @@ exports[`Link should render with component as child 1`] = `
     href="#"
   >
     <span
-      class="sc-bdfBwQ cJAVCI"
+      class="sc-bdfBwQ cmSgzP"
     >
       Hi i am Name
     </span>
@@ -22,7 +22,7 @@ exports[`Link should render with default props 1`] = `
     href="#"
   >
     <span
-      class="sc-bdfBwQ cJAVCI"
+      class="sc-bdfBwQ cmSgzP"
     >
       Test
     </span>

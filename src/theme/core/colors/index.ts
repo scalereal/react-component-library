@@ -1,5 +1,5 @@
-import { ColorsType } from './types'
-export const blue:ColorsType = {
+import { Color, ColorsTheme } from './types'
+export const blue:Color = {
   100: "#E7F0FF",
   200: "#D0E1FE",
   300: "#A5CBF1",
@@ -10,18 +10,18 @@ export const blue:ColorsType = {
   800: "#09357D"
 };
 
-export const orange:ColorsType = {
+export const orange:Color = {
   100: "#FFCCBC",
   200: "#FFAB91",
   300: "#FF8A65",
   400: "#FF7043",
-  500: "#E64A19",
+  500: "#F4511E",
   600: "#E64A19",
   700: "#D84315",
   800: "#BF360C"
 };
 
-export const red:ColorsType = {
+export const red:Color = {
   100: "#FAE6E6",
   200: "#F5CCCC",
   300: "#E58080",
@@ -32,7 +32,7 @@ export const red:ColorsType = {
   800: "#660000"
 };
 
-export const green:ColorsType = {
+export const green:Color = {
   100: "#E7F0FF",
   200: "#CCE6CC",
   300: "#80BF80",
@@ -42,7 +42,7 @@ export const green:ColorsType = {
   700: "#005A00",
   800: "#004000"
 };
-export const grey:ColorsType = {
+export const grey:Color = {
   100: "#eff2f4",
   200: "#dfe4e9",
   300: "#C7D0D8",
@@ -51,4 +51,14 @@ export const grey:ColorsType = {
   600: "#607890",
   700: "#546A7F",
   800: "#435465"
+};
+
+export const colorsTheme: ColorsTheme = {
+    black: '#000000',
+    white: '#ffffff',
+    blue: blue,
+    green: green,
+    grey: grey,
+    red: red,
+    orange: orange
 };

@@ -1,9 +1,11 @@
 import { Meta, Story } from '@storybook/react/types-6-0';
 import React from 'react';
 import Radio from '.';
-import { RadioProps } from './types';
+import { Props } from './types';
 
-const SizeMap: RadioProps['size'][] = ['XS', 'S', 'M', 'L', 'XL'];
+const SizeMap: Props['size'][] = ['XS', 'S', 'M', 'L', 'XL'];
+const lposMap: Props['labelPosition'][] = ['top','bottom','left','right']
+
 
 export default {
     title: 'Components/Core/Radio',
@@ -13,6 +15,12 @@ export default {
             control: {
                 type: 'select',
                 options: Object.values(SizeMap),
+            },
+        },
+        labelPosition:{
+            control: {
+                type: 'select',
+                options: Object.values(lposMap),
             },
         },
         label:{
@@ -30,29 +38,44 @@ export default {
         bgColor : {
             control:'color'
         },
-        labelColor: {
+        hoverBgColor: {
             control:'color'
         },
-        hoverBgColor: {
+        checkedBgColor : {
+            control:'color'
+        },
+        hoverCheckedBgColor : {
+            control:'color'
+        },
+        labelColor: {
             control:'color'
         },
         hoverLabelColor: {
             control:'color'
         },
-        hoverShadowColor: {
-            control:'color'
-        },
-        // hoverTextShadowColor: {
-        //     control:'color'
-        // },
         hoverEffect:{ 
             control: { type: 'boolean'}  
+        },
+        ref:{
+            table:{
+              disable:true
+            }
+        },
+        theme:{
+            table:{
+              disable:true
+            }
+        },
+        onChange:{
+            table:{
+              disable:true
+            }
         },
         
     }
 } as Meta;
 
-const Template: Story<RadioProps> = ({...args }) => {
+const Template: Story<Props> = ({...args }) => {
     // retrieves the appropriate icon passes it as a component prop
     return <Radio {...args} />;
 };

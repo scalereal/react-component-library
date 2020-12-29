@@ -1,9 +1,77 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Radio component should render with all the props given 1`] = `
+<div>
+  <div
+    class="sc-pFZIQ fJhliA"
+    display="inline"
+  >
+    <label
+      class="sc-jSgupP cRlLKn"
+    >
+      not valid
+    </label>
+    <div
+      class="sc-fubCfw fPlukN"
+      display="inline"
+    >
+      <span
+        class="sc-bdfBwQ fVhTiG radioGroupLabel"
+      >
+        Radio Group Label
+      </span>
+      <ul
+        class="sc-iBPRYJ beOvuo"
+        display="inline"
+      />
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Radio component should render with default theme 1`] = `
 <div>
-  <ul
-    class="sc-hKgILt fHDGXY"
-  />
+  <div
+    class="sc-pFZIQ fJhliA"
+  >
+    <label
+      class="sc-jSgupP cRlLKn"
+    />
+    <div
+      class="sc-fubCfw fPlukN"
+    >
+      <span
+        class="sc-bdfBwQ cmSgzP radioGroupLabel"
+      />
+      <ul
+        class="sc-iBPRYJ beOvuo"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Radio component should render with not-allowed cursor when it is disabled 1`] = `
+<div>
+  <div
+    class="sc-pFZIQ fJhliA"
+    disabled=""
+  >
+    <label
+      class="sc-jSgupP cRlLKn"
+    />
+    <div
+      class="sc-fubCfw dVTXdZ"
+      disabled=""
+    >
+      <span
+        class="sc-bdfBwQ cmSgzP radioGroupLabel"
+      />
+      <ul
+        class="sc-iBPRYJ beOvuo"
+        disabled=""
+      />
+    </div>
+  </div>
 </div>
 `;

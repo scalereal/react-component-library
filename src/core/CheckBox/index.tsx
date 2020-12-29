@@ -1,27 +1,29 @@
-import React from 'react';
-import { ErrorLabel, StyledLabel } from './styled';
+import React, { FC, memo, useState } from 'react';
+import { WithStyle } from '../../utils';
+import Text from '../Text/Text';
+import { CheckBoxWrapper, ErrorLabel, StyledLabel } from './styled';
 import { Props } from './types';
 
-export type Ref = HTMLLabelElement;
+// export type Ref = HTMLLabelElement;
 
-let CheckBox = React.forwardRef<Ref, Props>( (props, ref) => {
-    const {size='S', label='CheckBox',value='',errorText=''} = props;
-  
+const CheckBox:FC<Props> & WithStyle = memo(React.forwardRef( (props, ref) => {
+    const {size='S', label='CheckBox',value='',errorText='',fontSize,labelHoverEffect,labelHoverColor,labelColor,checked=false} = props;
+    const [check,setCheck] = useState<boolean>(checked);
+
     return ( 
-        <div>
+        <CheckBoxWrapper ref={ref} {...props}>
             <ErrorLabel id="error" htmlFor="error">{errorText}</ErrorLabel>
-            <StyledLabel ref={ref} size={size} {...props} >
-                <input type="checkbox" value={value===''?label:value}/>
-                <span>{label}</span>
-                {/* <Label>{label}</Label> */}
+            <StyledLabel size={size} {...props} >
+                <input type="checkbox" checked={checked?checked:check} value={value===''?label:value} onChange={()=>setCheck(!check)}/>
+                <Text textSize={fontSize} textColor={labelColor} hoverEffect={labelHoverEffect} hoverColor={labelHoverColor} >{label}</Text>
             </StyledLabel>
-        </div>
+        </CheckBoxWrapper>
         )
-});
+}));
 
 CheckBox.displayName="CheckBox";
 CheckBox.defaultProps = {
     hoverEffect: false
 };
 
-export default CheckBox = React.memo(CheckBox)
+export default CheckBox;

@@ -1,5 +1,6 @@
 import * as CoreThemes from './core/types';
-import { LoaderTheme } from "./loader/types";
+import { LoaderTheme } from './loader/types';
+
 export interface DefaultTheme {
     primaryColor: string;
     primaryHoverColor: string;
@@ -66,17 +67,25 @@ type statusColors = {
 };
 
 export interface CoreTheme {
-    cardTheme?: CoreThemes.CardTheme;
-    inputTheme?: CoreThemes.InputTheme;
-    labelTheme?: CoreThemes.LabelTheme;
-    linkTheme?: CoreThemes.LinkTheme;
-    modalTheme?: CoreThemes.ModalTheme;
-    toggleTheme?: CoreThemes.ToggleTheme;
-    toastTheme?: CoreThemes.ToastTheme;
-    // fontTheme?: CoreThemes.FontTheme;
+    card?: CoreThemes.CardTheme;
+    input?: CoreThemes.InputTheme;
+    label?: CoreThemes.LabelTheme;
+    link?: CoreThemes.LinkTheme;
+    modal?: CoreThemes.ModalTheme;
+    toggle?: CoreThemes.ToggleTheme;
+    toast?: CoreThemes.ToastTheme;
+    colors?: CoreThemes.ColorsTheme;
+    text?: CoreThemes.TextTheme;
+    list?: CoreThemes.ListTheme;
 }
 export interface Theme extends CoreTheme {
-    loaderTheme?: LoaderTheme;
+    loader?: LoaderTheme;
 }
 
-export * from './core/types';
+export interface ToggleSizes{
+    XS?:string;
+    S?:string;
+    M?:string;
+    L?:string;
+    XL?:string;
+}

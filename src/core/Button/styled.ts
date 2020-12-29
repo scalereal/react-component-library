@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { buttonTheme } from '../../theme/core/button';
 import { defaultTheme } from "../../theme/theme";
 import { Props } from './types';
 
@@ -33,69 +34,69 @@ const SizeMixin = (size:any) => {
 const hoverPick = (pr:Props) => {
     switch (pr.type) {
         case "primary":{
-            return `background: ${defaultTheme.primaryColor};
+            return `background: ${pr.bgColor || buttonTheme.primary.bgColor};
             border:none;
-            color:${ pr.textColor || defaultTheme.whiteColor};
+            span{color:${ pr.textColor || buttonTheme.defaults.textColor};};
             ${pr.hoverEffect?`&:hover {
-                background-color: ${pr.hoverBgColor || defaultTheme.primaryActiveColor};
-                box-shadow: 0px 5px 8px ${pr.hoverShadowColor || defaultTheme.shadowColor };
-                color:${pr.hoverTextColor || defaultTheme.whiteColor };
+                background-color: ${pr.hoverBgColor || buttonTheme.primary.hoverBgColor};
+                box-shadow: 0px 5px 8px ${pr.hoverShadowColor || buttonTheme.defaults.hoverShadowColor };
+                span{color:${pr.hoverTextColor || defaultTheme.whiteColor };};
                 };`:''}
             `};
 
         case "secondary":
           return `background:transparent;
             border:1px solid ${defaultTheme.secondaryColor};
-            color:${pr.textColor || defaultTheme.secondaryActiveColor};
+            span{color:${pr.textColor || defaultTheme.secondaryActiveColor};};
             ${pr.hoverEffect?`&:hover {
             border:1px solid ${defaultTheme.secondaryActiveColor};
             box-shadow: 0px 5px 8px ${pr.hoverShadowColor || defaultTheme.shadowColor };
-            color:${pr.hoverTextColor || defaultTheme.secondaryActiveColor };
+            span{color:${pr.hoverTextColor || defaultTheme.secondaryActiveColor };};
             };`:''}
             `;
         
         case "warning":
             return `
-            background: ${defaultTheme.warningColor};
+            background: ${ pr.bgColor || defaultTheme.warningColor};
             border:none;
-            color:${pr.textColor || defaultTheme.whiteColor};
+            span{color:${pr.textColor || defaultTheme.whiteColor};};
             ${pr.hoverEffect?`&:hover {
                 background-color: ${pr.hoverBgColor || defaultTheme.warningActiveColor};
                 box-shadow: 0px 5px 8px ${pr.hoverShadowColor || defaultTheme.shadowColor };
-                color:${pr.hoverTextColor || defaultTheme.whiteColor };
+                span{color:${pr.hoverTextColor || defaultTheme.whiteColor };};
                 };`:''}
            `;
 
         case "danger":
-            return `background: ${defaultTheme.dangerColor};
+            return `background: ${pr.bgColor || defaultTheme.dangerColor};
             border:none;
-            color:${pr.textColor || defaultTheme.whiteColor};
+            span{color:${pr.textColor || defaultTheme.whiteColor};}
             ${pr.hoverEffect?`&:hover {
                 background-color: ${pr.hoverBgColor || defaultTheme.dangerActiveColor};
                 box-shadow: 0px 5px 8px ${pr.hoverShadowColor || defaultTheme.shadowColor };
-                color:${pr.hoverTextColor || defaultTheme.whiteColor };
+                span{color:${pr.hoverTextColor || defaultTheme.whiteColor };};
                 };`:''}
             `;
         
         case "success":
-        return `background: ${defaultTheme.successColor};
+        return `background: ${pr.bgColor || defaultTheme.successColor};
         border:none;
-        color:${pr.textColor || defaultTheme.whiteColor};
+        span{color:${pr.textColor || defaultTheme.whiteColor};};
         ${pr.hoverEffect?`&:hover {
             background-color: ${pr.hoverBgColor || defaultTheme.successActiveColor};
             box-shadow: 0px 5px 8px ${pr.hoverShadowColor || defaultTheme.shadowColor };
-            color:${pr.hoverTextColor || defaultTheme.whiteColor };
+            span{color:${pr.hoverTextColor || defaultTheme.whiteColor };};
             };`:''}
         `;
 
       default:
-        return `background: ${defaultTheme.primaryColor};
+        return `background: ${pr.bgColor || defaultTheme.primaryColor};
         border:none;
-        color:${pr.textColor || defaultTheme.whiteColor};
+        span{color:${pr.textColor || defaultTheme.whiteColor};};
         ${pr.hoverEffect?`&:hover {
             background-color: ${pr.hoverBgColor || defaultTheme.primaryActiveColor};
             box-shadow: 0px 5px 8px ${pr.hoverShadowColor || defaultTheme.shadowColor };
-            color:${pr.hoverTextColor || defaultTheme.whiteColor };
+            span{color:${pr.hoverTextColor || defaultTheme.whiteColor };};
             };`:''}`;
     }
  };
@@ -104,7 +105,7 @@ export const StyledButton = styled.button<Props>`
     ${pr => pr.disabled === true?'pointer-events: none;opacity: 0.4;':''};
     ${pr=>  SizeMixin(pr.size)};
     ${pr => hoverPick(pr)};
-    font-size: 20px;
+    /* font-size: 20px; */
     border-radius: 0.5rem;
     text-align:center;
     position: relative;

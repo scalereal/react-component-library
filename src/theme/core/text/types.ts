@@ -25,5 +25,6 @@ export interface TextTheme {
         activeColor:string;
         textAlign:string;
         textWeight:string;
+        size:string;
     };
 }

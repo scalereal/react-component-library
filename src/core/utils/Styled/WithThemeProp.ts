@@ -1,5 +1,5 @@
 import React from "react"
-import { Theme } from "../../theme"
+import { Theme } from "../../../theme"
 export interface WithThemeProp {
     theme?: Theme;
     // eslint-disable-next-line no-undef

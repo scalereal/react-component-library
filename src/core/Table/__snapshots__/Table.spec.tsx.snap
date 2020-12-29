@@ -1,15 +1,135 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`CheckBoxGroup component should render with default theme 1`] = `
+exports[`CheckBoxGroup component should render with all the props given 1`] = `
 <div>
   <table
-    class="sc-jSgupP byYnCb"
+    class="sc-jSgupP eKkiRr"
   >
     <thead
       class="sc-bdfBwQ dbXZak"
     >
       <tr
-        class="sc-dlfnbm cqtsAl"
+        class="sc-dlfnbm fgYrRv"
+      >
+        <th
+          class="sc-gsTCUz dPAonl"
+        >
+          ID
+        </th>
+        <th
+          class="sc-gsTCUz dPAonl"
+        >
+          EmployeeID
+        </th>
+        <th
+          class="sc-gsTCUz dPAonl"
+        >
+          Name
+        </th>
+      </tr>
+    </thead>
+    <tbody
+      class="sc-hKgILt cTJgxF"
+    >
+      <tr
+        class="sc-dlfnbm fgYrRv"
+      >
+         
+        <td
+          class="sc-eCssSg flCDJa"
+        >
+          1
+        </td>
+        <td
+          class="sc-eCssSg flCDJa"
+        >
+          2
+        </td>
+        <td
+          class="sc-eCssSg flCDJa"
+        >
+          3
+        </td>
+         
+      </tr>
+      <tr
+        class="sc-dlfnbm fgYrRv"
+      >
+         
+        <td
+          class="sc-eCssSg flCDJa"
+        >
+          1
+        </td>
+        <td
+          class="sc-eCssSg flCDJa"
+        >
+          2
+        </td>
+        <td
+          class="sc-eCssSg flCDJa"
+        >
+          3
+        </td>
+         
+      </tr>
+      <tr
+        class="sc-dlfnbm fgYrRv"
+      >
+         
+        <td
+          class="sc-eCssSg flCDJa"
+        >
+          1
+        </td>
+        <td
+          class="sc-eCssSg flCDJa"
+        >
+          2
+        </td>
+        <td
+          class="sc-eCssSg flCDJa"
+        >
+          3
+        </td>
+         
+      </tr>
+      <tr
+        class="sc-dlfnbm fgYrRv"
+      >
+         
+        <td
+          class="sc-eCssSg flCDJa"
+        >
+          1
+        </td>
+        <td
+          class="sc-eCssSg flCDJa"
+        >
+          2
+        </td>
+        <td
+          class="sc-eCssSg flCDJa"
+        >
+          3
+        </td>
+         
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
+
+exports[`CheckBoxGroup component should render with default theme 1`] = `
+<div>
+  <table
+    class="sc-jSgupP fPFcvH"
+  >
+    <thead
+      class="sc-bdfBwQ dbXZak"
+    >
+      <tr
+        class="sc-dlfnbm eeeREN"
       />
     </thead>
     <tbody

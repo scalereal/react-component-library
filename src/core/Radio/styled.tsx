@@ -1,134 +1,180 @@
 import styled from 'styled-components';
-import { defaultTheme } from '../../theme/theme';
-import { RadioProps } from './types';
+import { radioTheme } from '../../theme/core/radio';
+import { Props } from './types';
+
+
+export const RadioSpan = styled.span<Props>`
+    /* position: absolute;
+    top: 0;
+    left: 0; */
+    position: relative;
+    text-align:center;
+    background-color: ${pr=>pr.bgColor|| radioTheme.defaults.bgColor};
+    border-radius: 50%;
+    ${pr => (pr.hasError || pr.errorText!=='')?`border:1px solid ${radioTheme.defaults.errorTextColor}`:''};
+
+    &:after {
+        content: "";
+        position:absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: none;
+        border-radius: 50%;
+    }
+
+`;
+
+
+export const ErrorLabel = styled.label`
+    display:block;
+    color: ${radioTheme.defaults.errorTextColor};
+    padding:0.5rem 0;
+`;
 
 const mixin = (size:any) => {
     switch (size) {
         case "XS":
-            return `padding: 0 2rem;
-            span{
+            return `
+            ${RadioSpan}{
                 width: 1rem;
                 height: 1rem;
                 &:after {
-                    width: 0.6rem;
-                    height: 0.6rem;
-                    top: 3px;
-                    left: 3px;
+                    width: 0.5rem;
+                    height: 0.5rem;
                 }
             }
             `;
         case "S":
-            return `padding: 0 2rem;
-            span{
+            return `
+            ${RadioSpan}{
                 width: 1.4rem;
                 height: 1.4rem;
                 &:after {
-                    width: 1rem;
-                    height: 1rem;
-                    top: 3px;
-                    left: 3px;
+                    width: 0.8rem;
+                    height: 0.8rem;
                 }
             }
             `;
         
         case "M":
-            return `padding: 0.2rem 3rem;
-            span{
+            return `
+            ${RadioSpan}{
                 width: 1.8rem;
                 height: 1.8rem;
                 &:after {
-                    width: 1.4rem;
-                    height: 1.4rem;
-                    top: 3.3px;
-                    left: 3.3px;
+                    width: 1.2rem;
+                    height: 1.2rem;
                 }
             }
             `;
 
         case "L":
-            return `padding: 0.25rem 4rem;
-            span{
+            return `
+            ${RadioSpan}{
                 width: 2rem;
                 height: 2rem;
                 &:after {
-                    width: 1.6rem;
-                    height: 1.6rem;
-                    top: 3px;
-                    left: 3px;
+                    width: 1.4rem;
+                    height: 1.4rem;
                 }
             }
             `;
 
         case "XL":
-            return `padding: 0.5rem 4rem;
-            span{
+            return `
+            ${RadioSpan}{
                 width: 2.4rem;
                 height: 2.4rem;
                 &:after {
-                    width: 2rem;
-                    height: 2rem;
-                    top: 3px;
-                    left: 3px;
+                    width: 1.8rem;
+                    height: 1.8rem;
                 }
             }
             `;
      }
- };
-export const ErrorLabel = styled.label`
-    display:block;
-    color: ${defaultTheme.statusColors.danger};
-`;
+};
 
-export const StyledLabel = styled.label<RadioProps>`
-    display: inline-block;
+
+const labelPos = (position:any) => {
+    switch(position){
+        case "top":
+            return `flex-direction:column;
+            align-items: flex-start;
+            .radioLabel{
+                    padding:0.5rem 0;
+                }
+                
+            `;
+        case "bottom":
+            return `flex-direction:column-reverse;
+            align-items: flex-start;
+            .radioLabel{
+                    padding:0.5rem 0;
+                }
+            `;
+        case "left":
+            return `flex-direction:row;
+            justify-content:flex-start;
+            .radioLabel{
+                padding-right:1.6rem;
+                padding-left:0;
+            }
+            `;
+        default:
+            return `.radioLabel{
+                padding-left:1.3rem;
+            }
+            `;
+    };
+};
+
+export const StyledLabel = styled.label<Props>`
+    display: flex;
     position:relative;
     cursor: pointer;
-    margin:1rem 0;
+    /* margin:1rem 0; */
     align-items: center;
+    flex-direction:row-reverse;
     justify-content: flex-end;
-    font-size: 20px;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    color:${pr=>pr.labelColor|| defaultTheme.typographyColor };
+    color:${pr=>pr.labelColor|| radioTheme.defaults.textColor };
     ${pr => pr.disabled === true?'pointer-events: none;opacity: 0.4;':''}
-
-    span{
-        position: absolute;
-        top: 0;
-        left: 0;
-        background-color: ${pr=>pr.bgColor||'#eeeeee'};
-        border-radius: 50%;
-        ${pr => (pr.hasError || pr.errorText!=='')?`border:1px solid ${defaultTheme.statusColors.danger}`:''};
-
-        &:after {
-            content: "";
-            position: absolute;
-            display: none;
-            border-radius: 50%;
-            background: #eeeeee;
-        }
-
-    }
-
-    ${pr => pr.hoverEffect? `&:hover span {
-        background-color: #999999;
-        }`:''
-    }
 
     input{
         position: absolute;
         opacity: 0;
         cursor: pointer;
-        &:checked ~ span {
-            
+        &:checked ~ ${RadioSpan} {
             &:after {
                 display: block;
-                background-color: ${defaultTheme.primaryColor};
+                background-color: ${pr=>pr.checkedBgColor || radioTheme.defaults.checkedBgColor};
             }
         }
     }
+
+    ${pr => pr.hoverEffect? `&:hover{ 
+        ${RadioSpan} {
+            background-color: ${pr.hoverBgColor || radioTheme.defaults.hoverBgColor};
+        }; 
+        input:checked ~ ${RadioSpan}:after{
+            background-color: ${pr.hoverCheckedBgColor || radioTheme.defaults.hoverCheckedBgColor};
+        };
+        ${pr.labelHoverEffect?`.radioLabel{
+            color:${pr.hoverLabelColor};
+        }`:''
+        } 
+    };`:''
+    }
+
     ${pr=>  mixin(pr.size)}
-        
+    ${pr=> labelPos(pr.labelPosition) };
+
+`;
+
+export const RadioWrapper = styled.div`
+
 `;

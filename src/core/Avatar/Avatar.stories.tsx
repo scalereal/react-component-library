@@ -3,7 +3,8 @@ import React from 'react';
 import Avatar from '.';
 import { Props } from './types';
 
-const SizeMap: Props['size'][] = ['XS', 'S', 'M', 'L', 'XL'];
+const SizeMap: Props['size'][] = ['XXS','XS', 'S', 'M', 'L', 'XL'];
+const DisplayMap: Props['display'][] = ['inline','inline-block','block']
 
 export default {
     title: 'Components/Core/Avatar',
@@ -39,7 +40,18 @@ export default {
         disabled:{
             control:{type:'boolean'}
         },
+        display:{
+            control: {
+                type: 'select',
+                options: Object.values(DisplayMap),
+            },
+        },
         ref:{
+            table:{
+              disable:true
+            }
+        },
+        theme:{
             table:{
               disable:true
             }

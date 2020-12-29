@@ -9,7 +9,7 @@ exports[`Toast should render properly with danger variant 1`] = `
       class="sc-gsTCUz cqslIK"
     >
       <span
-        class="sc-jSgupP bdYDDc"
+        class="sc-jSgupP bvhCwX"
       >
         Title
       </span>
@@ -18,7 +18,7 @@ exports[`Toast should render properly with danger variant 1`] = `
       class="sc-dlfnbm eupWQN"
     >
       <span
-        class="sc-jSgupP cyDglv"
+        class="sc-jSgupP iPbxjQ"
       >
         Message
       </span>
@@ -44,7 +44,7 @@ exports[`Toast should render properly with info variant 1`] = `
       class="sc-gsTCUz cqslIK"
     >
       <span
-        class="sc-jSgupP bdYDDc"
+        class="sc-jSgupP bvhCwX"
       >
         Title
       </span>
@@ -53,7 +53,7 @@ exports[`Toast should render properly with info variant 1`] = `
       class="sc-dlfnbm eupWQN"
     >
       <span
-        class="sc-jSgupP cyDglv"
+        class="sc-jSgupP iPbxjQ"
       >
         Message
       </span>
@@ -79,7 +79,7 @@ exports[`Toast should render properly with success variant 1`] = `
       class="sc-gsTCUz cqslIK"
     >
       <span
-        class="sc-jSgupP bdYDDc"
+        class="sc-jSgupP bvhCwX"
       >
         Title
       </span>
@@ -88,7 +88,7 @@ exports[`Toast should render properly with success variant 1`] = `
       class="sc-dlfnbm eupWQN"
     >
       <span
-        class="sc-jSgupP cyDglv"
+        class="sc-jSgupP iPbxjQ"
       >
         Message
       </span>
@@ -114,7 +114,7 @@ exports[`Toast should render properly with warning variant 1`] = `
       class="sc-gsTCUz cqslIK"
     >
       <span
-        class="sc-jSgupP bdYDDc"
+        class="sc-jSgupP bvhCwX"
       >
         Title
       </span>
@@ -123,13 +123,13 @@ exports[`Toast should render properly with warning variant 1`] = `
       class="sc-dlfnbm eupWQN"
     >
       <span
-        class="sc-jSgupP cyDglv"
+        class="sc-jSgupP iPbxjQ"
       >
         Message
       </span>
     </div>
     <div
-      class="sc-hKgILt kstjDk"
+      class="sc-hKgILt djIRUQ"
     />
     <div
       class="sc-eCssSg fiYKEv"
@@ -149,7 +149,7 @@ exports[`Toast should render title and message text 1`] = `
       class="sc-gsTCUz cqslIK"
     >
       <span
-        class="sc-jSgupP bdYDDc"
+        class="sc-jSgupP bvhCwX"
       >
         Title
       </span>
@@ -158,7 +158,7 @@ exports[`Toast should render title and message text 1`] = `
       class="sc-dlfnbm eupWQN"
     >
       <span
-        class="sc-jSgupP cyDglv"
+        class="sc-jSgupP iPbxjQ"
       >
         Message
       </span>

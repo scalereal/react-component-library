@@ -22,7 +22,20 @@ export default {
         },
         borderColor:{
             control:'color'
-        }
+        },
+        nthTrBgColor:{
+            control:'color'
+        },
+        ref:{
+            table:{
+              disable:true
+            }
+        },
+        theme:{
+            table:{
+              disable:true
+            }
+        },
         
     }
 } as Meta;

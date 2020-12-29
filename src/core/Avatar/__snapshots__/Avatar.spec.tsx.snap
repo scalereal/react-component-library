@@ -3,7 +3,7 @@
 exports[`Avatar component should render image avatar properly 1`] = `
 <div>
   <div
-    class="sc-bdfBwQ bQHeWL"
+    class="sc-bdfBwQ cBbEeN"
   >
     <img
       src="https://media.istockphoto.com/photos/child-hands-formig-heart-shape-picture-id951945718?k=6&m=951945718&s=612x612&w=0&h=ih-N7RytxrTfhDyvyTQCA5q5xKoJToKSYgdsJ_mHrv0="
@@ -15,7 +15,7 @@ exports[`Avatar component should render image avatar properly 1`] = `
 exports[`Avatar component should render with all the props given 1`] = `
 <div>
   <div
-    class="sc-bdfBwQ jERgWU"
+    class="sc-bdfBwQ edrmRa"
   >
     <span>
       PB
@@ -27,7 +27,7 @@ exports[`Avatar component should render with all the props given 1`] = `
 exports[`Avatar component should render with default theme 1`] = `
 <div>
   <div
-    class="sc-bdfBwQ dFTrMl"
+    class="sc-bdfBwQ ZGcuX"
   >
     <span>
       PB
@@ -39,7 +39,7 @@ exports[`Avatar component should render with default theme 1`] = `
 exports[`Avatar component should render with not-allowed cursor when it is disabled 1`] = `
 <div>
   <div
-    class="sc-bdfBwQ eEGfGH"
+    class="sc-bdfBwQ feyqSt"
     disabled=""
   >
     <span>

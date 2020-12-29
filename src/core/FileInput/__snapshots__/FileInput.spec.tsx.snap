@@ -1,14 +1,103 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`CheckBox component should render with all the props given 1`] = `
+<div>
+  <div
+    class="sc-iBPRYJ fScuuL"
+    label="checkBoxGroup Label"
+  >
+    <label
+      class="sc-bdfBwQ gowKKC"
+      label="checkBoxGroup Label"
+    >
+      Invalid File
+    </label>
+    <label
+      class="sc-gKsewC cAKvTz"
+      label="checkBoxGroup Label"
+    >
+      <span
+        class="sc-jSgupP hjrfqr"
+        label="checkBoxGroup Label"
+      >
+        Browse
+      </span>
+      <span
+        class="sc-eCssSg dqsnRY"
+        label="checkBoxGroup Label"
+      >
+        Chose file
+      </span>
+      <input
+        class="sc-hKgILt gCeYRd"
+        type="file"
+      />
+    </label>
+  </div>
+</div>
+`;
+
 exports[`CheckBox component should render with default theme 1`] = `
 <div>
-  <label
-    class="sc-bdfBwQ fysQaf"
+  <div
+    class="sc-iBPRYJ fScuuL"
   >
-    <input
-      aria-label="File browser example"
-      type="file"
+    <label
+      class="sc-bdfBwQ gowKKC"
     />
-  </label>
+    <label
+      class="sc-gKsewC hBmODz"
+    >
+      <span
+        class="sc-jSgupP hYGisR"
+      >
+        Browse
+      </span>
+      <span
+        class="sc-eCssSg eOtcvt"
+      >
+        Chose file
+      </span>
+      <input
+        class="sc-hKgILt gCeYRd"
+        type="file"
+      />
+    </label>
+  </div>
+</div>
+`;
+
+exports[`CheckBox component should render with not-allowed cursor when it is disabled 1`] = `
+<div>
+  <div
+    class="sc-iBPRYJ fScuuL"
+    disabled=""
+  >
+    <label
+      class="sc-bdfBwQ gowKKC"
+      disabled=""
+    />
+    <label
+      class="sc-gKsewC iqZIkL"
+      disabled=""
+    >
+      <span
+        class="sc-jSgupP hYGisR"
+        disabled=""
+      >
+        Browse
+      </span>
+      <span
+        class="sc-eCssSg eOtcvt"
+        disabled=""
+      >
+        Chose file
+      </span>
+      <input
+        class="sc-hKgILt gCeYRd"
+        type="file"
+      />
+    </label>
+  </div>
 </div>
 `;
