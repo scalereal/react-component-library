@@ -4,6 +4,7 @@ exports[`List should render horizontal list 1`] = `
 <div>
   <ul
     class="sc-bdfBwQ hjSajA"
+    list="[object Object]"
   >
     <li>
       <p>
@@ -23,6 +24,7 @@ exports[`List should render vertical list 1`] = `
 <div>
   <ul
     class="sc-bdfBwQ cjZcyT"
+    list="[object Object]"
   >
     <li>
       <p>

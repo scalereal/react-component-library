@@ -1,6 +1,6 @@
 import { Meta, Story } from '@storybook/react/types-6-0';
 import React from 'react';
-import Button from './Button';
+import Button from '.';
 import { Props } from './types';
 
 const SizeMap: Props['size'][] = ['XS', 'S', 'M', 'L', 'XL'];
@@ -11,6 +11,12 @@ export default {
     component: Button,
     argTypes : {
         size : {
+            control: {
+                type: 'select',
+                options: Object.values(SizeMap),
+            },
+        },
+        textSize : {
             control: {
                 type: 'select',
                 options: Object.values(SizeMap),

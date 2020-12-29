@@ -1,12 +1,15 @@
 import { Meta, Story } from '@storybook/react/types-6-0';
 import React from 'react';
-import Text from "./Text"
+import Text from "./Text";
 
 
 export default {
     title: 'Components/Core/Text',
     component: Text,
     argTypes: {
+        hoverEffect:{
+            control:{ type: 'boolean'} 
+        },
         textColor: {
             control: 'color'
         },

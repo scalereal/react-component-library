@@ -1,10 +1,19 @@
 import styled from 'styled-components';
-import { defaultTheme } from "../../theme/theme";
+import { avatarTheme } from '../../theme/core/avatar';
 import { Props } from './types';
 
 
 const mixin = (size:any) => {
     switch (size) {
+        case "XXS":
+            return `width: 30px;
+            height: 30px;
+            line-height: 30px;
+            img{width: 30px;
+                height: 30px;
+            }
+            span{font-size:0.8em};
+            `;
         case "XS":
             return `width: 50px;
             height: 50px;
@@ -61,15 +70,16 @@ const mixin = (size:any) => {
 export const StyledAvatar = styled.div<Props>`
     ${pr => pr.disabled === true?'pointer-events: none;opacity: 0.4;':''}
     ${pr=>  mixin(pr.size)}
+    display:${pr=> pr.display!=='block'?pr.display:'block'};
     border-radius: 50%;
     text-align:center;
-    background-color: ${pr => pr.bgColor || defaultTheme.secondaryColor };
+    background-color: ${pr => pr.bgColor || avatarTheme.defaults.bgColor };
 
     ${pr => pr.hoverEffect? `&:hover {
-        background-color: ${pr.hoverBgColor || defaultTheme.primaryActiveColor};
-        box-shadow: 0px 5px 8px ${pr.hoverShadowColor || defaultTheme.shadowColor };
+        background-color: ${pr.hoverBgColor || avatarTheme.defaults.hoverBgColor };
+        box-shadow: 0px 5px 8px ${pr.hoverShadowColor || avatarTheme.defaults.shadowColor };
         span{
-            color: ${pr.hoverTextColor || defaultTheme.whiteColor};
+            color: ${pr.hoverTextColor || avatarTheme.defaults.hoverTextColor };
             text-shadow: 0px 5px 8px ${pr.hoverTextShadowColor };
         }
         }
@@ -85,6 +95,6 @@ export const StyledAvatar = styled.div<Props>`
         display: inline-block;
         vertical-align: middle;
         line-height: normal;
-        color: ${pr => pr.textColor || defaultTheme.primaryColor};
+        color: ${pr => pr.textColor || avatarTheme.defaults.textColor };
     }
 `;

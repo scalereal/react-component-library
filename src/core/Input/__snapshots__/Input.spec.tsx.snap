@@ -3,10 +3,10 @@
 exports[`Input should render correctly when fullWidth & required props are falsy 1`] = `
 <div>
   <div
-    class="sc-bdfBwQ dOTqjN"
+    class="sc-bdfBwQ fIDpPC"
   >
     <input
-      class="sc-gsTCUz guRvgL"
+      class="sc-gsTCUz jElvau"
       id="input"
       placeholder="Enter Email Address"
       type="email"
@@ -18,10 +18,10 @@ exports[`Input should render correctly when fullWidth & required props are falsy
 exports[`Input should render correctly when it is disabled 1`] = `
 <div>
   <div
-    class="sc-bdfBwQ dOTqjN"
+    class="sc-bdfBwQ fIDpPC"
   >
     <input
-      class="sc-gsTCUz qdJqK"
+      class="sc-gsTCUz hgGslb"
       disabled=""
       id="email-input"
       placeholder="Enter Email Address"
@@ -34,22 +34,23 @@ exports[`Input should render correctly when it is disabled 1`] = `
 exports[`Input should render correctly with all the props given 1`] = `
 <div>
   <div
-    class="sc-bdfBwQ faCpUx"
+    class="sc-bdfBwQ gNdbCe"
   >
     <span
-      class="sc-dlfnbm csXxpq"
+      class="sc-dlfnbm gFsDaS"
     >
       www.
     </span>
     <input
-      class="sc-gsTCUz guRvgL"
+      class="sc-gsTCUz jElvau"
       id="email-input"
       placeholder="Enter Email Address"
       required=""
       type="email"
     />
     <span
-      class="sc-hKgILt dMhINk"
+      class="sc-hKgILt kAVLpk"
+
     >
       .com
     </span>

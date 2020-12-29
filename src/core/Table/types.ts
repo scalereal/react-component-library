@@ -15,5 +15,6 @@ export interface Props extends Omit<HTMLProps<HTMLTableElement>,'size'|'onChange
     thBgColor?:string;
     thTextColor?:string;
     hoverEffect?:boolean;
+    nthTrBgColor?:string;
     hoverTrBgColor?:string;
 }

@@ -8,6 +8,7 @@ export type ButtonType = 'primary' | 'secondary' | 'warning' | 'danger'| 'succes
 export interface Props extends Omit<HTMLProps<HTMLDivElement>,'size' | 'type'>,WithThemeProp {
     type?: ButtonType;
     icon?: ElementType;
+    textSize?:ComponentSize;
     size?: ComponentSize;
     className?: string;
     children?: ReactNode;

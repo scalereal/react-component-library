@@ -1,9 +1,9 @@
 import { render } from '@testing-library/react';
 import * as React from 'react';
-import Button from './Button';
+import Button from '.';
 
 describe('Button', () => {
-    it('should render properly', () => {
+    it('should render properl', () => {
         const { container } = render(<Button />);
         expect(container).toMatchSnapshot();
     });
@@ -32,9 +32,9 @@ describe('Button', () => {
         expect(container).toMatchSnapshot();
     });
 
-    it('should render with correct children', () => {
-        const{container}=render(<Button>Click Me</Button>);
-        expect(container).toContainHTML("Click Me");
-    });
+    // it('should render with correct children', () => {
+    //     const{container}=render(<Button>Click Me</Button>);
+    //     expect(container).toContainHTML("Click Me");
+    // });
 
 });

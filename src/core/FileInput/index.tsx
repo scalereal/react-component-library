@@ -1,22 +1,27 @@
-import React, { FC } from 'react';
+import React, { FC, useState } from 'react';
 import { WithStyle } from '../../utils';
-import { StyledLabel } from './styled';
+import { ErrorLabel } from '../CheckBox/styled';
+import { BrowsSpan, FileNameSpan, StyledInput, StyledLabel, StyledWrapper } from './styled';
 import { Props } from './types';
 
 const FileInput:FC<Props> & WithStyle = React.memo(React.forwardRef( (props, ref) => {
 
-    const [file, setFile] = React.useState("");
+  const [file, setFile] = useState<any>('');
 
-  const handleUpload = (event:any) =>{
-    setFile(event.target.files[0]);
-
-    // Add code here to upload file to server
-    // ...
+  const {errorText,size='S'} = props;
+  const handleUpload = (e:any) =>{
+    setFile(e.target.files[0].name);
+    console.log(file)
   }
     return(
-        <StyledLabel ref={ref} {...props}>
-            <input type="file" aria-label="File browser example" onChange={(e:any) => handleUpload(e)} />
+      <StyledWrapper ref={ref} {...props}>
+        <ErrorLabel {...props}>{errorText}</ErrorLabel>
+        <StyledLabel {...props}>
+            <BrowsSpan size={size} {...props}>Browse</BrowsSpan>
+            <FileNameSpan size={size}  {...props}>{file===''?'Chose file':file}</FileNameSpan>
+            <StyledInput type="file"  onChange={handleUpload} />
         </StyledLabel>
+      </StyledWrapper>
     )
 }));
 

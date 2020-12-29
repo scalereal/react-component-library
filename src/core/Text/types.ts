@@ -11,6 +11,7 @@ export interface TextProps extends HTMLProps<HTMLElement>, WithThemeProp {
     lineThrough?: boolean;
     /**Text Line Height */
     lineHeight?:string;
+    hoverEffect?:boolean;
     /** Text Hover Color */
     hoverColor?:string;
     /** Text Active Color*/

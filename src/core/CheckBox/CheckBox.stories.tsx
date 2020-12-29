@@ -4,6 +4,7 @@ import CheckBox from '.';
 import { Props } from './types';
 
 const SizeMap: Props['size'][] = ['XS', 'S', 'M', 'L', 'XL'];
+const lposMap: Props['labelPosition'][] = ['top','bottom','left','right']
 
 export default {
     title: 'Components/Core/CheckBox',
@@ -15,8 +16,29 @@ export default {
                 options: Object.values(SizeMap),
             },
         },
+        fontSize:{
+            control: {
+                type: 'select',
+                options: Object.values(SizeMap),
+            },
+        },
+        labelPosition:{
+            control: {
+                type: 'select',
+                options: Object.values(lposMap),
+            },
+        },
         label:{
             control:{type:'text'}
+        },
+        value:{
+            control:{type:'text'}
+        },
+        hoverEffect:{ 
+            control: { type: 'boolean'}  
+        },
+        labelHoverEffect:{ 
+            control: { type: 'boolean'}  
         },
         disabled:{
             control:{type:'boolean'}
@@ -30,23 +52,27 @@ export default {
         bgColor : {
             control:'color'
         },
-        textColor: {
+        labelColor: {
             control:'color'
         },
         hoverBgColor: {
             control:'color'
         },
-        hoverTextColor: {
+        labelHoverColor: {
             control:'color'
         },
         hoverShadowColor: {
             control:'color'
         },
-        hoverTextShadowColor: {
-            control:'color'
+        ref:{
+            table:{
+              disable:true
+            }
         },
-        hoverEffect:{ 
-            control: { type: 'boolean'}  
+        theme:{
+            table:{
+              disable:true
+            }
         },
         
     }

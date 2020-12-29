@@ -1,6 +1,7 @@
-import styled,{ css } from 'styled-components';
+import styled, { css } from 'styled-components';
+import { defaultTheme } from '../../theme';
 import { TextProps } from './types';
-import { defaultTheme } from '../../theme'
+
 
 const uppercase = () => css`
     text-transform: uppercase;
@@ -23,6 +24,7 @@ const getTextStyle = ({ ...props }: TextProps) => {
 };
 
 export const Text = styled('span')<TextProps>`
+    padding:0.3rem;
     ${getTextStyle}
     ${props => props.uppercase && uppercase()};
     ${props => props.lineThrough && lineThrough()};
@@ -30,9 +32,14 @@ export const Text = styled('span')<TextProps>`
         color: ${({ theme, activeColor }) => (activeColor ? activeColor : theme.text.defaults.activeColor)};
     }
 
-    &:hover {
+    ${props => props.hoverEffect? `&:hover {
+        color: ${props.hoverColor ? props.hoverColor : props.theme.text.defaults.hoverColor};
+    }`:''
+    };
+    /* &:hover {
         color: ${({ theme, hoverColor }) => (hoverColor ? hoverColor : theme.text.defaults.hoverColor)};
-    }
+    } */
+
 `;
 
 Text.displayName = "Text";

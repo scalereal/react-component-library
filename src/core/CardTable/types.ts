@@ -12,8 +12,11 @@ export interface Props extends Omit<HTMLProps<HTMLTableElement>,'size'|'onChange
     thData?: {id:any,data:any}[];
     tdData?:{trId:any,trData:{tdId:any,tdData:any}[]}[];
     borderColor?:string
-    thBgColor?:string;
-    thTextColor?:string;
+    headerBgColor?:string;
+    hoverBorderColor?:string;
+    hoverShadowColor?:string;
+    trBgColor?:string;
+    nthTrBgColor?:string;
     hoverEffect?:boolean;
     hoverTrBgColor?:string;
 }
