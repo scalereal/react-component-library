@@ -1,9 +1,9 @@
 import styled,{ css } from 'styled-components';
 import { ListProps } from './types';
-import { spacingTheme } from "../../theme/core/list/index"
-import { SpacingTheme } from "../../theme/core/list/types"
+import { defaultTheme } from '../../theme';
+import { ListTheme } from '../../theme/core/list/types';
 
-const horizontal = (spacings: SpacingTheme) => css`
+const horizontal = (spacings: ListTheme) => css`
     li {
         margin: 0 ${spacings.S1};
         &:last-child {
@@ -15,7 +15,7 @@ const horizontal = (spacings: SpacingTheme) => css`
     }
 `;
 
-const vertical = (spacings: SpacingTheme) => css`
+const vertical = (spacings: ListTheme) => css`
     li {
         margin: ${spacings.S1} 0;
         &:last-child {
@@ -27,16 +27,16 @@ const vertical = (spacings: SpacingTheme) => css`
     }
 `;
 
-export const ListStyled = styled('ul').attrs(({ theme: spacings  }) => ({ spacings }))<ListProps>`
+export const ListStyled = styled('ul').attrs(({ theme: { list }  }) => ({ list }))<ListProps>`
     padding: 0;
     margin: 0;
     display: flex;
     list-style: none;
     flex-direction: ${({ variant }) => (variant === 'horizontal' ? 'row' : 'column')};
-    ${({ spacings, variant }) => variant === 'horizontal' && horizontal(spacings)};
-    ${({ spacings, variant }) => variant === 'vertical' && vertical(spacings)};
+    ${({ list, variant }) => variant === 'horizontal' && horizontal(list)};
+    ${({ list, variant }) => variant === 'vertical' && vertical(list)};
 `;
 
 ListStyled.defaultProps = {
-    theme:spacingTheme
+    theme:defaultTheme
 }

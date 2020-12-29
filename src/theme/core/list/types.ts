@@ -1,4 +1,4 @@
-export interface SpacingTheme {
+export interface ListTheme {
     S1: string;
     S2: string;
     S3: string;

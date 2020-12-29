@@ -5,3 +5,6 @@ export * from './link/types';
 export * from './modal/types';
 export * from './toast/types';
 export * from './toggle/types';
+export * from './colors/types';
+export * from './text/types';
+export * from './list/types';

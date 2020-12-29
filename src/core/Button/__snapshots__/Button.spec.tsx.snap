@@ -1,5 +1,25 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Button should render properly 1`] = `
+<div>
+  <button
+    class="sc-bdfBwQ gUBtvU"
+    type="primary"
+  />
+</div>
+`;
+
+exports[`Button should render with all the props given 1`] = `
+<div>
+  <button
+    class="sc-bdfBwQ lbSdzD"
+    type="danger"
+  >
+    Button
+  </button>
+</div>
+`;
+
 exports[`Button should render with not-allowed cursor when it is disabled 1`] = `
 <div>
   <button

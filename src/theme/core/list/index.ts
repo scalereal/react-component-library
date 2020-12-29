@@ -1,5 +1,5 @@
-import { SpacingTheme } from "./types"
-export const spacingTheme: SpacingTheme = {
+import { ListTheme } from "./types"
+export const listTheme: ListTheme = {
     S1: '0.4rem',
     S2: '0.8rem',
     S3: '1.2rem',
