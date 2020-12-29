@@ -1,0 +1,97 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Radio component should render with all the props given 1`] = `
+<div>
+  <div
+    class="sc-eCssSg flCDJa"
+  >
+    <label
+      class="sc-dlfnbm cayrCo"
+      for="error"
+      id="error"
+    />
+    <label
+      class="sc-hKgILt firMIG"
+      label="1"
+      value="1"
+    >
+      <span
+        class="sc-bdfBwQ fVhTiG radioLabel"
+      >
+        1
+      </span>
+      <input
+        type="radio"
+        value="1"
+      />
+      <span
+        class="sc-gsTCUz uHtaa"
+        label="1"
+        value="1"
+      />
+    </label>
+  </div>
+</div>
+`;
+
+exports[`Radio component should render with default theme 1`] = `
+<div>
+  <div
+    class="sc-eCssSg flCDJa"
+  >
+    <label
+      class="sc-dlfnbm cayrCo"
+      for="error"
+      id="error"
+    />
+    <label
+      class="sc-hKgILt dFxNXU"
+    >
+      <span
+        class="sc-bdfBwQ cmSgzP radioLabel"
+      >
+        CheckBox
+      </span>
+      <input
+        type="radio"
+        value=""
+      />
+      <span
+        class="sc-gsTCUz jcBRty"
+      />
+    </label>
+  </div>
+</div>
+`;
+
+exports[`Radio component should render with not-allowed cursor when it is disabled 1`] = `
+<div>
+  <div
+    class="sc-eCssSg flCDJa"
+  >
+    <label
+      class="sc-dlfnbm cayrCo"
+      for="error"
+      id="error"
+    />
+    <label
+      class="sc-hKgILt rqhIk"
+      disabled=""
+    >
+      <span
+        class="sc-bdfBwQ cmSgzP radioLabel"
+      >
+        CheckBox
+      </span>
+      <input
+        type="radio"
+        value=""
+      />
+      <span
+        class="sc-gsTCUz jcBRty"
+        disabled=""
+      />
+    </label>
+  </div>
+</div>
+`;

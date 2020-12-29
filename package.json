@@ -16,6 +16,7 @@
     "scripts": {
         "compile-icons": "npx @svgr/cli -d src/icons src/icons --typescript",
         "start": "react-scripts start",
+        "test:jest": "jest --config config/jest/jest.config.js",
         "test": "jest -c config/jest/jest.config.js --watch",
         "eject": "react-scripts eject",
         "clear": "rm -rf packages",
@@ -46,8 +47,8 @@
     },
     "jest": {
         "setupFilesAfterEnv": [
-          "@testing-library/jest-dom/extend-expect",
-          "<rootDir>/src/setupTests.js"
+            "@testing-library/jest-dom/extend-expect",
+            "<rootDir>/src/setupTests.js"
         ]
     },
     "publishConfig": {

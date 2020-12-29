@@ -1,0 +1,176 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Toast should render properly with danger variant 1`] = `
+<div>
+  <div
+    class="sc-bdfBwQ drLDWu"
+  >
+    <div
+      class="sc-gsTCUz cqslIK"
+    >
+      <span
+        class="sc-jSgupP bvhCwX"
+      >
+        Title
+      </span>
+    </div>
+    <div
+      class="sc-dlfnbm eupWQN"
+    >
+      <span
+        class="sc-jSgupP iPbxjQ"
+      >
+        Message
+      </span>
+    </div>
+    <div
+      class="sc-hKgILt coUvtK"
+    />
+    <div
+      class="sc-eCssSg fiYKEv"
+    >
+      X
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Toast should render properly with info variant 1`] = `
+<div>
+  <div
+    class="sc-bdfBwQ drLDWu"
+  >
+    <div
+      class="sc-gsTCUz cqslIK"
+    >
+      <span
+        class="sc-jSgupP bvhCwX"
+      >
+        Title
+      </span>
+    </div>
+    <div
+      class="sc-dlfnbm eupWQN"
+    >
+      <span
+        class="sc-jSgupP iPbxjQ"
+      >
+        Message
+      </span>
+    </div>
+    <div
+      class="sc-hKgILt jXuuKZ"
+    />
+    <div
+      class="sc-eCssSg fiYKEv"
+    >
+      X
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Toast should render properly with success variant 1`] = `
+<div>
+  <div
+    class="sc-bdfBwQ drLDWu"
+  >
+    <div
+      class="sc-gsTCUz cqslIK"
+    >
+      <span
+        class="sc-jSgupP bvhCwX"
+      >
+        Title
+      </span>
+    </div>
+    <div
+      class="sc-dlfnbm eupWQN"
+    >
+      <span
+        class="sc-jSgupP iPbxjQ"
+      >
+        Message
+      </span>
+    </div>
+    <div
+      class="sc-hKgILt jJbQmO"
+    />
+    <div
+      class="sc-eCssSg fiYKEv"
+    >
+      X
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Toast should render properly with warning variant 1`] = `
+<div>
+  <div
+    class="sc-bdfBwQ drLDWu"
+  >
+    <div
+      class="sc-gsTCUz cqslIK"
+    >
+      <span
+        class="sc-jSgupP bvhCwX"
+      >
+        Title
+      </span>
+    </div>
+    <div
+      class="sc-dlfnbm eupWQN"
+    >
+      <span
+        class="sc-jSgupP iPbxjQ"
+      >
+        Message
+      </span>
+    </div>
+    <div
+      class="sc-hKgILt djIRUQ"
+    />
+    <div
+      class="sc-eCssSg fiYKEv"
+    >
+      X
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Toast should render title and message text 1`] = `
+<div>
+  <div
+    class="sc-bdfBwQ drLDWu"
+  >
+    <div
+      class="sc-gsTCUz cqslIK"
+    >
+      <span
+        class="sc-jSgupP bvhCwX"
+      >
+        Title
+      </span>
+    </div>
+    <div
+      class="sc-dlfnbm eupWQN"
+    >
+      <span
+        class="sc-jSgupP iPbxjQ"
+      >
+        Message
+      </span>
+    </div>
+    <div
+      class="sc-hKgILt jJbQmO"
+    />
+    <div
+      class="sc-eCssSg fiYKEv"
+    >
+      X
+    </div>
+  </div>
+</div>
+`;

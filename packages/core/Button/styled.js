@@ -3,27 +3,42 @@ var __makeTemplateObject = (this && this.__makeTemplateObject) || function (cook
     return cooked;
 };
 import styled from 'styled-components';
-import { heights, sidePaddings } from '../../theme/sizes';
-var typeColors = {
-    default: {
-        regular: '#0018cf',
-        hover: '#2e27cc'
-    },
-    danger: {
-        regular: '#d93848',
-        hover: '#eb4d5d'
-    },
-    ghost: {
-        regular: 'transparent',
-        hover: '#dbdbdb'
-    },
-    secondary: {
-        regular: '#000',
-        hover: '#3d3d3d'
-    },
+import { buttonTheme } from '../../theme/core/button';
+import { defaultTheme } from "../../theme/theme";
+var SizeMixin = function (size) {
+    switch (size) {
+        case "XS":
+            return "padding: 0.6rem 2.4rem 0.8rem;\n            ";
+        case "S":
+            return "padding: 0.8rem 2.4rem 1rem;\n            ";
+        case "M":
+            return "padding: 1rem 2.4rem 1.2rem;\n           ";
+        case "L":
+            return "padding: 1.2rem 2.4rem 1.4rem;\n            ";
+        case "XL":
+            return "padding: 1.4rem 2.4rem 1.6rem;\n        ";
+        default:
+            return "border:1px solid red;";
+    }
 };
-/* Real tag is assigned dynamically */
-export var StyledButton = styled.button(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    /* Add margin in case of loading or icon */\n    & > *:nth-child(1) {\n        margin-left: ", "px;\n    }\n    font-size: 15px;\n    border: none;\n    cursor: pointer;\n    background-color: ", ";\n    padding: 0 ", "px;\n    height: ", "px;\n    color: ", ";\n    ", ";\n    border-radius: 0;\n    outline: none;\n    &:focus {\n        box-shadow: 0 0 0 1px #fff, 0 0 0 2px ", ";\n    }\n    &:hover {\n        background-color: ", ";\n    }\n"], ["\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    /* Add margin in case of loading or icon */\n    & > *:nth-child(1) {\n        margin-left: ", "px;\n    }\n    font-size: 15px;\n    border: none;\n    cursor: pointer;\n    background-color: ", ";\n    padding: 0 ", "px;\n    height: ", "px;\n    color: ", ";\n    ",
-    ";\n    border-radius: 0;\n    outline: none;\n    &:focus {\n        box-shadow: 0 0 0 1px #fff, 0 0 0 2px ", ";\n    }\n    &:hover {\n        background-color: ", ";\n    }\n"])), function (pr) { return (pr.withText ? 7 : 0); }, function (pr) { return typeColors[pr.innerType].regular; }, function (pr) { return sidePaddings[pr.size]; }, function (pr) { return heights[pr.size]; }, function (pr) { return (pr.innerType === 'ghost' ? typeColors.default.regular : '#fff'); }, function (pr) { return pr.disabled ? "\n        background-color: #a6a6a6;\n        color: #5e5e5e;\n        cursor: not-allowed;\n        &:hover {\n            background-color: #a6a6a6 !important;\n            color: #5e5e5e !important;\n        }\n    " : ''; }, function (pr) { return typeColors[pr.innerType].regular; }, function (pr) { return typeColors[pr.innerType].hover; });
-export var StyledIcon = styled.div(templateObject_2 || (templateObject_2 = __makeTemplateObject(["\n    height: 20px;\n"], ["\n    height: 20px;\n"])));
-var templateObject_1, templateObject_2;
+var hoverPick = function (pr) {
+    switch (pr.type) {
+        case "primary":
+            {
+                return "background: " + (pr.bgColor || buttonTheme.primary.bgColor) + ";\n            border:none;\n            span{color:" + (pr.textColor || buttonTheme.defaults.textColor) + ";};\n            " + (pr.hoverEffect ? "&:hover {\n                background-color: " + (pr.hoverBgColor || buttonTheme.primary.hoverBgColor) + ";\n                box-shadow: 0px 5px 8px " + (pr.hoverShadowColor || buttonTheme.defaults.hoverShadowColor) + ";\n                span{color:" + (pr.hoverTextColor || defaultTheme.whiteColor) + ";};\n                };" : '') + "\n            ";
+            }
+            ;
+        case "secondary":
+            return "background:transparent;\n            border:1px solid " + defaultTheme.secondaryColor + ";\n            span{color:" + (pr.textColor || defaultTheme.secondaryActiveColor) + ";};\n            " + (pr.hoverEffect ? "&:hover {\n            border:1px solid " + defaultTheme.secondaryActiveColor + ";\n            box-shadow: 0px 5px 8px " + (pr.hoverShadowColor || defaultTheme.shadowColor) + ";\n            span{color:" + (pr.hoverTextColor || defaultTheme.secondaryActiveColor) + ";};\n            };" : '') + "\n            ";
+        case "warning":
+            return "\n            background: " + (pr.bgColor || defaultTheme.warningColor) + ";\n            border:none;\n            span{color:" + (pr.textColor || defaultTheme.whiteColor) + ";};\n            " + (pr.hoverEffect ? "&:hover {\n                background-color: " + (pr.hoverBgColor || defaultTheme.warningActiveColor) + ";\n                box-shadow: 0px 5px 8px " + (pr.hoverShadowColor || defaultTheme.shadowColor) + ";\n                span{color:" + (pr.hoverTextColor || defaultTheme.whiteColor) + ";};\n                };" : '') + "\n           ";
+        case "danger":
+            return "background: " + (pr.bgColor || defaultTheme.dangerColor) + ";\n            border:none;\n            span{color:" + (pr.textColor || defaultTheme.whiteColor) + ";}\n            " + (pr.hoverEffect ? "&:hover {\n                background-color: " + (pr.hoverBgColor || defaultTheme.dangerActiveColor) + ";\n                box-shadow: 0px 5px 8px " + (pr.hoverShadowColor || defaultTheme.shadowColor) + ";\n                span{color:" + (pr.hoverTextColor || defaultTheme.whiteColor) + ";};\n                };" : '') + "\n            ";
+        case "success":
+            return "background: " + (pr.bgColor || defaultTheme.successColor) + ";\n        border:none;\n        span{color:" + (pr.textColor || defaultTheme.whiteColor) + ";};\n        " + (pr.hoverEffect ? "&:hover {\n            background-color: " + (pr.hoverBgColor || defaultTheme.successActiveColor) + ";\n            box-shadow: 0px 5px 8px " + (pr.hoverShadowColor || defaultTheme.shadowColor) + ";\n            span{color:" + (pr.hoverTextColor || defaultTheme.whiteColor) + ";};\n            };" : '') + "\n        ";
+        default:
+            return "background: " + (pr.bgColor || defaultTheme.primaryColor) + ";\n        border:none;\n        span{color:" + (pr.textColor || defaultTheme.whiteColor) + ";};\n        " + (pr.hoverEffect ? "&:hover {\n            background-color: " + (pr.hoverBgColor || defaultTheme.primaryActiveColor) + ";\n            box-shadow: 0px 5px 8px " + (pr.hoverShadowColor || defaultTheme.shadowColor) + ";\n            span{color:" + (pr.hoverTextColor || defaultTheme.whiteColor) + ";};\n            };" : '');
+    }
+};
+export var StyledButton = styled.button(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n    ", ";\n    ", ";\n    ", ";\n    /* font-size: 20px; */\n    border-radius: 0.5rem;\n    text-align:center;\n    position: relative;\n    user-select: none;\n    font-family: inherit;\n    text-decoration: none;\n    transition: all 100ms ease-out 0s;\n    display: inline-flex;\n    -webkit-box-pack: center;\n    justify-content: center;\n    -webkit-box-align: center;\n    align-items: center;\n"], ["\n    ", ";\n    ", ";\n    ", ";\n    /* font-size: 20px; */\n    border-radius: 0.5rem;\n    text-align:center;\n    position: relative;\n    user-select: none;\n    font-family: inherit;\n    text-decoration: none;\n    transition: all 100ms ease-out 0s;\n    display: inline-flex;\n    -webkit-box-pack: center;\n    justify-content: center;\n    -webkit-box-align: center;\n    align-items: center;\n"])), function (pr) { return pr.disabled === true ? 'pointer-events: none;opacity: 0.4;' : ''; }, function (pr) { return SizeMixin(pr.size); }, function (pr) { return hoverPick(pr); });
+var templateObject_1;

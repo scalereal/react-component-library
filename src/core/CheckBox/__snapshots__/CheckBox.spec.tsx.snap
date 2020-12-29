@@ -1,0 +1,90 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CheckBox component should render with all the props given 1`] = `
+<div>
+  <div
+    class="sc-hKgILt cTJgxF"
+    font-size="M"
+    label="1"
+    value="1"
+  >
+    <label
+      class="sc-gsTCUz jbqcjW"
+      for="error"
+      id="error"
+    />
+    <label
+      class="sc-dlfnbm UwbaL"
+      font-size="M"
+      label="1"
+      value="1"
+    >
+      <input
+        type="checkbox"
+        value="1"
+      />
+      <span
+        class="sc-bdfBwQ gdLRZY"
+      >
+        1
+      </span>
+    </label>
+  </div>
+</div>
+`;
+
+exports[`CheckBox component should render with default theme 1`] = `
+<div>
+  <div
+    class="sc-hKgILt cTJgxF"
+  >
+    <label
+      class="sc-gsTCUz jbqcjW"
+      for="error"
+      id="error"
+    />
+    <label
+      class="sc-dlfnbm knavht"
+    >
+      <input
+        type="checkbox"
+        value="CheckBox"
+      />
+      <span
+        class="sc-bdfBwQ cmSgzP"
+      >
+        CheckBox
+      </span>
+    </label>
+  </div>
+</div>
+`;
+
+exports[`CheckBox component should render with not-allowed cursor when it is disabled 1`] = `
+<div>
+  <div
+    class="sc-hKgILt cTJgxF"
+    disabled=""
+  >
+    <label
+      class="sc-gsTCUz jbqcjW"
+      for="error"
+      id="error"
+    />
+    <label
+      class="sc-dlfnbm kVdZtZ"
+      disabled=""
+    >
+      <input
+        type="checkbox"
+        value="CheckBox"
+      />
+      <span
+        class="sc-bdfBwQ cmSgzP"
+      >
+        CheckBox
+      </span>
+    </label>
+  </div>
+</div>
+`;

@@ -1,89 +1,22 @@
-import React, { ElementType, MouseEventHandler, ReactNode } from 'react';
-// import Spinner from '../spinner';
-import { ComponentSize } from '../../theme/sizes';
-import { StyledButton, StyledIcon } from './styled';
+import React, { FC, memo } from 'react';
+import { WithStyle } from '../../utils';
+import Text from '../Text/Text';
+import { StyledButton } from './styled';
+import { Props } from './types';
 
-export type ButtonType = 'default' | 'danger' | 'ghost' | 'secondary';
+export type Ref = HTMLButtonElement;
 
-interface BaseButtonProps {
-    type?: ButtonType;
-    icon?: ElementType;
-    size?: ComponentSize;
-    className?: string;
-    children?: ReactNode;
-    disabled?: boolean;
-    loading?: boolean;
-    backgroundColor?:string;
-}
+const Button:FC<Props> & WithStyle = memo(React.forwardRef( (props, ref) => {
+    const {type='primary',size='S',textSize, textColor, hoverTextColor} = props;
+    
+    return <StyledButton ref={ref} type={type} size={size} {...props}>
+            <Text textSize={textSize} textColor={textColor} hoverColor={hoverTextColor}>{props.children}</Text>
+        </StyledButton>;
+}));
 
-type HTMLButtonProps = {
-    onClick?: MouseEventHandler<HTMLButtonElement>;
-} & BaseButtonProps;
-
-/**
- * If href is supplied, button becomes an anchor link
- */
-type HTMLAnchorProps = {
-    href?: string;
-} & BaseButtonProps;
-
-/**
- * If `as` is supplied, button becomes a custom html node specified in `as`
- */
-type CustomNodeProps = {
-    as?: ElementType;
-    to?: string;
-} & BaseButtonProps;
-
-export type ButtonProps = HTMLButtonProps & HTMLAnchorProps & CustomNodeProps;
-
-const Button: React.ForwardRefRenderFunction<unknown, ButtonProps> = (props, ref) => {
-    const { type = 'default', icon, size = 'default', className, children, disabled = false, loading, onClick, href, as, to } = props;
-
-    const styles = {
-        innerType: type,
-        size,
-        disabled,
-        withText: children != null
-    };
-
-    const childrenWithIcon = !icon ? (
-        children
-    ) : (
-        <>
-            {children}
-            <StyledIcon as={icon} />
-        </>
-    );
-
-    if (as && !disabled) {
-        return (
-            <StyledButton as={as} to={to} ref={ref} className={className} {...styles}>
-                {loading ? 'Loading...' : childrenWithIcon}
-            </StyledButton>
-        );
-    }
-
-    if (href && !disabled) {
-        return (
-            <StyledButton as="a" href={href} ref={ref as React.MutableRefObject<HTMLAnchorElement>} className={className} {...styles}>
-                {loading ? 'Loading...' : childrenWithIcon}
-            </StyledButton>
-        );
-    }
-
-    return (
-        <StyledButton
-            as="button"
-            type="button"
-            onClick={onClick}
-            ref={ref as React.MutableRefObject<HTMLButtonElement>}
-            className={className}
-            {...styles}
-        >
-            {loading ? 'Loading...' : childrenWithIcon}
-        </StyledButton>
-    );
+Button.displayName="Button";
+Button.defaultProps = {
+    hoverEffect: true
 };
 
-export default React.forwardRef<unknown, ButtonProps>(Button);
+export default Button;

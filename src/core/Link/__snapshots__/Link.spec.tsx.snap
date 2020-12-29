@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Link should render with component as child 1`] = `
+<div>
+  <a
+    class="sc-gsTCUz iyrXEY"
+    href="#"
+  >
+    <span
+      class="sc-bdfBwQ cmSgzP"
+    >
+      Hi i am Name
+    </span>
+  </a>
+</div>
+`;
+
+exports[`Link should render with default props 1`] = `
+<div>
+  <a
+    class="sc-gsTCUz iyrXEY"
+    href="#"
+  >
+    <span
+      class="sc-bdfBwQ cmSgzP"
+    >
+      Test
+    </span>
+  </a>
+</div>
+`;

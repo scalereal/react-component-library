@@ -1,0 +1,157 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CheckBoxGroup component should render with all the props given 1`] = `
+<div>
+  <div
+    class="sc-hKgILt cTJgxF"
+    font-size="M"
+    label="checkBoxGroup Label"
+  >
+    <label
+      class="sc-gsTCUz jbqcjW"
+      for="error"
+      id="error"
+    />
+    <label
+      class="sc-gKsewC fDMCFB"
+      font-size="M"
+      label="checkBoxGroup Label"
+    >
+      <input
+        type="checkbox"
+      />
+      <span
+        class="sc-bdfBwQ gdLRZY"
+      >
+        checkBoxGroup Label
+      </span>
+    </label>
+    <ul
+      class="sc-jSgupP dPSTHG"
+      display="block"
+      font-size="M"
+      label="checkBoxGroup Label"
+    >
+      <li
+        class="sc-eCssSg jZAUgl"
+      >
+        <div
+          class="sc-hKgILt cTJgxF"
+          font-size="M"
+          label="1"
+          value="1"
+        >
+          <label
+            class="sc-gsTCUz jbqcjW"
+            for="error"
+            id="error"
+          />
+          <label
+            class="sc-dlfnbm UwbaL"
+            font-size="M"
+            label="1"
+            value="1"
+          >
+            <input
+              type="checkbox"
+              value="1"
+            />
+            <span
+              class="sc-bdfBwQ gdLRZY"
+            >
+              1
+            </span>
+          </label>
+        </div>
+      </li>
+      <li
+        class="sc-eCssSg jZAUgl"
+      >
+        <div
+          class="sc-hKgILt cTJgxF"
+          font-size="M"
+          label="2"
+          value="2"
+        >
+          <label
+            class="sc-gsTCUz jbqcjW"
+            for="error"
+            id="error"
+          />
+          <label
+            class="sc-dlfnbm UwbaL"
+            font-size="M"
+            label="2"
+            value="2"
+          >
+            <input
+              type="checkbox"
+              value="2"
+            />
+            <span
+              class="sc-bdfBwQ gdLRZY"
+            >
+              2
+            </span>
+          </label>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+`;
+
+exports[`CheckBoxGroup component should render with default theme 1`] = `
+<div>
+  <div
+    class="sc-hKgILt cTJgxF"
+  >
+    <label
+      class="sc-gsTCUz jbqcjW"
+      for="error"
+      id="error"
+    />
+    <label
+      class="sc-gKsewC hOUZyW"
+    >
+      
+      <span
+        class="sc-bdfBwQ cmSgzP"
+      />
+    </label>
+    <ul
+      class="sc-jSgupP dPSTHG"
+      display="block"
+    />
+  </div>
+</div>
+`;
+
+exports[`CheckBoxGroup component should render with not-allowed cursor when it is disabled 1`] = `
+<div>
+  <div
+    class="sc-hKgILt cTJgxF"
+    disabled=""
+  >
+    <label
+      class="sc-gsTCUz jbqcjW"
+      for="error"
+      id="error"
+    />
+    <label
+      class="sc-gKsewC fVwTbS"
+      disabled=""
+    >
+      
+      <span
+        class="sc-bdfBwQ cmSgzP"
+      />
+    </label>
+    <ul
+      class="sc-jSgupP dPSTHG"
+      disabled=""
+      display="block"
+    />
+  </div>
+</div>
+`;

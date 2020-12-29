@@ -9,25 +9,16 @@ var __assign = (this && this.__assign) || function () {
     };
     return __assign.apply(this, arguments);
 };
-import React from 'react';
-import { StyledButton, StyledIcon } from './styled';
-var Button = function (props, ref) {
-    var _a = props.type, type = _a === void 0 ? 'default' : _a, icon = props.icon, _b = props.size, size = _b === void 0 ? 'default' : _b, className = props.className, children = props.children, _c = props.disabled, disabled = _c === void 0 ? false : _c, loading = props.loading, onClick = props.onClick, href = props.href, as = props.as, to = props.to;
-    var styles = {
-        innerType: type,
-        size: size,
-        disabled: disabled,
-        withText: children != null
-    };
-    var childrenWithIcon = !icon ? (children) : (React.createElement(React.Fragment, null,
-        children,
-        React.createElement(StyledIcon, { as: icon })));
-    if (as && !disabled) {
-        return (React.createElement(StyledButton, __assign({ as: as, to: to, ref: ref, className: className }, styles), loading ? 'Loading...' : childrenWithIcon));
-    }
-    if (href && !disabled) {
-        return (React.createElement(StyledButton, __assign({ as: "a", href: href, ref: ref, className: className }, styles), loading ? 'Loading...' : childrenWithIcon));
-    }
-    return (React.createElement(StyledButton, __assign({ as: "button", type: "button", onClick: onClick, ref: ref, className: className }, styles), loading ? 'Loading...' : childrenWithIcon));
+import React, { memo } from 'react';
+import Text from '../Text/Text';
+import { StyledButton } from './styled';
+var Button = memo(React.forwardRef(function (props, ref) {
+    var _a = props.type, type = _a === void 0 ? 'primary' : _a, _b = props.size, size = _b === void 0 ? 'S' : _b, textSize = props.textSize, textColor = props.textColor, hoverTextColor = props.hoverTextColor;
+    return React.createElement(StyledButton, __assign({ ref: ref, type: type, size: size }, props),
+        React.createElement(Text, { textSize: textSize, textColor: textColor, hoverColor: hoverTextColor }, props.children));
+}));
+Button.displayName = "Button";
+Button.defaultProps = {
+    hoverEffect: true
 };
-export default React.forwardRef(Button);
+export default Button;
