@@ -7,6 +7,7 @@ exports[`Input should render correctly when fullWidth & required props are falsy
   >
     <input
       class="sc-gsTCUz jElvau"
+
       id="input"
       placeholder="Enter Email Address"
       type="email"
@@ -18,10 +19,17 @@ exports[`Input should render correctly when fullWidth & required props are falsy
 exports[`Input should render correctly when it is disabled 1`] = `
 <div>
   <div
+<<<<<<< HEAD
     class="sc-bdfBwQ fIDpPC"
   >
     <input
       class="sc-gsTCUz hgGslb"
+=======
+    class="sc-bdfBwQ dOTqjN"
+  >
+    <input
+      class="sc-gsTCUz qdJqK"
+>>>>>>> 2506ee9ef3faa800ea85300cdbee4766631fee7b
       disabled=""
       id="email-input"
       placeholder="Enter Email Address"
@@ -34,22 +42,37 @@ exports[`Input should render correctly when it is disabled 1`] = `
 exports[`Input should render correctly with all the props given 1`] = `
 <div>
   <div
+<<<<<<< HEAD
     class="sc-bdfBwQ gNdbCe"
   >
     <span
       class="sc-dlfnbm gFsDaS"
+=======
+    class="sc-bdfBwQ faCpUx"
+  >
+    <span
+      class="sc-dlfnbm csXxpq"
+>>>>>>> 2506ee9ef3faa800ea85300cdbee4766631fee7b
     >
       www.
     </span>
     <input
+<<<<<<< HEAD
       class="sc-gsTCUz jElvau"
+=======
+      class="sc-gsTCUz guRvgL"
+>>>>>>> 2506ee9ef3faa800ea85300cdbee4766631fee7b
       id="email-input"
       placeholder="Enter Email Address"
       required=""
       type="email"
     />
     <span
+<<<<<<< HEAD
       class="sc-hKgILt kAVLpk"
+=======
+      class="sc-hKgILt dMhINk"
+>>>>>>> 2506ee9ef3faa800ea85300cdbee4766631fee7b
     >
       .com
     </span>

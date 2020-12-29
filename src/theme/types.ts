@@ -81,7 +81,6 @@ export interface CoreTheme {
 export interface Theme extends CoreTheme {
     loader?: LoaderTheme;
 }
-
 export interface ToggleSizes{
     XS?:string;
     S?:string;
@@ -89,3 +88,4 @@ export interface ToggleSizes{
     L?:string;
     XL?:string;
 }
+
