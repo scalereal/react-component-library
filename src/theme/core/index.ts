@@ -15,6 +15,8 @@ import { tableTheme } from './table';
 import { textTheme } from './text';
 import { toastTheme } from './toast';
 import { toggleTheme } from './toggle';
+import { colorsTheme } from './colors';
+import { listTheme } from './list';
 
 
 export const coreDefaultTheme = {
@@ -35,4 +37,5 @@ export const coreDefaultTheme = {
     table:tableTheme,
     cardTable:cardTableTheme,
     fileInput:fileInputTheme
+
 };
