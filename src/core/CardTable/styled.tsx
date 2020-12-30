@@ -33,7 +33,7 @@ export const StyledTbody = styled.tbody<Props>`
         background-color:${pr=> pr.trBgColor || cardTableTheme.defaults.trBgColor};
         &:nth-child(even){background-color: ${pr=> pr.nthTrBgColor || cardTableTheme.defaults.nthTrBgColor};};
         ${pr => pr.hoverEffect?`&:hover {box-shadow: 0px 4px 19px ${pr.hoverShadowColor || cardTableTheme.defaults.hoverShadowColor};
-                                border:2px solid ${pr.hoverBorderColor || cardTableTheme.defaults.hoverBorderColor};
+                                border:1px solid ${pr.hoverBorderColor || cardTableTheme.defaults.hoverBorderColor};
                                 background-color:${pr.hoverTrBgColor || cardTableTheme.defaults.hoverTrBgColor};}`:''
                 }
     }

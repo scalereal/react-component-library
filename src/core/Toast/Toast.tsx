@@ -7,7 +7,7 @@ import { ToastProps } from './types';
 
 const Toast:FC<ToastProps> & WithStyle = React.memo(
     React.forwardRef((props, ref) => {
-        const { variant, title, message, titleColor, messageColor, borderColor, ...restProps } = props;
+        const { variant, title, message, titleColor, messageColor, ...restProps } = props;
         return (
             <Styled.Toast ref={ref} variant={variant} {...restProps}>
                 <Styled.ToastHeader {...props}>

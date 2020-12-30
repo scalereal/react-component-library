@@ -24,7 +24,7 @@ import React from 'react';
 import Text from '../Text/Text';
 import * as Styled from "./Toast.styled";
 var Toast = React.memo(React.forwardRef(function (props, ref) {
-    var variant = props.variant, title = props.title, message = props.message, titleColor = props.titleColor, messageColor = props.messageColor, borderColor = props.borderColor, restProps = __rest(props, ["variant", "title", "message", "titleColor", "messageColor", "borderColor"]);
+    var variant = props.variant, title = props.title, message = props.message, titleColor = props.titleColor, messageColor = props.messageColor, restProps = __rest(props, ["variant", "title", "message", "titleColor", "messageColor"]);
     return (React.createElement(Styled.Toast, __assign({ ref: ref, variant: variant }, restProps),
         React.createElement(Styled.ToastHeader, __assign({}, props),
             React.createElement(Text, { textSize: "S", lineHeight: "1.5", textColor: titleColor }, title)),
