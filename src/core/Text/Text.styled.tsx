@@ -31,7 +31,6 @@ export const Text = styled('span')<TextProps>`
     &:active {
         color: ${({ theme, activeColor }) => (activeColor ? activeColor : theme.text.defaults.activeColor)};
     }
-
     ${props => props.hoverEffect? `&:hover {
         color: ${props.hoverColor ? props.hoverColor : props.theme.text.defaults.hoverColor};
     }`:''
