@@ -1,46 +1,127 @@
-# Getting Started with Create React App
+# ScaleReal React Component Library
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### [Still in progess not yet deployed]
 
-## Available Scripts
+Themable react components with various configuration to match your need. You can checkout the storybook of the components [here](https://scalereal.github.io/react-component-library/?path=/story/components-core-cardtable--default).
 
-In the project directory, you can run:
+## Table of Contents
 
-### `npm start`
+-   🚀[Getting Started](#getting-started)
+-   📦[Packages](#packages)
+    -   🧩 [Core](#core)
+    -   ℹ [Icons](#icons)
+    -   🌀 [Loaders](#loaders)
+    -   ⧉ [Layout](#layout)
+    -   📝 [Forms](#forms)
+    -   🏞 [Theme](#theme)
+    -   🛠 [Utils](#utils)
+-   📜[Built With](#built-with)
+-   📝[Npm Scripts](#npm-scripts)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Getting Started
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+```properties
+npx create-react-app react-components-demo --template typescript
+cd react-components-demo
+yarn add styled-components @types/styled-components
+yarn add @scaleReal-components/theme @scaleReal-components/utils @scaleReal-components/icons @scaleReal-components/core @scaleReal-components/layout @scaleReal-components/loaders @scaleReal-components/forms
+```
 
-### `npm test`
+Replace content of `index.tsx` with the following:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```tsx
+import { defaultTheme } from '@scaleReal-components/theme';
+import { CssBaseline } from '@scaleReal-components/core';
+import { ThemeProvider } from 'styled-components';
+import React from 'react';
+import * as ReactDOM from 'react-dom';
+import App from './App';
 
-### `npm run build`
+ReactDOM.render(
+    <ThemeProvider theme={defaultTheme}>
+        <CssBaseline />
+        <App />
+    </ThemeProvider>,
+    document.getElementById('root')
+);
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Replace content in `App.tsx` with the following:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```tsx
+import React from 'react';
+import { Button } from '@scaleReal-components/core';
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+const App: React.FC = () => <Button variant="solid">Click me!</Button>;
 
-### `npm run eject`
+export default App;
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+If you are using any static property of any component like `Modal.Header`, you have to add `"strictNullChecks": false` in your `tsconfig.json` file.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Packages
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Library consists of five packages:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### [Core](https://github.com/scalereal/react-component-library/tree/main/packages/core)
 
-## Learn More
+Core package consists of components almost all basic react components like Avatar, Button, Input, List, Modal etc.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### [Icons](https://github.com/scalereal/react-component-library/tree/main/packages/icons)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Icons package consists of most commonly used svg icons exposed as react components.
+
+### [Loaders](https://github.com/scalereal/react-component-library/tree/main/packages/loaders)
+
+Few simple svg loaders exposed as react components.
+
+### [Layout](https://github.com/scalereal/react-component-library/tree/main/packages/layout)
+
+Layout package consists of components that help in creating a page layout using side panels and nav items, which are exposed as react components.
+
+### [Forms](https://github.com/scalereal/react-component-library/tree/main/packages/forms)
+
+Using this package you can create dynamic form using simple json
+
+### [Theme](https://github.com/medly/medly-components/tree/master/packages/theme)
+
+Themes lets you define how a component should be styled across website. This can be done individually for particular type of components, eg all icons should be solid or can be done for the whole website, like color theme for all type of components across website should be orange.
+
+### [Utils](https://github.com/scalereal/react-component-library/tree/main/packages/utils)
+
+Utils package consists of most commonly used functionalities or components.
+
+## Built With
+
+🔥 [react](https://github.com/facebook/react)
+
+💅 [styled-components](https://www.styled-components.com)
+
+⛑ [typescript](https://www.typescriptlang.org/)
+
+📚 [storybook](https://storybook.js.org/)
+
+💥 [babel](https://babeljs.io/)
+
+🐐 [react-testing-library](https://github.com/kentcdodds/react-testing-library)
+
+## npm scripts
+
+-   `yarn build` to build components
+-   `yarn commit` to commit with conventional-commit approach
+-   `yarn lint:css` to run the css lint
+-   `yarn lint:ts` to run the ts lint
+-   `yarn lint` to run both css & ts lint
+-   `yarn test` to run tests and type check
+-   `yarn test:update` to update snapshots
+-   `yarn test:watch` to watch tests
+-   `yarn type-check` to run tsc to check types
+-   `yarn test:jest` to run test only
+-   `yarn storybook` to run storybook for live reloading your components
+-   `yarn release` to publish the latest version to npm
+    Page Saving
+
+Add Tag
+You are not Logged-In
+
+Please Login
