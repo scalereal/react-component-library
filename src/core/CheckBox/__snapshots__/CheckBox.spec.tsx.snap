@@ -24,7 +24,7 @@ exports[`CheckBox component should render with all the props given 1`] = `
         value="1"
       />
       <span
-        class="sc-bdfBwQ gdLRZY"
+        class="sc-bdfBwQ bLBrZi"
       >
         1
       </span>
@@ -51,7 +51,7 @@ exports[`CheckBox component should render with default theme 1`] = `
         value="CheckBox"
       />
       <span
-        class="sc-bdfBwQ cmSgzP"
+        class="sc-bdfBwQ hcPyHd"
       >
         CheckBox
       </span>
@@ -80,7 +80,7 @@ exports[`CheckBox component should render with not-allowed cursor when it is dis
         value="CheckBox"
       />
       <span
-        class="sc-bdfBwQ cmSgzP"
+        class="sc-bdfBwQ hcPyHd"
       >
         CheckBox
       </span>

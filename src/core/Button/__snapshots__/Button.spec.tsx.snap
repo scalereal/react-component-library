@@ -3,20 +3,11 @@
 exports[`Button should render properl 1`] = `
 <div>
   <button
-    class="sc-bdfBwQ dIndFy"
-    type="button"
-  />
-</div>
-`;
-
-exports[`Button should render properly 1`] = `
-<div>
-  <button
     class="sc-gsTCUz fJrzpU"
     type="primary"
   >
     <span
-      class="sc-bdfBwQ cmSgzP"
+      class="sc-bdfBwQ hcPyHd"
     />
   </button>
 </div>
@@ -29,7 +20,7 @@ exports[`Button should render with all the props given 1`] = `
     type="danger"
   >
     <span
-      class="sc-bdfBwQ kCIRp"
+      class="sc-bdfBwQ iztpyr"
     >
       Button
     </span>
@@ -45,7 +36,7 @@ exports[`Button should render with not-allowed cursor when it is disabled 1`] = 
     type="primary"
   >
     <span
-      class="sc-bdfBwQ cmSgzP"
+      class="sc-bdfBwQ hcPyHd"
     >
       ClickMe
     </span>

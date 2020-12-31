@@ -1,4 +1,5 @@
 # ScaleReal React Component Library
+
 ### [Still in progess not yet deployed]
 
 Themable react components with various configuration to match your need. You can checkout the storybook of the components [here](https://scalereal.github.io/react-component-library/?path=/story/components-core-cardtable--default).
@@ -118,8 +119,8 @@ Utils package consists of most commonly used functionalities or components.
 -   `yarn test:jest` to run test only
 -   `yarn storybook` to run storybook for live reloading your components
 -   `yarn release` to publish the latest version to npm
-Page Saving
 
+Page Saving
 Add Tag
 You are not Logged-In
 

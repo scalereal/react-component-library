@@ -3,31 +3,33 @@
 exports[`Toast should render properly with danger variant 1`] = `
 <div>
   <div
-    class="sc-bdfBwQ drLDWu"
+    class="sc-gsTCUz hmyRbi"
   >
     <div
-      class="sc-gsTCUz cqslIK"
+      class="sc-dlfnbm SYrnl"
+      title="Title"
     >
       <span
-        class="sc-jSgupP bvhCwX"
+        class="sc-bdfBwQ eCEmam"
       >
         Title
       </span>
     </div>
     <div
-      class="sc-dlfnbm eupWQN"
+      class="sc-hKgILt UimoD"
     >
       <span
-        class="sc-jSgupP iPbxjQ"
+        class="sc-bdfBwQ hOunjh"
       >
         Message
       </span>
     </div>
     <div
-      class="sc-hKgILt coUvtK"
+      class="sc-eCssSg dHVTKx"
+      title="Title"
     />
     <div
-      class="sc-eCssSg fiYKEv"
+      class="sc-jSgupP jVqlaK"
     >
       X
     </div>
@@ -38,31 +40,33 @@ exports[`Toast should render properly with danger variant 1`] = `
 exports[`Toast should render properly with info variant 1`] = `
 <div>
   <div
-    class="sc-bdfBwQ drLDWu"
+    class="sc-gsTCUz hmyRbi"
   >
     <div
-      class="sc-gsTCUz cqslIK"
+      class="sc-dlfnbm SYrnl"
+      title="Title"
     >
       <span
-        class="sc-jSgupP bvhCwX"
+        class="sc-bdfBwQ eCEmam"
       >
         Title
       </span>
     </div>
     <div
-      class="sc-dlfnbm eupWQN"
+      class="sc-hKgILt UimoD"
     >
       <span
-        class="sc-jSgupP iPbxjQ"
+        class="sc-bdfBwQ hOunjh"
       >
         Message
       </span>
     </div>
     <div
-      class="sc-hKgILt jXuuKZ"
+      class="sc-eCssSg fFZEbq"
+      title="Title"
     />
     <div
-      class="sc-eCssSg fiYKEv"
+      class="sc-jSgupP jVqlaK"
     >
       X
     </div>
@@ -73,31 +77,33 @@ exports[`Toast should render properly with info variant 1`] = `
 exports[`Toast should render properly with success variant 1`] = `
 <div>
   <div
-    class="sc-bdfBwQ drLDWu"
+    class="sc-gsTCUz hmyRbi"
   >
     <div
-      class="sc-gsTCUz cqslIK"
+      class="sc-dlfnbm SYrnl"
+      title="Title"
     >
       <span
-        class="sc-jSgupP bvhCwX"
+        class="sc-bdfBwQ eCEmam"
       >
         Title
       </span>
     </div>
     <div
-      class="sc-dlfnbm eupWQN"
+      class="sc-hKgILt UimoD"
     >
       <span
-        class="sc-jSgupP iPbxjQ"
+        class="sc-bdfBwQ hOunjh"
       >
         Message
       </span>
     </div>
     <div
-      class="sc-hKgILt jJbQmO"
+      class="sc-eCssSg rPXZZ"
+      title="Title"
     />
     <div
-      class="sc-eCssSg fiYKEv"
+      class="sc-jSgupP jVqlaK"
     >
       X
     </div>
@@ -108,31 +114,33 @@ exports[`Toast should render properly with success variant 1`] = `
 exports[`Toast should render properly with warning variant 1`] = `
 <div>
   <div
-    class="sc-bdfBwQ drLDWu"
+    class="sc-gsTCUz hmyRbi"
   >
     <div
-      class="sc-gsTCUz cqslIK"
+      class="sc-dlfnbm SYrnl"
+      title="Title"
     >
       <span
-        class="sc-jSgupP bvhCwX"
+        class="sc-bdfBwQ eCEmam"
       >
         Title
       </span>
     </div>
     <div
-      class="sc-dlfnbm eupWQN"
+      class="sc-hKgILt UimoD"
     >
       <span
-        class="sc-jSgupP iPbxjQ"
+        class="sc-bdfBwQ hOunjh"
       >
         Message
       </span>
     </div>
     <div
-      class="sc-hKgILt djIRUQ"
+      class="sc-eCssSg jeqfcD"
+      title="Title"
     />
     <div
-      class="sc-eCssSg fiYKEv"
+      class="sc-jSgupP jVqlaK"
     >
       X
     </div>
@@ -143,31 +151,33 @@ exports[`Toast should render properly with warning variant 1`] = `
 exports[`Toast should render title and message text 1`] = `
 <div>
   <div
-    class="sc-bdfBwQ drLDWu"
+    class="sc-gsTCUz hmyRbi"
   >
     <div
-      class="sc-gsTCUz cqslIK"
+      class="sc-dlfnbm SYrnl"
+      title="Title"
     >
       <span
-        class="sc-jSgupP bvhCwX"
+        class="sc-bdfBwQ eCEmam"
       >
         Title
       </span>
     </div>
     <div
-      class="sc-dlfnbm eupWQN"
+      class="sc-hKgILt UimoD"
     >
       <span
-        class="sc-jSgupP iPbxjQ"
+        class="sc-bdfBwQ hOunjh"
       >
         Message
       </span>
     </div>
     <div
-      class="sc-hKgILt jJbQmO"
+      class="sc-eCssSg rPXZZ"
+      title="Title"
     />
     <div
-      class="sc-eCssSg fiYKEv"
+      class="sc-jSgupP jVqlaK"
     >
       X
     </div>
