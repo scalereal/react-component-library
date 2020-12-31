@@ -7,7 +7,6 @@ exports[`Input should render correctly when fullWidth & required props are falsy
   >
     <input
       class="sc-gsTCUz jElvau"
-
       id="input"
       placeholder="Enter Email Address"
       type="email"

@@ -14,7 +14,7 @@ exports[`Modal should render title and description text 1`] = `
         class="sc-dlfnbm eVErIe"
       >
         <span
-          class="sc-gKsewC hvsAou"
+          class="sc-gKsewC hWUpWw"
         >
           Title
         </span>
@@ -28,7 +28,7 @@ exports[`Modal should render title and description text 1`] = `
         class="sc-eCssSg dkxmEH"
       >
         <span
-          class="sc-gKsewC iUhLON"
+          class="sc-gKsewC fXPGYv"
         >
           Description
         </span>

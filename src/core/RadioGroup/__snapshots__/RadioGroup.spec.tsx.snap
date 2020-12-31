@@ -16,7 +16,7 @@ exports[`Radio component should render with all the props given 1`] = `
       display="inline"
     >
       <span
-        class="sc-bdfBwQ fVhTiG radioGroupLabel"
+        class="sc-bdfBwQ jmDKPg radioGroupLabel"
       >
         Radio Group Label
       </span>
@@ -41,7 +41,7 @@ exports[`Radio component should render with default theme 1`] = `
       class="sc-fubCfw fPlukN"
     >
       <span
-        class="sc-bdfBwQ cmSgzP radioGroupLabel"
+        class="sc-bdfBwQ hcPyHd radioGroupLabel"
       />
       <ul
         class="sc-iBPRYJ beOvuo"
@@ -65,7 +65,7 @@ exports[`Radio component should render with not-allowed cursor when it is disabl
       disabled=""
     >
       <span
-        class="sc-bdfBwQ cmSgzP radioGroupLabel"
+        class="sc-bdfBwQ hcPyHd radioGroupLabel"
       />
       <ul
         class="sc-iBPRYJ beOvuo"
