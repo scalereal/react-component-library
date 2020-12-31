@@ -2,6 +2,7 @@ import styled, { css } from 'styled-components';
 import { defaultTheme } from '../../theme';
 import { TextProps } from './types';
 
+
 const uppercase = () => css`
     text-transform: uppercase;
 `;
@@ -37,6 +38,7 @@ export const Text = styled('span')<TextProps>`
     /* &:hover {
         color: ${({ theme, hoverColor }) => (hoverColor ? hoverColor : theme.text.defaults.hoverColor)};
     } */
+
 `;
 
 Text.displayName = "Text";

@@ -35,4 +35,5 @@ export const coreDefaultTheme = {
     table:tableTheme,
     cardTable:cardTableTheme,
     fileInput:fileInputTheme
+
 };
