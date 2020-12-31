@@ -20,7 +20,7 @@
         "start": "react-scripts start",
         "test:jest": "jest --config config/jest/jest.config.js",
         "test": "jest -c config/jest/jest.config.js",
-        "test:watch": "test --watch",
+        "test:watch": "jest -c config/jest/jest.config.js --watch",
         "eject": "react-scripts eject",
         "clear": "rm -rf packages",
         "mkdir": "mkdir -m 700  packages",
