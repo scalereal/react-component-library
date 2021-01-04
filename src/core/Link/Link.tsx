@@ -1,7 +1,7 @@
-import React, { FC } from 'react';
-import Text from '../Text/Text';
-import * as Styled from './Link.styled';
-import { LinkProps } from './types';
+import React, { FC } from 'react'
+import Text from '../Text/Text'
+import * as Styled from './Link.styled'
+import { LinkProps } from './types'
 import { WithStyle } from '../../utils'
 
 const Link: FC<LinkProps> & WithStyle = React.memo(

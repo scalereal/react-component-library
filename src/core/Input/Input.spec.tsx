@@ -1,6 +1,6 @@
-import { render } from '@testing-library/react';
-import React from 'react';
-import { Input } from './Input';
+import { render } from '@testing-library/react'
+import React from 'react'
+import { Input } from './Input'
 
 describe('Input', () => {
     it('should render correctly with all the props given', () => {

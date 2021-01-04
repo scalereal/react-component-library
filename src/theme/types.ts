@@ -1,5 +1,5 @@
-import * as CoreThemes from './core/types';
-import { LoaderTheme } from './loader/types';
+import * as CoreThemes from './core/types'
+import { LoaderTheme } from './loader/types'
 
 export interface DefaultTheme {
     primaryColor: string;
@@ -81,11 +81,3 @@ export interface CoreTheme {
 export interface Theme extends CoreTheme {
     loader?: LoaderTheme;
 }
-export interface ToggleSizes{
-    XS?:string;
-    S?:string;
-    M?:string;
-    L?:string;
-    XL?:string;
-}
-

@@ -1,5 +1,5 @@
-import { defaultTheme } from "../../theme"
-import { ButtonTheme } from "./types"
+import { defaultTheme } from '../../theme'
+import { ButtonTheme } from './types'
 export const  buttonTheme : ButtonTheme = {
     defaults:{
         bgColor:defaultTheme.primaryColor,

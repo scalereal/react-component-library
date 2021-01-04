@@ -1,7 +1,7 @@
-import styled,{ css } from 'styled-components';
-import { ListProps } from './types';
-import { defaultTheme } from '../../theme';
-import { ListTheme } from '../../theme/core/list/types';
+import styled,{ css } from 'styled-components'
+import { ListProps } from './types'
+import { defaultTheme } from '../../theme'
+import { ListTheme } from '../../theme/core/list/types'
 
 const horizontal = (spacings: ListTheme) => css`
     li {

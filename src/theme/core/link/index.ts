@@ -1,5 +1,5 @@
-import { grey } from '../../core/colors';
-import { LinkTheme } from './types';
+import { grey } from '../../core/colors'
+import { LinkTheme } from './types'
 
 export const linkTheme: LinkTheme = {
     sizes: {

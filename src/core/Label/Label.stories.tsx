@@ -1,8 +1,10 @@
-import { Meta, Story } from '@storybook/react/types-6-0';
-import React from 'react';
-import Label from "./Label"
+import { Meta, Story } from '@storybook/react/types-6-0'
+import React from 'react'
+import Label from './Label'
+import { LabelProps } from './types'
 
-
+const labelSizes : LabelProps['labelSize'][]  = ['XS', 'S', 'M', 'L', 'XL']
+const labelWeights : LabelProps['labelWeight'][] = ['light', 'regular', 'medium', 'strong', 'extraStrong']
 export default {
     title: 'Components/Core/Label',
     component: Label,
@@ -10,6 +12,18 @@ export default {
         labelColor: {
             control: 'color'
         },
+        labelSize:{
+            control: {
+                type: 'select',
+                options: Object.values(labelSizes),
+            },
+        },
+        labelWeight:{
+            control: {
+                type: 'select',
+                options: Object.values(labelWeights),
+            },
+        }
     }
 } as Meta;
 

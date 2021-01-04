@@ -1,6 +1,6 @@
 import { grey } from '../../Colors'
-import { defaultTheme } from "../../theme"
-import { RadioTheme } from "./types"
+import { defaultTheme } from '../../theme'
+import { RadioTheme } from './types'
 export const  radioTheme : RadioTheme = {
     defaults:{
         bgColor:grey[200],

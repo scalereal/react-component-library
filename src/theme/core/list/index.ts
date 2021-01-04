@@ -1,4 +1,4 @@
-import { ListTheme } from "./types"
+import { ListTheme } from './types'
 export const listTheme: ListTheme = {
     S1: '0.4rem',
     S2: '0.8rem',

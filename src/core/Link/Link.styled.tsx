@@ -1,6 +1,6 @@
-import styled from "styled-components"
-import { LinkProps } from './types';
-import { defaultTheme } from '../../theme';
+import styled from 'styled-components'
+import { LinkProps } from './types'
+import { defaultTheme } from '../../theme'
 
 export const LinkStyled = styled('a')<LinkProps>`
     color: ${({ theme, linkColor }) => (linkColor ? linkColor : theme.link.defaults.linkColor)};

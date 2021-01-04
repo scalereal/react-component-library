@@ -1,6 +1,6 @@
-import { render } from '@testing-library/react';
-import React from 'react';
-import List  from './List';
+import { render } from '@testing-library/react'
+import React from 'react'
+import List  from './List'
 
 describe('List', () => {
     it('should render horizontal list', () => {

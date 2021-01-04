@@ -1,6 +1,13 @@
-import { Meta, Story } from '@storybook/react/types-6-0';
-import React from 'react';
-import Card from "./Card"
+import { Meta, Story } from '@storybook/react/types-6-0'
+import React from 'react'
+import Card from './Card'
+import { CardProps } from './types'
+
+const variants : CardProps['variant'][]  = ['horizontal', 'vertical']
+const textAlignments : CardProps['textAlignment'][] = ['left', 'center', 'right']
+const textSizes : CardProps['titleSize'][] = ['XS', 'S', 'M', 'L', 'XL']
+const descriptionSizes : CardProps['descriptionSize'][] = ['XS', 'S', 'M', 'L', 'XL']
+
 export default {
     title: 'Components/Core/Card',
     component: Card,
@@ -16,6 +23,30 @@ export default {
         },
         descriptionColor:{
             control:'color'
+        },
+        variant:{
+            control: {
+                type: 'select',
+                options: Object.values(variants),
+            },
+        },
+        textAlignment:{
+            control: {
+                type: 'select',
+                options: Object.values(textAlignments),
+            },
+        },
+        titleSize:{
+            control: {
+                type: 'select',
+                options: Object.values(textSizes),
+            },
+        },
+       descriptionSize:{
+            control: {
+                type: 'select',
+                options: Object.values(descriptionSizes),
+            },
         }
     }
 } as Meta

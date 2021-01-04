@@ -1,5 +1,5 @@
-import { grey, green, blue, red, orange  } from '../../core/colors';
-import { ToastTheme } from './types';
+import { grey, green, blue, red, orange  } from '../../core/colors'
+import { ToastTheme } from './types'
 
 export const toastTheme: ToastTheme = {
     statusColor: {

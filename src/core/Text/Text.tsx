@@ -1,6 +1,6 @@
-import React, { FC } from 'react';
-import * as Styled from "./Text.styled"
-import { TextProps } from './types';
+import React, { FC } from 'react'
+import * as Styled from './Text.styled'
+import { TextProps } from './types'
 import { WithStyle } from '../../utils'
 
 const Text: FC<TextProps> & WithStyle = React.memo(

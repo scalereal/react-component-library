@@ -1,6 +1,6 @@
-import styled, { css } from 'styled-components';
-import { defaultTheme } from '../../theme';
-import { TextProps } from './types';
+import styled, { css } from 'styled-components'
+import { defaultTheme } from '../../theme'
+import { TextProps } from './types'
 
 
 const uppercase = () => css`

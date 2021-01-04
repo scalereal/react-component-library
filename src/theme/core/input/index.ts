@@ -1,5 +1,5 @@
-import { grey }from '../../core/colors';
-import { InputTheme } from './types';
+import { grey }from '../../core/colors'
+import { InputTheme } from './types'
 
 export const inputTheme: InputTheme = {
     inputBackgroundColor:'#ffffff',

@@ -1,8 +1,8 @@
-import React, { FC } from 'react';
-import { WithStyle } from '../../utils';
-import Text from '../Text/Text';
-import * as Styled from "./Toast.styled";
-import { ToastProps } from './types';
+import React, { FC } from 'react'
+import { WithStyle } from '../../utils'
+import Text from '../Text/Text'
+import * as Styled from './Toast.styled'
+import { ToastProps } from './types'
 
 
 const Toast:FC<ToastProps> & WithStyle = React.memo(

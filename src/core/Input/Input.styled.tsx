@@ -1,6 +1,6 @@
-import styled from 'styled-components';
-import { InputProps } from './types';
-import { defaultTheme } from '../../theme';
+import styled from 'styled-components'
+import { InputProps } from './types'
+import { defaultTheme } from '../../theme'
 
 export const Wrapper = styled('div')<InputProps>`
     display: flex;

@@ -1,6 +1,6 @@
-import { Meta, Story } from '@storybook/react/types-6-0';
-import React from 'react';
-import Toast from "./Toast"
+import { Meta, Story } from '@storybook/react/types-6-0'
+import React from 'react'
+import Toast from './Toast'
 import { ToastProps } from './types'
 
 const variants: ToastProps['variant'][] = ['danger', 'warning', 'success', 'info'];
