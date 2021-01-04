@@ -1,6 +1,6 @@
-import styled,{ css } from 'styled-components';
-import { LabelProps } from './types';
-import { defaultTheme } from '../../theme';
+import styled,{ css } from 'styled-components'
+import { LabelProps } from './types'
+import { defaultTheme } from '../../theme'
 
 const asterisk = () => css`
     ::after {

@@ -1,6 +1,9 @@
-import { Meta, Story } from '@storybook/react/types-6-0';
-import React from 'react';
-import Link  from './Link';
+import { Meta, Story } from '@storybook/react/types-6-0'
+import React from 'react'
+import Link  from './Link'
+import { LinkProps } from './types'
+
+const linkSizes : LinkProps['linkSize'][] = ['XS', 'S', 'M', 'L', 'XL']
 
 export default {
     title: 'Components/Core/Link',
@@ -14,6 +17,12 @@ export default {
         },
         activeColor: {
             control: 'color'
+        },
+        linkSize:{
+            control: {
+                type: 'select',
+                options: Object.values(linkSizes),
+            },
         }
     }
 } as Meta;

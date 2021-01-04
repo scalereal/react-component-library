@@ -1,6 +1,6 @@
-import styled from 'styled-components';
-import { ModalProps } from './types';
-import { defaultTheme } from '../../theme';
+import styled from 'styled-components'
+import { ModalProps } from './types'
+import { defaultTheme } from '../../theme'
 
 export const Modal = styled('div')<ModalProps>`
     position: relative;

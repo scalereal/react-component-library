@@ -1,4 +1,4 @@
-import { LabelTheme } from './types';
+import { LabelTheme } from './types'
 import { grey } from '../../core/colors'
 export const labelTheme: LabelTheme = {
     sizes: {

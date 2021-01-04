@@ -1,5 +1,5 @@
-import { HTMLProps, WithThemeProp } from '../../utils';
-import { ToggleSizes } from "../../theme/core/toggle/types"
+import { HTMLProps, WithThemeProp } from '../../utils'
+import { ToggleSizes } from '../../theme/core/toggle/types'
 
 type DivProps = Omit<HTMLProps<HTMLInputElement>, 'size'>;
 type InputProps = Omit<HTMLProps<HTMLInputElement>, 'size' | 'type'>;

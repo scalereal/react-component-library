@@ -1,6 +1,6 @@
 
-import { TextSizes } from "../../theme/core/text/types";
-import { HTMLProps, WithThemeProp } from '../../utils';
+import { TextSizes } from '../../theme/core/text/types'
+import { HTMLProps, WithThemeProp } from '../../utils'
         
 export type CardDirection = 'horizontal' | 'vertical';
 export type CardTextAlignment = 'left' | 'center' | 'right';

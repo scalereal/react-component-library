@@ -1,7 +1,11 @@
-import { Meta, Story } from '@storybook/react/types-6-0';
-import React from 'react';
-import Text from "./Text";
+import { Meta, Story } from '@storybook/react/types-6-0'
+import React from 'react'
+import Text from './Text'
+import { TextProps } from './types'
 
+const textSizes : TextProps['textSize'][] = ['XS', 'S', 'M', 'L', 'XL']
+const textAlignments : TextProps['textAlign'][] = ['left', 'right', 'center', 'justify', 'justify-all', 'start', 'end', 'match-parent', 'inherit', 'initial', 'unset']
+const textWeights : TextProps['textWeight'][] = ['light', 'regular', 'medium', 'strong', 'extraStrong']
 
 export default {
     title: 'Components/Core/Text',
@@ -19,6 +23,24 @@ export default {
         activeColor: {
             control:'color'
         },
+        textSize:{
+            control: {
+                type: 'select',
+                options: Object.values(textSizes),
+            },
+        },
+        textAlign: {
+            control: {
+                type: 'select',
+                options: Object.values(textAlignments)
+            }
+        },
+        textWeight: {
+            control: {
+                type: 'select',
+                options: Object.values(textWeights)
+            }
+        }
     }
 } as Meta;
 

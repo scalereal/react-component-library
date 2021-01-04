@@ -1,5 +1,5 @@
-import { grey } from '../../Colors';
-import { ToggleTheme } from './types';
+import { grey } from '../../Colors'
+import { ToggleTheme } from './types'
 
 export const toggleTheme: ToggleTheme = {
     sizes: {

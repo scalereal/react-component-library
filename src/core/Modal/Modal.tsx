@@ -1,7 +1,7 @@
 import React,{ FC } from 'react'
-import * as Styled from "./Modal.styled"
-import { ModalProps } from './types';
-import Text from "../Text/Text"
+import * as Styled from './Modal.styled'
+import { ModalProps } from './types'
+import Text from '../Text/Text'
 
 const Toast:FC<ModalProps> = ({ title, description, borderColor, shadowColor, titleSize,titleColor,descriptionSize,descriptionColor } : ModalProps) => {
 

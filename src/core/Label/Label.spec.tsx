@@ -1,6 +1,6 @@
-import { render } from '@testing-library/react';
-import React from 'react';
-import Label from './Label';
+import { render } from '@testing-library/react'
+import React from 'react'
+import Label from './Label'
 
 describe('Label', () => {
     it('should render correctly with default props', () => {
@@ -10,7 +10,7 @@ describe('Label', () => {
 
     it('should render correctly with all the given props', () => {
         const { container } = render(
-            <Label required showPointer labelColor="pink" labelSize="S" hoverColor="#ffff">
+            <Label required showPointer uppercase labelColor="pink" labelSize="S" lineHeight="1" labelWeight="medium">
                 Demo Label
             </Label>
         );

@@ -1,5 +1,5 @@
-import { HTMLProps, WithThemeProp } from '../../utils';
-import { LinkSizes } from "../../theme/core/link/types"
+import { HTMLProps, WithThemeProp } from '../../utils'
+import { LinkSizes } from '../../theme/core/link/types'
 export interface LinkProps extends HTMLProps<HTMLAnchorElement>,WithThemeProp {
     /** Link url */
     href: string;

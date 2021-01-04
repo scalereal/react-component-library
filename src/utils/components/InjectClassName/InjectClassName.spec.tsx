@@ -1,6 +1,6 @@
-import { render } from '@testing-library/react';
-import React from 'react';
-import InjectClassName from './InjectClassName';
+import { render } from '@testing-library/react'
+import React from 'react'
+import InjectClassName from './InjectClassName'
 
 describe('InjectClassName', () => {
     it('should inject className prop to all children', () => {

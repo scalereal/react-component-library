@@ -1,1 +1,1 @@
-export { default as InjectClassName } from './InjectClassName/InjectClassName';
+export { default as InjectClassName } from './InjectClassName/InjectClassName'

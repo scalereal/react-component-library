@@ -1,1 +1,1 @@
-export * from './useCombinedRefs';
+export * from './useCombinedRefs'

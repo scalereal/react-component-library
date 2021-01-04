@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react'
 
 // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
 export const useCombinedRefs = <T>(...refs: any[]) => {

@@ -1,5 +1,5 @@
-import { defaultTheme } from "../../theme"
-import { CheckBoxTheme } from "./types"
+import { defaultTheme } from '../../theme'
+import { CheckBoxTheme } from './types'
 export const  checkBoxTheme : CheckBoxTheme = {
     defaults:{
         bgColor:defaultTheme.primaryColor,
