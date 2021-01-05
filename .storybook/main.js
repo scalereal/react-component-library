@@ -13,6 +13,7 @@ module.exports = {
     '@storybook/addon-knobs',
     '@storybook/addon-viewport',
     '@storybook/addon-actions',
+    'storybook-addon-react-docgen'
   ],
   typescript: {
     reactDocgen: 'react-docgen-typescript',
