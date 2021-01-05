@@ -4,7 +4,8 @@ import Text from '../Text/Text';
 import { ErrorLabel, RadioSpan, RadioWrapper, StyledLabel } from './styled';
 import { Props } from './types';
 
-// export type Ref = HTMLLabelElement;
+export const SizeMap: Props['size'][] = ['XS', 'S', 'M', 'L', 'XL'];
+export const lposMap: Props['labelPosition'][] = ['top','bottom','left','right']
 
 const Radio:FC<Props> & WithStyle = React.memo(React.forwardRef( (props, ref) => {
     const {size='S', label='CheckBox',errorText='',value,checked,labelColor,labelHoverEffect,hoverLabelColor} = props;

@@ -105,6 +105,7 @@ export const StyledButton = styled.button<Props>`
     ${pr => pr.disabled === true?'pointer-events: none;opacity: 0.4;':''};
     ${pr=>  SizeMixin(pr.size)};
     ${pr => hoverPick(pr)};
+    margin: 0.5rem;
     /* font-size: 20px; */
     border-radius: 0.5rem;
     text-align:center;

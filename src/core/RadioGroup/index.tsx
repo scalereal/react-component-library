@@ -5,10 +5,12 @@ import Text from '../Text/Text';
 import { ErrorLabel, RadioGroupWrapper, StyledLi, StyledUl, StyledWrapper } from './styled';
 import { Props } from './types';
 
-// export type Ref = HTMLLabelElement;
+export const SizeMap: Props['size'][] = ['XS', 'S', 'M', 'L', 'XL'];
+export const lposMap: Props['labelPosition'][] = ['top','bottom','left','right']
+export const DisplayMap: Props['display'][] = ['inline', 'block'];
 
 const RadioGroup:FC<Props> & WithStyle = React.memo(React.forwardRef( (props, ref) => {
-    const {size='S',options,mainLabel,errorText,
+    const {size,options,mainLabel,errorText,
     labelColor,labelHoverEffect,hoverLabelColor,
     hoverEffect,bgColor,hoverCheckedBgColor,
     hoverBgColor,checkedBgColor,labelPosition} = props;
@@ -49,7 +51,8 @@ const RadioGroup:FC<Props> & WithStyle = React.memo(React.forwardRef( (props, re
 
 RadioGroup.displayName="RadioGroup";
 RadioGroup.defaultProps = {
-    
+    hoverEffect:true,
+    size:'S'
 };
 
 export default RadioGroup

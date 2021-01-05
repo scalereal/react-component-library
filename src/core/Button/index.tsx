@@ -4,7 +4,8 @@ import Text from '../Text/Text';
 import { StyledButton } from './styled';
 import { Props } from './types';
 
-export type Ref = HTMLButtonElement;
+export const SizeMap: Props['size'][] = ['XS', 'S', 'M', 'L', 'XL'];
+export const TypeMap: Props['type'][] = ['primary', 'secondary', 'warning', 'danger', 'success'];
 
 const Button:FC<Props> & WithStyle = memo(React.forwardRef( (props, ref) => {
     const {type='primary',size='S',textSize, textColor, hoverTextColor} = props;

@@ -4,6 +4,9 @@ import { ErrorLabel } from '../CheckBox/styled';
 import { BrowsSpan, FileNameSpan, StyledInput, StyledLabel, StyledWrapper } from './styled';
 import { Props } from './types';
 
+export const SizeMap: Props['size'][] = ['XS', 'S', 'M', 'L', 'XL'];
+
+
 const FileInput:FC<Props> & WithStyle = React.memo(React.forwardRef( (props, ref) => {
 
   const [file, setFile] = useState<any>('');

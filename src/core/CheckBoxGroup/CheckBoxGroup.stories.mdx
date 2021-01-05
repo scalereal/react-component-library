@@ -1,0 +1,317 @@
+import CheckBoxGroup, { lposMap, SizeMap, DisplayMap } from '.';
+import { Preview, Story, Meta, Props, ArgsTable, Canvas } from '@storybook/addon-docs/blocks';
+import { withKnobs, color, boolean, select } from '@storybook/addon-knobs';
+
+<Meta
+    title="Components/Core/CheckBoxGroup"
+    component={CheckBoxGroup}
+    argTypes={{
+        size: {
+            control: {
+                type: 'select',
+                options: Object.values(SizeMap)
+            }
+        },
+        fontSize: {
+            control: {
+                type: 'select',
+                options: Object.values(SizeMap)
+            }
+        },
+        label: {
+            control: { type: 'text' }
+        },
+        labelPosition: {
+            control: {
+                type: 'select',
+                options: Object.values(lposMap)
+            }
+        },
+        display: {
+            control: {
+                type: 'select',
+                options: Object.values(DisplayMap)
+            }
+        },
+        showSelectAll: {
+            control: { type: 'boolean' }
+        },
+        hoverEffect: {
+            control: { type: 'boolean' }
+        },
+        labelHoverEffect: {
+            control: { type: 'boolean' }
+        },
+        disabled: {
+            control: { type: 'boolean' }
+        },
+        hasError: {
+            control: { type: 'boolean' }
+        },
+        errorText: {
+            control: { type: 'text' }
+        },
+        bgColor: {
+            control: 'color'
+        },
+        labelColor: {
+            control: 'color'
+        },
+        hoverBgColor: {
+            control: 'color'
+        },
+        labelHoverColor: {
+            control: 'color'
+        },
+        hoverShadowColor: {
+            control: 'color'
+        },
+        ref: {
+            table: {
+                disable: true
+            }
+        },
+        theme: {
+            table: {
+                disable: true
+            }
+        }
+    }}
+/>
+
+# CheckBoxGroup
+
+Displays a CheckBoxGroup
+
+export const Template = args => (
+    <div>
+        <CheckBoxGroup {...args} />
+    </div>
+);
+
+<Preview>
+    <Story
+        name="CheckBoxGroup"
+        args={{
+            display: 'block',
+            label: 'CheckBoxGroup Label',
+            size: 'S',
+            checkBoxOptions: [
+                { id: '1', value: 1, label: '1' },
+                { id: '2', value: 2, label: '2' }
+            ]
+        }}
+    >
+        {Template.bind({})}
+    </Story>
+</Preview>
+
+### Select All
+
+Displays Select All for CheckBoxGroup.
+
+<Preview withToolbar>
+    <div>
+        <CheckBoxGroup
+            display="inline"
+            label="CheckBoxGroup Label"
+            size="S"
+            checkBoxOptions={[
+                { id: '1', value: 1, label: '1' },
+                { id: '2', value: 2, label: '2' }
+            ]}
+            showSelectAll={true}
+        />
+    </div>
+</Preview>
+
+### Display Inline
+
+Displays inline Checkboxes.
+
+<Preview withToolbar>
+    <div>
+        <CheckBoxGroup
+            display="inline"
+            label="CheckBoxGroup Label"
+            size="S"
+            checkBoxOptions={[
+                { id: '1', value: 1, label: '1' },
+                { id: '2', value: 2, label: '2' }
+            ]}
+        />
+    </div>
+</Preview>
+
+### Error
+
+Displays error text if not valid or hasError={true}.
+
+<Preview withToolbar>
+    <div>
+        <CheckBoxGroup
+            display="inline"
+            label="CheckBoxGroup Label"
+            size="S"
+            hasError={true}
+            errorText="Please select any"
+            checkBoxOptions={[
+                { id: '1', value: 1, label: '1' },
+                { id: '2', value: 2, label: '2' }
+            ]}
+            showSelectAll={true}
+        />
+    </div>
+</Preview>
+
+### Color Variations
+
+You can either change the theme or pass the colors as props.
+
+<Preview withToolbar>
+    <div>
+        <CheckBoxGroup
+            display="block"
+            label="CheckBoxGroup Label"
+            size="S"
+            checkBoxOptions={[
+                { id: '1', value: 1, label: '1', checked: true },
+                { id: '2', value: 2, label: '2' }
+            ]}
+            bgColor="#37d5d3"
+            labelColor="blue"
+        />
+    </div>
+</Preview>
+
+### Sizes
+
+There are five sizs available `XS` | `S` | `M` | `L` | `XL`.
+
+<Preview withToolbar>
+    <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-around' }}>
+        <CheckBoxGroup
+            display="inline"
+            label="CheckBoxGroup Label"
+            size="XS"
+            checkBoxOptions={[
+                { id: '1', value: 1, label: '1' },
+                { id: '2', value: 2, label: '2' }
+            ]}
+            bgColor="#37d5d3"
+            labelColor="blue"
+        />
+        <CheckBoxGroup
+            display="inline"
+            label="CheckBoxGroup Label"
+            size="S"
+            checkBoxOptions={[
+                { id: '1', value: 1, label: '1' },
+                { id: '2', value: 2, label: '2' }
+            ]}
+            bgColor="#37d5d3"
+            labelColor="blue"
+        />
+        <CheckBoxGroup
+            display="inline"
+            label="CheckBoxGroup Label"
+            size="M"
+            checkBoxOptions={[
+                { id: '1', value: 1, label: '1' },
+                { id: '2', value: 2, label: '2' }
+            ]}
+            bgColor="#37d5d3"
+            labelColor="blue"
+        />
+        <CheckBoxGroup
+            display="inline"
+            label="CheckBoxGroup Label"
+            size="L"
+            checkBoxOptions={[
+                { id: '1', value: 1, label: '1' },
+                { id: '2', value: 2, label: '2' }
+            ]}
+            bgColor="#37d5d3"
+            labelColor="blue"
+        />
+        <CheckBoxGroup
+            display="inline"
+            label="CheckBoxGroup Label"
+            size="XL"
+            checkBoxOptions={[
+                { id: '1', value: 1, label: '1' },
+                { id: '2', value: 2, label: '2' }
+            ]}
+            bgColor="#37d5d3"
+            labelColor="blue"
+        />
+    </div>
+</Preview>
+
+### Text Sizes
+
+There are five Text sizs available `XS` | `S` | `M` | `L` | `XL`.
+
+<Preview withToolbar>
+    <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-around' }}>
+        <CheckBoxGroup
+            display="inline"
+            label="CheckBoxGroup Label"
+            fontSize="XS"
+            checkBoxOptions={[
+                { id: '1', value: 1, label: '1' },
+                { id: '2', value: 2, label: '2' }
+            ]}
+            bgColor="#37d5d3"
+            labelColor="blue"
+        />
+        <CheckBoxGroup
+            display="inline"
+            label="CheckBoxGroup Label"
+            fontSize="S"
+            checkBoxOptions={[
+                { id: '1', value: 1, label: '1' },
+                { id: '2', value: 2, label: '2' }
+            ]}
+            bgColor="#37d5d3"
+            labelColor="blue"
+        />
+        <CheckBoxGroup
+            display="inline"
+            label="CheckBoxGroup Label"
+            fontSize="M"
+            checkBoxOptions={[
+                { id: '1', value: 1, label: '1' },
+                { id: '2', value: 2, label: '2' }
+            ]}
+            bgColor="#37d5d3"
+            labelColor="blue"
+        />
+        <CheckBoxGroup
+            display="inline"
+            label="CheckBoxGroup Label"
+            fontSize="L"
+            checkBoxOptions={[
+                { id: '1', value: 1, label: '1' },
+                { id: '2', value: 2, label: '2' }
+            ]}
+            bgColor="#37d5d3"
+            labelColor="blue"
+        />
+        <CheckBoxGroup
+            display="inline"
+            label="CheckBoxGroup Label"
+            fontSize="XL"
+            checkBoxOptions={[
+                { id: '1', value: 1, label: '1' },
+                { id: '2', value: 2, label: '2' }
+            ]}
+            bgColor="#37d5d3"
+            labelColor="blue"
+        />
+    </div>
+</Preview>
+
+### Props
+
+<Props story="CheckBoxGroup" />

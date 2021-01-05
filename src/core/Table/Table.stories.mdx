@@ -1,0 +1,152 @@
+import Table from '.';
+import { Preview, Story, Meta, Props, ArgsTable, Canvas } from '@storybook/addon-docs/blocks';
+import { withKnobs, color, boolean, select } from '@storybook/addon-knobs';
+
+<Meta
+    title="Components/Core/Table"
+    component={Table}
+    argTypes={{
+        hoverEffect: {
+            control: { type: 'boolean' }
+        },
+        thBgColor: {
+            control: 'color'
+        },
+        thTextColor: {
+            control: 'color'
+        },
+        hoverTrBgColor: {
+            control: 'color'
+        },
+        borderColor: {
+            control: 'color'
+        },
+        nthTrBgColor: {
+            control: 'color'
+        },
+        ref: {
+            table: {
+                disable: true
+            }
+        },
+        theme: {
+            table: {
+                disable: true
+            }
+        }
+    }}
+/>
+
+# Table
+
+Displays a Table.
+
+export const Template = args => (
+    <div>
+        <Table {...args} />
+    </div>
+);
+
+<Preview>
+    <Story
+        name="Table"
+        args={{
+            thData: [
+                { id: 1, data: 'ID' },
+                { id: 2, data: 'EmployeeID' },
+                { id: 3, data: 'Name' }
+            ],
+            tdData: [
+                {
+                    trId: 1,
+                    trData: [
+                        { tdId: 1, tdData: '1' },
+                        { tdId: 2, tdData: '2' },
+                        { tdId: 3, tdData: '3' }
+                    ]
+                },
+                {
+                    trId: 2,
+                    trData: [
+                        { tdId: 1, tdData: '1' },
+                        { tdId: 2, tdData: '2' },
+                        { tdId: 3, tdData: '3' }
+                    ]
+                },
+                {
+                    trId: 3,
+                    trData: [
+                        { tdId: 1, tdData: '1' },
+                        { tdId: 2, tdData: '2' },
+                        { tdId: 3, tdData: '3' }
+                    ]
+                },
+                {
+                    trId: 4,
+                    trData: [
+                        { tdId: 1, tdData: '1' },
+                        { tdId: 2, tdData: '2' },
+                        { tdId: 3, tdData: '3' }
+                    ]
+                }
+            ]
+        }}
+    >
+        {Template.bind({})}
+    </Story>
+</Preview>
+
+### Color Variations
+
+You can either change the theme or pass the colors as props.
+
+<Preview withToolbar>
+    <div>
+        <Table
+            thBgColor="green"
+            thData={[
+                { id: 1, data: 'ID' },
+                { id: 2, data: 'EmployeeID' },
+                { id: 3, data: 'Name' }
+            ]}
+            tdData={[
+                {
+                    trId: 1,
+                    trData: [
+                        { tdId: 1, tdData: '1' },
+                        { tdId: 2, tdData: '2' },
+                        { tdId: 3, tdData: '3' }
+                    ]
+                },
+                {
+                    trId: 2,
+                    trData: [
+                        { tdId: 1, tdData: '1' },
+                        { tdId: 2, tdData: '2' },
+                        { tdId: 3, tdData: '3' }
+                    ]
+                },
+                {
+                    trId: 3,
+                    trData: [
+                        { tdId: 1, tdData: '1' },
+                        { tdId: 2, tdData: '2' },
+                        { tdId: 3, tdData: '3' }
+                    ]
+                },
+                {
+                    trId: 4,
+                    trData: [
+                        { tdId: 1, tdData: '1' },
+                        { tdId: 2, tdData: '2' },
+                        { tdId: 3, tdData: '3' }
+                    ]
+                }
+            ]}
+        />
+    </div>
+</Preview>
+
+### Props
+
+<Props story="Table" />
