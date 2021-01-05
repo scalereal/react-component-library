@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { avatarTheme } from '../../theme/core/avatar';
-import { Props } from './types';
+import { AvatarProps } from './types';
 
 
 const mixin = (size:any) => {
@@ -67,10 +67,11 @@ const mixin = (size:any) => {
      }
  };
 
-export const StyledAvatar = styled.div<Props>`
+export const StyledAvatar = styled.div<AvatarProps>`
     ${pr => pr.disabled === true?'pointer-events: none;opacity: 0.4;':''}
     ${pr=>  mixin(pr.size)}
-    display:${pr=> pr.display!=='block'?pr.display:'block'};
+    ${pr=> pr.display!=='block'?`display:${pr.display};`:`display:block;`};
+    margin:0 0.5rem;
     border-radius: 50%;
     text-align:center;
     background-color: ${pr => pr.bgColor || avatarTheme.defaults.bgColor };
@@ -89,6 +90,9 @@ export const StyledAvatar = styled.div<Props>`
 
     img{
         border-radius: 50%;
+        display: inline-block;
+        vertical-align: middle;
+        line-height: normal;
     }
     
     span{
