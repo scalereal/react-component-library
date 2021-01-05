@@ -1,3 +1,3 @@
-export * from './components';
-export * from './hooks';
-export * from './Styled';
+export * from './components'
+export * from './hooks'
+export * from './Styled'

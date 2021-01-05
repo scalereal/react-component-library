@@ -1,6 +1,6 @@
-import { Meta, Story } from '@storybook/react/types-6-0';
-import React from 'react';
-import Input from "./Input"
+import { Meta, Story } from '@storybook/react/types-6-0'
+import React from 'react'
+import Input from './Input'
 
 export default {
     title: 'Components/Core/Input',

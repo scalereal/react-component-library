@@ -1,6 +1,6 @@
-import { HTMLProps, Omit, WithThemeProp } from '../../utils';
+import { HTMLProps, Omit, WithThemeProp } from '../../utils'
 
-export type ToastVariants = 'success' | 'danger' | 'info' | 'warning';
+export type ToastVariants = 'success' | 'danger' | 'info' | 'warning'
 
 export interface ToastProps extends Omit<HTMLProps<HTMLDivElement>,'id' | 'action' >,WithThemeProp {
     /** Toast Id */

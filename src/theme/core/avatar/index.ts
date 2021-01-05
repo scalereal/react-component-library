@@ -1,5 +1,5 @@
-import { defaultTheme } from "../../theme"
-import { AvatarTheme } from "./types"
+import { defaultTheme } from '../../theme'
+import { AvatarTheme } from './types'
 export const  avatarTheme : AvatarTheme = {
     defaults:{
         bgColor:defaultTheme.secondaryColor,

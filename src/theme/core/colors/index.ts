@@ -33,7 +33,7 @@ export const red:Color = {
 };
 
 export const green:Color = {
-  100: "#E7F0FF",
+  100: "#E6F2E6",
   200: "#CCE6CC",
   300: "#80BF80",
   400: "#269326",

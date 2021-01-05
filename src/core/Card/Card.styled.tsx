@@ -1,6 +1,6 @@
-import styled from 'styled-components';
-import { CardProps } from './types';
-import { defaultTheme } from '../../theme';
+import styled from 'styled-components'
+import { CardProps } from './types'
+import { defaultTheme } from '../../theme'
 
 export const Card = styled('div')<CardProps>`
     position: relative;
@@ -19,9 +19,11 @@ export const Card = styled('div')<CardProps>`
     border-bottom-left-radius: calc(.3rem - 1px);
     border-bottom-right-radius: calc(.3rem - 1px);
 `;
+
 Card.defaultProps = {
     theme:defaultTheme
 }
+
 export const CardHeader = styled('div')<CardProps>`
     background-color:#fff;
     width:${({ variant }) => variant ===  "vertical" ? "auto": "10rem" };

@@ -1,6 +1,6 @@
 import { grey } from '../../Colors'
-import { defaultTheme } from "../../theme"
-import { TableTheme } from "./types"
+import { defaultTheme } from '../../theme'
+import { TableTheme } from './types'
 export const  tableTheme : TableTheme = {
     defaults:{
         thBgColor:defaultTheme.primaryColor,

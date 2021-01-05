@@ -1,8 +1,8 @@
-import React, { FC } from 'react';
-import { WithStyle } from "../../utils";
-import Text from "../Text/Text";
-import * as Styled from "./Card.styled";
-import { CardProps } from './types';
+import React, { FC } from 'react'
+import { WithStyle } from '../../utils'
+import Text from '../Text/Text'
+import * as Styled from './Card.styled'
+import { CardProps } from './types'
 
 const Card:FC<CardProps> & WithStyle = React.memo(
     React.forwardRef((props, ref) => {

@@ -1,5 +1,5 @@
-import React from 'react';
-import { Props } from './types';
+import React from 'react'
+import { Props } from './types'
 
 const InjectClassName: React.FunctionComponent<Props> = props => {
     const { className, children } = props;

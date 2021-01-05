@@ -1,5 +1,5 @@
-import { HTMLProps, WithThemeProp } from '../../utils';
-import { TextSizes } from "../../theme/core/text/types"
+import { HTMLProps, WithThemeProp } from '../../utils'
+import { TextSizes } from '../../theme/core/text/types'
 
 export interface ModalProps extends HTMLProps<HTMLDivElement>, WithThemeProp {
     /** Modal Title */

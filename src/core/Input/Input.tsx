@@ -1,7 +1,7 @@
-import React, { FC } from 'react';
-import * as Styled from './Input.styled';
-import { InputProps } from './types';
-import { WithStyle } from "../../utils"
+import React, { FC } from 'react'
+import * as Styled from './Input.styled'
+import { InputProps } from './types'
+import { WithStyle } from '../../utils'
 
 export const Input: FC<InputProps> & WithStyle = React.memo(
     React.forwardRef((props, ref) => {

@@ -1,5 +1,5 @@
-import { defaultTheme } from "../../theme"
-import { CardTableTheme } from "./types"
+import { defaultTheme } from '../../theme'
+import { CardTableTheme } from './types'
 export const  cardTableTheme : CardTableTheme = {
     defaults:{
         borderColor:defaultTheme.borderColor,

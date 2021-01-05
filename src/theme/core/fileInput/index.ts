@@ -1,6 +1,6 @@
 import { grey } from '../../Colors'
-import { defaultTheme } from "../../theme"
-import { FileInputTheme } from "./types"
+import { defaultTheme } from '../../theme'
+import { FileInputTheme } from './types'
 export const  fileInputTheme : FileInputTheme = {
     defaults:{
         textColor:defaultTheme.typographyColor,

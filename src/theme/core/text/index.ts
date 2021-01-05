@@ -1,5 +1,5 @@
-import { grey } from '../../core/colors';
-import { TextTheme } from './types';
+import { grey } from '../../core/colors'
+import { TextTheme } from './types'
 
 export const textTheme: TextTheme = {
     sizes: {

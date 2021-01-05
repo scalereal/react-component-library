@@ -1,7 +1,10 @@
-import { Meta, Story } from '@storybook/react/types-6-0';
-import React from 'react';
-import Modal from "./Modal"
+import { Meta, Story } from '@storybook/react/types-6-0'
+import React from 'react'
+import Modal from './Modal'
+import { ModalProps } from './types'
 
+const textSizes : ModalProps['titleSize'][] = ['XS', 'S', 'M', 'L', 'XL']
+const descriptionSizes : ModalProps['descriptionSize'][] = ['XS', 'S', 'M', 'L', 'XL']
 
 export default {
     title: 'Components/Core/Modal',
@@ -18,6 +21,18 @@ export default {
         },
         descriptionColor:{
             control:'color'
+        },
+        titleSize:{
+            control: {
+                type: 'select',
+                options: Object.values(textSizes),
+            },
+        },
+        descriptionSize:{
+            control: {
+                type: 'select',
+                options: Object.values(descriptionSizes),
+            },
         }
     }
 } as Meta
