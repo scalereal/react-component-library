@@ -1,0 +1,133 @@
+import Radio, { lposMap, SizeMap } from '.';
+import { Preview, Story, Meta, Props, ArgsTable, Canvas } from '@storybook/addon-docs/blocks';
+import { withKnobs, color, boolean, select } from '@storybook/addon-knobs';
+
+<Meta
+    title="Components/Core/Radio"
+    component={Radio}
+    argTypes={{
+        size: {
+            control: {
+                type: 'select',
+                options: Object.values(SizeMap)
+            }
+        },
+        labelPosition: {
+            control: {
+                type: 'select',
+                options: Object.values(lposMap)
+            }
+        },
+        label: {
+            control: { type: 'text' }
+        },
+        disabled: {
+            control: { type: 'boolean' }
+        },
+        hasError: {
+            control: { type: 'boolean' }
+        },
+        errorText: {
+            control: { type: 'text' }
+        },
+        bgColor: {
+            control: 'color'
+        },
+        hoverBgColor: {
+            control: 'color'
+        },
+        checkedBgColor: {
+            control: 'color'
+        },
+        hoverCheckedBgColor: {
+            control: 'color'
+        },
+        labelColor: {
+            control: 'color'
+        },
+        hoverLabelColor: {
+            control: 'color'
+        },
+        hoverEffect: {
+            control: { type: 'boolean' }
+        },
+        ref: {
+            table: {
+                disable: true
+            }
+        },
+        theme: {
+            table: {
+                disable: true
+            }
+        },
+        onChange: {
+            table: {
+                disable: true
+            }
+        }
+    }}
+/>
+
+# Radio
+
+Displays a Radio.
+
+export const Template = args => (
+    <div>
+        <Radio {...args} />
+    </div>
+);
+
+<Preview>
+    <Story
+        name="Radio"
+        args={{
+            hasError: false,
+            hoverEffect: true
+        }}
+    >
+        {Template.bind({})}
+    </Story>
+</Preview>
+
+### Error
+
+Displays error text if not selected or hasError={true}
+
+<Preview withToolbar>
+    <div>
+        <Radio hasError={true} errorText="please check radio" />
+    </div>
+</Preview>
+
+### Color Variations
+
+You can either change the theme or pass the colors as props.
+
+<Preview withToolbar>
+    <div>
+        <Radio bgColor="#37d5d3" />
+        <Radio bgColor="#2a0481" />
+        <Radio bgColor="#37d5d3" labelColor="blue" />
+        <Radio bgColor="#2a0481" labelColor="red" />
+    </div>
+</Preview>
+
+### Sizes
+
+There are five sizs available `XS` | `S` | `M` | `L` | `XL`.
+
+<Preview withToolbar>
+    <div>
+        <Radio size="XS" />
+        <Radio size="S" />
+        <Radio size="M" />
+        <Radio size="L" />
+        <Radio size="XL" />
+    </div>
+</Preview>
+
+### Props
+
+<Props story="Radio" />

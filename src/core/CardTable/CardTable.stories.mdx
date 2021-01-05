@@ -1,0 +1,280 @@
+import CardTable from '.';
+import Avatar from '../Avatar';
+import Text from '../Text/Text';
+import { Preview, Story, Meta, Props, ArgsTable, Canvas } from '@storybook/addon-docs/blocks';
+import { withKnobs, color, boolean, select } from '@storybook/addon-knobs';
+
+<Meta
+    title="Components/Core/CardTable"
+    component={CardTable}
+    argTypes={{
+        hoverEffect: {
+            control: { type: 'boolean' }
+        },
+        borderColor: {
+            control: 'color'
+        },
+        headerBgColor: {
+            control: 'color'
+        },
+        hoverBorderColor: {
+            control: 'color'
+        },
+        hoverShadowColor: {
+            control: 'color'
+        },
+        trBgColor: {
+            control: 'color'
+        },
+        nthTrBgColor: {
+            control: 'color'
+        },
+        hoverTrBgColor: {
+            control: 'color'
+        }
+    }}
+/>
+
+# CardTable
+
+Displays a CardTable
+
+export const Template = args => <CardTable {...args} />;
+
+<Preview>
+    <Story
+        name="CardTable"
+        args={{
+            thData: [
+                { id: 1, data: <Text textWeight="strong">User</Text> },
+                { id: 2, data: <Text textWeight="strong">Last Login</Text> },
+                { id: 3, data: <Text textWeight="strong">Department</Text> },
+                { id: 3, data: <Text textWeight="strong">Status</Text> }
+            ],
+            tdData: [
+                {
+                    trId: 1,
+                    trData: [
+                        {
+                            tdId: 1,
+                            tdData: (
+                                <>
+                                    <Avatar size="XXS" display="inline-block" res="Akshay Kumar" />
+                                    <Text textSize="XS">Akshay Kumar</Text>
+                                </>
+                            )
+                        },
+                        { tdId: 2, tdData: <Text textSize="XS">sep 20 2019</Text> },
+                        { tdId: 3, tdData: <Text textSize="XS">Development</Text> },
+                        {
+                            tdId: 4,
+                            tdData: (
+                                <Text textSize="XS" textColor="blue">
+                                    active
+                                </Text>
+                            )
+                        }
+                    ]
+                },
+                {
+                    trId: 2,
+                    trData: [
+                        {
+                            tdId: 1,
+                            tdData: (
+                                <>
+                                    <Avatar size="XXS" display="inline-block" res="Akshay Kumar" />
+                                    <Text textSize="XS">Akshay Kumar</Text>
+                                </>
+                            )
+                        },
+                        { tdId: 2, tdData: <Text textSize="XS">sep 20 2019</Text> },
+                        { tdId: 3, tdData: <Text textSize="XS">Development</Text> },
+                        {
+                            tdId: 4,
+                            tdData: (
+                                <Text textSize="XS" textColor="blue">
+                                    active
+                                </Text>
+                            )
+                        }
+                    ]
+                },
+                {
+                    trId: 3,
+                    trData: [
+                        {
+                            tdId: 1,
+                            tdData: (
+                                <>
+                                    <Avatar size="XXS" display="inline-block" res="Akshay Kumar" />
+                                    <Text textSize="XS">Akshay Kumar</Text>
+                                </>
+                            )
+                        },
+                        { tdId: 2, tdData: <Text textSize="XS">sep 20 2019</Text> },
+                        { tdId: 3, tdData: <Text textSize="XS">Development</Text> },
+                        {
+                            tdId: 4,
+                            tdData: (
+                                <Text textSize="XS" textColor="blue">
+                                    active
+                                </Text>
+                            )
+                        }
+                    ]
+                },
+                {
+                    trId: 4,
+                    trData: [
+                        {
+                            tdId: 1,
+                            tdData: (
+                                <>
+                                    <Avatar size="XXS" display="inline-block" res="Akshay Kumar" />
+                                    <Text textSize="XS">Akshay Kumar</Text>
+                                </>
+                            )
+                        },
+                        { tdId: 2, tdData: <Text textSize="XS">sep 20 2019</Text> },
+                        { tdId: 3, tdData: <Text textSize="XS">Development</Text> },
+                        {
+                            tdId: 4,
+                            tdData: (
+                                <Text textSize="XS" textColor="blue">
+                                    active
+                                </Text>
+                            )
+                        }
+                    ]
+                }
+            ],
+            hoverEffect: true
+        }}
+    >
+        {Template.bind({})}
+    </Story>
+</Preview>
+
+### Color Variations
+
+You can either change the theme or pass the colors as props.
+
+<Preview withToolbar>
+    <div>
+        <CardTable
+            hoverEffect={true}
+            headerBgColor="rgb(32 224 255 / 82%)"
+            trBgColor="#ad9d9d91"
+            nthTrBgColor="#f5eded"
+            thData={[
+                { id: 1, data: <Text textWeight="strong">User</Text> },
+                { id: 2, data: <Text textWeight="strong">Last Login</Text> },
+                { id: 3, data: <Text textWeight="strong">Department</Text> },
+                { id: 3, data: <Text textWeight="strong">Status</Text> }
+            ]}
+            tdData={[
+                {
+                    trId: 1,
+                    trData: [
+                        {
+                            tdId: 1,
+                            tdData: (
+                                <>
+                                    <Avatar size="XXS" display="inline-block" res="Akshay Kumar" />
+                                    <Text textSize="XS">Akshay Kumar</Text>
+                                </>
+                            )
+                        },
+                        { tdId: 2, tdData: <Text textSize="XS">sep 20 2019</Text> },
+                        { tdId: 3, tdData: <Text textSize="XS">Development</Text> },
+                        {
+                            tdId: 4,
+                            tdData: (
+                                <Text textSize="XS" textColor="blue">
+                                    active
+                                </Text>
+                            )
+                        }
+                    ]
+                },
+                {
+                    trId: 2,
+                    trData: [
+                        {
+                            tdId: 1,
+                            tdData: (
+                                <>
+                                    <Avatar size="XXS" display="inline-block" res="Akshay Kumar" />
+                                    <Text textSize="XS">Akshay Kumar</Text>
+                                </>
+                            )
+                        },
+                        { tdId: 2, tdData: <Text textSize="XS">sep 20 2019</Text> },
+                        { tdId: 3, tdData: <Text textSize="XS">Development</Text> },
+                        {
+                            tdId: 4,
+                            tdData: (
+                                <Text textSize="XS" textColor="blue">
+                                    active
+                                </Text>
+                            )
+                        }
+                    ]
+                },
+                {
+                    trId: 3,
+                    trData: [
+                        {
+                            tdId: 1,
+                            tdData: (
+                                <>
+                                    <Avatar size="XXS" display="inline-block" res="Akshay Kumar" />
+                                    <Text textSize="XS">Akshay Kumar</Text>
+                                </>
+                            )
+                        },
+                        { tdId: 2, tdData: <Text textSize="XS">sep 20 2019</Text> },
+                        { tdId: 3, tdData: <Text textSize="XS">Development</Text> },
+                        {
+                            tdId: 4,
+                            tdData: (
+                                <Text textSize="XS" textColor="blue">
+                                    active
+                                </Text>
+                            )
+                        }
+                    ]
+                },
+                {
+                    trId: 4,
+                    trData: [
+                        {
+                            tdId: 1,
+                            tdData: (
+                                <>
+                                    <Avatar size="XXS" display="inline-block" res="Akshay Kumar" />
+                                    <Text textSize="XS">Akshay Kumar</Text>
+                                </>
+                            )
+                        },
+                        { tdId: 2, tdData: <Text textSize="XS">sep 20 2019</Text> },
+                        { tdId: 3, tdData: <Text textSize="XS">Development</Text> },
+                        {
+                            tdId: 4,
+                            tdData: (
+                                <Text textSize="XS" textColor="blue">
+                                    active
+                                </Text>
+                            )
+                        }
+                    ]
+                }
+            ]}
+        />
+    </div>
+</Preview>
+
+### Props
+
+<Props story="CardTable" />

@@ -1,5 +1,5 @@
 import { HTMLProps, WithThemeProp } from '../../utils';
-import { ToggleSizes } from "../../theme/core/toggle/types";
+import { ToggleSizes } from '../../theme/core/toggle/types';
 declare type DivProps = Omit<HTMLProps<HTMLInputElement>, 'size'>;
 declare type InputProps = Omit<HTMLProps<HTMLInputElement>, 'size' | 'type'>;
 export interface ToggleWrapperProps extends DivProps, WithThemeProp {

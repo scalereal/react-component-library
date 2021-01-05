@@ -8,10 +8,3 @@ export var heights = {
     default: 45,
     small: 35
 };
-export var toggleSizes = {
-    XS: '20px',
-    S: '24px',
-    M: '28px',
-    L: '32px',
-    XL: '40px'
-};

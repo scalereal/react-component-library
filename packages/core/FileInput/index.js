@@ -12,6 +12,7 @@ var __assign = (this && this.__assign) || function () {
 import React, { useState } from 'react';
 import { ErrorLabel } from '../CheckBox/styled';
 import { BrowsSpan, FileNameSpan, StyledInput, StyledLabel, StyledWrapper } from './styled';
+export var SizeMap = ['XS', 'S', 'M', 'L', 'XL'];
 var FileInput = React.memo(React.forwardRef(function (props, ref) {
     var _a = useState(''), file = _a[0], setFile = _a[1];
     var errorText = props.errorText, _b = props.size, size = _b === void 0 ? 'S' : _b;

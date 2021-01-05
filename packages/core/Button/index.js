@@ -12,6 +12,8 @@ var __assign = (this && this.__assign) || function () {
 import React, { memo } from 'react';
 import Text from '../Text/Text';
 import { StyledButton } from './styled';
+export var SizeMap = ['XS', 'S', 'M', 'L', 'XL'];
+export var TypeMap = ['primary', 'secondary', 'warning', 'danger', 'success'];
 var Button = memo(React.forwardRef(function (props, ref) {
     var _a = props.type, type = _a === void 0 ? 'primary' : _a, _b = props.size, size = _b === void 0 ? 'S' : _b, textSize = props.textSize, textColor = props.textColor, hoverTextColor = props.hoverTextColor;
     return React.createElement(StyledButton, __assign({ ref: ref, type: type, size: size }, props),

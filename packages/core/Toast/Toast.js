@@ -22,17 +22,17 @@ var __rest = (this && this.__rest) || function (s, e) {
 };
 import React from 'react';
 import Text from '../Text/Text';
-import * as Styled from "./Toast.styled";
+import * as Styled from './Toast.styled';
 var Toast = React.memo(React.forwardRef(function (props, ref) {
     var variant = props.variant, title = props.title, message = props.message, titleColor = props.titleColor, messageColor = props.messageColor, restProps = __rest(props, ["variant", "title", "message", "titleColor", "messageColor"]);
-    return (React.createElement(Styled.Toast, __assign({ ref: ref, variant: variant }, restProps),
-        React.createElement(Styled.ToastHeader, __assign({}, props),
-            React.createElement(Text, { textSize: "S", lineHeight: "1.5", textColor: titleColor }, title)),
-        React.createElement(Styled.ToastBody, null,
-            React.createElement(Text, { textSize: "XS", textColor: messageColor }, message)),
-        React.createElement(Styled.ToastFooter, __assign({}, props)),
-        React.createElement(Styled.ToastCloseIcon, null, "X")));
+    var color = variant === 'success' ? '#008000' : variant === 'info' ? '#126AFA' : variant === 'danger' ? '#cc0000' : variant === 'warning' ? '#ff9800' : '';
+    return (React.createElement(Styled.ToastContainer, __assign({ ref: ref, variant: variant }, restProps),
+        React.createElement(Styled.Toast, __assign({ variant: variant }, restProps),
+            React.createElement(Styled.ToastHeader, __assign({}, props),
+                React.createElement(Text, { textSize: "S", textColor: titleColor ? titleColor : color }, title)),
+            React.createElement(Styled.ToastBody, null,
+                React.createElement(Text, { textSize: "XS", textColor: messageColor ? messageColor : color }, message)))));
 }));
 Toast.displayName = 'Toast';
-Toast.Style = Styled.Toast;
+Toast.Style = Styled.ToastContainer;
 export default Toast;

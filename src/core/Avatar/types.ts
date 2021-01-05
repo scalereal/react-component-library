@@ -1,9 +1,9 @@
 import { HTMLProps, Omit, WithThemeProp } from '../../utils/Styled';
 
 export type AvatarSizes = 'XXS' | 'XS' | 'S' | 'M' | 'L' | 'XL' ;
-export type Display = 'inline' | 'inline-block' | 'block';
+export type Display = 'inline-block' | 'block';
 
-export interface Props extends Omit<HTMLProps<HTMLDivElement>,'size'>,WithThemeProp {
+export interface AvatarProps extends Omit<HTMLProps<HTMLDivElement>,'size'>,WithThemeProp {
     display?:string;
     size?: AvatarSizes;
     bgColor?:string;

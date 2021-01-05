@@ -1,4 +1,4 @@
-import { TextSizes } from "../../theme/core/text/types";
+import { TextSizes } from '../../theme/core/text/types';
 import { HTMLProps, WithThemeProp } from '../../utils';
 export declare type CardDirection = 'horizontal' | 'vertical';
 export declare type CardTextAlignment = 'left' | 'center' | 'right';

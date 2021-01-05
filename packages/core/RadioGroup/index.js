@@ -13,10 +13,12 @@ import React, { useState } from 'react';
 import Radio from '../Radio';
 import Text from '../Text/Text';
 import { ErrorLabel, RadioGroupWrapper, StyledLi, StyledUl, StyledWrapper } from './styled';
-// export type Ref = HTMLLabelElement;
+export var SizeMap = ['XS', 'S', 'M', 'L', 'XL'];
+export var lposMap = ['top', 'bottom', 'left', 'right'];
+export var DisplayMap = ['inline', 'block'];
 var RadioGroup = React.memo(React.forwardRef(function (props, ref) {
-    var _a = props.size, size = _a === void 0 ? 'S' : _a, options = props.options, mainLabel = props.mainLabel, errorText = props.errorText, labelColor = props.labelColor, labelHoverEffect = props.labelHoverEffect, hoverLabelColor = props.hoverLabelColor, hoverEffect = props.hoverEffect, bgColor = props.bgColor, hoverCheckedBgColor = props.hoverCheckedBgColor, hoverBgColor = props.hoverBgColor, checkedBgColor = props.checkedBgColor, labelPosition = props.labelPosition;
-    var _b = useState(''), select = _b[0], setSelect = _b[1];
+    var size = props.size, options = props.options, mainLabel = props.mainLabel, errorText = props.errorText, labelColor = props.labelColor, labelHoverEffect = props.labelHoverEffect, hoverLabelColor = props.hoverLabelColor, hoverEffect = props.hoverEffect, bgColor = props.bgColor, hoverCheckedBgColor = props.hoverCheckedBgColor, hoverBgColor = props.hoverBgColor, checkedBgColor = props.checkedBgColor, labelPosition = props.labelPosition;
+    var _a = useState(''), select = _a[0], setSelect = _a[1];
     var handleChange = function (e) {
         setSelect(e.target.value);
     };
@@ -30,5 +32,8 @@ var RadioGroup = React.memo(React.forwardRef(function (props, ref) {
             })))));
 }));
 RadioGroup.displayName = "RadioGroup";
-RadioGroup.defaultProps = {};
+RadioGroup.defaultProps = {
+    hoverEffect: true,
+    size: 'S'
+};
 export default RadioGroup;

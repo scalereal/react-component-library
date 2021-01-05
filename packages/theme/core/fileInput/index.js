@@ -1,5 +1,5 @@
 import { grey } from '../../Colors';
-import { defaultTheme } from "../../theme";
+import { defaultTheme } from '../../theme';
 export var fileInputTheme = {
     defaults: {
         textColor: defaultTheme.typographyColor,
