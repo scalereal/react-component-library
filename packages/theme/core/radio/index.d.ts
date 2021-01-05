@@ -1,2 +1,2 @@
-import { RadioTheme } from "./types";
+import { RadioTheme } from './types';
 export declare const radioTheme: RadioTheme;

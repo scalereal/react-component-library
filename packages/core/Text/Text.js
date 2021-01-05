@@ -21,7 +21,7 @@ var __rest = (this && this.__rest) || function (s, e) {
     return t;
 };
 import React from 'react';
-import * as Styled from "./Text.styled";
+import * as Styled from './Text.styled';
 var Text = React.memo(React.forwardRef(function (_a, ref) {
     var children = _a.children, textSize = _a.textSize, textWeight = _a.textWeight, textAlign = _a.textAlign, restProps = __rest(_a, ["children", "textSize", "textWeight", "textAlign"]);
     return (React.createElement(Styled.Text, __assign({ textSize: textSize, textWeight: textWeight, textAlign: textAlign, ref: ref }, restProps), children));

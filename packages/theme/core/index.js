@@ -32,5 +32,5 @@ export var coreDefaultTheme = {
     radio: radioTheme,
     table: tableTheme,
     cardTable: cardTableTheme,
-    fileInput: fileInputTheme
+    fileInput: fileInputTheme,
 };

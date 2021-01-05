@@ -10,8 +10,8 @@ var __assign = (this && this.__assign) || function () {
     return __assign.apply(this, arguments);
 };
 import React from 'react';
-import Text from "../Text/Text";
-import * as Styled from "./Card.styled";
+import Text from '../Text/Text';
+import * as Styled from './Card.styled';
 var Card = React.memo(React.forwardRef(function (props, ref) {
     var title = props.title, description = props.description, imgSrc = props.imgSrc, titleSize = props.titleSize, descriptionSize = props.descriptionSize, titleColor = props.titleColor, descriptionColor = props.descriptionColor;
     return (React.createElement(Styled.Card, __assign({ ref: ref }, props),

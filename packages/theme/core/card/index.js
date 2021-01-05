@@ -1,4 +1,4 @@
-import { grey } from "../../core/colors";
+import { grey } from '../../core/colors';
 export var cardTheme = {
     defaults: {
         borderColor: grey[500],

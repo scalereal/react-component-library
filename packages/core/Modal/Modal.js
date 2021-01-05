@@ -1,6 +1,6 @@
 import React from 'react';
-import * as Styled from "./Modal.styled";
-import Text from "../Text/Text";
+import * as Styled from './Modal.styled';
+import Text from '../Text/Text';
 var Toast = function (_a) {
     var title = _a.title, description = _a.description, borderColor = _a.borderColor, shadowColor = _a.shadowColor, titleSize = _a.titleSize, titleColor = _a.titleColor, descriptionSize = _a.descriptionSize, descriptionColor = _a.descriptionColor;
     return (React.createElement(Styled.Modal, { title: title, description: description, shadowColor: shadowColor, borderColor: borderColor, titleSize: titleSize, descriptionSize: descriptionSize },
