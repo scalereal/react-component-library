@@ -1,11 +1,18 @@
+export type ToastVariant = 'success' | 'danger' | 'info' | 'warning';
 export interface ToastTheme {
     statusColor: {
-        [key : string]:string;
-        success: string;
-        info: string;
-        warning: string;
-        danger: string;
+        [key in ToastVariant]:{
+            color:string;
+            bgColor:string;
+            borderColor:string;
+        };
     },
-    shadowColor: string;
-    borderColor:string;
+    defaults:{
+        position:{
+            top:string;
+            right:string;
+        }
+        shadowColor: string;
+        borderColor:string;
+    }
 }

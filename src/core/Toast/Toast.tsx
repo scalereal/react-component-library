@@ -8,25 +8,26 @@ import { ToastProps } from './types'
 const Toast:FC<ToastProps> & WithStyle = React.memo(
     React.forwardRef((props, ref) => {
         const { variant, title, message, titleColor, messageColor, ...restProps } = props;
+        const color = variant === 'success' ? '#008000' : variant === 'info' ? '#126AFA' : variant === 'danger' ? '#cc0000' : variant === 'warning'? '#ff9800' : '';
         return (
-            <Styled.Toast ref={ref} variant={variant} {...restProps}>
+            <Styled.ToastContainer ref={ref} variant={variant} {...restProps}>
+                <Styled.Toast variant={variant} {...restProps}>
                 <Styled.ToastHeader {...props}>
-                    <Text textSize="S" lineHeight="1.5" textColor={titleColor}>
+                    <Text textSize="S" textColor={titleColor ? titleColor : color}>
                         {title}
                     </Text>
                 </Styled.ToastHeader>
                 <Styled.ToastBody>
-                    <Text textSize="XS" textColor={messageColor}>
+                    <Text textSize="XS" textColor={messageColor ? messageColor : color}>
                         {message}
                     </Text>
                 </Styled.ToastBody>
-                <Styled.ToastFooter {...props} />
-                <Styled.ToastCloseIcon>X</Styled.ToastCloseIcon>
             </Styled.Toast>
+            </Styled.ToastContainer>
         );
     })
 );
 Toast.displayName = 'Toast';
-Toast.Style = Styled.Toast;
+Toast.Style = Styled.ToastContainer;
 
 export default Toast
