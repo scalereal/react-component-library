@@ -14,6 +14,9 @@ import CheckBox from '../CheckBox';
 import { CheckBoxWrapper, ErrorLabel } from '../CheckBox/styled';
 import Text from '../Text/Text';
 import { StyledLabel, StyledLi, StyledUl } from './styled';
+export var SizeMap = ['XS', 'S', 'M', 'L', 'XL'];
+export var DisplayMap = ['inline', 'block'];
+export var lposMap = ['top', 'bottom', 'left', 'right'];
 var CheckBoxGroup = memo(React.forwardRef(function (props, ref) {
     var _a = props.display, display = _a === void 0 ? "block" : _a, checkBoxOptions = props.checkBoxOptions, errorText = props.errorText, size = props.size, fontSize = props.fontSize, labelColor = props.labelColor, labelHoverEffect = props.labelHoverEffect, labelHoverColor = props.labelHoverColor, label = props.label, _b = props.showSelectAll, showSelectAll = _b === void 0 ? false : _b, hoverEffect = props.hoverEffect, disabled = props.disabled, bgColor = props.bgColor, hoverBgColor = props.hoverBgColor, hoverShadowColor = props.hoverShadowColor, labelPosition = props.labelPosition;
     var _c = useState(false), selectAll = _c[0], setSelectAll = _c[1];
@@ -29,6 +32,7 @@ var CheckBoxGroup = memo(React.forwardRef(function (props, ref) {
 }));
 CheckBoxGroup.displayName = "CheckBoxGroup";
 CheckBoxGroup.defaultProps = {
-// hoverEffect: false
+    hoverEffect: true,
+    size: 'S'
 };
 export default CheckBoxGroup;

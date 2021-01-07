@@ -40,8 +40,8 @@ var getTextStyle = function (_a) {
         return (theme.text.fontFamily);
     });
 };
-export var Text = styled('span')(templateObject_4 || (templateObject_4 = __makeTemplateObject(["\n    padding:0.3rem;\n    ", "\n    ", ";\n    ", ";\n    &:active {\n        color: ", ";\n    }\n\n    ", ";\n    /* &:hover {\n        color: ", ";\n    } */\n"], ["\n    padding:0.3rem;\n    ", "\n    ", ";\n    ", ";\n    &:active {\n        color: ", ";\n    }\n\n    ",
-    ";\n    /* &:hover {\n        color: ", ";\n    } */\n"])), getTextStyle, function (props) { return props.uppercase && uppercase(); }, function (props) { return props.lineThrough && lineThrough(); }, function (_a) {
+export var Text = styled('span')(templateObject_4 || (templateObject_4 = __makeTemplateObject(["\n    padding:0.3rem;\n    ", "\n    ", ";\n    ", ";\n    &:active {\n        color: ", ";\n    }\n    ", ";\n    /* &:hover {\n        color: ", ";\n    } */\n\n"], ["\n    padding:0.3rem;\n    ", "\n    ", ";\n    ", ";\n    &:active {\n        color: ", ";\n    }\n    ",
+    ";\n    /* &:hover {\n        color: ", ";\n    } */\n\n"])), getTextStyle, function (props) { return props.uppercase && uppercase(); }, function (props) { return props.lineThrough && lineThrough(); }, function (_a) {
     var theme = _a.theme, activeColor = _a.activeColor;
     return (activeColor ? activeColor : theme.text.defaults.activeColor);
 }, function (props) { return props.hoverEffect ? "&:hover {\n        color: " + (props.hoverColor ? props.hoverColor : props.theme.text.defaults.hoverColor) + ";\n    }" : ''; }, function (_a) {

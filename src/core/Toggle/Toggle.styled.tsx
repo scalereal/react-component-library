@@ -1,8 +1,8 @@
-import styled from 'styled-components'
-import { ToggleProps, ToggleWrapperProps } from './types'
-import { defaultTheme } from '../../theme'
+import styled from 'styled-components';
+import { defaultTheme } from '../../theme';
+import { ToggleProps, ToggleWrapperProps } from './types';
 
-const getHeight = ({ theme, size}: ToggleProps) => (theme?.toggle?.sizes[size]);
+const getHeight = ({ theme, size='S'}: ToggleProps) => (theme?.toggle?.sizes[size]);
 const getWidth = (props: ToggleProps) => `calc(${getHeight(props)} * 2)`;
 
 export const ToggleWrapper = styled('div')<ToggleWrapperProps>`
@@ -10,11 +10,9 @@ export const ToggleWrapper = styled('div')<ToggleWrapperProps>`
     width: ${getWidth};
     height: ${getHeight};
     border-radius: 15px;
-
     &:focus-within {
         box-shadow: 0 0 0 1pt ${({ theme }) => (theme.toggle.borderColor)};
     }
-
     & > * {
         width: 100%;
         height: 100%;
@@ -28,7 +26,6 @@ export const Circle = styled('div')<ToggleWrapperProps>`
     z-index: 1;
     position: absolute;
     background-color: ${({ theme }) => theme.toggle.backgroundColor};
-
     &::after {
         content: '';
         margin: 3px;
@@ -42,25 +39,23 @@ export const Circle = styled('div')<ToggleWrapperProps>`
 `;
 Circle.defaultProps = {
     theme: defaultTheme
-}
+};
+
 export const Checkbox = styled('input').attrs({ type: 'checkbox' })<ToggleProps>`
     opacity: 0;
     z-index: 2;
     margin: 0;
     position: absolute;
     cursor: pointer;
-
     &:focus {
         outline: none;
     }
-
     &:disabled {
         cursor: not-allowed;
         & + ${Circle} {
-            background: ${({ theme }) => theme.toggle.disabledBackgroundColor};
+            background: ${({ theme }) =>  theme.toggle.disabledBackgroundColor};
         }
     }
-
     &:checked + ${Circle} {
         background: ${({ theme }) => theme.toggle.checkedBackgroundColor};
         &::after {
@@ -71,3 +66,17 @@ export const Checkbox = styled('input').attrs({ type: 'checkbox' })<ToggleProps>
 Checkbox.defaultProps = {
     theme: defaultTheme
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+

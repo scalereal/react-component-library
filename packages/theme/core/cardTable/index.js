@@ -1,4 +1,4 @@
-import { defaultTheme } from "../../theme";
+import { defaultTheme } from '../../theme';
 export var cardTableTheme = {
     defaults: {
         borderColor: defaultTheme.borderColor,

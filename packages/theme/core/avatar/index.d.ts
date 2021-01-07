@@ -1,2 +1,2 @@
-import { AvatarTheme } from "./types";
+import { AvatarTheme } from './types';
 export declare const avatarTheme: AvatarTheme;

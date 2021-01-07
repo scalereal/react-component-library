@@ -1,0 +1,125 @@
+import Input from './Input';
+import { Preview, Story, Meta, Props, ArgsTable, Canvas } from '@storybook/addon-docs/blocks';
+import { withKnobs, color, boolean, select } from '@storybook/addon-knobs';
+
+<Meta
+    title="Components/Core/Input"
+    component={Input}
+    argTypes={{
+        textColor: {
+            control: 'color'
+        },
+        borderColor: {
+            control: 'color'
+        },
+        disabledColor: {
+            control: 'color'
+        },
+        backgroundColor: {
+            control: 'color'
+        },
+        placeHolderColor: {
+            control: 'color'
+        },
+        preffixBackgroundColor: {
+            control: 'color'
+        },
+        suffixBackgroundColor: {
+            control: 'color'
+        }
+    }}
+/>
+
+# Input
+
+Displays a Input
+
+export const Template = ({
+    suffix,
+    prefix,
+    required,
+    disabled,
+    fullWidth,
+    textColor,
+    borderColor,
+    disabledColor,
+    backgroundColor,
+    placeHolderColor,
+    preffixBackgroundColor,
+    suffixBackgroundColor,
+    ...args
+}) => {
+    return (
+        <Input
+            id="input"
+            type="email"
+            fullWidth={fullWidth}
+            disabled={disabled}
+            required={required}
+            placeholder="Enter Email Address"
+            prefix={prefix}
+            suffix={suffix}
+            textColor={textColor}
+            borderColor={borderColor}
+            disabledColor={disabledColor}
+            backgroundColor={backgroundColor}
+            placeHolderColor={placeHolderColor}
+            preffixBackgroundColor={preffixBackgroundColor}
+            suffixBackgroundColor={suffixBackgroundColor}
+            {...args}
+        ></Input>
+    );
+};
+
+<Preview>
+    <Story name="Input">{Template.bind({})}</Story>
+</Preview>
+
+### Color Variations
+
+You can either change the theme or pass the colors as props.
+
+<Preview withToolbar>
+    <div>
+        <Input id="input" type="email" placeholder="Enter Email Address" />
+        <Input id="input" type="email" placeholder="Enter Email Address" />
+    </div>
+</Preview>
+
+### Sizes
+
+There are five sizs available `XS` | `S` | `M` | `L` | `XL`.
+
+<Preview withToolbar>
+    <div>
+        <Input id="input" type="email" placeholder="Enter Email Address" />
+        <Input id="input" type="email" placeholder="Enter Email Address" />
+        <Input id="input" type="email" placeholder="Enter Email Address" />
+        <Input id="input" type="email" placeholder="Enter Email Address" />
+        <Input id="input" type="email" placeholder="Enter Email Address" />
+    </div>
+</Preview>
+
+### Error
+
+Displays error if hasError={true}
+
+<Preview withToolbar>
+    <div>
+        <Input id="input" type="email" placeholder="Enter Email Address" />
+    </div>
+</Preview>
+
+### Disabled
+
+Disabled FileInput
+
+<Preview withToolbar>
+    <div>
+        <Input id="input" type="email" placeholder="Enter Email Address" />
+    </div>
+</Preview>
+
+### Props
+
+<Props story="Input" />

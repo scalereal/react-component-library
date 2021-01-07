@@ -1,2 +1,2 @@
-import { TableTheme } from "./types";
+import { TableTheme } from './types';
 export declare const tableTheme: TableTheme;

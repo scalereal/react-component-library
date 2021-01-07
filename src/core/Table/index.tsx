@@ -21,7 +21,7 @@ const Table:FC<Props> & WithStyle = React.memo(React.forwardRef( (props, ref) =>
 
 Table.displayName="Table";
 Table.defaultProps = {
-    // hoverEffect: false
+    hoverEffect: true
 };
 
 export default Table;

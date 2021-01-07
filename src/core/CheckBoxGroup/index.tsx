@@ -5,6 +5,10 @@ import Text from '../Text/Text';
 import { StyledLabel, StyledLi, StyledUl } from './styled';
 import { Props } from './types';
 
+export const SizeMap: Props['size'][] = ['XS', 'S', 'M', 'L', 'XL'];
+export const DisplayMap: Props['display'][] = ['inline', 'block'];
+export const lposMap: Props['labelPosition'][] = ['top','bottom','left','right']
+
 const CheckBoxGroup:FC<Props> = memo(React.forwardRef( (props, ref) => {
     const {display="block",checkBoxOptions,errorText,size,
     fontSize,labelColor,labelHoverEffect,labelHoverColor,
@@ -41,7 +45,8 @@ const CheckBoxGroup:FC<Props> = memo(React.forwardRef( (props, ref) => {
 
 CheckBoxGroup.displayName="CheckBoxGroup";
 CheckBoxGroup.defaultProps = {
-    // hoverEffect: false
+    hoverEffect: true,
+    size:'S'
 };
 
 export default CheckBoxGroup;

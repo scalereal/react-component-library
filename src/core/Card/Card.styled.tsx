@@ -1,12 +1,13 @@
-import styled from 'styled-components'
-import { CardProps } from './types'
-import { defaultTheme } from '../../theme'
+import styled from 'styled-components';
+import { defaultTheme } from '../../theme';
+import { CardProps } from './types';
 
 export const Card = styled('div')<CardProps>`
     position: relative;
     display: flex;
     flex-direction: ${({ variant }) => variant ===  "vertical" ? "column": "row" };
     min-width: 0;
+    margin:0.5rem;
     word-wrap: break-word;
     background-color: #fff;
     background-clip: border-box;

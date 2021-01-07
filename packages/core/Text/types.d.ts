@@ -1,7 +1,7 @@
-import { TextAlignments, TextSizes, TextWeights } from "../../theme/core/text/types";
+import { TextAlignments, TextSizes, TextWeights } from '../../theme/core/text/types';
 import { HTMLProps, WithThemeProp } from '../../utils';
 export interface TextProps extends HTMLProps<HTMLElement>, WithThemeProp {
-    /**Text Size */
+    /** Text Size */
     textSize?: TextSizes;
     /** Text color */
     textColor?: string;
@@ -9,8 +9,9 @@ export interface TextProps extends HTMLProps<HTMLElement>, WithThemeProp {
     uppercase?: boolean;
     /** Line through text */
     lineThrough?: boolean;
-    /**Text Line Height */
+    /** Text Line Height */
     lineHeight?: string;
+    /** Hover Effect */
     hoverEffect?: boolean;
     /** Text Hover Color */
     hoverColor?: string;

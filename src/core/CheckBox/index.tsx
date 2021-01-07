@@ -4,7 +4,8 @@ import Text from '../Text/Text';
 import { CheckBoxWrapper, ErrorLabel, StyledLabel } from './styled';
 import { Props } from './types';
 
-// export type Ref = HTMLLabelElement;
+export const SizeMap: Props['size'][] = ['XS', 'S', 'M', 'L', 'XL'];
+export const lposMap: Props['labelPosition'][] = ['top','bottom','left','right']
 
 const CheckBox:FC<Props> & WithStyle = memo(React.forwardRef( (props, ref) => {
     const {size='S', label='CheckBox',value='',errorText='',fontSize,labelHoverEffect,labelHoverColor,labelColor,checked=false} = props;
@@ -23,7 +24,7 @@ const CheckBox:FC<Props> & WithStyle = memo(React.forwardRef( (props, ref) => {
 
 CheckBox.displayName="CheckBox";
 CheckBox.defaultProps = {
-    hoverEffect: false
+    hoverEffect: true
 };
 
 export default CheckBox;
