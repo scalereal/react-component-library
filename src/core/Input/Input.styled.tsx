@@ -1,6 +1,6 @@
-import styled from 'styled-components'
-import { InputProps } from './types'
-import { defaultTheme } from '../../theme'
+import styled from 'styled-components';
+import { defaultTheme } from '../../theme';
+import { InputProps } from './types';
 
 export const Wrapper = styled('div')<InputProps>`
     display: flex;
@@ -13,7 +13,8 @@ export const Wrapper = styled('div')<InputProps>`
     border: 1px solid ${({ theme, borderColor }) => (borderColor ? borderColor : theme.input.inputBorderColor)};
     border-radius: 5px;
     overflow: hidden;
-    width: ${props => (props.fullWidth ? '100%' : 'max-content')};
+    margin:0.5rem;
+    width: ${props => (props.fullWidth ? '94.5%%' : 'max-content')};
     height: max-content;
     font-family: ${({ theme }) =>(theme.input.fontFamily)};
     &:focus-within {
