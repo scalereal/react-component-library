@@ -1,5 +1,5 @@
-import { HTMLProps, WithThemeProp } from '../../utils'
 import { LabelSizes, LabelWeights } from '../../theme/core/label/types'
+import { HTMLProps, WithThemeProp } from '../../utils'
 export interface LabelProps extends HTMLProps<HTMLLabelElement>, WithThemeProp   {
     /** Shows pointer while hovering on it*/
     showPointer?: boolean;
@@ -8,7 +8,7 @@ export interface LabelProps extends HTMLProps<HTMLLabelElement>, WithThemeProp  
     /** Label Color */
     labelColor?: string;
     /** Label Size */
-    labelSize: LabelSizes;
+    labelSize?: LabelSizes;
     /** Label Uppercase*/
     uppercase?: boolean;
     /** Label Line Height */

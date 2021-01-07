@@ -81,32 +81,34 @@ You can either change the theme or pass the colors as props.
 
 <Preview withToolbar>
     <div>
-        <Input id="input" type="email" placeholder="Enter Email Address" />
-        <Input id="input" type="email" placeholder="Enter Email Address" />
+        <Input
+            id="input"
+            type="email"
+            placeholder="Enter 
+            Email Address"
+            placeHolderColor="blue"
+            borderColor="blue"
+            backgroundColor="rgb(132 130 130 / 20%)"
+        />
+        <Input
+            id="input"
+            type="email"
+            placeholder="Enter Email Address"
+            placeHolderColor="red"
+            borderColor="red"
+            backgroundColor="rgb(132 130 130 / 20%)"
+        />
     </div>
 </Preview>
 
-### Sizes
+### prefix Suffix
 
-There are five sizs available `XS` | `S` | `M` | `L` | `XL`.
-
-<Preview withToolbar>
-    <div>
-        <Input id="input" type="email" placeholder="Enter Email Address" />
-        <Input id="input" type="email" placeholder="Enter Email Address" />
-        <Input id="input" type="email" placeholder="Enter Email Address" />
-        <Input id="input" type="email" placeholder="Enter Email Address" />
-        <Input id="input" type="email" placeholder="Enter Email Address" />
-    </div>
-</Preview>
-
-### Error
-
-Displays error if hasError={true}
+Displays prefix/suffix text or icon.
 
 <Preview withToolbar>
     <div>
-        <Input id="input" type="email" placeholder="Enter Email Address" />
+        <Input id="input" type="email" placeholder="Enter Email Address" prefix="icon" />
+        <Input id="input" type="email" placeholder="Enter Email Address" suffix="icon" />
     </div>
 </Preview>
 
@@ -116,7 +118,7 @@ Disabled FileInput
 
 <Preview withToolbar>
     <div>
-        <Input id="input" type="email" placeholder="Enter Email Address" />
+        <Input id="input" type="email" placeholder="Enter Email Address" disabled={true} />
     </div>
 </Preview>
 

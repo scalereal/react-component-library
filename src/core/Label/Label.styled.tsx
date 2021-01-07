@@ -1,6 +1,6 @@
-import styled,{ css } from 'styled-components'
-import { LabelProps } from './types'
-import { defaultTheme } from '../../theme'
+import styled, { css } from 'styled-components';
+import { defaultTheme } from '../../theme';
+import { LabelProps } from './types';
 
 const asterisk = () => css`
     ::after {
@@ -12,7 +12,7 @@ const uppercase = () => css`
     text-transform: uppercase;
 `;
 const getTextStyle = ({ ...props }: LabelProps) => {
-    const { labelColor, lineHeight, labelSize, labelWeight } = props;
+    const { labelColor, lineHeight, labelSize="S", labelWeight } = props;
     return css`
         margin: 0;
         color: ${({ theme }) => (labelColor ? labelColor : theme.label.defaults.labelColor)};

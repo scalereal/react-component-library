@@ -1,7 +1,10 @@
 import React, { FC } from 'react'
+import { WithStyle } from '../../utils'
 import * as Styled from './Label.styled'
 import { LabelProps } from './types'
-import { WithStyle } from '../../utils'
+
+export const labelSizes : LabelProps['labelSize'][]  = ['XS', 'S', 'M', 'L', 'XL']
+export const labelWeights : LabelProps['labelWeight'][] = ['light', 'regular', 'medium', 'strong', 'extraStrong']
 
 const Label: FC<LabelProps> & WithStyle = React.memo(
     React.forwardRef((props, ref) => (

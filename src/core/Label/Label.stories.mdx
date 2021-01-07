@@ -1,0 +1,96 @@
+import Label, { labelSizes, labelWeights } from './Label';
+import { Preview, Story, Meta, Props, ArgsTable, Canvas } from '@storybook/addon-docs/blocks';
+import { withKnobs, color, boolean, select } from '@storybook/addon-knobs';
+
+<Meta
+    title="Components/Core/Label"
+    component={Label}
+    argTypes={{
+        labelColor: {
+            control: 'color'
+        },
+        labelSize: {
+            control: {
+                type: 'select',
+                options: Object.values(labelSizes)
+            }
+        },
+        labelWeight: {
+            control: {
+                type: 'select',
+                options: Object.values(labelWeights)
+            }
+        }
+    }}
+/>
+
+# FileInput
+
+Displays a FileInput
+
+export const Template = ({ labelColor, required, showPointer, labelSize, labelWeight, lineHeight, upperCase, ...args }) => {
+    return (
+        <Label
+            labelColor={labelColor}
+            required={required}
+            showPointer={showPointer}
+            labelSize={labelSize}
+            labelWeight={labelWeight}
+            lineHeight={lineHeight}
+            uppercase={upperCase}
+            {...args}
+        >
+            Lorem Ipsum is simply dummy text
+        </Label>
+    );
+};
+
+<Preview>
+    <Story
+        name="Label"
+        args={{
+            labelSize: 'S'
+        }}
+    >
+        {Template.bind({})}
+    </Story>
+</Preview>
+
+### Color Variations
+
+You can either change the theme or pass the colors as props.
+
+<Preview withToolbar>
+    <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-around' }}>
+        <Label labelColor="blue">Lorem Ipsum is simply dummy text</Label>
+        <Label labelColor="red">Lorem Ipsum is simply dummy text</Label>
+    </div>
+</Preview>
+
+### Sizes
+
+There are five sizes available `XS` | `S` | `M` | `L` | `XL`.
+
+<Preview withToolbar>
+    <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-around' }}>
+        <Label labelColor="blue" labelSize="XS">
+            Lorem Ipsum is simply dummy text
+        </Label>
+        <Label labelColor="blue" labelSize="S">
+            Lorem Ipsum is simply dummy text
+        </Label>
+        <Label labelColor="blue" labelSize="M">
+            Lorem Ipsum is simply dummy text
+        </Label>
+        <Label labelColor="blue" labelSize="L">
+            Lorem Ipsum is simply dummy text
+        </Label>
+        <Label labelColor="blue" labelSize="XL">
+            Lorem Ipsum is simply dummy text
+        </Label>
+    </div>
+</Preview>
+
+### Props
+
+<Props story="Label" />
