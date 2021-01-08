@@ -8,7 +8,7 @@ export const Input: FC<InputProps> & WithStyle = React.memo(
         const {
                 fullWidth,
                 required,
-                prefix,
+                preffix,
                 suffix,
                 borderColor,
                 textColor,
@@ -18,25 +18,32 @@ export const Input: FC<InputProps> & WithStyle = React.memo(
                 placeHolderColor,
                 preffixBackgroundColor,
                 suffixBackgroundColor,
+                hasError,
+                errorText,
+                preffixColor,
+                suffixColor,
                 ...restProps
             } = props,
             id = props.id || 'input';
         return (
-            <Styled.Wrapper fullWidth={fullWidth} borderColor={borderColor} textColor={textColor}>
-                {prefix && <Styled.Prefix preffixBackgroundColor={preffixBackgroundColor}>{prefix}</Styled.Prefix>}
-                <Styled.Input
-                    id={id}
-                    ref={ref}
-                    required={required}
-                    fullWidth={fullWidth}
-                    disabledColor={disabledColor}
-                    backgroundColor={backgroundColor}
-                    placeHolderColor={placeHolderColor}
-                    disabled={disabled}
-                    {...restProps}
-                />
-                {suffix && <Styled.Suffix suffixBackgroundColor={suffixBackgroundColor}>{suffix}</Styled.Suffix>}
-            </Styled.Wrapper>
+            <Styled.OuterWrapper>
+                <Styled.InputWrapper fullWidth={fullWidth} borderColor={borderColor} textColor={textColor} hasError={hasError}>
+                    {preffix && <Styled.Preffix preffixBackgroundColor={preffixBackgroundColor} preffixColor={preffixColor} hasError={hasError}>{preffix}</Styled.Preffix>}
+                    <Styled.Input
+                        id={id}
+                        ref={ref}
+                        required={required}
+                        fullWidth={fullWidth}
+                        disabledColor={disabledColor}
+                        backgroundColor={backgroundColor}
+                        placeHolderColor={placeHolderColor}
+                        disabled={disabled}
+                        {...restProps}
+                    />
+                    {suffix && <Styled.Suffix suffixBackgroundColor={suffixBackgroundColor} suffixColor={suffixColor} hasError={hasError}>{suffix}</Styled.Suffix>}
+                </Styled.InputWrapper>
+                {hasError && <Styled.Error>{errorText}</Styled.Error>}
+            </Styled.OuterWrapper>
         );
     })
 );
