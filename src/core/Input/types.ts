@@ -2,9 +2,9 @@ import { HTMLProps, WithThemeProp } from '../../utils'
 export interface InputProps extends HTMLProps<HTMLInputElement>, WithThemeProp {
     /** Takes full width of the parent component */
     fullWidth?: boolean;
-    /** Prefix  */
-    prefix?: string;
-    /** Suffix */
+    /** Preffix Text */
+    preffix?: string;
+    /** Suffix Text */
     suffix?: string;
     /** Disable Input */
     disabled?: boolean;
@@ -23,5 +23,13 @@ export interface InputProps extends HTMLProps<HTMLInputElement>, WithThemeProp {
     /** Input Prefix Background Color */
     preffixBackgroundColor?:string;
     /** Input Suffix Background Color */ 
-    suffixBackgroundColor?:string
+    suffixBackgroundColor?:string;
+    /** Input Error */
+    hasError?:boolean;
+    /** Input Error Text */
+    errorText?:string;
+    /** Input Preffix Color */
+    preffixColor?:string;
+    /** Input Suffix Color */
+    suffixColor?:string;
 }

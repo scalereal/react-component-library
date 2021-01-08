@@ -11,14 +11,14 @@ export const blue:Color = {
 };
 
 export const orange:Color = {
-  100: "#ffe0b2",
-  200: "#ffcc80",
-  300: "#ffb74d",
-  400: "#ffa726",
-  500: "#ff9800",
-  600: "#fb8c00",
-  700: "#f57c00",
-  800: "#ef6c00"
+  100: "#fff3e0",
+  200: "#ffe0b2",
+  300: "#ffcc80",
+  400: "#ffb74d",
+  500: "#ffa726",
+  600: "#ff9800",
+  700: "#fb8c00",
+  800: "#f57c00"
 };
 
 export const red:Color = {
