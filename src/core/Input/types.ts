@@ -1,4 +1,4 @@
-import { HTMLProps, WithThemeProp } from '../../utils'
+import { HTMLProps, WithThemeProp } from '../../utils';
 export interface InputProps extends HTMLProps<HTMLInputElement>, WithThemeProp {
     /** Takes full width of the parent component */
     fullWidth?: boolean;
