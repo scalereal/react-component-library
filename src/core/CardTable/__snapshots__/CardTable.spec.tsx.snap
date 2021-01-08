@@ -1,5 +1,262 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`CheckBoxGroup component should render with all the props given 1`] = `
+<div>
+  <table
+    class="sc-jSgupP cJDMeT"
+  >
+    <thead
+      class="sc-dlfnbm dygKIA"
+    >
+      <tr
+        class="sc-gsTCUz dhuSOP"
+      >
+        <th
+          class="sc-bdfBwQ eINZyl"
+        >
+          <span
+            class="sc-iBPRYJ kBOVnS"
+          >
+            User
+          </span>
+        </th>
+        <th
+          class="sc-bdfBwQ eINZyl"
+        >
+          <span
+            class="sc-iBPRYJ kBOVnS"
+          >
+            Last Login
+          </span>
+        </th>
+        <th
+          class="sc-bdfBwQ eINZyl"
+        >
+          <span
+            class="sc-iBPRYJ kBOVnS"
+          >
+            Department
+          </span>
+        </th>
+        <th
+          class="sc-bdfBwQ eINZyl"
+        >
+          <span
+            class="sc-iBPRYJ kBOVnS"
+          >
+            Status
+          </span>
+        </th>
+      </tr>
+    </thead>
+    <tbody
+      class="sc-hKgILt cdTezY"
+    >
+      <tr
+        class="sc-gsTCUz dhuSOP"
+      >
+         
+        <td
+          class="sc-eCssSg jqBCNq"
+        >
+          <div
+            class="sc-gKsewC llWDhm"
+            display="inline-block"
+          >
+            <span>
+              AK
+            </span>
+          </div>
+          <span
+            class="sc-iBPRYJ fHvDlZ"
+          >
+            Akshay Kumar
+          </span>
+        </td>
+        <td
+          class="sc-eCssSg jqBCNq"
+        >
+          <span
+            class="sc-iBPRYJ fHvDlZ"
+          >
+            sep 20 2019
+          </span>
+        </td>
+        <td
+          class="sc-eCssSg jqBCNq"
+        >
+          <span
+            class="sc-iBPRYJ fHvDlZ"
+          >
+            Development
+          </span>
+        </td>
+        <td
+          class="sc-eCssSg jqBCNq"
+        >
+          <span
+            class="sc-iBPRYJ hjvKZl"
+          >
+            active
+          </span>
+        </td>
+         
+      </tr>
+      <tr
+        class="sc-gsTCUz dhuSOP"
+      >
+         
+        <td
+          class="sc-eCssSg jqBCNq"
+        >
+          <div
+            class="sc-gKsewC llWDhm"
+            display="inline-block"
+          >
+            <span>
+              AK
+            </span>
+          </div>
+          <span
+            class="sc-iBPRYJ fHvDlZ"
+          >
+            Akshay Kumar
+          </span>
+        </td>
+        <td
+          class="sc-eCssSg jqBCNq"
+        >
+          <span
+            class="sc-iBPRYJ fHvDlZ"
+          >
+            sep 20 2019
+          </span>
+        </td>
+        <td
+          class="sc-eCssSg jqBCNq"
+        >
+          <span
+            class="sc-iBPRYJ fHvDlZ"
+          >
+            Development
+          </span>
+        </td>
+        <td
+          class="sc-eCssSg jqBCNq"
+        >
+          <span
+            class="sc-iBPRYJ hjvKZl"
+          >
+            active
+          </span>
+        </td>
+         
+      </tr>
+      <tr
+        class="sc-gsTCUz dhuSOP"
+      >
+         
+        <td
+          class="sc-eCssSg jqBCNq"
+        >
+          <div
+            class="sc-gKsewC llWDhm"
+            display="inline-block"
+          >
+            <span>
+              AK
+            </span>
+          </div>
+          <span
+            class="sc-iBPRYJ fHvDlZ"
+          >
+            Akshay Kumar
+          </span>
+        </td>
+        <td
+          class="sc-eCssSg jqBCNq"
+        >
+          <span
+            class="sc-iBPRYJ fHvDlZ"
+          >
+            sep 20 2019
+          </span>
+        </td>
+        <td
+          class="sc-eCssSg jqBCNq"
+        >
+          <span
+            class="sc-iBPRYJ fHvDlZ"
+          >
+            Development
+          </span>
+        </td>
+        <td
+          class="sc-eCssSg jqBCNq"
+        >
+          <span
+            class="sc-iBPRYJ hjvKZl"
+          >
+            active
+          </span>
+        </td>
+         
+      </tr>
+      <tr
+        class="sc-gsTCUz dhuSOP"
+      >
+         
+        <td
+          class="sc-eCssSg jqBCNq"
+        >
+          <div
+            class="sc-gKsewC llWDhm"
+            display="inline-block"
+          >
+            <span>
+              AK
+            </span>
+          </div>
+          <span
+            class="sc-iBPRYJ fHvDlZ"
+          >
+            Akshay Kumar
+          </span>
+        </td>
+        <td
+          class="sc-eCssSg jqBCNq"
+        >
+          <span
+            class="sc-iBPRYJ fHvDlZ"
+          >
+            sep 20 2019
+          </span>
+        </td>
+        <td
+          class="sc-eCssSg jqBCNq"
+        >
+          <span
+            class="sc-iBPRYJ fHvDlZ"
+          >
+            Development
+          </span>
+        </td>
+        <td
+          class="sc-eCssSg jqBCNq"
+        >
+          <span
+            class="sc-iBPRYJ hjvKZl"
+          >
+            active
+          </span>
+        </td>
+         
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
+
 exports[`CheckBoxGroup component should render with default theme 1`] = `
 <div>
   <table

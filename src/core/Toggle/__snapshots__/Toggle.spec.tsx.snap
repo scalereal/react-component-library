@@ -3,14 +3,14 @@
 exports[`Toggle should render correctly with all the props given 1`] = `
 <div>
   <div
-    class="sc-bdfBwQ ljahyS"
+    class="sc-bdfBwQ BkaiC"
   >
     <input
-      class="sc-dlfnbm hWcVOc"
+      class="sc-dlfnbm gMsWbe"
       type="checkbox"
     />
     <div
-      class="sc-gsTCUz jWJZQO"
+      class="sc-gsTCUz cewHHg"
     />
   </div>
 </div>

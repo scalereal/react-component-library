@@ -3,39 +3,39 @@
 exports[`Modal should render title and description text 1`] = `
 <div>
   <div
-    class="sc-bdfBwQ kOUwLq"
+    class="sc-gsTCUz jpAIdr"
     title="Title"
   >
     <div
-      class="sc-gsTCUz kdZmDy"
+      class="sc-dlfnbm eRtJZ"
       title="Title"
     >
       <div
-        class="sc-dlfnbm eVErIe"
+        class="sc-hKgILt zRnGw"
       >
         <span
-          class="sc-gKsewC hWUpWw"
+          class="sc-bdfBwQ qAAtQ"
         >
           Title
         </span>
       </div>
     </div>
     <div
-      class="sc-hKgILt iEmfbb"
+      class="sc-eCssSg jBPVBw"
       title="Title"
     >
       <div
-        class="sc-eCssSg dkxmEH"
+        class="sc-jSgupP cmvsWa"
       >
         <span
-          class="sc-gKsewC fXPGYv"
+          class="sc-bdfBwQ ixTvTj"
         >
           Description
         </span>
       </div>
     </div>
     <div
-      class="sc-jSgupP fOOCZY"
+      class="sc-gKsewC hpskEZ"
       title="Title"
     />
   </div>

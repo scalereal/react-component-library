@@ -12,6 +12,10 @@ var __assign = (this && this.__assign) || function () {
 import React from 'react';
 import Text from '../Text/Text';
 import * as Styled from './Card.styled';
+export var variants = ['horizontal', 'vertical'];
+export var textAlignments = ['left', 'center', 'right'];
+export var textSizes = ['XS', 'S', 'M', 'L', 'XL'];
+export var descriptionSizes = ['XS', 'S', 'M', 'L', 'XL'];
 var Card = React.memo(React.forwardRef(function (props, ref) {
     var title = props.title, description = props.description, imgSrc = props.imgSrc, titleSize = props.titleSize, descriptionSize = props.descriptionSize, titleColor = props.titleColor, descriptionColor = props.descriptionColor;
     return (React.createElement(Styled.Card, __assign({ ref: ref }, props),

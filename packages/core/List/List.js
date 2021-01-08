@@ -11,6 +11,7 @@ var __assign = (this && this.__assign) || function () {
 };
 import React from 'react';
 import * as Styled from './List.styled';
+export var variant = ['horizontal', 'vertical'];
 var List = React.memo(React.forwardRef(function (props, ref) { return (React.createElement(Styled.ListStyled, __assign({ ref: ref }, props), React.Children.map(props.children, function (c, i) {
     return React.createElement("li", { key: i }, c);
 }))); }));

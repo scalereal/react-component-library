@@ -11,6 +11,8 @@ var __assign = (this && this.__assign) || function () {
 };
 import React from 'react';
 import * as Styled from './Label.styled';
+export var labelSizes = ['XS', 'S', 'M', 'L', 'XL'];
+export var labelWeights = ['light', 'regular', 'medium', 'strong', 'extraStrong'];
 var Label = React.memo(React.forwardRef(function (props, ref) { return (React.createElement(Styled.Label, __assign({ ref: ref }, props), props.children)); }));
 Label.defaultProps = {
     required: false

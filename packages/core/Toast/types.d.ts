@@ -2,9 +2,11 @@ import { HTMLProps, Omit, WithThemeProp } from '../../utils';
 export declare type ToastVariants = 'success' | 'danger' | 'info' | 'warning';
 export interface ToastProps extends Omit<HTMLProps<HTMLDivElement>, 'id' | 'action'>, WithThemeProp {
     /** Toast Id */
-    id: number;
+    id?: number;
     /** Toast Variant */
-    variant: string;
+    variant?: string;
+    /** Toast position on window */
+    fixed?: boolean;
     /** Toast Title */
     title: string;
     /** Toast message */
@@ -20,5 +22,5 @@ export interface ToastProps extends Omit<HTMLProps<HTMLDivElement>, 'id' | 'acti
     /** Toast Position */
     position?: 'top-left' | 'top-center' | 'top-right' | 'right-center' | 'left-center' | 'bottom-left' | 'bottom-center' | 'bottom-right';
     /** Toast Border Position */
-    borderPosition: 'top' | 'right' | 'left' | 'bottom';
+    borderPosition?: 'top' | 'right' | 'left' | 'bottom';
 }

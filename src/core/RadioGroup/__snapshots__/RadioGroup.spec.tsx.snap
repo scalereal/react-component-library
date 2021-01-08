@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Radio component should render with all the props given 1`] = `
+exports[`RadioGroup component should render with all the props given 1`] = `
 <div>
   <div
     class="sc-pFZIQ fJhliA"
@@ -16,7 +16,7 @@ exports[`Radio component should render with all the props given 1`] = `
       display="inline"
     >
       <span
-        class="sc-bdfBwQ jmDKPg radioGroupLabel"
+        class="sc-bdfBwQ cQNmAO radioGroupLabel"
       >
         Radio Group Label
       </span>
@@ -29,7 +29,7 @@ exports[`Radio component should render with all the props given 1`] = `
 </div>
 `;
 
-exports[`Radio component should render with default theme 1`] = `
+exports[`RadioGroup component should render with default theme 1`] = `
 <div>
   <div
     class="sc-pFZIQ fJhliA"
@@ -41,7 +41,7 @@ exports[`Radio component should render with default theme 1`] = `
       class="sc-fubCfw fPlukN"
     >
       <span
-        class="sc-bdfBwQ hcPyHd radioGroupLabel"
+        class="sc-bdfBwQ ixTvTj radioGroupLabel"
       />
       <ul
         class="sc-iBPRYJ beOvuo"
@@ -51,7 +51,7 @@ exports[`Radio component should render with default theme 1`] = `
 </div>
 `;
 
-exports[`Radio component should render with not-allowed cursor when it is disabled 1`] = `
+exports[`RadioGroup component should render with not-allowed cursor when it is disabled 1`] = `
 <div>
   <div
     class="sc-pFZIQ fJhliA"
@@ -65,7 +65,7 @@ exports[`Radio component should render with not-allowed cursor when it is disabl
       disabled=""
     >
       <span
-        class="sc-bdfBwQ hcPyHd radioGroupLabel"
+        class="sc-bdfBwQ ixTvTj radioGroupLabel"
       />
       <ul
         class="sc-iBPRYJ beOvuo"

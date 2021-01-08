@@ -4,7 +4,7 @@ var __makeTemplateObject = (this && this.__makeTemplateObject) || function (cook
 };
 import styled from 'styled-components';
 import { defaultTheme } from '../../theme';
-export var Modal = styled('div')(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n    position: relative;\n    display: flex;\n    flex-direction: column;\n    width: 100%;\n    pointer-events: auto;\n    background-color: #fff;\n    background-clip: padding-box;\n    border: 1px solid ", ";\n    border-radius: .3rem;\n    outline: 0;\n    box-shadow: 0 0.5rem 2rem ", ";\n"], ["\n    position: relative;\n    display: flex;\n    flex-direction: column;\n    width: 100%;\n    pointer-events: auto;\n    background-color: #fff;\n    background-clip: padding-box;\n    border: 1px solid ", ";\n    border-radius: .3rem;\n    outline: 0;\n    box-shadow: 0 0.5rem 2rem ", ";\n"])), function (_a) {
+export var Modal = styled('div')(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n    position: relative;\n    display: flex;\n    flex-direction: column;\n    margin: 1%;\n    width: 98%;\n    pointer-events: auto;\n    background-color: #fff;\n    background-clip: padding-box;\n    border: 1px solid ", ";\n    border-radius: .3rem;\n    outline: 0;\n    box-shadow: 0 0.5rem 2rem ", ";\n"], ["\n    position: relative;\n    display: flex;\n    flex-direction: column;\n    margin: 1%;\n    width: 98%;\n    pointer-events: auto;\n    background-color: #fff;\n    background-clip: padding-box;\n    border: 1px solid ", ";\n    border-radius: .3rem;\n    outline: 0;\n    box-shadow: 0 0.5rem 2rem ", ";\n"])), function (_a) {
     var theme = _a.theme, borderColor = _a.borderColor;
     return borderColor ? borderColor : theme.modal.defaults.borderColor;
 }, function (_a) {

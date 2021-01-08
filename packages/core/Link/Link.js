@@ -23,11 +23,12 @@ var __rest = (this && this.__rest) || function (s, e) {
 import React from 'react';
 import Text from '../Text/Text';
 import * as Styled from './Link.styled';
+export var linkSizes = ['XS', 'S', 'M', 'L', 'XL'];
 var Link = React.memo(React.forwardRef(function (_a, ref) {
     var href = _a.href, linkSize = _a.linkSize, linkColor = _a.linkColor, hoverColor = _a.hoverColor, activeColor = _a.activeColor, props = __rest(_a, ["href", "linkSize", "linkColor", "hoverColor", "activeColor"]);
     var isValidStringOrNumber = function (e) { return typeof e === 'string' || typeof e === 'number'; };
     return (React.createElement(Styled.LinkStyled, __assign({ href: href, ref: ref, linkSize: linkSize, linkColor: linkColor, hoverColor: hoverColor, activeColor: activeColor }, props), React.Children.map(props.children, function (c) {
-        return isValidStringOrNumber(c) ? React.createElement(Text, { textSize: linkSize, textColor: linkColor, hoverColor: hoverColor, activeColor: activeColor }, c) : c;
+        return isValidStringOrNumber(c) ? React.createElement(Text, { textSize: linkSize, textColor: linkColor, hoverColor: hoverColor, activeColor: activeColor, hoverEffect: true }, c) : c;
     })));
 }));
 Link.displayName = 'Link';
