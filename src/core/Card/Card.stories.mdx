@@ -1,0 +1,230 @@
+import Card, { variants, textAlignments, textSizes, descriptionSizes } from './Card';
+import { Preview, Story, Meta, Props, ArgsTable, Canvas } from '@storybook/addon-docs/blocks';
+import { withKnobs, color, boolean, select } from '@storybook/addon-knobs';
+
+<Meta
+    title="Components/Core/Card"
+    component={Card}
+    argTypes={{
+        shadowColor: {
+            control: 'color'
+        },
+        borderColor: {
+            control: 'color'
+        },
+        titleColor: {
+            control: 'color'
+        },
+        descriptionColor: {
+            control: 'color'
+        },
+        variant: {
+            control: {
+                type: 'select',
+                options: Object.values(variants)
+            }
+        },
+        textAlignment: {
+            control: {
+                type: 'select',
+                options: Object.values(textAlignments)
+            }
+        },
+        titleSize: {
+            control: {
+                type: 'select',
+                options: Object.values(textSizes)
+            }
+        },
+        descriptionSize: {
+            control: {
+                type: 'select',
+                options: Object.values(descriptionSizes)
+            }
+        }
+    }}
+/>
+
+# Card
+
+Displays a Card
+
+export const Template = ({
+    imgSrc,
+    title,
+    description,
+    variant,
+    textAlignment,
+    borderColor,
+    shadowColor,
+    titleSize,
+    descriptionSize,
+    ...args
+}) => {
+    return (
+        <Card
+            imgSrc={imgSrc}
+            title={title}
+            description={description}
+            variant={variant}
+            textAlignment={textAlignment}
+            borderColor={borderColor}
+            shadowColor={shadowColor}
+            titleSize={titleSize}
+            descriptionSize={descriptionSize}
+            {...args}
+        />
+    );
+};
+
+<Preview>
+    <Story
+        name="Card"
+        args={{
+            title: 'Title',
+            description: 'Lorem Ipsum is simply dummy text',
+            imgSrc: 'https://www.w3schools.com/w3css/img_forest.jpg',
+            variant: 'vertical',
+            textAlignment: 'left',
+            titleSize: 'M',
+            descriptionSize: 'XS'
+        }}
+    >
+        {Template.bind({})}
+    </Story>
+</Preview>
+
+### Color Variations
+
+You can either change the theme or pass the colors as props.
+
+<Preview withToolbar>
+    <div>
+        <Card
+            title="Title"
+            description="Lorem Ipsum is simply dummy text"
+            imgSrc="https://www.w3schools.com/w3css/img_forest.jpg"
+            variant="vertical"
+            textAlignment="left"
+            titleSize="M"
+            descriptionSize="XS"
+            borderColor="blue"
+            titleColor="green"
+            descriptionColor="blue"
+            shadowColor="blue"
+        />
+    </div>
+</Preview>
+
+### Variant
+
+Displays card in vertical or horizontal
+
+<Preview withToolbar>
+    <div>
+        <Card
+            title="Title"
+            description="Lorem Ipsum is simply dummy text"
+            imgSrc="https://www.w3schools.com/w3css/img_forest.jpg"
+            variant="vertical"
+            textAlignment="left"
+            titleSize="M"
+            descriptionSize="XS"
+            variant="horizontal"
+        />
+    </div>
+</Preview>
+
+### textAlignment
+
+`lef` | `center` | `right`
+
+<Preview withToolbar>
+    <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-around' }}>
+        <Card
+            title="Title"
+            description="Lorem Ipsum is simply dummy text"
+            imgSrc="https://www.w3schools.com/w3css/img_forest.jpg"
+            variant="vertical"
+            textAlignment="left"
+            titleSize="S"
+            descriptionSize="XS"
+        />
+        <Card
+            title="Title"
+            description="Lorem Ipsum is simply dummy text"
+            imgSrc="https://www.w3schools.com/w3css/img_forest.jpg"
+            variant="vertical"
+            textAlignment="center"
+            titleSize="S"
+            descriptionSize="XS"
+        />
+        <Card
+            title="Title"
+            description="Lorem Ipsum is simply dummy text"
+            imgSrc="https://www.w3schools.com/w3css/img_forest.jpg"
+            variant="vertical"
+            textAlignment="right"
+            titleSize="S"
+            descriptionSize="XS"
+        />
+    </div>
+</Preview>
+
+### Text Sizes
+
+There are five sizs available `XS` | `S` | `M` | `L` | `XL`.
+
+<Preview withToolbar>
+    <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-around' }}>
+        <Card
+            title="Title"
+            description="Lorem Ipsum is simply dummy text"
+            imgSrc="https://www.w3schools.com/w3css/img_forest.jpg"
+            variant="vertical"
+            textAlignment="left"
+            titleSize="XS"
+            descriptionSize="XS"
+        />
+        <Card
+            title="Title"
+            description="Lorem Ipsum is simply dummy text"
+            imgSrc="https://www.w3schools.com/w3css/img_forest.jpg"
+            variant="vertical"
+            textAlignment="left"
+            titleSize="S"
+            descriptionSize="XS"
+        />
+        <Card
+            title="Title"
+            description="Lorem Ipsum is simply dummy text"
+            imgSrc="https://www.w3schools.com/w3css/img_forest.jpg"
+            variant="vertical"
+            textAlignment="left"
+            titleSize="M"
+            descriptionSize="S"
+        />
+        <Card
+            title="Title"
+            description="Lorem Ipsum is simply dummy text"
+            imgSrc="https://www.w3schools.com/w3css/img_forest.jpg"
+            variant="vertical"
+            textAlignment="left"
+            titleSize="L"
+            descriptionSize="M"
+        />
+        <Card
+            title="Title"
+            description="Lorem Ipsum is simply dummy text"
+            imgSrc="https://www.w3schools.com/w3css/img_forest.jpg"
+            variant="vertical"
+            textAlignment="left"
+            titleSize="XL"
+            descriptionSize="L"
+        />
+    </div>
+</Preview>
+
+### Props
+
+<Props story="Card" />

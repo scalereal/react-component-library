@@ -19,7 +19,7 @@ var asterisk = function () { return css(templateObject_1 || (templateObject_1 = 
 var uppercase = function () { return css(templateObject_2 || (templateObject_2 = __makeTemplateObject(["\n    text-transform: uppercase;\n"], ["\n    text-transform: uppercase;\n"]))); };
 var getTextStyle = function (_a) {
     var props = __rest(_a, []);
-    var labelColor = props.labelColor, lineHeight = props.lineHeight, labelSize = props.labelSize, labelWeight = props.labelWeight;
+    var labelColor = props.labelColor, lineHeight = props.lineHeight, _b = props.labelSize, labelSize = _b === void 0 ? "S" : _b, labelWeight = props.labelWeight;
     return css(templateObject_3 || (templateObject_3 = __makeTemplateObject(["\n        margin: 0;\n        color: ", ";\n        line-height: ", ";\n        font-size: ", ";\n        font-weight: ", ";\n        font-family: ", ";\n    "], ["\n        margin: 0;\n        color: ", ";\n        line-height: ", ";\n        font-size: ", ";\n        font-weight: ", ";\n        font-family: ", ";\n    "])), function (_a) {
         var theme = _a.theme;
         return (labelColor ? labelColor : theme.label.defaults.labelColor);

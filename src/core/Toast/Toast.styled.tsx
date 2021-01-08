@@ -1,6 +1,6 @@
-import styled, { css } from 'styled-components'
-import { ToastProps } from './types'
-import { defaultTheme } from '../../theme'
+import styled, { css } from 'styled-components';
+import { defaultTheme } from '../../theme';
+import { ToastProps } from './types';
 
 const getPosition = (position: ToastProps['position']) => {
     switch (position) {
@@ -50,6 +50,24 @@ const getPosition = (position: ToastProps['position']) => {
             `;
     }
 };
+
+const getFlexPosition = (position: ToastProps['position']) => {
+    switch (position) {
+        case 'top-left':
+            return css`
+                align-items: flex-start;
+            `;
+        case 'top-center':
+            return css`
+                align-items:center;
+            `;
+        case 'top-right':
+            return css`
+                align-items:flex-end;
+            `;
+    }
+};
+
 const getBorder = (borderPosition: ToastProps['borderPosition']) => {
     switch (borderPosition) {
         case 'top':
@@ -80,14 +98,15 @@ const getBorder = (borderPosition: ToastProps['borderPosition']) => {
 };
 
 export const ToastContainer = styled('div')<ToastProps>`
-	position: fixed;
+	position: ${pr=> pr.fixed?'fixed':'relative'};
     display: flex;
-    align-items: flex-end;
+    /* align-items: flex-end; */
 	flex-direction: column;
 	height: auto;
 	width: auto;
 	z-index: 999;
-    ${({ position ,theme }) => (position ? getPosition(position): theme.toast.defaults.position)}
+    ${({ position ,theme, fixed }) => (position && fixed ? getPosition(position): theme.toast.defaults.position)}
+    ${({ position , fixed }) => (position && fixed!==true? getFlexPosition(position):'')}
 `
 ToastContainer.defaultProps = {
     theme:defaultTheme
@@ -102,7 +121,7 @@ export const Toast = styled('div')<ToastProps>`
     padding: 12px;
     margin: 10px;
 	min-width: 250px;
-    background-color:${({ theme, variant }) => (theme.toast.statusColor[variant].bgColor)};
+    background-color:${({ theme, variant='' }) => (theme.toast.statusColor[variant].bgColor)};
     border-radius: 3px;
     -webkit-box-shadow: 0 0 10px${({ theme, shadowColor }) => (shadowColor ? shadowColor : theme.toast.defaults.shadowColor)};
 	-moz-box-shadow: 0 0 10px ${({ theme, shadowColor }) => (shadowColor ? shadowColor : theme.toast.defaults.shadowColor)};
@@ -113,7 +132,7 @@ export const Toast = styled('div')<ToastProps>`
 	-webkit-user-select: none;
 	-moz-user-select: none;
 	user-select: none;
-    border: solid 4px ${({ theme, variant, borderColor }) => (borderColor ? borderColor : theme.toast.statusColor[variant].color)};
+    border: solid 4px ${({ theme, variant='', borderColor }) => (borderColor ? borderColor : theme.toast.statusColor[variant].color)};
     ${({ borderPosition }) => (getBorder(borderPosition))}
 `;
 export const ToastHeader = styled('div')<ToastProps>`
@@ -122,7 +141,7 @@ export const ToastHeader = styled('div')<ToastProps>`
     align-items: center;
     justify-content: space-between;
     padding: 0.5rem;
-    border-bottom: 1px solid ${({ theme, variant, borderColor }) => (borderColor ? borderColor : theme.toast.statusColor[variant].borderColor)};
+    border-bottom: 1px solid ${({ theme, variant='', borderColor }) => (borderColor ? borderColor : theme.toast.statusColor[variant].borderColor)};
     border-top-left-radius: calc(3px - 1px);
     border-top-right-radius: calc(3px - 1px);
 `;

@@ -3,7 +3,7 @@ import * as React from 'react';
 import Button from '.';
 
 describe('Button', () => {
-    it('should render properl', () => {
+    it('should render with default theme', () => {
         const { container } = render(<Button />);
         expect(container).toMatchSnapshot();
     });

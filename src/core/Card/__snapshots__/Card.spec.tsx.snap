@@ -3,7 +3,7 @@
 exports[`Card should render with All the default Props 1`] = `
 <div>
   <div
-    class="sc-gsTCUz CCZjf"
+    class="sc-gsTCUz jeuzBH"
     src="src"
     title="Title"
   >
@@ -16,7 +16,7 @@ exports[`Card should render with All the default Props 1`] = `
         class="sc-eCssSg eBRVuq"
       >
         <span
-          class="sc-bdfBwQ hcPyHd"
+          class="sc-bdfBwQ ixTvTj"
         >
           Title
         </span>
@@ -25,7 +25,7 @@ exports[`Card should render with All the default Props 1`] = `
         class="sc-gKsewC gUlKoN"
       >
         <span
-          class="sc-bdfBwQ hcPyHd"
+          class="sc-bdfBwQ ixTvTj"
         >
           Description
         </span>

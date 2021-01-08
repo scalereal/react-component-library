@@ -22,6 +22,9 @@ var __rest = (this && this.__rest) || function (s, e) {
 };
 import React from 'react';
 import * as Styled from './Text.styled';
+export var textSizes = ['XS', 'S', 'M', 'L', 'XL'];
+export var textAlignments = ['left', 'right', 'center', 'justify', 'justify-all', 'start', 'end', 'match-parent', 'inherit', 'initial', 'unset'];
+export var textWeights = ['light', 'regular', 'medium', 'strong', 'extraStrong'];
 var Text = React.memo(React.forwardRef(function (_a, ref) {
     var children = _a.children, textSize = _a.textSize, textWeight = _a.textWeight, textAlign = _a.textAlign, restProps = __rest(_a, ["children", "textSize", "textWeight", "textAlign"]);
     return (React.createElement(Styled.Text, __assign({ textSize: textSize, textWeight: textWeight, textAlign: textAlign, ref: ref }, restProps), children));

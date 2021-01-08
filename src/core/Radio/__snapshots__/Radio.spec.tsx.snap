@@ -16,7 +16,7 @@ exports[`Radio component should render with all the props given 1`] = `
       value="1"
     >
       <span
-        class="sc-bdfBwQ jmDKPg radioLabel"
+        class="sc-bdfBwQ cQNmAO radioLabel"
       >
         1
       </span>
@@ -48,7 +48,7 @@ exports[`Radio component should render with default theme 1`] = `
       class="sc-hKgILt dFxNXU"
     >
       <span
-        class="sc-bdfBwQ hcPyHd radioLabel"
+        class="sc-bdfBwQ ixTvTj radioLabel"
       >
         CheckBox
       </span>
@@ -79,7 +79,7 @@ exports[`Radio component should render with not-allowed cursor when it is disabl
       disabled=""
     >
       <span
-        class="sc-bdfBwQ hcPyHd radioLabel"
+        class="sc-bdfBwQ ixTvTj radioLabel"
       >
         CheckBox
       </span>

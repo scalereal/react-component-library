@@ -1,0 +1,147 @@
+import Input from './Input';
+import { Preview, Story, Meta, Props, ArgsTable, Canvas } from '@storybook/addon-docs/blocks';
+import { withKnobs, color, boolean, select } from '@storybook/addon-knobs';
+
+<Meta
+    title="Components/Core/Input"
+    component={Input}
+    argTypes={{
+        textColor: {
+            control: 'color'
+        },
+        borderColor: {
+            control: 'color'
+        },
+        disabledColor: {
+            control: 'color'
+        },
+        backgroundColor: {
+            control: 'color'
+        },
+        placeHolderColor: {
+            control: 'color'
+        },
+        preffixBackgroundColor: {
+            control: 'color'
+        },
+        suffixBackgroundColor: {
+            control: 'color'
+        },
+        preffixColor: {
+            control: 'color'
+        },
+        suffixColor: {
+            control: 'color'
+        }
+    }}
+/>
+
+# Input
+
+Displays a Input
+
+export const Template = ({
+    suffix,
+    preffix,
+    required,
+    disabled,
+    fullWidth,
+    textColor,
+    borderColor,
+    disabledColor,
+    backgroundColor,
+    placeHolderColor,
+    preffixBackgroundColor,
+    suffixBackgroundColor,
+    hasError,
+    errorText,
+    ...args
+}) => {
+    return (
+        <Input
+            id="input"
+            type="email"
+            fullWidth={fullWidth}
+            disabled={disabled}
+            required={required}
+            placeholder="Enter Email Address"
+            preffix={preffix}
+            suffix={suffix}
+            textColor={textColor}
+            borderColor={borderColor}
+            disabledColor={disabledColor}
+            backgroundColor={backgroundColor}
+            placeHolderColor={placeHolderColor}
+            preffixBackgroundColor={preffixBackgroundColor}
+            suffixBackgroundColor={suffixBackgroundColor}
+            hasError={hasError}
+            errorText={errorText}
+            {...args}
+        ></Input>
+    );
+};
+
+<Preview>
+    <Story name="Input">{Template.bind({})}</Story>
+</Preview>
+
+### Color Variations
+
+You can either change the theme or pass the colors as props.
+
+<Preview withToolbar>
+    <div>
+        <Input
+            id="input"
+            type="email"
+            placeholder="Enter 
+            Email Address"
+            placeHolderColor="blue"
+            borderColor="blue"
+            backgroundColor="rgb(132 130 130 / 20%)"
+        />
+        <Input
+            id="input"
+            type="email"
+            placeholder="Enter Email Address"
+            placeHolderColor="red"
+            borderColor="red"
+            backgroundColor="rgb(132 130 130 / 20%)"
+        />
+    </div>
+</Preview>
+
+### prefix Suffix
+
+Displays prefix/suffix text or icon.
+
+<Preview withToolbar>
+    <div>
+        <Input id="input" type="email" placeholder="Enter Email Address" prefix="icon" />
+        <Input id="input" type="email" placeholder="Enter Email Address" suffix="icon" />
+    </div>
+</Preview>
+
+### Error
+
+Displays error if hasError and errorText="Error Message" props are passed
+
+<Preview withToolbar>
+    <div>
+        <Input id="input" type="email" placeholder="Enter Email Address" hasError errorText="Error" />
+    </div>
+</Preview>
+
+### Disabled
+
+Disabled Input
+
+<Preview withToolbar>
+    <div>
+        <Input id="input" type="email" placeholder="Enter Email Address" disabled />
+    </div>
+</Preview>
+
+### Props
+
+<Props story="Input" />

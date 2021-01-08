@@ -1,7 +1,9 @@
-import React, { FC } from 'react'
-import * as Styled from './List.styled'
-import { ListProps } from './types'
-import { WithStyle } from '../../utils'
+import React, { FC } from 'react';
+import { WithStyle } from '../../utils';
+import * as Styled from './List.styled';
+import { ListProps } from './types';
+
+export const variant: ListProps['variant'][] = ['horizontal', 'vertical'];
 
 const List: FC<ListProps> & WithStyle = React.memo(
     React.forwardRef((props, ref) => (

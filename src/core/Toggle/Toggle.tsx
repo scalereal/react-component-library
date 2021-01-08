@@ -1,7 +1,9 @@
 import React, { FC, useCallback } from 'react'
+import { WithStyle } from '../../utils'
 import * as Styled from './Toggle.styled'
 import { ToggleProps } from './types'
-import { WithStyle } from '../../utils'
+
+export const toggleSizes : ToggleProps['size'][] = ['XS', 'S', 'M', 'L', 'XL']
 
 export const Toggle: FC<ToggleProps> & WithStyle = React.memo(
     React.forwardRef((props, ref) => {

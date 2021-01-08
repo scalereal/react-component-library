@@ -21,7 +21,7 @@ exports[`CheckBoxGroup component should render with all the props given 1`] = `
         type="checkbox"
       />
       <span
-        class="sc-bdfBwQ bLBrZi"
+        class="sc-bdfBwQ fghInA"
       >
         checkBoxGroup Label
       </span>
@@ -57,7 +57,7 @@ exports[`CheckBoxGroup component should render with all the props given 1`] = `
               value="1"
             />
             <span
-              class="sc-bdfBwQ bLBrZi"
+              class="sc-bdfBwQ fghInA"
             >
               1
             </span>
@@ -89,7 +89,7 @@ exports[`CheckBoxGroup component should render with all the props given 1`] = `
               value="2"
             />
             <span
-              class="sc-bdfBwQ bLBrZi"
+              class="sc-bdfBwQ fghInA"
             >
               2
             </span>
@@ -112,11 +112,11 @@ exports[`CheckBoxGroup component should render with default theme 1`] = `
       id="error"
     />
     <label
-      class="sc-gKsewC hOUZyW"
+      class="sc-gKsewC hFNdkN"
     >
       
       <span
-        class="sc-bdfBwQ hcPyHd"
+        class="sc-bdfBwQ ixTvTj"
       />
     </label>
     <ul
@@ -139,12 +139,12 @@ exports[`CheckBoxGroup component should render with not-allowed cursor when it i
       id="error"
     />
     <label
-      class="sc-gKsewC fVwTbS"
+      class="sc-gKsewC gnErNZ"
       disabled=""
     >
       
       <span
-        class="sc-bdfBwQ hcPyHd"
+        class="sc-bdfBwQ ixTvTj"
       />
     </label>
     <ul

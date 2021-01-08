@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`CheckBoxGroup component should render with all the props given 1`] = `
+exports[`Table component should render with all the props given 1`] = `
 <div>
   <table
     class="sc-jSgupP eKkiRr"
@@ -120,7 +120,7 @@ exports[`CheckBoxGroup component should render with all the props given 1`] = `
 </div>
 `;
 
-exports[`CheckBoxGroup component should render with default theme 1`] = `
+exports[`Table component should render with default theme 1`] = `
 <div>
   <table
     class="sc-jSgupP fPFcvH"
@@ -129,7 +129,7 @@ exports[`CheckBoxGroup component should render with default theme 1`] = `
       class="sc-bdfBwQ dbXZak"
     >
       <tr
-        class="sc-dlfnbm eeeREN"
+        class="sc-dlfnbm dvtEeE"
       />
     </thead>
     <tbody

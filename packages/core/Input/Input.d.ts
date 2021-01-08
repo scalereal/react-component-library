@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { InputProps } from './types';
 import { WithStyle } from '../../utils';
+import { InputProps } from './types';
 export declare const Input: FC<InputProps> & WithStyle;
 export default Input;

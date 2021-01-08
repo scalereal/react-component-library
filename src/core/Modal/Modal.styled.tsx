@@ -1,12 +1,13 @@
-import styled from 'styled-components'
-import { ModalProps } from './types'
-import { defaultTheme } from '../../theme'
+import styled from 'styled-components';
+import { defaultTheme } from '../../theme';
+import { ModalProps } from './types';
 
 export const Modal = styled('div')<ModalProps>`
     position: relative;
     display: flex;
     flex-direction: column;
-    width: 100%;
+    margin: 1%;
+    width: 98%;
     pointer-events: auto;
     background-color: #fff;
     background-clip: padding-box;

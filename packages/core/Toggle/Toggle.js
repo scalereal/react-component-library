@@ -22,6 +22,7 @@ var __rest = (this && this.__rest) || function (s, e) {
 };
 import React, { useCallback } from 'react';
 import * as Styled from './Toggle.styled';
+export var toggleSizes = ['XS', 'S', 'M', 'L', 'XL'];
 export var Toggle = React.memo(React.forwardRef(function (props, ref) {
     var size = props.size, required = props.required, onChange = props.onChange, restProps = __rest(props, ["size", "required", "onChange"]);
     var changeHandler = useCallback(function (e) {
