@@ -2,7 +2,7 @@ import { render } from '@testing-library/react';
 import * as React from 'react';
 import FileInput from '.';
 
-describe('CheckBox component', () => {
+describe('FileInput component', () => {
     it('should render with default theme', () => {
         const { container } = render(<FileInput/>);
         expect(container).toMatchSnapshot();
@@ -11,7 +11,6 @@ describe('CheckBox component', () => {
     it('should render with all the props given', () => {
         const { container } = render(
             <FileInput
-                label="checkBoxGroup Label"
                 size="M"
                 hoverEffect={true}
                 errorText='Invalid File'

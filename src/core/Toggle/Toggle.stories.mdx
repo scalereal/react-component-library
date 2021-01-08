@@ -1,0 +1,61 @@
+import Toggle, { toggleSizes } from './Toggle';
+import { Preview, Story, Meta, Props, ArgsTable, Canvas } from '@storybook/addon-docs/blocks';
+import { withKnobs, color, boolean, select } from '@storybook/addon-knobs';
+
+<Meta
+    title="Components/Core/Toggle"
+    component={Toggle}
+    argTypes={{
+        size: {
+            control: {
+                type: 'select',
+                options: Object.values(toggleSizes)
+            }
+        }
+    }}
+/>
+
+# Toggle
+
+Displays a Toggle
+
+export const Template = ({ size, ...args }) => {
+    return <Toggle size={size} {...args} />;
+};
+
+<Preview>
+    <Story
+        name="Toggle"
+        args={{
+            size: 'M'
+        }}
+    >
+        {Template.bind({})}
+    </Story>
+</Preview>
+
+### Sizes
+
+There are five sizes available `XS` | `S` | `M` | `L` | `XL`.
+
+<Preview withToolbar>
+    <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-around' }}>
+        <Toggle size="XS" />
+        <Toggle size="S" />
+        <Toggle size="M" />
+        <Toggle size="L" />
+        <Toggle size="XL" />
+    </div>
+</Preview>
+
+### Disabled
+
+<Preview withToolbar>
+    <div>
+        <Toggle size="M" disabled={true} />
+    </div>
+</Preview>
+
+### Props
+
+<Props story="Toggle" />

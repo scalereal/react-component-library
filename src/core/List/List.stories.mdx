@@ -1,0 +1,64 @@
+import List, { variant } from './List';
+import { Preview, Story, Meta, Props, ArgsTable, Canvas } from '@storybook/addon-docs/blocks';
+import { withKnobs, color, boolean, select } from '@storybook/addon-knobs';
+
+<Meta
+    title="Components/Core/List"
+    component={List}
+    argTypes={{
+        variant: {
+            control: {
+                type: 'select',
+                options: Object.values(variant)
+            }
+        }
+    }}
+/>
+
+# List
+
+Displays a List
+
+export const Template = ({ variant, ...args }) => {
+    return (
+        <List variant={variant} {...args}>
+            <Text> Item 1</Text>
+            <Text> Item 2</Text>
+            <Text> Item 3</Text>
+        </List>
+    );
+};
+
+<Preview>
+    <Story
+        name="List"
+        args={{
+            variant: 'vertical'
+        }}
+    >
+        {Template.bind({})}
+    </Story>
+</Preview>
+
+### variant
+
+`vertical` | `horizontal`.
+
+<Preview withToolbar>
+    <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-around' }}>
+        <List variant="vertical">
+            <Text> Item 1</Text>
+            <Text> Item 2</Text>
+            <Text> Item 3</Text>
+        </List>
+        <List variant="horizontal">
+            <Text> Item 1</Text>
+            <Text> Item 2</Text>
+            <Text> Item 3</Text>
+        </List>
+    </div>
+</Preview>
+
+### Props
+
+<Props story="List" />

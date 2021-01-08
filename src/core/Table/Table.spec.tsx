@@ -2,7 +2,14 @@ import { render } from '@testing-library/react';
 import * as React from 'react';
 import Table from '.';
 
-describe('CheckBoxGroup component', () => {
+const thData=[{id:1,data:'ID'},{id:2,data:'EmployeeID'},{id:3,data:'Name'}]
+const tdData=[
+    {trId:1,trData:[{tdId:1,tdData:'1'},{tdId:2,tdData:'2'},{tdId:3,tdData:'3'}]},
+    {trId:2,trData:[{tdId:1,tdData:'1'},{tdId:2,tdData:'2'},{tdId:3,tdData:'3'}]},
+    {trId:3,trData:[{tdId:1,tdData:'1'},{tdId:2,tdData:'2'},{tdId:3,tdData:'3'}]},
+    {trId:4,trData:[{tdId:1,tdData:'1'},{tdId:2,tdData:'2'},{tdId:3,tdData:'3'}]},
+]
+describe('Table component', () => {
     it('should render with default theme', () => {
         const { container } = render(<Table />);
         expect(container).toMatchSnapshot();
@@ -17,13 +24,8 @@ describe('CheckBoxGroup component', () => {
                 thTextColor='white'
                 nthTrBgColor='#8a8a8f'
                 hoverTrBgColor='#434346'
-                thData={[{id:1,data:'ID'},{id:2,data:'EmployeeID'},{id:3,data:'Name'}]}
-                tdData={[
-                    {trId:1,trData:[{tdId:1,tdData:'1'},{tdId:2,tdData:'2'},{tdId:3,tdData:'3'}]},
-                    {trId:2,trData:[{tdId:1,tdData:'1'},{tdId:2,tdData:'2'},{tdId:3,tdData:'3'}]},
-                    {trId:3,trData:[{tdId:1,tdData:'1'},{tdId:2,tdData:'2'},{tdId:3,tdData:'3'}]},
-                    {trId:4,trData:[{tdId:1,tdData:'1'},{tdId:2,tdData:'2'},{tdId:3,tdData:'3'}]},
-                ]}
+                thData={thData}
+                tdData={tdData}
             />
             );
         expect(container).toMatchSnapshot();

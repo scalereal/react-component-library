@@ -13,8 +13,8 @@ export const Wrapper = styled('div')<InputProps>`
     border: 1px solid ${({ theme, borderColor }) => (borderColor ? borderColor : theme.input.inputBorderColor)};
     border-radius: 5px;
     overflow: hidden;
-    margin:0.5rem;
-    width: ${props => (props.fullWidth ? '94.5%%' : 'max-content')};
+    margin: 1%;
+    width: ${props => (props.fullWidth ? '98%' : 'max-content')};
     height: max-content;
     font-family: ${({ theme }) =>(theme.input.fontFamily)};
     &:focus-within {

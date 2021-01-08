@@ -1,0 +1,146 @@
+import Toast, { variants, positions, borderPositions } from './Toast';
+import { Preview, Story, Meta, Props, ArgsTable, Canvas } from '@storybook/addon-docs/blocks';
+import { withKnobs, color, boolean, select } from '@storybook/addon-knobs';
+
+<Meta
+    title="Components/Core/Toast"
+    component={Toast}
+    argTypes={{
+        variant: {
+            control: {
+                type: 'select',
+                options: Object.values(variants)
+            }
+        },
+        fixed: {
+            control: {
+                type: 'boolean'
+            }
+        },
+        titleColor: {
+            control: 'color'
+        },
+        messageColor: {
+            control: 'color'
+        },
+        shadowColor: {
+            control: 'color'
+        },
+        borderColor: {
+            control: 'color'
+        },
+        position: {
+            control: {
+                type: 'select',
+                options: Object.values(positions)
+            }
+        },
+        borderPosition: {
+            control: {
+                type: 'select',
+                options: Object.values(borderPositions)
+            }
+        }
+    }}
+/>
+
+# Toast
+
+Displays a Toast
+
+export const Template = ({
+    variant,
+    title,
+    message,
+    titleColor,
+    messageColor,
+    borderColor,
+    shadowColor,
+    position,
+    borderPosition,
+    ...args
+}) => {
+    return (
+        <Toast
+            variant={variant}
+            title={title}
+            message={message}
+            titleColor={titleColor}
+            messageColor={messageColor}
+            borderColor={borderColor}
+            shadowColor={shadowColor}
+            position={position}
+            borderPosition={borderPosition}
+            {...args}
+        />
+    );
+};
+
+<Preview>
+    <Story
+        name="Toast"
+        args={{
+            variant: 'success',
+            title: 'Title',
+            message: 'Lorem Ipsum is simply dummy text',
+            borderPosition: 'top'
+        }}
+    >
+        {Template.bind({})}
+    </Story>
+</Preview>
+
+### Color Variations
+
+You can either change the theme or pass the colors as props.
+
+<Preview withToolbar>
+    <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-around' }}>
+        <Toast variant="success" title="Title" message="Lorem Ipsum is simply dummy text" titleColor="blue" messageColor="blue" />
+        <Toast variant="success" title="Title" message="Lorem Ipsum is simply dummy text" titleColor="red" messageColor="red" />
+    </div>
+</Preview>
+
+### Varient
+
+There are four varient available `danger`, `warning`, `success`, `info`.
+
+<Preview withToolbar>
+    <div style={{ display: 'flex', flexDirection: 'column' }}>
+        <Toast variant="danger" title="Title" message="Lorem Ipsum is simply dummy text" borderPosition="top" />
+        <Toast variant="warning" title="Title" message="Lorem Ipsum is simply dummy text" borderPosition="top" />
+        <Toast variant="success" title="Title" message="Lorem Ipsum is simply dummy text" borderPosition="top" />
+        <Toast variant="info" title="Title" message="Lorem Ipsum is simply dummy text" borderPosition="top" />
+    </div>
+</Preview>
+
+### Border position
+
+There are four Border position available `top` | `left` | `right` | `bottom`.
+
+<Preview withToolbar>
+    <div style={{ display: 'flex', flexDirection: 'column' }}>
+        <Toast variant="danger" title="Title" message="Lorem Ipsum is simply dummy text" borderPosition="top" />
+        <Toast variant="warning" title="Title" message="Lorem Ipsum is simply dummy text" borderPosition="right" />
+        <Toast variant="success" title="Title" message="Lorem Ipsum is simply dummy text" borderPosition="bottom" />
+        <Toast variant="info" title="Title" message="Lorem Ipsum is simply dummy text" borderPosition="left" />
+    </div>
+</Preview>
+
+### Toast position
+
+fixed={true} `top-left` | `top-center` | `top-right` | `right-center` | `left-center` | `bottom-left` | `bottom-center` | `bottom-right`.
+
+fixed={false} `top-left` | `top-center` | `top-right`.
+
+<Preview withToolbar>
+    <div style={{ display: 'flex', flexDirection: 'column' }}>
+        <Toast variant="info" title="Title" message="Lorem Ipsum is simply dummy text" position="top-left" />
+        <Toast variant="info" title="Title" message="Lorem Ipsum is simply dummy text" position="top-center" />
+        <Toast variant="info" title="Title" message="Lorem Ipsum is simply dummy text" position="top-right" />
+    </div>
+</Preview>
+
+### Props
+
+<Props story="Toast" />
