@@ -2,10 +2,17 @@ import styled from 'styled-components';
 import { defaultTheme } from '../../theme';
 import { InputProps } from './types';
 
-export const OuterWrapper = styled('div')`
-    display:flex;
-    flex-direction:column;
+export const OuterWrapper = styled('div')<InputProps>`
+    .error{
+        color:${({ theme }) => (theme.input.inputErrorColor)};
+        font-family: ${({ theme }) =>(theme.input.fontFamily)};
+    }
 `;
+
+OuterWrapper.defaultProps = {
+    theme: defaultTheme
+};
+
 export const Error = styled('span')<InputProps>`
     font-size: 0.9rem;
     line-height: 1rem;
@@ -30,13 +37,8 @@ export const InputWrapper = styled('div')<InputProps>`
     border: 2px solid ${({ theme, borderColor, hasError }) => (borderColor ? hasError ? theme.input.inputErrorColor: borderColor : hasError ? theme.input.inputErrorColor : theme.input.inputBorderColor)};
     border-radius: 3px;
     overflow: hidden;
-<<<<<<< HEAD
     margin: 1%;
     width: ${props => (props.fullWidth ? '98%' : 'max-content')};
-=======
-    margin:0.5rem;
-    width: ${({ fullWidth }) => (fullWidth ? '94.5%%' : 'max-content')};
->>>>>>> 237dbde8bf82ecb8419d97447768ed78c8a0c4ed
     height: max-content;
     font-family: ${({ theme }) =>(theme.input.fontFamily)};
     &:focus-within {
@@ -48,6 +50,7 @@ export const InputWrapper = styled('div')<InputProps>`
         font-family: ${({ theme }) =>(theme.input.fontFamily)};
         color: ${({ theme, textColor }) => (textColor ? textColor : theme.input.inputTextColor)};
     }
+    
 `;
 InputWrapper.defaultProps = {
     theme: defaultTheme

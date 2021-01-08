@@ -28,7 +28,7 @@ export var positions = ['top-left', 'top-center', 'top-right', 'right-center', '
 export var borderPositions = ['top', 'bottom', 'left', 'right'];
 var Toast = React.memo(React.forwardRef(function (props, ref) {
     var variant = props.variant, title = props.title, message = props.message, titleColor = props.titleColor, messageColor = props.messageColor, restProps = __rest(props, ["variant", "title", "message", "titleColor", "messageColor"]);
-    var color = variant === 'success' ? '#008000' : variant === 'info' ? '#126AFA' : variant === 'danger' ? '#cc0000' : variant === 'warning' ? '#ff9800' : '';
+    var color = variant === 'success' ? '#008000' : variant === 'info' ? '#126AFA' : variant === 'danger' ? '#cc0000' : variant === 'warning' ? '#ffa726' : '';
     return (React.createElement(Styled.ToastContainer, __assign({ ref: ref, variant: variant }, restProps),
         React.createElement(Styled.Toast, __assign({ variant: variant }, restProps),
             React.createElement(Styled.ToastHeader, __assign({}, props),

@@ -7,4 +7,8 @@ export interface InputTheme {
     inputPreffixBackgroundColor: string;
     inputSuffixBackgroundColor: string;
     fontFamily: string;
+    inputErrorColor: string;
+    inputFocusBorderColor: string;
+    inputSuffixColor: string;
+    inputPreffixColor: string;
 }
