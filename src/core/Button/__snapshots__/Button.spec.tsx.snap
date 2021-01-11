@@ -1,18 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Button should render properl 1`] = `
-<div>
-  <button
-    class="sc-gsTCUz fUCyww"
-    type="primary"
-  >
-    <span
-      class="sc-bdfBwQ ixTvTj"
-    />
-  </button>
-</div>
-`;
-
 exports[`Button should render with all the props given 1`] = `
 <div>
   <button
@@ -24,6 +11,19 @@ exports[`Button should render with all the props given 1`] = `
     >
       Button
     </span>
+  </button>
+</div>
+`;
+
+exports[`Button should render with default theme 1`] = `
+<div>
+  <button
+    class="sc-gsTCUz fUCyww"
+    type="primary"
+  >
+    <span
+      class="sc-bdfBwQ ixTvTj"
+    />
   </button>
 </div>
 `;

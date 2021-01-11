@@ -3,14 +3,20 @@
 exports[`Input should render correctly when fullWidth & required props are falsy 1`] = `
 <div>
   <div
-    class="sc-bdfBwQ fLOOjT"
+    class="sc-gsTCUz fnsRrG"
+    placeholder="Enter Email Address"
+    type="email"
   >
-    <input
-      class="sc-gsTCUz jElvau"
-      id="input"
-      placeholder="Enter Email Address"
-      type="email"
-    />
+    <div
+      class="sc-hKgILt jpuMkQ"
+    >
+      <input
+        class="sc-eCssSg gnQvOb"
+        id="input"
+        placeholder="Enter Email Address"
+        type="email"
+      />
+    </div>
   </div>
 </div>
 `;
@@ -18,15 +24,22 @@ exports[`Input should render correctly when fullWidth & required props are falsy
 exports[`Input should render correctly when it is disabled 1`] = `
 <div>
   <div
-    class="sc-bdfBwQ fLOOjT"
+    class="sc-gsTCUz fnsRrG"
+    id="email-input"
+    placeholder="Enter Email Address"
+    type="text"
   >
-    <input
-      class="sc-gsTCUz hgGslb"
-      disabled=""
-      id="email-input"
-      placeholder="Enter Email Address"
-      type="text"
-    />
+    <div
+      class="sc-hKgILt jpuMkQ"
+    >
+      <input
+        class="sc-eCssSg jsHIOX"
+        disabled=""
+        id="email-input"
+        placeholder="Enter Email Address"
+        type="text"
+      />
+    </div>
   </div>
 </div>
 `;
@@ -34,25 +47,29 @@ exports[`Input should render correctly when it is disabled 1`] = `
 exports[`Input should render correctly with all the props given 1`] = `
 <div>
   <div
-    class="sc-bdfBwQ jrNqOv"
+    class="sc-gsTCUz fnsRrG"
+    id="email-input"
+    placeholder="Enter Email Address"
+    prefix="www."
+    type="email"
   >
-    <span
-      class="sc-dlfnbm gFsDaS"
+    <div
+      class="sc-hKgILt fxOLGw"
     >
-      www.
-    </span>
-    <input
-      class="sc-gsTCUz jElvau"
-      id="email-input"
-      placeholder="Enter Email Address"
-      required=""
-      type="email"
-    />
-    <span
-      class="sc-hKgILt kAVLpk"
-    >
-      .com
-    </span>
+      <input
+        class="sc-eCssSg gnQvOb"
+        id="email-input"
+        placeholder="Enter Email Address"
+        prefix="www."
+        required=""
+        type="email"
+      />
+      <span
+        class="sc-gKsewC cwjetH"
+      >
+        .com
+      </span>
+    </div>
   </div>
 </div>
 `;

@@ -1,0 +1,86 @@
+import CircleLoader9 from '.';
+import { SizeMap } from '../types';
+import { Preview, Story, Meta, Props, ArgsTable, Canvas } from '@storybook/addon-docs/blocks';
+import { withKnobs, color, boolean, select } from '@storybook/addon-knobs';
+
+<Meta
+    title="Components/Loaders/CircleLoader9"
+    component={CircleLoader9}
+    argTypes={{
+        size: {
+            control: {
+                type: 'select',
+                options: Object.values(SizeMap)
+            }
+        },
+        Color: {
+            control: 'color'
+        },
+        display: {
+            control: {
+                type: 'boolean'
+            }
+        },
+        ref: {
+            table: {
+                disable: true
+            }
+        },
+        theme: {
+            table: {
+                disable: true
+            }
+        },
+        as: {
+            table: {
+                disable: true
+            }
+        }
+    }}
+/>
+
+# Loaders
+
+Displays a Loader.
+
+export const Template = args => (
+    <div>
+        <CircleLoader9 {...args} />
+    </div>
+);
+
+<Preview>
+    <Story name="CircleLoader9" args={{ size: 'S' }}>
+        {Template.bind({})}
+    </Story>
+</Preview>
+
+### Color Variations
+
+You can either change the theme or pass the colors as props.
+
+<Preview withToolbar>
+    <div style={{ display: 'flex', justifyContent: 'space-around' }}>
+        <CircleLoader9 size="S" Color="green" />
+        <CircleLoader9 size="S" Color="red" />
+    </div>
+</Preview>
+
+### Sizes
+
+There are Six sizs available `XXS` | `XS` | `S` | `M` | `L` | `XL`.
+
+<Preview withToolbar>
+    <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+        <DotsCircle size="XXS" />
+        <CircleLoader9 size="XS" />
+        <CircleLoader9 size="S" />
+        <CircleLoader9 size="M" />
+        <CircleLoader9 size="L" />
+        <CircleLoader9 size="XL" />
+    </div>
+</Preview>
+
+### Props
+
+<Props story="CircleLoader9" />

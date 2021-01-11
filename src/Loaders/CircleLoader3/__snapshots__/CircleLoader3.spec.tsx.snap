@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CircleLoader3 Loader should render image avatar properly 1`] = `
+<div>
+  <div
+    class="sc-gsTCUz jsjtfW"
+  >
+    <div
+      class="sc-bdfBwQ lcCcqu"
+    />
+  </div>
+</div>
+`;
+
+exports[`CircleLoader3 Loader should render with all the props given 1`] = `
+<div>
+  <div
+    class="sc-gsTCUz dmmxVM"
+  >
+    <div
+      class="sc-bdfBwQ hcleJf"
+    />
+  </div>
+</div>
+`;
+
+exports[`CircleLoader3 Loader should render with default theme 1`] = `
+<div>
+  <div
+    class="sc-gsTCUz cZUSMR"
+  >
+    <div
+      class="sc-bdfBwQ lcCcqu"
+    />
+  </div>
+</div>
+`;
