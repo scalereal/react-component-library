@@ -79,6 +79,7 @@ Input.defaultProps = {
     theme: defaultTheme
 };
 
+
 export const Preffix = styled('span')<InputProps>`
     background-color: ${({ theme, preffixBackgroundColor }) => (preffixBackgroundColor ? preffixBackgroundColor : theme.input.inputPreffixBackgroundColor)};
     font-family: ${({ theme }) => (theme.input.fontFamily)};

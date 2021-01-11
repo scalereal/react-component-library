@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DotsCircle Loader should render image avatar properly 1`] = `
+<div>
+  <div
+    class="sc-gsTCUz bMFuWA"
+  >
+    <div
+      class="sc-bdfBwQ hSFrdG"
+    />
+  </div>
+</div>
+`;
+
+exports[`DotsCircle Loader should render with all the props given 1`] = `
+<div>
+  <div
+    class="sc-gsTCUz lgfpuC"
+  >
+    <div
+      class="sc-bdfBwQ jNUwAr"
+    />
+  </div>
+</div>
+`;
+
+exports[`DotsCircle Loader should render with default theme 1`] = `
+<div>
+  <div
+    class="sc-gsTCUz dhEPbz"
+  >
+    <div
+      class="sc-bdfBwQ hSFrdG"
+    />
+  </div>
+</div>
+`;

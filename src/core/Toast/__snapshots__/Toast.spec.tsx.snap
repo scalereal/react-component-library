@@ -102,14 +102,14 @@ exports[`Toast should render properly with warning variant 1`] = `
     class="sc-gsTCUz jkvztz"
   >
     <div
-      class="sc-dlfnbm bPWpZv"
+      class="sc-dlfnbm cNVCVR"
     >
       <div
-        class="sc-hKgILt kCLPXp"
+        class="sc-hKgILt htTaBc"
         title="Title"
       >
         <span
-          class="sc-bdfBwQ jfvasr"
+          class="sc-bdfBwQ gyJFPM"
         >
           Title
         </span>
@@ -118,7 +118,7 @@ exports[`Toast should render properly with warning variant 1`] = `
         class="sc-eCssSg cplufu"
       >
         <span
-          class="sc-bdfBwQ kQPiZj"
+          class="sc-bdfBwQ gwMaoE"
         >
           Message
         </span>
