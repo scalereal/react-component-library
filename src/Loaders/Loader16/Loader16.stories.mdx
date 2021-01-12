@@ -1,0 +1,89 @@
+import Loader16 from '.';
+import { SizeMap } from '../types';
+import { Preview, Story, Meta, Props, ArgsTable, Canvas } from '@storybook/addon-docs/blocks';
+import { withKnobs, color, boolean, select } from '@storybook/addon-knobs';
+
+<Meta
+    title="Components/Loaders/Loader16"
+    component={Loader16}
+    argTypes={{
+        size: {
+            control: {
+                type: 'select',
+                options: Object.values(SizeMap)
+            }
+        },
+        Color: {
+            control: 'color'
+        },
+        innerColor: {
+            control: 'color'
+        },
+        display: {
+            control: {
+                type: 'boolean'
+            }
+        },
+        ref: {
+            table: {
+                disable: true
+            }
+        },
+        theme: {
+            table: {
+                disable: true
+            }
+        },
+        as: {
+            table: {
+                disable: true
+            }
+        }
+    }}
+/>
+
+# Loaders
+
+Displays a Loader.
+
+export const Template = args => (
+    <div>
+        <Loader16 {...args} />
+    </div>
+);
+
+<Preview>
+    <Story name="Loader16" args={{ size: 'S' }}>
+        {Template.bind({})}
+    </Story>
+</Preview>
+
+### Color Variations
+
+You can either change the theme or pass the colors as props.
+
+<Preview withToolbar>
+    <div style={{ display: 'flex', justifyContent: 'space-around', flexWrap: 'wrap' }}>
+        <Loader16 size="S" Color="green" />
+        <Loader16 size="S" Color="red" />
+    </div>
+</Preview>
+
+### Sizes
+
+There are Six sizs available `XXS` | `XS` | `S` | `M` | `L` | `XL`.
+
+<Preview withToolbar>
+    <div style={{ display: 'flex', justifyContent: 'space-around', flexDirection: 'column' }}>
+        <Loader16 size="XXS" />
+        <Loader16 size="XS" />
+        <Loader16 size="S" />
+        <Loader16 size="M" />
+        <Loader16 size="L" />
+        <Loader16 size="XL" />
+    </div>
+</Preview>
+
+### Props
+
+<Props story="Loader16" />
