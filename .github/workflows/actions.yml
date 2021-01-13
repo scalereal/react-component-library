@@ -2,8 +2,6 @@ name: Install, Format, Lint, Test, Build, Release, Publish
 
 # Controls when the action will run. 
 on:
-  release:
-    types: [created]
   # Triggers the workflow on push request events but only for the release branch and release tag
   push:
     tags: 
