@@ -11,4 +11,5 @@ var __assign = (this && this.__assign) || function () {
 };
 export * from './types';
 import { coreDefaultTheme } from './core';
-export var defaultTheme = __assign({}, coreDefaultTheme);
+import { layoutDefaultTheme } from './Layout';
+export var defaultTheme = __assign(__assign({}, coreDefaultTheme), layoutDefaultTheme);

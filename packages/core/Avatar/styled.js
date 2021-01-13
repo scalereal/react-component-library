@@ -3,7 +3,7 @@ var __makeTemplateObject = (this && this.__makeTemplateObject) || function (cook
     return cooked;
 };
 import styled from 'styled-components';
-import { avatarTheme } from '../../theme/core/avatar';
+import { defaultTheme } from '../../theme';
 var mixin = function (size) {
     switch (size) {
         case "XXS":
@@ -23,6 +23,9 @@ var mixin = function (size) {
     }
 };
 export var StyledAvatar = styled.div(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n    ", "\n    ", "\n    ", ";\n    margin:0 0.5rem;\n    border-radius: 50%;\n    text-align:center;\n    background-color: ", ";\n\n    ", "\n\n    img{\n        border-radius: 50%;\n        display: inline-block;\n        vertical-align: middle;\n        line-height: normal;\n    }\n    \n    span{\n        display: inline-block;\n        vertical-align: middle;\n        line-height: normal;\n        color: ", ";\n    }\n"], ["\n    ", "\n    ", "\n    ", ";\n    margin:0 0.5rem;\n    border-radius: 50%;\n    text-align:center;\n    background-color: ", ";\n\n    ",
-    "\n\n    img{\n        border-radius: 50%;\n        display: inline-block;\n        vertical-align: middle;\n        line-height: normal;\n    }\n    \n    span{\n        display: inline-block;\n        vertical-align: middle;\n        line-height: normal;\n        color: ", ";\n    }\n"])), function (pr) { return pr.disabled === true ? 'pointer-events: none;opacity: 0.4;' : ''; }, function (pr) { return mixin(pr.size); }, function (pr) { return pr.display !== 'block' ? "display:" + pr.display + ";" : "display:block;"; }, function (pr) { return pr.bgColor || avatarTheme.defaults.bgColor; }, function (pr) { return pr.hoverEffect ? "&:hover {\n        background-color: " + (pr.hoverBgColor || avatarTheme.defaults.hoverBgColor) + ";\n        box-shadow: 0px 5px 8px " + (pr.hoverShadowColor || avatarTheme.defaults.shadowColor) + ";\n        span{\n            color: " + (pr.hoverTextColor || avatarTheme.defaults.hoverTextColor) + ";\n            text-shadow: 0px 5px 8px " + pr.hoverTextShadowColor + ";\n        }\n        }\n        " :
-    ''; }, function (pr) { return pr.textColor || avatarTheme.defaults.textColor; });
+    "\n\n    img{\n        border-radius: 50%;\n        display: inline-block;\n        vertical-align: middle;\n        line-height: normal;\n    }\n    \n    span{\n        display: inline-block;\n        vertical-align: middle;\n        line-height: normal;\n        color: ", ";\n    }\n"])), function (pr) { return pr.disabled === true ? 'pointer-events: none;opacity: 0.4;' : ''; }, function (pr) { return mixin(pr.size); }, function (pr) { return pr.display !== 'block' ? "display:" + pr.display + ";" : "display:block;"; }, function (pr) { return pr.bgColor || pr.theme.avatar.defaults.bgColor; }, function (pr) { return pr.hoverEffect ? "&:hover {\n        background-color: " + (pr.hoverBgColor || pr.theme.avatar.defaults.hoverBgColor) + ";\n        box-shadow: 0px 5px 8px " + (pr.hoverShadowColor || pr.theme.avatar.defaults.shadowColor) + ";\n        span{\n            color: " + (pr.hoverTextColor || pr.theme.avatar.defaults.hoverTextColor) + ";\n            text-shadow: 0px 5px 8px " + pr.hoverTextShadowColor + ";\n        }\n        }\n        " :
+    ''; }, function (pr) { return pr.textColor || pr.theme.avatar.defaults.textColor; });
+StyledAvatar.defaultProps = {
+    theme: defaultTheme
+};
 var templateObject_1;

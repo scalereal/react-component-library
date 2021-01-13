@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { avatarTheme } from '../../theme/core/avatar';
+import { defaultTheme } from '../../theme';
 import { AvatarProps } from './types';
 
 
@@ -74,13 +74,13 @@ export const StyledAvatar = styled.div<AvatarProps>`
     margin:0 0.5rem;
     border-radius: 50%;
     text-align:center;
-    background-color: ${pr => pr.bgColor || avatarTheme.defaults.bgColor };
+    background-color: ${pr => pr.bgColor || pr.theme.avatar.defaults.bgColor };
 
     ${pr => pr.hoverEffect? `&:hover {
-        background-color: ${pr.hoverBgColor || avatarTheme.defaults.hoverBgColor };
-        box-shadow: 0px 5px 8px ${pr.hoverShadowColor || avatarTheme.defaults.shadowColor };
+        background-color: ${pr.hoverBgColor || pr.theme.avatar.defaults.hoverBgColor };
+        box-shadow: 0px 5px 8px ${pr.hoverShadowColor || pr.theme.avatar.defaults.shadowColor };
         span{
-            color: ${pr.hoverTextColor || avatarTheme.defaults.hoverTextColor };
+            color: ${pr.hoverTextColor || pr.theme.avatar.defaults.hoverTextColor };
             text-shadow: 0px 5px 8px ${pr.hoverTextShadowColor };
         }
         }
@@ -99,6 +99,10 @@ export const StyledAvatar = styled.div<AvatarProps>`
         display: inline-block;
         vertical-align: middle;
         line-height: normal;
-        color: ${pr => pr.textColor || avatarTheme.defaults.textColor };
+        color: ${pr => pr.textColor || pr.theme.avatar.defaults.textColor };
     }
 `;
+
+StyledAvatar.defaultProps={
+    theme: defaultTheme
+}

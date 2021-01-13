@@ -1,0 +1,98 @@
+import Navbar from '.';
+import { Preview, Story, Meta, Props, ArgsTable, Canvas } from '@storybook/addon-docs/blocks';
+import { withKnobs, color, boolean, select } from '@storybook/addon-knobs';
+import logo from '../logo512.png';
+import Link from '../../core/Link/Link';
+
+<Meta
+    title="Components/Layout/Navbar"
+    component={Navbar}
+    argTypes={{
+        bgColor: {
+            control: 'color'
+        },
+        popBgColor: {
+            control: 'color'
+        },
+        navOptions: {
+            control: {
+                type: 'array'
+            }
+        },
+        Logo: {
+            control: {
+                type: 'text'
+            }
+        },
+        ref: {
+            table: {
+                disable: true
+            }
+        },
+        theme: {
+            table: {
+                disable: true
+            }
+        },
+        as: {
+            table: {
+                disable: true
+            }
+        }
+    }}
+/>
+
+# Navbar
+
+Displays a Navbar
+
+export const Template = args => (
+    <div>
+        <Navbar {...args} />
+    </div>
+);
+
+<Preview>
+    <Story
+        name="Navbar"
+        args={{
+            navOptions: [
+                {
+                    option: (
+                        <Link href="#" linkSize="S">
+                            Home
+                        </Link>
+                    )
+                },
+                {
+                    option: (
+                        <Link href="#" linkSize="S">
+                            About Us
+                        </Link>
+                    )
+                },
+                {
+                    option: (
+                        <Link href="#" linkSize="S">
+                            Articles
+                        </Link>
+                    )
+                },
+                {
+                    option: (
+                        <Link href="#" linkSize="S">
+                            Contact
+                        </Link>
+                    )
+                }
+            ],
+            Logo: <img src={logo} alt="logo" />
+        }}
+    >
+        {Template.bind({})}
+    </Story>
+</Preview>
+
+### Props
+
+<Props story="Navbar" />

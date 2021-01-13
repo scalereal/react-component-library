@@ -1,0 +1,92 @@
+import Loader18 from '.';
+import { SizeMap } from '../types';
+import { Preview, Story, Meta, Props, ArgsTable, Canvas } from '@storybook/addon-docs/blocks';
+import { withKnobs, color, boolean, select } from '@storybook/addon-knobs';
+
+<Meta
+    title="Components/Loaders/Loader18"
+    component={Loader18}
+    argTypes={{
+        size: {
+            control: {
+                type: 'select',
+                options: Object.values(SizeMap)
+            }
+        },
+        Color: {
+            control: 'color'
+        },
+        innerColor: {
+            control: 'color'
+        },
+        coreColor: {
+            control: 'color'
+        },
+        display: {
+            control: {
+                type: 'boolean'
+            }
+        },
+        ref: {
+            table: {
+                disable: true
+            }
+        },
+        theme: {
+            table: {
+                disable: true
+            }
+        },
+        as: {
+            table: {
+                disable: true
+            }
+        }
+    }}
+/>
+
+# Loaders
+
+Displays a Loader.
+
+export const Template = args => (
+    <div>
+        <Loader18 {...args} />
+    </div>
+);
+
+<Preview>
+    <Story name="Loader18" args={{ size: 'S' }}>
+        {Template.bind({})}
+    </Story>
+</Preview>
+
+### Color Variations
+
+You can either change the theme or pass the colors as props.
+
+<Preview withToolbar>
+    <div style={{ display: 'flex', justifyContent: 'space-around', flexWrap: 'wrap' }}>
+        <Loader18 size="S" Color="green" innerColor="red" />
+        <Loader18 size="S" Color="red" innerColor="green" />
+    </div>
+</Preview>
+
+### Sizes
+
+There are Six sizs available `XXS` | `XS` | `S` | `M` | `L` | `XL`.
+
+<Preview withToolbar>
+    <div style={{ display: 'flex', justifyContent: 'space-around', flexDirection: 'column' }}>
+        <Loader18 size="XXS" />
+        <Loader18 size="XS" />
+        <Loader18 size="S" />
+        <Loader18 size="M" />
+        <Loader18 size="L" />
+        <Loader18 size="XL" />
+    </div>
+</Preview>
+
+### Props
+
+<Props story="Loader18" />

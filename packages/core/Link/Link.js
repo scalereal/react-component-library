@@ -34,6 +34,7 @@ var Link = React.memo(React.forwardRef(function (_a, ref) {
 Link.displayName = 'Link';
 Link.Style = Styled.LinkStyled;
 Link.defaultProps = {
-    linkSize: 'S'
+    linkSize: 'S',
+    href: "#"
 };
 export default Link;

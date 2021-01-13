@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Loader18 Loader should render image avatar properly 1`] = `
+<div>
+  <div
+    class="sc-gsTCUz hdkynM"
+  >
+    <div
+      class="sc-dlfnbm bIJBxZ"
+    >
+      <div
+        class="sc-bdfBwQ llzSXf"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Loader18 Loader should render with all the props given 1`] = `
+<div>
+  <div
+    class="sc-gsTCUz hdkynM"
+  >
+    <div
+      class="sc-dlfnbm bIJBxZ"
+    >
+      <div
+        class="sc-bdfBwQ lfIUKy"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Loader18 Loader should render with default theme 1`] = `
+<div>
+  <div
+    class="sc-gsTCUz hdkynM"
+  >
+    <div
+      class="sc-dlfnbm bIJBxZ"
+    >
+      <div
+        class="sc-bdfBwQ bHQCfv"
+      />
+    </div>
+  </div>
+</div>
+`;
