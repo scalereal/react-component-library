@@ -61,8 +61,7 @@ jobs:
 
       # Create NPM Publish
       - name: Create NPM Publish
-        run: npm ci
-        run: npm publish
+        run: npm run publish
         with:
             registry-url: https://npm.pkg.github.com/
         env:
