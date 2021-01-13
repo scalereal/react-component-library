@@ -60,7 +60,7 @@ jobs:
           release_name: Release ${{ github.ref }}
   
   publish-gpr:
-    needs: build
+    needs: install-format-lint-test-build-release
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
