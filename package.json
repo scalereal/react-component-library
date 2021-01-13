@@ -1,6 +1,6 @@
 {
-    "homepage": "https://github.com/scalereal/react-component-library#readme",
-    "name": "@scalereal-components",
+    "homepage": "https://github.com/scalereal/scaleReal-components#readme",
+    "name": "@scalereal/scalereal-components",
     "version": "0.1.0",
     "private": false,
     "main": "packages/index.js",
