@@ -18,7 +18,6 @@
         "styled-components": "^5.2.1"
     },
     "scripts": {
-        "compile-icons": "npx @svgr/cli -d src/icons src/icons --typescript",
         "test:jest": "jest --config config/jest/jest.config.js",
         "test": "jest -c config/jest/jest.config.js -u",
         "test:watch": "jest -c config/jest/jest.config.js --watch",
@@ -29,7 +28,7 @@
         "build": "tsc && npm run copy",
         "storybook": "start-storybook -p 6006 -s public",
         "build-storybook": "build-storybook -s public",
-        "prebuild": "npm run clear && npm run compile-icons && npm run mkdir",
+        "prebuild": "npm run clear && npm run mkdir",
         "lint": "tsc --noEmit && eslint src/**/*.ts{,x}",
         "lint:fix": "eslint --ext js,js,ts,tsx src --fix",
         "format": "prettier --write src/**/*.ts{,x}",
