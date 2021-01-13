@@ -1,11 +1,13 @@
-name: Install, Format, Lint, Test, Build, Release
+name: Install, Format, Lint, Test, Build, Release, Publish
 
 # Controls when the action will run. 
 on:
+  release:
+    types: [created]
   # Triggers the workflow on push request events but only for the release branch and release tag
   push:
     tags: 
-      - 'v*'
+      - 'v*'      
     branches: [ release ]
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -56,3 +58,13 @@ jobs:
         with:
           tag_name: ${{ github.ref }}
           release_name: Release ${{ github.ref }}
+
+      # Create NPM Publish
+      - name: Create NPM Publish
+        run: npm ci
+        run: npm publish
+        with:
+            registry-url: https://npm.pkg.github.com/
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+
