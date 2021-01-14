@@ -18,7 +18,7 @@ export const StyledNav = styled.div<Props>`
     margin-right:30px;
     grid-template-columns: repeat(${pr=>pr.navOptions?.length}, auto);
     align-items: center;
-    justify-items: center;
+    justify-items: end;
     a{
         span{color: #fff;}
         color: #fff;
