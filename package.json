@@ -1,7 +1,7 @@
 {
     "homepage": "https://github.com/scalereal/scalereal-components#readme",
     "name": "@scalereal/scalereal-components",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "private": false,
     "main": "packages/index.js",
     "files": [
