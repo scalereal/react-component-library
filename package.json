@@ -84,6 +84,7 @@
         "web-vitals": "^0.2.4"
     },
     "scripts": {
+        "compile-icons": "npx @svgr/cli --out-dir src/icons src/icons --typescript",
         "test:jest": "jest --config config/jest/jest.config.js",
         "test": "jest -c config/jest/jest.config.js -u",
         "test:watch": "jest -c config/jest/jest.config.js --watch",
