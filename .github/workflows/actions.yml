@@ -48,6 +48,15 @@ jobs:
       - name: Build Script
         run: npm run build
         
+      # Create Release
+      - name: Create Release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
+        with:
+          tag_name: ${{ github.ref }}
+          release_name: Release ${{ github.ref }}
+        
   publish-gpr:
     needs: install-format-lint-test-build-release
     runs-on: ubuntu-latest
@@ -57,7 +66,7 @@ jobs:
         with:
           node-version: '14.x'
           registry-url: https://npm.pkg.github.com/
-      - run: npm install
+      - run: npm ci
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
