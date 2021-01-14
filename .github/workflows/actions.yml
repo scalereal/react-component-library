@@ -30,7 +30,7 @@ jobs:
           
       # Install All the Packages
       - name: Install Packages
-        run: npm install
+        run: npm ci
       
       # Run Format Script 
       - name: Format Script
