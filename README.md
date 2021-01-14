@@ -2,7 +2,7 @@
 
 ### [Still in progess not yet deployed]
 
-Themable react components with various configuration to match your need. You can checkout the storybook of the components [here](https://scalereal.github.io/react-component-library/?path=/story/components-core-cardtable--default).
+Themable react components with various configuration to match your need. You can checkout the storybook of the components [here](https://scalereal.github.io/scalerealcomponents/?path=/story/introduction--page).
 
 ## Table of Contents
 

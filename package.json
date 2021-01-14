@@ -1,7 +1,7 @@
 {
     "homepage": "https://github.com/scalereal/scalereal-components#readme",
     "name": "@scalereal/scalereal-components",
-    "version": "0.1.1",
+    "version": "0.2.0",
     "private": false,
     "main": "packages/index.js",
     "files": [
@@ -95,7 +95,7 @@
         "build": "tsc && npm run copy",
         "storybook": "start-storybook -p 6006 -s public",
         "build-storybook": "build-storybook -s public",
-        "prebuild": "npm run clear && npm run compile-icons && npm run mkdir",
+        "prebuild": "npm run clear && npm run mkdir",
         "lint": "tsc --noEmit && eslint src/**/*.ts{,x}",
         "lint:fix": "eslint --ext js,js,ts,tsx src --fix",
         "format": "prettier --write src/**/*.ts{,x}",
