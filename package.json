@@ -8,8 +8,6 @@
         "packages"
     ],
     "dependencies": {
-        "react": "^17.0.1",
-        "react-dom": "^17.0.1",
         "effector": "^21.7.5",
         "effector-react": "^21.2.1",
         "styled-components": "^5.2.1",
@@ -27,6 +25,8 @@
         "@types/styled-components": "^5.1.4"
     },
     "devDependencies": {
+        "react": "^17.0.1",
+        "react-dom": "^17.0.1",
         "@babel/cli": "^7.12.8",
         "@babel/core": "^7.9.0",
         "@babel/plugin-transform-runtime": "^7.12.10",
