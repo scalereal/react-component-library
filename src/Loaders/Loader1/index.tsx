@@ -19,7 +19,7 @@ const Loader1:React.FC<Props> & WithStyle = React.memo(React.forwardRef( (props,
 Loader1.displayName="Loader1";
 Loader1.defaultProps = {
     size:'S',
-    display: true
+    visible: true
 };
 
 export default Loader1;

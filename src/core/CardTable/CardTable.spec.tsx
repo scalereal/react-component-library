@@ -8,7 +8,7 @@ const thData=[
     { id: 1, data: <Text textWeight="strong">User</Text> },
     { id: 2, data: <Text textWeight="strong">Last Login</Text> },
     { id: 3, data: <Text textWeight="strong">Department</Text> },
-    { id: 3, data: <Text textWeight="strong">Status</Text> }
+    { id: 4, data: <Text textWeight="strong">Status</Text> }
 ]
 const tdData=[
     {

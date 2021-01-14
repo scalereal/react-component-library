@@ -3,51 +3,59 @@
 exports[`NavBar component should render with all the props given 1`] = `
 <div>
   <div
-    class="sc-hKgILt iVREzY"
+    class="sc-hKgILt ciEbKA"
   >
     <div
-      class="sc-gsTCUz eXMfYq"
+      class="sc-gsTCUz jTFECS"
     >
-      <a
-        class="sc-jSgupP eMyKUQ"
-        href="#"
-      >
-        <span
-          class="sc-eCssSg hBpHdJ"
+      <div>
+        <a
+          class="sc-jSgupP eMyKUQ"
+          href="#"
         >
-          Home
-        </span>
-      </a>
-      <a
-        class="sc-jSgupP eMyKUQ"
-        href="#"
-      >
-        <span
-          class="sc-eCssSg hBpHdJ"
+          <span
+            class="sc-eCssSg hBpHdJ"
+          >
+            Home
+          </span>
+        </a>
+      </div>
+      <div>
+        <a
+          class="sc-jSgupP eMyKUQ"
+          href="#"
         >
-          About Us
-        </span>
-      </a>
-      <a
-        class="sc-jSgupP eMyKUQ"
-        href="#"
-      >
-        <span
-          class="sc-eCssSg hBpHdJ"
+          <span
+            class="sc-eCssSg hBpHdJ"
+          >
+            About Us
+          </span>
+        </a>
+      </div>
+      <div>
+        <a
+          class="sc-jSgupP eMyKUQ"
+          href="#"
         >
-          Articles
-        </span>
-      </a>
-      <a
-        class="sc-jSgupP eMyKUQ"
-        href="#"
-      >
-        <span
-          class="sc-eCssSg hBpHdJ"
+          <span
+            class="sc-eCssSg hBpHdJ"
+          >
+            Articles
+          </span>
+        </a>
+      </div>
+      <div>
+        <a
+          class="sc-jSgupP eMyKUQ"
+          href="#"
         >
-          Contact
-        </span>
-      </a>
+          <span
+            class="sc-eCssSg hBpHdJ"
+          >
+            Contact
+          </span>
+        </a>
+      </div>
     </div>
     <button
       class="sc-dlfnbm hGVZlN Burger"
@@ -75,10 +83,10 @@ exports[`NavBar component should render with all the props given 1`] = `
 exports[`NavBar component should render with default theme 1`] = `
 <div>
   <div
-    class="sc-hKgILt iVREzY"
+    class="sc-hKgILt ciEbKA"
   >
     <div
-      class="sc-gsTCUz jmVWFq"
+      class="sc-gsTCUz fcBDvu"
     />
     <button
       class="sc-dlfnbm hGVZlN Burger"

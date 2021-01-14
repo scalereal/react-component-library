@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Props } from './types';
+import { Props } from '../types';
 
 export const Loader = styled.div<Props>`
     display: inline-block;
@@ -70,5 +70,5 @@ const mixin = (size:any) => {
 export const LoaderWrapper = styled.div<Props>`
     ${pr => pr.disabled === true?'pointer-events: none;opacity: 0.4;':''}
     ${pr=>  mixin(pr.size)}
-    display: ${pr=>pr.display?'inline-block':'none'};
+    display: ${pr=>pr.visible?'inline-block':'none'};
 `;

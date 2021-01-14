@@ -19,6 +19,6 @@ var Loader14 = React.memo(React.forwardRef(function (props, ref) {
 Loader14.displayName = "Loader14";
 Loader14.defaultProps = {
     size: 'S',
-    display: true
+    visible: true
 };
 export default Loader14;

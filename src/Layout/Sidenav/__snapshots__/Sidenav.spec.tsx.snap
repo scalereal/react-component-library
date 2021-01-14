@@ -10,48 +10,56 @@ exports[`Sidebar component should render with all the props given 1`] = `
       class="sc-hKgILt bzTnQc"
     >
       <div
-        class="sc-gsTCUz jTqHgL links"
+        class="sc-gsTCUz cWhPaQ links"
       >
-        <a
-          class="sc-gKsewC gpmffZ"
-          href="#"
-        >
-          <span
-            class="sc-jSgupP chjmVk"
+        <div>
+          <a
+            class="sc-gKsewC gpmffZ"
+            href="#"
           >
-            Home
-          </span>
-        </a>
-        <a
-          class="sc-gKsewC gpmffZ"
-          href="#"
-        >
-          <span
-            class="sc-jSgupP chjmVk"
+            <span
+              class="sc-jSgupP chjmVk"
+            >
+              Home
+            </span>
+          </a>
+        </div>
+        <div>
+          <a
+            class="sc-gKsewC gpmffZ"
+            href="#"
           >
-            About Us
-          </span>
-        </a>
-        <a
-          class="sc-gKsewC gpmffZ"
-          href="#"
-        >
-          <span
-            class="sc-jSgupP chjmVk"
+            <span
+              class="sc-jSgupP chjmVk"
+            >
+              About Us
+            </span>
+          </a>
+        </div>
+        <div>
+          <a
+            class="sc-gKsewC gpmffZ"
+            href="#"
           >
-            Articles
-          </span>
-        </a>
-        <a
-          class="sc-gKsewC gpmffZ"
-          href="#"
-        >
-          <span
-            class="sc-jSgupP chjmVk"
+            <span
+              class="sc-jSgupP chjmVk"
+            >
+              Articles
+            </span>
+          </a>
+        </div>
+        <div>
+          <a
+            class="sc-gKsewC gpmffZ"
+            href="#"
           >
-            Contact
-          </span>
-        </a>
+            <span
+              class="sc-jSgupP chjmVk"
+            >
+              Contact
+            </span>
+          </a>
+        </div>
       </div>
     </div>
   </div>
@@ -118,7 +126,7 @@ exports[`Sidebar component should render with default theme 1`] = `
       class="sc-hKgILt bzTnQc"
     >
       <div
-        class="sc-gsTCUz jTqHgL links"
+        class="sc-gsTCUz cWhPaQ links"
       />
     </div>
   </div>

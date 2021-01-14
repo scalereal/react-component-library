@@ -26,19 +26,17 @@ export const StyledNav = styled.div<Props>`
     display: flex;
     flex-direction: column;
 
-    > a {
-        font-size: 1.5rem;
-        text-decoration: none;
-        padding: 0.5rem 1rem;
-        border: 1px solid silver;
-        margin-bottom: 0.5rem;
-        border-radius: 1rem;
+    div{
         text-align:center;
+        padding: 0.5rem 1rem;
+        border-radius: 1rem;
+        margin-bottom: 0.5rem;
+        border: 1px solid silver;
         transition: 0.5s;
         &:hover {
             transform: scale(1.1);
         }
-    }
+    } 
 `;
 
 export const Wrapper = styled.div`

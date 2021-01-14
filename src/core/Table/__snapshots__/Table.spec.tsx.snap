@@ -34,7 +34,6 @@ exports[`Table component should render with all the props given 1`] = `
       <tr
         class="sc-dlfnbm fgYrRv"
       >
-         
         <td
           class="sc-eCssSg flCDJa"
         >
@@ -50,12 +49,10 @@ exports[`Table component should render with all the props given 1`] = `
         >
           3
         </td>
-         
       </tr>
       <tr
         class="sc-dlfnbm fgYrRv"
       >
-         
         <td
           class="sc-eCssSg flCDJa"
         >
@@ -71,12 +68,10 @@ exports[`Table component should render with all the props given 1`] = `
         >
           3
         </td>
-         
       </tr>
       <tr
         class="sc-dlfnbm fgYrRv"
       >
-         
         <td
           class="sc-eCssSg flCDJa"
         >
@@ -92,12 +87,10 @@ exports[`Table component should render with all the props given 1`] = `
         >
           3
         </td>
-         
       </tr>
       <tr
         class="sc-dlfnbm fgYrRv"
       >
-         
         <td
           class="sc-eCssSg flCDJa"
         >
@@ -113,7 +106,6 @@ exports[`Table component should render with all the props given 1`] = `
         >
           3
         </td>
-         
       </tr>
     </tbody>
   </table>

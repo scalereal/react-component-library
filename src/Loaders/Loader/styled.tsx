@@ -69,7 +69,7 @@ const mixin = (size:any) => {
 export const LoaderWrapper = styled.div<Props>`
     ${pr => pr.disabled === true?'pointer-events: none;opacity: 0.4;':''}
     ${pr=>  mixin(pr.size)}
-    display: ${pr=>pr.display?'inline-block':'none'};
+    display: ${pr=>pr.visible?'inline-block':'none'};
     ${StyledLoader}{
         border-left-color:  ${pr=>pr.Color?pr.Color:'inherit'};
         border-right-color:  ${pr=>pr.Color?pr.Color:'inherit'};

@@ -19,12 +19,10 @@ export const StyledNav = styled.div<Props>`
     grid-template-columns: repeat(${pr=>pr.navOptions?.length}, auto);
     align-items: center;
     justify-items: end;
-    a{
-        span{color: #fff;}
-        color: #fff;
+    div{
         transition: 0.5s;
         &:hover {
-            transform: scale(1.1);
+                transform: scale(1.1);
         }
     }
 `;
@@ -68,6 +66,8 @@ export const StyledHeader = styled.div<Props>`
         ${StyledNav} {
             grid-template-rows: repeat(4, auto);
             grid-template-columns: none;
+            justify-items:center;
+            width:100%;
             grid-row-gap: 20px;
             margin: 0;
             padding: 30px 0 30px;
