@@ -1,11 +1,11 @@
-name: Install, Format, Lint, Test, Build, Release
+name: Install, Format, Lint, Test, Build, Release, Publish
 
 # Controls when the action will run. 
 on:
   # Triggers the workflow on push request events but only for the release branch and release tag
   push:
     tags: 
-      - 'v*'
+      - 'v*'      
     branches: [ release ]
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -30,7 +30,7 @@ jobs:
           
       # Install All the Packages
       - name: Install Packages
-        run: npm install
+        run: npm ci
       
       # Run Format Script 
       - name: Format Script
@@ -48,11 +48,16 @@ jobs:
       - name: Build Script
         run: npm run build
         
-      # Create Release
-      - name: Create Release
-        uses: actions/create-release@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
+  publish-gpr:
+    needs: install-format-lint-test-build-release
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
         with:
-          tag_name: ${{ github.ref }}
-          release_name: Release ${{ github.ref }}
+          node-version: '14.x'
+          registry-url: https://npm.pkg.github.com/
+      - run: npm install
+      - run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
