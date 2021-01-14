@@ -55,7 +55,6 @@ exports[`CheckBoxGroup component should render with all the props given 1`] = `
       <tr
         class="sc-gsTCUz dhuSOP"
       >
-         
         <td
           class="sc-eCssSg jqBCNq"
         >
@@ -100,12 +99,10 @@ exports[`CheckBoxGroup component should render with all the props given 1`] = `
             active
           </span>
         </td>
-         
       </tr>
       <tr
         class="sc-gsTCUz dhuSOP"
       >
-         
         <td
           class="sc-eCssSg jqBCNq"
         >
@@ -150,12 +147,10 @@ exports[`CheckBoxGroup component should render with all the props given 1`] = `
             active
           </span>
         </td>
-         
       </tr>
       <tr
         class="sc-gsTCUz dhuSOP"
       >
-         
         <td
           class="sc-eCssSg jqBCNq"
         >
@@ -200,12 +195,10 @@ exports[`CheckBoxGroup component should render with all the props given 1`] = `
             active
           </span>
         </td>
-         
       </tr>
       <tr
         class="sc-gsTCUz dhuSOP"
       >
-         
         <td
           class="sc-eCssSg jqBCNq"
         >
@@ -250,7 +243,6 @@ exports[`CheckBoxGroup component should render with all the props given 1`] = `
             active
           </span>
         </td>
-         
       </tr>
     </tbody>
   </table>

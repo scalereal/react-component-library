@@ -22,5 +22,5 @@ var mixin = function (size) {
             return "font-size: 1rem;\n        " + Loader + "{\n            border: 0.15em solid transparent;\n        }";
     }
 };
-export var LoaderWrapper = styled.div(templateObject_2 || (templateObject_2 = __makeTemplateObject(["\n    ", "\n    ", "\n    display: ", ";\n    ", "{\n        border-top-color: currentcolor;\n    }\n"], ["\n    ", "\n    ", "\n    display: ", ";\n    ", "{\n        border-top-color: currentcolor;\n    }\n"])), function (pr) { return pr.disabled === true ? 'pointer-events: none;opacity: 0.4;' : ''; }, function (pr) { return mixin(pr.size); }, function (pr) { return pr.display ? 'inline-block' : 'none'; }, Loader);
+export var LoaderWrapper = styled.div(templateObject_2 || (templateObject_2 = __makeTemplateObject(["\n    ", "\n    ", "\n    display: ", ";\n    ", "{\n        border-top-color: currentcolor;\n    }\n"], ["\n    ", "\n    ", "\n    display: ", ";\n    ", "{\n        border-top-color: currentcolor;\n    }\n"])), function (pr) { return pr.disabled === true ? 'pointer-events: none;opacity: 0.4;' : ''; }, function (pr) { return mixin(pr.size); }, function (pr) { return pr.visible ? 'inline-block' : 'none'; }, Loader);
 var templateObject_1, templateObject_2;

@@ -49,8 +49,8 @@ const Navbar:FC<Props> & WithStyle = React.memo(React.forwardRef( (props, ref) =
         unmountOnExit
       >
         <StyledNav {...props}>
-          {navOptions && navOptions.map(obj=>{
-            return obj.option
+          {navOptions && navOptions.map((obj,index)=>{
+            return <div key={index}>{obj.option}</div>
           })}
         </StyledNav>
       </CSSTransition>

@@ -1,7 +1,7 @@
 import React from 'react';
 import { WithStyle } from '../../utils';
+import { Props } from '../types';
 import { Loader, LoaderWrapper } from './styled';
-import { Props } from './types';
 
 export const SizeMap: Props['size'][] = ['XXS','XS', 'S', 'M', 'L', 'XL'];
 
@@ -19,7 +19,7 @@ const DotsCircle:React.FC<Props> & WithStyle = React.memo(React.forwardRef( (pro
 DotsCircle.displayName="DotsCircle";
 DotsCircle.defaultProps = {
     size:'S',
-    display: true
+    visible: true
 };
 
 export default DotsCircle;

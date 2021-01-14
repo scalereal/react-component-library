@@ -22,8 +22,8 @@ var Sidenav = React.memo(React.forwardRef(function (props, ref) {
                     React.createElement(StyledLogo, null,
                         Logo,
                         React.createElement("hr", null)),
-                React.createElement(StyledNav, { className: "links" }, navOptions && navOptions.map(function (obj) {
-                    return obj.option;
+                React.createElement(StyledNav, { className: "links" }, navOptions && navOptions.map(function (obj, index) {
+                    return React.createElement("div", { key: index }, obj.option);
                 })))),
         React.createElement(Wrapper, null,
             React.createElement("a", { className: "open", href: "#nav" },

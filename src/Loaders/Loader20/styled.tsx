@@ -85,7 +85,7 @@ export const Loader = styled.div<Props>`
 
 export const LoaderWrapper = styled.div<Props>`
     ${pr => pr.disabled === true?'pointer-events: none;opacity: 0.4;':''}
-    display: ${pr=>pr.display?'inline-block':'none'};
+    display: ${pr=>pr.visible?'inline-block':'none'};
 `;
 
 export const StyledWrapper = styled.div<Props>`

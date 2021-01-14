@@ -17,7 +17,7 @@ const Loader6:React.FC<Props> & WithStyle = React.memo(React.forwardRef( (props,
   Loader6.displayName="Loader6";
   Loader6.defaultProps = {
     size:'S',
-    display: true
+    visible: true
 };
 
 export default Loader6;

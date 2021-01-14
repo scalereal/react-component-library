@@ -41,8 +41,8 @@ var Navbar = React.memo(React.forwardRef(function (props, ref) {
         Logo &&
             React.createElement(StyledLogo, null, Logo),
         React.createElement(CSSTransition, { in: !isSmallScreen || isNavVisible, timeout: 350, classNames: "NavAnimation", unmountOnExit: true },
-            React.createElement(StyledNav, __assign({}, props), navOptions && navOptions.map(function (obj) {
-                return obj.option;
+            React.createElement(StyledNav, __assign({}, props), navOptions && navOptions.map(function (obj, index) {
+                return React.createElement("div", { key: index }, obj.option);
             }))),
         React.createElement(NavButton, { onClick: toggleNav, className: "Burger" },
             React.createElement(FontAwesomeIcon, { icon: faBars }))));

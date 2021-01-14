@@ -20,6 +20,6 @@ var DotsCircle = React.memo(React.forwardRef(function (props, ref) {
 DotsCircle.displayName = "DotsCircle";
 DotsCircle.defaultProps = {
     size: 'S',
-    display: true
+    visible: true
 };
 export default DotsCircle;
