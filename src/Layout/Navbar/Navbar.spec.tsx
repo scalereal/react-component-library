@@ -1,7 +1,7 @@
 import { render } from '@testing-library/react';
 import * as React from 'react';
-import Navbar from '.';
-import Link from '../../core/Link/Link';
+import { Navbar } from '.';
+import { Link } from '../../core/Link/Link';
 
 describe('NavBar component', () => {
     beforeAll(() => {

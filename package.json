@@ -1,7 +1,7 @@
 {
     "homepage": "https://github.com/scalereal/scalereal-components#readme",
     "name": "@scalereal/scalereal-components",
-    "version": "0.2.0",
+    "version": "0.4.0",
     "private": false,
     "main": "packages/index.js",
     "module": "packages/index.es.js",
@@ -98,7 +98,7 @@
     "scripts": {
         "compile-icons": "npx @svgr/cli --out-dir src/icons src/icons --typescript",
         "test:jest": "jest --config config/jest/jest.config.js",
-        "test": "jest -c config/jest/jest.config.js -u",
+        "test": "jest -c config/jest/jest.config.js",
         "test:watch": "jest -c config/jest/jest.config.js --watch",
         "eject": "react-scripts eject",
         "clear": "rm -rf packages",

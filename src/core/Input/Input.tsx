@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { WithStyle } from '../../utils';
-import Text from '../Text/Text';
+import { Text } from '../Text/Text';
 import * as Styled from './Input.styled';
 import { InputProps } from './types';
 
@@ -56,4 +56,5 @@ Input.defaultProps = {
     fullWidth: false,
     required: false,
 };
+
 export default Input

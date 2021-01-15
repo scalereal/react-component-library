@@ -2,5 +2,5 @@ import * as React from 'react';
 import { WithStyle } from '../../utils';
 import { LinkProps } from './types';
 export declare const linkSizes: LinkProps['linkSize'][];
-declare const Link: React.FC<LinkProps> & WithStyle;
+export declare const Link: React.FC<LinkProps> & WithStyle;
 export default Link;

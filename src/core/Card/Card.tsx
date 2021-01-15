@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { WithStyle } from '../../utils'
-import Text from '../Text/Text'
+import { Text } from '../Text/Text'
 import * as Styled from './Card.styled'
 import { CardProps } from './types'
 
@@ -9,7 +9,7 @@ export const textAlignments : CardProps['textAlignment'][] = ['left', 'center', 
 export const textSizes : CardProps['titleSize'][] = ['XS', 'S', 'M', 'L', 'XL']
 export const descriptionSizes : CardProps['descriptionSize'][] = ['XS', 'S', 'M', 'L', 'XL']
 
-const Card:React.FC<CardProps> & WithStyle = React.memo(
+export const Card:React.FC<CardProps> & WithStyle = React.memo(
     React.forwardRef((props, ref) => {
         const { title, description,imgSrc,titleSize, descriptionSize ,titleColor,descriptionColor} = props
         return (
@@ -40,4 +40,3 @@ Card.displayName = 'Card';
 Card.Style = Styled.Card;
 
 export default Card
-

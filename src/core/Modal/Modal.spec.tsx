@@ -1,6 +1,6 @@
-import { render } from '@testing-library/react'
-import * as React from 'react'
-import Modal from './Modal'
+import { render } from '@testing-library/react';
+import * as React from 'react';
+import { Modal } from './Modal';
 
 
 describe('Modal', () => {

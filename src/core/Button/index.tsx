@@ -1,13 +1,13 @@
 import * as React from 'react';
 import { WithStyle } from '../../utils';
-import Text from '../Text/Text';
+import { Text } from '../Text/Text';
 import { StyledButton } from './styled';
 import { Props } from './types';
 
 export const SizeMap: Props['size'][] = ['XS', 'S', 'M', 'L', 'XL'];
 export const TypeMap: Props['type'][] = ['primary', 'secondary', 'warning', 'danger', 'success'];
 
-const Button:React.FC<Props> & WithStyle = React.memo(React.forwardRef( (props, ref) => {
+export const Button:React.FC<Props> & WithStyle = React.memo(React.forwardRef( (props, ref) => {
     const {type='primary',size='S',textSize, textColor, hoverTextColor} = props;
     
     return <StyledButton ref={ref} type={type} size={size} {...props}>
@@ -20,4 +20,4 @@ Button.defaultProps = {
     hoverEffect: true
 };
 
-export default Button;
+export default Button

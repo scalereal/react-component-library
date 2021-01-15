@@ -7,7 +7,7 @@ import { Props } from './types';
 export const SizeMap: Props['size'][] = ['XS', 'S', 'M', 'L', 'XL'];
 
 
-const FileInput:React.FC<Props> & WithStyle = React.memo(React.forwardRef( (props, ref) => {
+export const FileInput:React.FC<Props> & WithStyle = React.memo(React.forwardRef( (props, ref) => {
 
   const [file, setFile] = React.useState<any>('');
 
@@ -35,4 +35,4 @@ FileInput.defaultProps = {
     errorText:''
 };
 
-export default FileInput;
+export default FileInput

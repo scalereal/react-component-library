@@ -1,13 +1,13 @@
 import * as React from 'react';
 import { WithStyle } from '../../utils';
-import Text from '../Text/Text';
+import { Text } from '../Text/Text';
 import { ErrorLabel, RadioSpan, RadioWrapper, StyledLabel } from './styled';
 import { Props } from './types';
 
 export const SizeMap: Props['size'][] = ['XS', 'S', 'M', 'L', 'XL'];
 export const lposMap: Props['labelPosition'][] = ['top','bottom','left','right']
 
-const Radio:React.FC<Props> & WithStyle = React.memo(React.forwardRef( (props, ref) => {
+export const Radio:React.FC<Props> & WithStyle = React.memo(React.forwardRef( (props, ref) => {
     const {size='S', label='CheckBox',errorText='',value,checked,labelColor,labelHoverEffect,hoverLabelColor} = props;
     const [select,setSelect] = React.useState(checked);
 
