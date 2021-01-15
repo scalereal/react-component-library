@@ -56,8 +56,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
         with:
-          tag_name: release@v1
-          release_name: Release release@v1
+          tag_name: Release@v1
+          release_name: Release@v1
   
   publish-gpr:
     needs: install-format-lint-test-build-release
