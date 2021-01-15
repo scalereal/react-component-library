@@ -1,9 +1,9 @@
-import React, { FC } from 'react';
+import * as React from 'react';
 import { WithStyle } from '../../utils';
 import { StyledTable, StyledTbody, StyledTd, StyledTh, StyledThead, StyledTr } from './styled';
 import { Props } from './types';
 
-const CardTable:FC<Props> & WithStyle = React.memo(React.forwardRef( (props, ref) => {
+const CardTable:React.FC<Props> & WithStyle = React.memo(React.forwardRef( (props, ref) => {
     const {thData,tdData} = props;
 
     return <StyledTable ref={ref} {...props}>

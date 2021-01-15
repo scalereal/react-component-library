@@ -1,11 +1,11 @@
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React, { FC } from "react";
+import * as React from "react";
 import { WithStyle } from "../../utils";
 import { StyledContent, StyledHeader, StyledLogo, StyledNav, Wrapper } from "./styled";
 import { Props } from "./types";
 
-const Sidenav:FC<Props> & WithStyle = React.memo(React.forwardRef( (props, ref) => {
+const Sidenav:React.FC<Props> & WithStyle = React.memo(React.forwardRef( (props, ref) => {
   
   const {navOptions, Logo} = props;
 

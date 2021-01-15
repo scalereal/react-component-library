@@ -1,6 +1,6 @@
-import { render } from '@testing-library/react'
-import React from 'react'
-import Label from './Label'
+import { render } from '@testing-library/react';
+import * as React from 'react';
+import Label from './Label';
 
 describe('Label', () => {
     it('should render correctly with default props', () => {

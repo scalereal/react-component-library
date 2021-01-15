@@ -1,4 +1,4 @@
-import React, { FC, memo, useState } from 'react';
+import * as React from 'react';
 import { WithStyle } from '../../utils';
 import Text from '../Text/Text';
 import { CheckBoxWrapper, ErrorLabel, StyledLabel } from './styled';
@@ -7,9 +7,9 @@ import { Props } from './types';
 export const SizeMap: Props['size'][] = ['XS', 'S', 'M', 'L', 'XL'];
 export const lposMap: Props['labelPosition'][] = ['top','bottom','left','right']
 
-const CheckBox:FC<Props> & WithStyle = memo(React.forwardRef( (props, ref) => {
+const CheckBox:React.FC<Props> & WithStyle = React.memo(React.forwardRef( (props, ref) => {
     const {size='S', label='CheckBox',value='',errorText='',fontSize,labelHoverEffect,labelHoverColor,labelColor,checked=false} = props;
-    const [check,setCheck] = useState<boolean>(checked);
+    const [check,setCheck] = React.useState<boolean>(checked);
 
     return ( 
         <CheckBoxWrapper ref={ref} {...props}>

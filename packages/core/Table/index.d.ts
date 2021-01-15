@@ -1,5 +1,5 @@
-import { FC } from 'react';
+import * as React from 'react';
 import { WithStyle } from '../../utils';
 import { Props } from './types';
-declare const Table: FC<Props> & WithStyle;
+declare const Table: React.FC<Props> & WithStyle;
 export default Table;

@@ -1,4 +1,4 @@
-import React, { FC, memo, useState } from 'react';
+import * as React from 'react';
 import CheckBox from '../CheckBox';
 import { CheckBoxWrapper, ErrorLabel } from '../CheckBox/styled';
 import Text from '../Text/Text';
@@ -9,13 +9,13 @@ export const SizeMap: Props['size'][] = ['XS', 'S', 'M', 'L', 'XL'];
 export const DisplayMap: Props['display'][] = ['inline', 'block'];
 export const lposMap: Props['labelPosition'][] = ['top','bottom','left','right']
 
-const CheckBoxGroup:FC<Props> = memo(React.forwardRef( (props, ref) => {
+const CheckBoxGroup:React.FC<Props> = React.memo(React.forwardRef( (props, ref) => {
     const {display="block",checkBoxOptions,errorText,size,
     fontSize,labelColor,labelHoverEffect,labelHoverColor,
     label,showSelectAll=false,hoverEffect,disabled,
     bgColor,hoverBgColor,hoverShadowColor,labelPosition} = props;
 
-    const [selectAll,setSelectAll] = useState<boolean>(false);
+    const [selectAll,setSelectAll] = React.useState<boolean>(false);
 
     return (
         <CheckBoxWrapper ref={ref} {...props}>

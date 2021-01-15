@@ -1,8 +1,8 @@
 /* eslint-disable no-param-reassign */
+import * as React from 'react';
+import styled from 'styled-components';
 import Text from '../core/Text/Text';
 import { colorsTheme } from '../theme/core/colors';
-import React from 'react';
-import styled from 'styled-components';
 
 const contrastingColor = (hex: string) => {
     hex = hex.indexOf('#') === 0 ? hex.slice(1) : hex;

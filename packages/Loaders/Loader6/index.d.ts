@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import { WithStyle } from '../../utils';
 import { Props } from '../types';
 declare const Loader6: React.FC<Props> & WithStyle;

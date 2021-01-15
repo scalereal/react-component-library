@@ -1,10 +1,10 @@
-import React, { FC } from 'react';
+import * as React from 'react';
 import { WithStyle } from '../../utils';
 import Text from '../Text/Text';
 import * as Styled from './Input.styled';
 import { InputProps } from './types';
 
-export const Input: FC<InputProps> & WithStyle = React.memo(
+export const Input: React.FC<InputProps> & WithStyle = React.memo(
     React.forwardRef((props, ref) => {
         const {
                 fullWidth,

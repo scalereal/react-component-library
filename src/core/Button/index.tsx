@@ -1,4 +1,4 @@
-import React, { FC, memo } from 'react';
+import * as React from 'react';
 import { WithStyle } from '../../utils';
 import Text from '../Text/Text';
 import { StyledButton } from './styled';
@@ -7,7 +7,7 @@ import { Props } from './types';
 export const SizeMap: Props['size'][] = ['XS', 'S', 'M', 'L', 'XL'];
 export const TypeMap: Props['type'][] = ['primary', 'secondary', 'warning', 'danger', 'success'];
 
-const Button:FC<Props> & WithStyle = memo(React.forwardRef( (props, ref) => {
+const Button:React.FC<Props> & WithStyle = React.memo(React.forwardRef( (props, ref) => {
     const {type='primary',size='S',textSize, textColor, hoverTextColor} = props;
     
     return <StyledButton ref={ref} type={type} size={size} {...props}>

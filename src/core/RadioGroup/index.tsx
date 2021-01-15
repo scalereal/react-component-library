@@ -1,4 +1,4 @@
-import React, { FC, useState } from 'react';
+import * as React from 'react';
 import { WithStyle } from '../../utils';
 import Radio from '../Radio';
 import Text from '../Text/Text';
@@ -9,12 +9,12 @@ export const SizeMap: Props['size'][] = ['XS', 'S', 'M', 'L', 'XL'];
 export const lposMap: Props['labelPosition'][] = ['top','bottom','left','right']
 export const DisplayMap: Props['display'][] = ['inline', 'block'];
 
-const RadioGroup:FC<Props> & WithStyle = React.memo(React.forwardRef( (props, ref) => {
+const RadioGroup:React.FC<Props> & WithStyle = React.memo(React.forwardRef( (props, ref) => {
     const {size,options,mainLabel,errorText,
     labelColor,labelHoverEffect,hoverLabelColor,
     hoverEffect,bgColor,hoverCheckedBgColor,
     hoverBgColor,checkedBgColor,labelPosition} = props;
-    const [select,setSelect] = useState<any>('');
+    const [select,setSelect] = React.useState<any>('');
     
     const handleChange = (e:any) =>{
         setSelect(e.target.value)

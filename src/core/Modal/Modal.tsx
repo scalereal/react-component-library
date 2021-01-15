@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import * as React from 'react'
 import Text from '../Text/Text'
 import * as Styled from './Modal.styled'
 import { ModalProps } from './types'
@@ -6,7 +6,7 @@ import { ModalProps } from './types'
 export const textSizes : ModalProps['titleSize'][] = ['XS', 'S', 'M', 'L', 'XL']
 export const descriptionSizes : ModalProps['descriptionSize'][] = ['XS', 'S', 'M', 'L', 'XL']
 
-const Toast:FC<ModalProps> = ({ title, description, borderColor, shadowColor, titleSize,titleColor,descriptionSize,descriptionColor } : ModalProps) => {
+const Toast:React.FC<ModalProps> = ({ title, description, borderColor, shadowColor, titleSize,titleColor,descriptionSize,descriptionColor } : ModalProps) => {
 
     return (
         <Styled.Modal title={title} description={description} shadowColor={shadowColor} borderColor={borderColor} titleSize={titleSize} descriptionSize={descriptionSize}>
