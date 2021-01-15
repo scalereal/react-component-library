@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import { WithStyle } from '../../utils';
 import { AvatarProps } from './types';
 export declare const SizeMap: AvatarProps['size'][];

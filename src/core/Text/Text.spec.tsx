@@ -1,6 +1,6 @@
-import { render } from '@testing-library/react'
-import React from 'react'
-import Text  from './Text'
+import { render } from '@testing-library/react';
+import * as React from 'react';
+import Text from './Text';
 
 describe('Text', () => {
     it('should render span element by default', () => {

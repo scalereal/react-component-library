@@ -1,5 +1,5 @@
-import { FC } from "react";
+import * as React from "react";
 import { WithStyle } from "../../utils";
 import { Props } from "./types";
-declare const Sidenav: FC<Props> & WithStyle;
+declare const Sidenav: React.FC<Props> & WithStyle;
 export default Sidenav;

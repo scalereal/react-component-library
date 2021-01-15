@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import * as React from 'react'
 import { WithStyle } from '../../utils'
 import Text from '../Text/Text'
 import * as Styled from './Link.styled'
@@ -6,7 +6,7 @@ import { LinkProps } from './types'
 
 export const linkSizes : LinkProps['linkSize'][] = ['XS', 'S', 'M', 'L', 'XL']
 
-const Link: FC<LinkProps> & WithStyle = React.memo(
+const Link: React.FC<LinkProps> & WithStyle = React.memo(
     React.forwardRef(({ href, linkSize, linkColor,hoverColor,activeColor, ...props }, ref) => {
         const isValidStringOrNumber = (e: any) => typeof e === 'string' || typeof e === 'number';
         return (

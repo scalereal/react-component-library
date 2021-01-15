@@ -1,16 +1,16 @@
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React, { FC, useEffect, useState } from "react";
+import * as React from "react";
 import { CSSTransition } from "react-transition-group";
 import { WithStyle } from "../../utils";
 import { NavButton, StyledHeader, StyledLogo, StyledNav } from "./styled";
 import { Props } from "./types";
 
-const Navbar:FC<Props> & WithStyle = React.memo(React.forwardRef( (props, ref) => {
+const Navbar:React.FC<Props> & WithStyle = React.memo(React.forwardRef( (props, ref) => {
   const {navOptions,Logo} = props;
 
-  const [isNavVisible, setNavVisibility] = useState(false);
-  const [isSmallScreen, setIsSmallScreen] = useState(false);
+  const [isNavVisible, setNavVisibility] = React.useState(false);
+  const [isSmallScreen, setIsSmallScreen] = React.useState(false);
 
   const handleMediaQueryChange = (mediaQuery:any) => {
     if (mediaQuery.matches) {
@@ -20,7 +20,7 @@ const Navbar:FC<Props> & WithStyle = React.memo(React.forwardRef( (props, ref) =
     }
   };
 
-  useEffect(() => {
+  React.useEffect(() => {
     const mediaQuery = window.matchMedia("(max-width: 700px)");
     mediaQuery.addEventListener("change",handleMediaQueryChange);
     handleMediaQueryChange(mediaQuery);

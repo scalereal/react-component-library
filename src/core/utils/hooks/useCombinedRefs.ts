@@ -1,10 +1,10 @@
-import { useEffect, useRef } from 'react';
+import * as React from 'react';
 
 // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
 export const useCombinedRefs = <T>(...refs: any[]) => {
-    const targetRef = useRef<T>();
+    const targetRef = React.useRef<T>();
 
-    useEffect(() => {
+    React.useEffect(() => {
         refs.forEach(ref => {
             if (!ref) return;
 

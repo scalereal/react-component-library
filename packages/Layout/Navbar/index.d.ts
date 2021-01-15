@@ -1,5 +1,5 @@
-import { FC } from "react";
+import * as React from "react";
 import { WithStyle } from "../../utils";
 import { Props } from "./types";
-declare const Navbar: FC<Props> & WithStyle;
+declare const Navbar: React.FC<Props> & WithStyle;
 export default Navbar;

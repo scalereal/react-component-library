@@ -28,9 +28,7 @@ const tdData=[
             {
                 tdId: 4,
                 tdData: (
-                    <Text textSize="XS" textColor="blue">
-                        active
-                    </Text>
+                    <Text textSize="XS" textColor="blue">active</Text>
                 )
             }
         ]
@@ -52,9 +50,7 @@ const tdData=[
             {
                 tdId: 4,
                 tdData: (
-                    <Text textSize="XS" textColor="blue">
-                        active
-                    </Text>
+                    <Text textSize="XS" textColor="blue">active</Text>
                 )
             }
         ]
@@ -76,9 +72,7 @@ const tdData=[
             {
                 tdId: 4,
                 tdData: (
-                    <Text textSize="XS" textColor="blue">
-                        active
-                    </Text>
+                    <Text textSize="XS" textColor="blue">active</Text>
                 )
             }
         ]
@@ -100,9 +94,7 @@ const tdData=[
             {
                 tdId: 4,
                 tdData: (
-                    <Text textSize="XS" textColor="blue">
-                        active
-                    </Text>
+                    <Text textSize="XS" textColor="blue">active</Text>
                 )
             }
         ]

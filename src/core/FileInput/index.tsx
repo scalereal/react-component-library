@@ -1,4 +1,4 @@
-import React, { FC, useState } from 'react';
+import * as React from 'react';
 import { WithStyle } from '../../utils';
 import { ErrorLabel } from '../CheckBox/styled';
 import { BrowsSpan, FileNameSpan, StyledInput, StyledLabel, StyledWrapper } from './styled';
@@ -7,9 +7,9 @@ import { Props } from './types';
 export const SizeMap: Props['size'][] = ['XS', 'S', 'M', 'L', 'XL'];
 
 
-const FileInput:FC<Props> & WithStyle = React.memo(React.forwardRef( (props, ref) => {
+const FileInput:React.FC<Props> & WithStyle = React.memo(React.forwardRef( (props, ref) => {
 
-  const [file, setFile] = useState<any>('');
+  const [file, setFile] = React.useState<any>('');
 
   const {errorText,size='S'} = props;
   const handleUpload = (e:any) =>{

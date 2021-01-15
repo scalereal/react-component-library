@@ -1,15 +1,15 @@
-import React, { FC, useCallback } from 'react'
+import * as React from 'react'
 import { WithStyle } from '../../utils'
 import * as Styled from './Toggle.styled'
 import { ToggleProps } from './types'
 
 export const toggleSizes : ToggleProps['size'][] = ['XS', 'S', 'M', 'L', 'XL']
 
-export const Toggle: FC<ToggleProps> & WithStyle = React.memo(
+export const Toggle: React.FC<ToggleProps> & WithStyle = React.memo(
     React.forwardRef((props, ref) => {
         const { size, required, onChange, ...restProps } = props;
 
-        const changeHandler = useCallback(
+        const changeHandler = React.useCallback(
             (e: any) => {
                 e.stopPropagation();
                 onChange && onChange(e);

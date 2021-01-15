@@ -1,4 +1,4 @@
-import { ReactNode } from 'react';
+import * as React from 'react';
 import { HTMLProps, WithThemeProp } from '../../utils/Styled';
 export interface Props extends HTMLProps<HTMLDivElement>, WithThemeProp {
     bgColor?: string;
@@ -6,7 +6,7 @@ export interface Props extends HTMLProps<HTMLDivElement>, WithThemeProp {
     shadowColor?: string;
     popShadowColor?: string;
     navOptions?: {
-        option?: ReactNode;
+        option?: React.ReactNode;
     }[];
-    Logo?: ReactNode;
+    Logo?: React.ReactNode;
 }

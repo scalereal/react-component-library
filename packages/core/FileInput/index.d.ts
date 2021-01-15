@@ -1,6 +1,6 @@
-import { FC } from 'react';
+import * as React from 'react';
 import { WithStyle } from '../../utils';
 import { Props } from './types';
 export declare const SizeMap: Props['size'][];
-declare const FileInput: FC<Props> & WithStyle;
+declare const FileInput: React.FC<Props> & WithStyle;
 export default FileInput;

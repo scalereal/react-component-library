@@ -1,7 +1,7 @@
-import { FC } from 'react';
+import * as React from 'react';
 import { WithStyle } from '../../utils';
 import { Props } from './types';
 export declare const SizeMap: Props['size'][];
 export declare const lposMap: Props['labelPosition'][];
-declare const Radio: FC<Props> & WithStyle;
+declare const Radio: React.FC<Props> & WithStyle;
 export default Radio;

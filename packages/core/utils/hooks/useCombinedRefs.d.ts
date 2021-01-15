@@ -1,2 +1,2 @@
-/// <reference types="react" />
-export declare const useCombinedRefs: <T>(...refs: any[]) => import("react").MutableRefObject<T | undefined>;
+import * as React from 'react';
+export declare const useCombinedRefs: <T>(...refs: any[]) => React.MutableRefObject<T | undefined>;
