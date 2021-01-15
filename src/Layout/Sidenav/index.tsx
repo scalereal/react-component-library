@@ -5,7 +5,7 @@ import { WithStyle } from "../../utils";
 import { StyledContent, StyledHeader, StyledLogo, StyledNav, Wrapper } from "./styled";
 import { Props } from "./types";
 
-const Sidenav:React.FC<Props> & WithStyle = React.memo(React.forwardRef( (props, ref) => {
+export const Sidenav:React.FC<Props> & WithStyle = React.memo(React.forwardRef( (props, ref) => {
   
   const {navOptions, Logo} = props;
 

@@ -2477,7 +2477,7 @@ ModalFooter.defaultProps = {
 };
 var templateObject_1$c, templateObject_2$9, templateObject_3$9, templateObject_4$6, templateObject_5$4, templateObject_6$3;
 
-var Toast = function (_a) {
+var Modal$1 = function (_a) {
     var title = _a.title, description = _a.description, borderColor = _a.borderColor, shadowColor = _a.shadowColor, titleSize = _a.titleSize, titleColor = _a.titleColor, descriptionSize = _a.descriptionSize, descriptionColor = _a.descriptionColor;
     return (React.createElement(Modal, { title: title, description: description, shadowColor: shadowColor, borderColor: borderColor, titleSize: titleSize, descriptionSize: descriptionSize },
         React.createElement(ModalHeader, { title: title, description: description, shadowColor: shadowColor, borderColor: borderColor, titleSize: titleSize, descriptionSize: descriptionSize },
@@ -2642,7 +2642,7 @@ var ToastContainer = Ye('div')(templateObject_16 || (templateObject_16 = __makeT
 ToastContainer.defaultProps = {
     theme: defaultTheme$1
 };
-var Toast$1 = Ye('div')(templateObject_17 || (templateObject_17 = __makeTemplateObject(["\n    cursor: pointer;\n\tdisplay: flex;\n    flex-direction: column;\n    position: relative;\n\twidth: fit-content;\n    height: auto;\n    padding: 12px;\n    margin: 10px;\n\tmin-width: 250px;\n    background-color:", ";\n    border-radius: 3px;\n    -webkit-box-shadow: 0 0 10px", ";\n\t-moz-box-shadow: 0 0 10px ", ";\n\tbox-shadow: 0 0 10px ", ";\n\t-webkit-transition: opacity 1s ease 0.5s;\n\t-moz-transition: opacity 1s ease 0.5s;\n\ttransition: opacity 1s ease 0.5s;\n\t-webkit-user-select: none;\n\t-moz-user-select: none;\n\tuser-select: none;\n    border: solid 4px ", ";\n    ", "\n"], ["\n    cursor: pointer;\n\tdisplay: flex;\n    flex-direction: column;\n    position: relative;\n\twidth: fit-content;\n    height: auto;\n    padding: 12px;\n    margin: 10px;\n\tmin-width: 250px;\n    background-color:", ";\n    border-radius: 3px;\n    -webkit-box-shadow: 0 0 10px", ";\n\t-moz-box-shadow: 0 0 10px ", ";\n\tbox-shadow: 0 0 10px ", ";\n\t-webkit-transition: opacity 1s ease 0.5s;\n\t-moz-transition: opacity 1s ease 0.5s;\n\ttransition: opacity 1s ease 0.5s;\n\t-webkit-user-select: none;\n\t-moz-user-select: none;\n\tuser-select: none;\n    border: solid 4px ", ";\n    ", "\n"])), function (_a) {
+var Toast = Ye('div')(templateObject_17 || (templateObject_17 = __makeTemplateObject(["\n    cursor: pointer;\n\tdisplay: flex;\n    flex-direction: column;\n    position: relative;\n\twidth: fit-content;\n    height: auto;\n    padding: 12px;\n    margin: 10px;\n\tmin-width: 250px;\n    background-color:", ";\n    border-radius: 3px;\n    -webkit-box-shadow: 0 0 10px", ";\n\t-moz-box-shadow: 0 0 10px ", ";\n\tbox-shadow: 0 0 10px ", ";\n\t-webkit-transition: opacity 1s ease 0.5s;\n\t-moz-transition: opacity 1s ease 0.5s;\n\ttransition: opacity 1s ease 0.5s;\n\t-webkit-user-select: none;\n\t-moz-user-select: none;\n\tuser-select: none;\n    border: solid 4px ", ";\n    ", "\n"], ["\n    cursor: pointer;\n\tdisplay: flex;\n    flex-direction: column;\n    position: relative;\n\twidth: fit-content;\n    height: auto;\n    padding: 12px;\n    margin: 10px;\n\tmin-width: 250px;\n    background-color:", ";\n    border-radius: 3px;\n    -webkit-box-shadow: 0 0 10px", ";\n\t-moz-box-shadow: 0 0 10px ", ";\n\tbox-shadow: 0 0 10px ", ";\n\t-webkit-transition: opacity 1s ease 0.5s;\n\t-moz-transition: opacity 1s ease 0.5s;\n\ttransition: opacity 1s ease 0.5s;\n\t-webkit-user-select: none;\n\t-moz-user-select: none;\n\tuser-select: none;\n    border: solid 4px ", ";\n    ", "\n"])), function (_a) {
     var theme = _a.theme, _b = _a.variant, variant = _b === void 0 ? '' : _b;
     return (theme.toast.statusColor[variant].bgColor);
 }, function (_a) {
@@ -2666,8 +2666,8 @@ var ToastHeader = Ye('div')(templateObject_18 || (templateObject_18 = __makeTemp
     return (borderColor ? borderColor : theme.toast.statusColor[variant].borderColor);
 });
 var ToastBody = Ye('div')(templateObject_19 || (templateObject_19 = __makeTemplateObject(["\n    position: relative;\n    flex: 1 1 auto;\n    padding: 0.5rem;\n"], ["\n    position: relative;\n    flex: 1 1 auto;\n    padding: 0.5rem;\n"])));
-Toast$1.displayName = "Toast";
-Toast$1.defaultProps = {
+Toast.displayName = "Toast";
+Toast.defaultProps = {
     theme: defaultTheme$1
 };
 ToastHeader.defaultProps = {
@@ -2675,19 +2675,19 @@ ToastHeader.defaultProps = {
 };
 var templateObject_1$g, templateObject_2$d, templateObject_3$d, templateObject_4$a, templateObject_5$7, templateObject_6$5, templateObject_7, templateObject_8, templateObject_9, templateObject_10, templateObject_11, templateObject_12, templateObject_13, templateObject_14, templateObject_15, templateObject_16, templateObject_17, templateObject_18, templateObject_19;
 
-var Toast$2 = React.memo(React.forwardRef(function (props, ref) {
+var Toast$1 = React.memo(React.forwardRef(function (props, ref) {
     var variant = props.variant, title = props.title, message = props.message, titleColor = props.titleColor, messageColor = props.messageColor, restProps = __rest(props, ["variant", "title", "message", "titleColor", "messageColor"]);
     var color = variant === 'success' ? '#008000' : variant === 'info' ? '#126AFA' : variant === 'danger' ? '#cc0000' : variant === 'warning' ? '#ffa726' : '';
     return (React.createElement(ToastContainer, __assign({ ref: ref, variant: variant }, restProps),
-        React.createElement(Toast$1, __assign({ variant: variant }, restProps),
+        React.createElement(Toast, __assign({ variant: variant }, restProps),
             React.createElement(ToastHeader, __assign({}, props),
                 React.createElement(Text$1, { textSize: "S", textColor: titleColor ? titleColor : color }, title)),
             React.createElement(ToastBody, null,
                 React.createElement(Text$1, { textSize: "XS", textColor: messageColor ? messageColor : color }, message)))));
 }));
-Toast$2.displayName = 'Toast';
-Toast$2.Style = ToastContainer;
-Toast$2.defaultProps = {
+Toast$1.displayName = 'Toast';
+Toast$1.Style = ToastContainer;
+Toast$1.defaultProps = {
     variant: 'success',
     fixed: false,
     borderPosition: 'top'
@@ -7303,13 +7303,13 @@ exports.Loader6 = Loader6;
 exports.Loader7 = Loader7;
 exports.Loader8 = Loader8;
 exports.Loader9 = Loader9;
-exports.Modal = Toast;
+exports.Modal = Modal$1;
 exports.Navbar = Navbar;
 exports.Radio = Radio;
 exports.RadioGroup = RadioGroup;
 exports.Sidenav = Sidenav;
 exports.Table = Table;
 exports.Text = Text$1;
-exports.Toast = Toast$2;
+exports.Toast = Toast$1;
 exports.Toggle = Toggle;
 //# sourceMappingURL=index.js.map

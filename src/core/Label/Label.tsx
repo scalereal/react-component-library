@@ -6,7 +6,7 @@ import { LabelProps } from './types'
 export const labelSizes : LabelProps['labelSize'][]  = ['XS', 'S', 'M', 'L', 'XL']
 export const labelWeights : LabelProps['labelWeight'][] = ['light', 'regular', 'medium', 'strong', 'extraStrong']
 
-const Label: React.FC<LabelProps> & WithStyle = React.memo(
+export const Label: React.FC<LabelProps> & WithStyle = React.memo(
     React.forwardRef((props, ref) => (
         <Styled.Label ref={ref} {...props}>
             {props.children}

@@ -1,7 +1,7 @@
 import { render } from '@testing-library/react';
 import * as React from 'react';
-import Text from '../Text/Text';
-import Link from './Link';
+import { Text } from '../Text/Text';
+import { Link } from './Link';
 
 describe('Link', () => {
     it('should render with default props', () => {

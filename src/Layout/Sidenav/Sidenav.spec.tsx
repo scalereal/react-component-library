@@ -1,7 +1,7 @@
 import { render } from '@testing-library/react';
 import * as React from 'react';
-import Sidenav from '.';
-import Link from '../../core/Link/Link';
+import { Sidenav } from '.';
+import { Link } from '../../core/Link/Link';
 
 describe('Sidebar component', () => {
     it('should render with default theme', () => {

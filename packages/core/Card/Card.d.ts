@@ -5,5 +5,5 @@ export declare const variants: CardProps['variant'][];
 export declare const textAlignments: CardProps['textAlignment'][];
 export declare const textSizes: CardProps['titleSize'][];
 export declare const descriptionSizes: CardProps['descriptionSize'][];
-declare const Card: React.FC<CardProps> & WithStyle;
+export declare const Card: React.FC<CardProps> & WithStyle;
 export default Card;

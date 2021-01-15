@@ -1,6 +1,6 @@
 import { render } from '@testing-library/react';
 import * as React from 'react';
-import Radio from '.';
+import { Radio } from '.';
 
 describe('Radio component', () => {
     it('should render with default theme', () => {

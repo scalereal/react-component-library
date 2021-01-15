@@ -6,7 +6,7 @@ import { AvatarProps } from './types';
 export const SizeMap: AvatarProps['size'][] = ['XXS','XS', 'S', 'M', 'L', 'XL'];
 export const DisplayMap: AvatarProps['display'][] = ['inline-block','block']
 
-const Avatar:React.FC<AvatarProps> & WithStyle = React.memo(React.forwardRef( (props, ref) => {
+export const Avatar:React.FC<AvatarProps> & WithStyle = React.memo(React.forwardRef( (props, ref) => {
     const {size,res='Pradip Bhusnar'} = props;
 
     const isValidURL = (res:string) => {
@@ -35,4 +35,4 @@ Avatar.defaultProps = {
     hoverEffect: true
 };
 
-export default Avatar;
+export default Avatar

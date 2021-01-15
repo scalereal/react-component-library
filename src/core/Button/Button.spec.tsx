@@ -1,6 +1,6 @@
 import { render } from '@testing-library/react';
 import * as React from 'react';
-import Button from '.';
+import { Button } from '.';
 
 describe('Button', () => {
     it('should render with default theme', () => {

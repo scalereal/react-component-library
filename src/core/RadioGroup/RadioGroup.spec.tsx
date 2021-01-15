@@ -1,6 +1,6 @@
 import { render } from '@testing-library/react';
 import * as React from 'react';
-import RadioGroup from '.';
+import { RadioGroup } from '.';
 
 describe('RadioGroup component', () => {
     it('should render with default theme', () => {

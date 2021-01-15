@@ -1,6 +1,6 @@
 import { render } from '@testing-library/react';
 import * as React from 'react';
-import Table from '.';
+import { Table } from '.';
 
 const thData=[{id:1,data:'ID'},{id:2,data:'EmployeeID'},{id:3,data:'Name'}]
 const tdData=[

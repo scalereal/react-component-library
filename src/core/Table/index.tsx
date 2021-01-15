@@ -3,7 +3,7 @@ import { WithStyle } from '../../utils';
 import { StyledTable, StyledTbody, StyledTd, StyledTh, StyledThead, StyledTr } from './styled';
 import { Props } from './types';
 
-const Table:React.FC<Props> & WithStyle = React.memo(React.forwardRef( (props, ref) => {
+export const Table:React.FC<Props> & WithStyle = React.memo(React.forwardRef( (props, ref) => {
     const {thData,tdData} = props;
     return <StyledTable ref={ref} {...props}>
                 <StyledThead>
@@ -22,4 +22,4 @@ Table.defaultProps = {
     hoverEffect: true
 };
 
-export default Table;
+export default Table

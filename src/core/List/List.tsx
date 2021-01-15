@@ -5,7 +5,7 @@ import { ListProps } from './types';
 
 export const variant: ListProps['variant'][] = ['horizontal', 'vertical'];
 
-const List: React.FC<ListProps> & WithStyle = React.memo(
+export const List: React.FC<ListProps> & WithStyle = React.memo(
     React.forwardRef((props, ref) => (
         <Styled.ListStyled ref={ref} {...props}>
             {React.Children.map(props.children, (c, i) => {
@@ -22,4 +22,3 @@ List.defaultProps = {
 };
 
 export default List
-

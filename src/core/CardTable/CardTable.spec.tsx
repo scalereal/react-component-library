@@ -1,8 +1,8 @@
 import { render } from '@testing-library/react';
 import * as React from 'react';
-import CardTable from '.';
-import Avatar from '../Avatar';
-import Text from '../Text/Text';
+import { CardTable } from '.';
+import { Avatar } from '../Avatar';
+import { Text } from '../Text/Text';
 
 const thData=[
     { id: 1, data: <Text textWeight="strong">User</Text> },

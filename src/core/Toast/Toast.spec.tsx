@@ -1,7 +1,7 @@
-import { render } from '@testing-library/react'
-import * as React from 'react'
-import Toast from './Toast'
-import { ToastProps } from './types'
+import { render } from '@testing-library/react';
+import * as React from 'react';
+import { Toast } from './Toast';
+import { ToastProps } from './types';
 
 describe('Toast', () => {
     test.each(['danger', 'warning', 'success', 'info'])('should render properly with %s variant', (variant: ToastProps['variant']) => {

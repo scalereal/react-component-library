@@ -6,7 +6,7 @@ import { WithStyle } from "../../utils";
 import { NavButton, StyledHeader, StyledLogo, StyledNav } from "./styled";
 import { Props } from "./types";
 
-const Navbar:React.FC<Props> & WithStyle = React.memo(React.forwardRef( (props, ref) => {
+export const Navbar:React.FC<Props> & WithStyle = React.memo(React.forwardRef( (props, ref) => {
   const {navOptions,Logo} = props;
 
   const [isNavVisible, setNavVisibility] = React.useState(false);
