@@ -1,4 +1,4 @@
-import { Button, TypeMap, SizeMap } from '.';
+import { Button, TypeMap, SizeMap, EdgeMap } from '.';
 import { Preview, Story, Meta, Props, ArgsTable, Canvas } from '@storybook/addon-docs/blocks';
 import { withKnobs, color, boolean, select } from '@storybook/addon-knobs';
 
@@ -17,6 +17,15 @@ import { withKnobs, color, boolean, select } from '@storybook/addon-knobs';
                 type: 'select',
                 options: Object.values(SizeMap)
             }
+        },
+        edges: {
+            control: {
+                type: 'select',
+                options: Object.values(EdgeMap)
+            }
+        },
+        fullWidth: {
+            control: { type: 'boolean' }
         },
         type: {
             control: {
@@ -74,7 +83,7 @@ export const Template = args => (
 );
 
 <Preview>
-    <Story name="Button" args={{ size: 'S', children: 'Click Me' }}>
+    <Story name="Button" args={{ size: 'S', edges: 'squared', children: 'Click Me' }}>
         {Template.bind({})}
     </Story>
 </Preview>
